@@ -23,7 +23,9 @@ export default function Carousel({ list }: { list: any[] }) {
     };
 
     animationRef.current = setInterval(scroll, 25);
-    return () => animationRef.current && clearInterval(animationRef.current);
+    return () => {
+      animationRef.current && clearInterval(animationRef.current);
+    };
   }, []);
 
   const handleMouseEnter = () => {
