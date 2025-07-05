@@ -4,8 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import BackToTopButton from '../components/BackToTopButton'
 import './global.css'
-import CreativityActivityService from '@/public/images/Creativity - Activity - Service.svg'
+import Sologan from '@/public/images/sologan.svg'
 import Logo from '@/public/images/logo.svg'
+import Facebook from '@/public/images/facebook.svg'
+import Tiktok from '@/public/images/tiktok.svg'
+import Youtube from '@/public/images/youtube.svg'
+import Instagram from '@/public/images/instagram.svg'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -60,12 +64,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Hero Section */}
         <div className="relative h-screen md:max-h-[655px] bg-cover bg-no-repeat bg-center bg-[url('../public/images/cover.png')]">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="top-[10%] absolute px-3 md:px-[120px] z-1 flex flex-col items-center justify-center h-full w-full text-white text-center">
-            <Image src={CreativityActivityService} height={113} alt="reativity-activity-service" />
-            <h2 className="text-[35px] font-[800] mt-[12px] mb-[77px]">
+          <div className="top-[10%] absolute px-3 md:px-[120px] z-1 flex flex-col items-center justify-center h-full w-full">
+            <Image src={Sologan} height={113} alt="reativity-activity-service" />
+
+            <h2 className="text-[35px] font-[800] mt-3 mb-[77px] text-white text-center">
               CONNECT CULTURES, CREATE CHANGE
             </h2>
-            <button className="text-white px-[32px] py-[16px] rounded-[10px] bg-[#FFA726] text-[20px] font-[600]">
+
+            <button className="text-white px-8 py-4 rounded-xl bg-[#FFA726] text-[20px] font-[600]">
               Explore Our Programs
             </button>
           </div>
@@ -74,8 +80,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
 
         {/* FOOTER */}
-        <footer className="bg-[#00712D] text-white p-3 md:py-20 md:px-[120px]">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-9 md:gap-[90px]">
+        <footer className="bg-[#00712D] text-white px-3 py-20 md:px-[120px]">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
             <div className="md:col-span-1">
               <Image src={Logo} alt="CAS-trip-logo" width={211} />
             </div>
@@ -123,18 +129,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             <div>
               <h4 className="font-[900] text-[24px] mb-[25px]">Social Media Contacts</h4>
-              <div className="flex gap-3 text-2xl">
+              <ul className="space-y-[10px] text-[18px] font-[600]">
+                <li>Please check us out at:</li>
+                </ul>
+
+              <div className="flex gap-6 mt-[25px]">
                 <Link href="#">
-                  <i className="fab fa-facebook-square" />
+                  <Image src={Facebook} width={47} height={47} alt="facebook" />
                 </Link>
+                
                 <Link href="#">
-                  <i className="fab fa-instagram" />
+                <Image src={Instagram} width={47} height={47} alt="instagram" />
                 </Link>
+
                 <Link href="#">
-                  <i className="fab fa-tiktok" />
+                 <Image src={Tiktok} width={47} height={47} alt="tiktok" />
                 </Link>
+
                 <Link href="#">
-                  <i className="fab fa-youtube" />
+                   <Image src={Youtube} width={47} height={47} alt="youtube" />
                 </Link>
               </div>
             </div>

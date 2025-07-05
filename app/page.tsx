@@ -97,16 +97,6 @@ export default function Home() {
             </div>
             //////
           </button>
-
-          {/* <button className="flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-green-700 text-white text-lg font-semibold">
-            <span className="inline-block w-6 h-6 bg-white rounded-full" /> Leadership Camps
-          </button>
-          <button className="flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-green-700 text-white text-lg font-semibold">
-            <span className="inline-block w-6 h-6 bg-white rounded-full" /> Subject Camps
-          </button>
-          <button className="flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-green-700 text-white text-lg font-semibold">
-            <span className="inline-block w-6 h-6 bg-white rounded-full" /> Other Camps
-          </button> */}
         </div>
       </section>
 
@@ -127,18 +117,27 @@ export default function Home() {
           CHOOSE YOUR FAVORITE PROGRAM
         </h2>
 
-        <div className="flex md:flex-row flex-col justify-center gap-28">
-          <div className="w-full max-w-[390px] bg-white border-2 border-[#00712D] rounded-[15px] flex flex-col items-center p-10 text-center">
-            <Image src={ByPrograms} alt="By Programs" height={140} />
+        <div className="flex sm:flex-row flex-col justify-center sm:gap-24 gap-6">
+        {[
+            {
+              img: ByPrograms,
+              title: 'By Programs',
+            },
+            {
+              img: ByDestination,
+              title: 'By Destinations',
+            },
+          ].map((item, index) => (
+            <div key={index} className="w-full max-w-[390px] bg-white border-2 border-[#00712D] rounded-[15px]">
+              <div className="w-full h-fill hover:opacity-30 flex flex-col items-center p-10 text-center cursor-pointer transition">
+                <div className="relative max-w-[120px] w-full aspect-square">
+                  <Image src={item.img} alt="By Programs" layout="fill" />
+                </div>
 
-            <label className="font-[700] text-[24px] text-[#00712D] mt-6">By Programs</label>
-          </div>
-
-          <div className="w-full max-w-[390px] bg-white border-2 border-[#00712D] rounded-[15px] flex flex-col items-center p-10 text-center">
-            <Image src={ByDestination} alt="By Destinations" height={140} />
-
-            <label className="font-[700] text-[24px] text-[#00712D] mt-6">By Destinations</label>
-          </div>
+                <label className="font-[700] text-[24px] text-[#00712D] mt-6">{item.title}</label>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -152,31 +151,33 @@ export default function Home() {
             {
               title: 'Flight Booking',
               img: WeWillHandleTripForYou1,
-              desc: 'Assist with securing the most convenient and cost-effective flight options for participants, managing itineraries, and providing timely updates on flight statuses',
+              description: 'Assist with securing the most convenient and cost-effective flight options for participants, managing itineraries, and providing timely updates on flight statuses',
             },
             {
               title: 'Tours & Activities',
               img: WeWillHandleTripForYou2,
-              desc: 'Engaging tours and activities that complement the main program, offering cultural immersion, local exploration trips and deeply memorable leisure experience',
+              description: 'Engaging tours and activities that complement the main program, offering cultural immersion, local exploration trips and deeply memorable leisure experience',
             },
             {
               title: 'Airport Transfers',
               img: WeWillHandleTripForYou3,
-              desc: 'Arrange reliable transportation from the airport to the accommodation to ensure a comfortable and stress-free arrival and smooth departure experience for all attendees',
+              description: 'Arrange reliable transportation from the airport to the accommodation to ensure a comfortable and stress-free arrival and smooth departure experience for all attendees',
             },
             {
               title: 'Hotel Bookings',
               img: WeWillHandleTripForYou4,
-              desc: "Handle reservations at selected hotels, prioritizing safety, comfort, and proximity to program venues or key attractions, tailored to the group's needs",
+              description: "Handle reservations at selected hotels, prioritizing safety, comfort, and proximity to program venues or key attractions, tailored to the group's needs",
             },
-          ].map((item, idx) => (
-            <div key={idx} className="flex items-center gap-6 flex-col md:flex-row">
-              <div className="relative min-w-[291px] min-h-[291px] rounded-[10px]">
+          ].map((item, index) => (
+            <div key={index} className="flex items-center gap-6 flex-col sm:flex-row">
+              <div className="relative min-w-[290px] w-full aspect-square rounded-xl">
                 <Image src={item.img} alt={item.title} layout="fill" className="object-cover" />
               </div>
-              <div className="md:text-left text-center">
+
+              <div className="sm:text-left text-center">
                 <h3 className="text-[24px] font-[900] mb-[25px] text-[#00712D]">{item.title}</h3>
-                <p className="text-[18px] font-[600] text-[#00712D]">{item.desc}</p>
+
+                <p className="text-[18px] font-[600] text-[#00712D]">{item.description}</p>
               </div>
             </div>
           ))}
@@ -187,25 +188,25 @@ export default function Home() {
       <section className="bg-[#00712D] py-20 px-3 md:px-[120px] text-white">
         <h2 className="font-[800] text-[32px] text-center mb-[32px]">WHERE WE TRAVEL</h2>
 
-        <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-8">
-          <div className="flex flex-col gap-8">
-            <div className="rounded-lg overflow-hidden relative w-64 h-40">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 gap-8">
+            <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
               <Image src={WhereWeTravel1} alt="Travel 1" layout="fill" className="object-cover" />
             </div>
-            <div className="rounded-lg overflow-hidden relative w-64 h-40">
+            <div className="rounded-lg overflow-hidden relative w-full  h-[50vw] md:h-full">
               <Image src={WhereWeTravel2} alt="Travel 2" layout="fill" className="object-cover" />
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="rounded-lg overflow-hidden relative w-64 h-84">
+         
+            <div className="rounded-lg overflow-hidden relative w-full h-[100vw] md:h-[calc(40vw)]">
               <Image src={WhereWeTravel3} alt="Travel 3" layout="fill" className="object-cover" />
             </div>
-          </div>
-          <div className="flex flex-col gap-8">
-            <div className="rounded-lg overflow-hidden relative w-64 h-40">
+
+          <div className="grid grid-cols-1 gap-8">
+            <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
               <Image src={WhereWeTravel4} alt="Travel 4" layout="fill" className="object-cover" />
             </div>
-            <div className="rounded-lg overflow-hidden relative w-64 h-40">
+            <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
               <Image src={WhereWeTravel5} alt="Travel 5" layout="fill" className="object-cover" />
             </div>
           </div>
@@ -213,10 +214,11 @@ export default function Home() {
       </section>
 
       {/* OUR FAVORITE TRAVELERS */}
-      <section className="bg-cover px-3 py-20 md:px-[120px] text-white bg-cover bg-center bg-[url('../public/images/our_favorite_travelers_cover.png')]">
+      <section className="bg-cover px-3 py-20 md:px-[120px] bg-cover bg-center bg-[url('../public/images/our_favorite_travelers_cover.png')]">
         <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-[72px]">
           OUR FAVORITE TRAVELERS
         </h2>
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
@@ -234,15 +236,18 @@ export default function Home() {
               text: 'The Trip is a life-changing experience. Getting to work directly with the local community and seeing the impact of my efforts was incredibly rewarding. I learned so much about myself and the world',
               img: '/traveler3.jpg',
             },
-          ].map((item, idx) => (
-            <div key={idx} className="flex flex-col justify-between bg-white py-9 px-7">
+          ].map((item, index) => (
+            <div key={index} className="flex flex-col justify-between bg-white py-10 px-6">
               <p className="mb-6 text-[22px] text-[#00712D] font-[600]">{item.text}</p>
+
               <div className="flex items-center gap-5">
                 <div className="min-w-16 min-h-16 md:min-w-[84px] md:min-h-[84px] relative rounded-full overflow-hidden border-4 border-[#00712D]">
                   <Image src={item.img} alt={item.name} layout="fill" className="object-cover" />
                 </div>
+
                 <div>
-                  <p className="font-[900] text-[24px] text-[#00712D] mb-[5px]">{item.name}</p>
+                  <label className="font-[900] text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
+
                   <div className="flex space-x-2.5">
                     <div className="text-[#FFA726] md:text-[40px] md:leading-10 text-[32px] leading-8">
                       ★
