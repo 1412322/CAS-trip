@@ -15,6 +15,7 @@ import ByDestination from '@/public/images/by_destination.svg'
 import LeadershipCamp from '@/public/images/leadership_camp.svg'
 import SubjectCamp from '@/public/images/subject_camp.svg'
 import NatureCamp from '@/public/images/nature_camp.svg'
+import PopularProgram from '@/public/images/popular_program.jpg'
 
 const programs = [
   {
@@ -22,35 +23,35 @@ const programs = [
     subTitle: '4D3N | Ages 14 & above | RM1090 estimate',
     description:
       'The trip packs survival campcraft, independent foraging, ending with community service',
-    img: '/program_1.jpg',
+    img: PopularProgram,
   },
   {
     title: 'Wilderness Skills Camp, Janda Baik',
     subTitle: '3D2N | Ages 11-17 | RM850 estimate',
     description:
       'Embark on an unforgettable 3-day learning essential survival skills sharpening your collaborative edge',
-    img: '/program_2.jpg',
+    img: PopularProgram,
   },
   {
     title: 'Eco Conservation Camp, Penyabong',
     subTitle: '3D2N | Ages 10-16 | RM790 estimate',
     description:
       'Get hands-on with campcraft. Learn to build shelters, dive into conservation and create idea for conservation',
-    img: '/program_3.jpg',
+    img: PopularProgram,
   },
   {
     title: 'Jungle Expedition Camp, Janda Baik',
     subTitle: '3D2N | Ages 10-16 | RM840 estimate',
     description:
       "Trekking up Sungai Chemperoh, riding horse and outdoor cooking. Experience nature's create lasting memories with us",
-    img: '/program_4.jpg',
+    img: PopularProgram,
   },
   {
     title: 'Leadership & Service Camp',
     subTitle: '3D2N | Ages 12-17 | RM890 estimate',
     description:
       'Boost your leadership mindset through simulations, bonding challenges and service work',
-    img: '/program_5.jpg',
+    img: PopularProgram,
   },
 ]
 
@@ -58,61 +59,61 @@ export default function Home() {
   return (
     <main>
       {/* OUR PROGRAMS */}
-      <section className="bg-[#ECFAE5] py-20 px-3 md:px-[120px] text-center">
-        <h2 className="text-[32px] font-[800] text-[#22C55E] mb-8">OUR PROGRAMS</h2>
+      <section className="bg-[#ECFAE5]">
+      <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
+        <h2 className="text-center text-[32px] font-[800] text-[#22C55E] mb-8">OUR PROGRAMS</h2>
 
         <div className="text-[32px] font-[900] grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-7 text-white">
-          <button className="relative h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]">
+        {[
+            {
+              img: NatureCamp,
+              title: 'By Programs',
+            },
+            {
+              img: LeadershipCamp,
+              title: 'Leadership Camps',
+            },
+            {
+              img: SubjectCamp,
+              title: 'Subject Camps',
+            },
+            {
+              img: undefined,
+              title: '//////',
+            },
+          ].map((item, index) => (
+          <button key={index} className="relative h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]">
             <div className="absolute start-0 flex p-5 items-center justify-center w-[105px] h-full border-2 border-white rounded-full">
               <div className="relative w-full h-full">
-                <Image src={NatureCamp} layout="fill" alt="nature-camp-icon" />
+                <Image src={item.img} layout="fill" alt={item.title} />
               </div>
             </div>
-            Nature Camps
+            
+            {item.title}
           </button>
-
-          <button className="relative h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]">
-            <div className="absolute start-0 flex p-5 items-center justify-center w-[105px] h-full border-2 border-white rounded-full">
-              <div className="relative w-full h-full">
-                <Image src={LeadershipCamp} layout="fill" alt="nature-camp-icon" />
-              </div>
-            </div>
-            Leadership Camps
-          </button>
-
-          <button className="relative h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]">
-            <div className="absolute start-0 flex p-5 items-center justify-center w-[105px] h-full border-2 border-white rounded-full">
-              <div className="relative w-full h-full">
-                <Image src={SubjectCamp} layout="fill" alt="nature-camp-icon" />
-              </div>
-            </div>
-            Subject Camps
-          </button>
-
-          <button className="relative h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]">
-            <div className="absolute start-0 flex p-5 items-center justify-center w-[105px] h-full border-2 border-white rounded-full">
-              <div className="relative w-full h-full">
-                {/* <Image src={LeadershipCamp} layout="fill" alt="nature-camp-icon" /> */}
-              </div>
-            </div>
-            //////
-          </button>
+          ))}
+        </div>
         </div>
       </section>
 
       {/* Popular Programs - Carousel */}
-      <section className="bg-green-800 text-white py-16 px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">POPULAR PROGRAMS</h2>
+      <section className="bg-[#00712D]">
+      <div className="py-20">
+      <h2 className="font-[800] text-[32px] text-center mb-[32px] text-white">POPULAR PROGRAMS</h2>
+
         <Carousel list={programs} />
+
         <div className="mt-10 flex justify-center">
-          <button className="bg-orange-400 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-500">
+          <button className="text-white px-8 py-4 rounded-xl bg-[#FFA726] text-[20px] font-[600]">
             View All 10+ Programs
           </button>
+        </div>
         </div>
       </section>
 
       {/* CHOOSE YOUR FAVORITE PROGRAM */}
-      <section className="bg-[#ECFAE5] text-green-900 py-20 px-3 md:px-[120px]">
+      <section className="bg-[#ECFAE5]">
+      <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
         <h2 className="text-[32px] font-[800] text-[#22C55E] text-center mb-8">
           CHOOSE YOUR FAVORITE PROGRAM
         </h2>
@@ -139,14 +140,17 @@ export default function Home() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* WE'LL HANDLE YOUR TRIP FOR YOU */}
-      <section className="bg-[#ECFAE5] text-green-900 py-20 pt-0 px-3 md:px-[120px]">
+      <section className="bg-[#ECFAE5]">
+      <div className="md:max-w-6xl m-auto px-3 md:px-0 pt-0 py-20">
         <h2 className="text-[32px] font-[800] text-[#22C55E] text-center mb-8">
           WE'LL HANDLE YOUR TRIP FOR YOU
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-[26px]">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
           {[
             {
               title: 'Flight Booking',
@@ -182,11 +186,13 @@ export default function Home() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* WHERE WE TRAVEL */}
-      <section className="bg-[#00712D] py-20 px-3 md:px-[120px] text-white">
-        <h2 className="font-[800] text-[32px] text-center mb-[32px]">WHERE WE TRAVEL</h2>
+      <section className="bg-[#00712D]">
+      <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
+        <h2 className="font-[800] text-[32px] text-center mb-[32px] text-white">WHERE WE TRAVEL</h2>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
           <div className="grid grid-cols-1 gap-8">
@@ -211,10 +217,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* OUR FAVORITE TRAVELERS */}
-      <section className="bg-cover px-3 py-20 md:px-[120px] bg-cover bg-center bg-[url('../public/images/our_favorite_travelers_cover.png')]">
+      <section className="bg-cover bg-cover bg-center bg-[url('../public/images/our_favorite_travelers_cover.png')]">
+        <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
         <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-[72px]">
           OUR FAVORITE TRAVELERS
         </h2>
@@ -269,6 +277,7 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </section>
     </main>
