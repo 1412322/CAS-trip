@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ArrowUp from '@/public/images/arrow_up.svg'
+import Image from "next/image";
 
 export default function BackToTopButton() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -19,11 +21,11 @@ export default function BackToTopButton() {
   return showTop ? (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-24 right-6 md:right-10 w-[50px] h-[50px] rounded-full flex items-center justify-center shadow-lg z-50 transition border-2 border-white"
+      className="fixed bottom-[25px] right-[25px] w-[50px] h-[50px] rounded-full flex items-center justify-center z-50 transition border-2 border-white"
       style={{ background: "#00712D4D" }}
       aria-label="Back to top"
     >
-      ↑
+      <Image src={ArrowUp} height={16} alt="back-to-top-button" />
     </button>
   ) : null;
 }
