@@ -8,7 +8,7 @@ import Instagram from '@/public/images/instagram.svg'
 
 export default function Footer() {
   return (
-<footer className="bg-[#00712D] text-white px-3 py-20">
+<footer className="bg-[#00712D] text-white px-3 md:px-0 py-20">
 <div className="grid grid-cols-1 md:grid-cols-4 gap-20 md:max-w-6xl m-auto">
   <div className="md:col-span-1">
     <Image src={Logo} alt="CAS-trip-logo" width={211} />

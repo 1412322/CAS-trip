@@ -17,8 +17,8 @@ export default function Header() {
     }, []);
 
   return (
-    <header className={`sticky top-0 flex items-center justify-between h-[80px] z-20 w-full transition-all duration-300 ${
-        scrolled ? 'bg-[#00712D80] shadow-md' : 'bg-transparent'
+    <header className={`fixed top-0 flex items-center justify-between h-[80px] z-20 w-full transition-all duration-300 ${
+        scrolled ? 'bg-[#00712D80]' : 'bg-transparent'
       }`}>
     <div className="m-auto w-full md:max-w-6xl flex justify-between items-center">
 

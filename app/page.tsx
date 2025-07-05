@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Carousel from '../components/Carousel'
 import WhereWeTravel1 from '@/public/images/where_we_travel_1.png'
 import WhereWeTravel2 from '@/public/images/where_we_travel_2.png'
@@ -16,6 +15,8 @@ import LeadershipCamp from '@/public/images/leadership_camp.svg'
 import SubjectCamp from '@/public/images/subject_camp.svg'
 import NatureCamp from '@/public/images/nature_camp.svg'
 import PopularProgram from '@/public/images/popular_program.jpg'
+import Container from '@/components/Layout/Container'
+import Sologan from '@/public/images/sologan.svg'
 
 const programs = [
   {
@@ -58,9 +59,25 @@ const programs = [
 export default function Home() {
   return (
     <main>
+              {/* Hero Section */}
+              <div className="relative h-screen md:max-h-[655px] bg-cover bg-no-repeat bg-center bg-[url('../public/images/cover.png')]">
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+          <div className="top-[10%] absolute px-3 md:px-0 z-1 flex flex-col items-center justify-center h-full w-full">
+            <Image src={Sologan} height={113} alt="reativity-activity-service" />
+
+            <h2 className="text-[35px] font-[800] mt-3 mb-[77px] text-white text-center">
+              CONNECT CULTURES, CREATE CHANGE
+            </h2>
+
+            <button className="text-white px-8 py-4 rounded-xl bg-[#FFA726] text-[20px] font-[600]">
+              Explore Our Programs
+            </button>
+          </div>
+        </div>
+
       {/* OUR PROGRAMS */}
-      <section className="bg-[#ECFAE5]">
-      <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
+      <Container background="bg-[#ECFAE5]">
         <h2 className="text-center text-[32px] font-[800] text-[#22C55E] mb-8">OUR PROGRAMS</h2>
 
         <div className="text-[32px] font-[900] grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-7 text-white">
@@ -93,8 +110,7 @@ export default function Home() {
           </button>
           ))}
         </div>
-        </div>
-      </section>
+        </Container>
 
       {/* Popular Programs - Carousel */}
       <section className="bg-[#00712D]">
@@ -112,8 +128,8 @@ export default function Home() {
       </section>
 
       {/* CHOOSE YOUR FAVORITE PROGRAM */}
-      <section className="bg-[#ECFAE5]">
-      <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
+
+      <Container background="bg-[#ECFAE5]" className="pb-0">
         <h2 className="text-[32px] font-[800] text-[#22C55E] text-center mb-8">
           CHOOSE YOUR FAVORITE PROGRAM
         </h2>
@@ -140,12 +156,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-        </div>
-      </section>
+      </Container>
 
       {/* WE'LL HANDLE YOUR TRIP FOR YOU */}
-      <section className="bg-[#ECFAE5]">
-      <div className="md:max-w-6xl m-auto px-3 md:px-0 pt-0 py-20">
+      <Container background="bg-[#ECFAE5]">
         <h2 className="text-[32px] font-[800] text-[#22C55E] text-center mb-8">
           WE'LL HANDLE YOUR TRIP FOR YOU
         </h2>
@@ -186,12 +200,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-        </div>
-      </section>
+        </Container>
 
       {/* WHERE WE TRAVEL */}
-      <section className="bg-[#00712D]">
-      <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
+      <Container background="bg-[#00712D]">
         <h2 className="font-[800] text-[32px] text-center mb-[32px] text-white">WHERE WE TRAVEL</h2>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
@@ -217,12 +229,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </div>
-      </section>
+        </Container>
 
       {/* OUR FAVORITE TRAVELERS */}
-      <section className="bg-cover bg-cover bg-center bg-[url('../public/images/our_favorite_travelers_cover.png')]">
-        <div className="md:max-w-6xl m-auto px-3 md:px-0 py-20">
+        <Container background="bg-[url('../public/images/our_favorite_travelers_cover.png')]">
         <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-[72px]">
           OUR FAVORITE TRAVELERS
         </h2>
@@ -278,8 +288,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        </div>
-      </section>
+        </Container>
     </main>
   )
 }
