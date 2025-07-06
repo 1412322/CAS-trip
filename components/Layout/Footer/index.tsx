@@ -10,9 +10,8 @@ export default function Footer() {
   return (
 <footer className="bg-[#00712D] text-white px-3 md:px-0 py-20">
 <div className="grid grid-cols-1 md:grid-cols-4 gap-20 md:max-w-6xl m-auto">
-  <div className="md:col-span-1">
-    <Image src={Logo} alt="CAS-trip-logo" width={211} />
-  </div>
+    <Image className="md:col-span-1" src={Logo} alt="CAS-trip-logo" layout="responsive" />
+
   <div>
     <h4 className="font-[900] text-[24px] mb-[25px]">Expore</h4>
     <ul className="space-y-[10px] text-[18px] font-[600]">
@@ -63,19 +62,19 @@ export default function Footer() {
 
     <div className="flex gap-6 mt-[25px]">
       <Link href="#">
-        <Image src={Facebook} width={47} height={47} alt="facebook" />
+        <Image className="max-w-[48px]" src={Facebook} layout="responsive" alt="facebook" />
       </Link>
       
       <Link href="#">
-      <Image src={Instagram} width={47} height={47} alt="instagram" />
+      <Image className="max-w-[48px]" src={Instagram} layout="responsive" alt="instagram" />
       </Link>
 
       <Link href="#">
-       <Image src={Tiktok} width={47} height={47} alt="tiktok" />
+       <Image className="max-w-[48px]" src={Tiktok} layout="responsive" alt="tiktok" />
       </Link>
 
       <Link href="#">
-         <Image src={Youtube} width={47} height={47} alt="youtube" />
+         <Image className="max-w-[48px]" src={Youtube} layout="responsive" alt="youtube" />
       </Link>
     </div>
   </div>

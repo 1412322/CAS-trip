@@ -28,7 +28,7 @@ export default function Header() {
       <Link href="#" className="hover:underline hover:font-[700] font-[600] text-[16px]">
         Home
       </Link>
-      <Link href="#" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/about-us" className="hover:underline hover:font-[700] font-[600] text-[16px]">
         About Us
       </Link>
       <Link href="#" className="hover:underline hover:font-[700] font-[600] text-[16px]">

@@ -101,9 +101,7 @@ export default function Home() {
           ].map((item, index) => (
           <button key={index} className="relative h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]">
             <div className="absolute start-0 flex p-5 items-center justify-center w-[105px] h-full border-2 border-white rounded-full">
-              <div className="relative w-full h-full">
-                <Image src={item.img} layout="fill" alt={item.title} />
-              </div>
+                <Image src={item.img} layout="responsive" alt={item.title} />
             </div>
             
             {item.title}
@@ -134,7 +132,7 @@ export default function Home() {
           CHOOSE YOUR FAVORITE PROGRAM
         </h2>
 
-        <div className="flex sm:flex-row flex-col justify-center sm:gap-24 gap-6">
+        <div className="flex md:flex-row flex-col justify-center md:gap-24 gap-6">
         {[
             {
               img: ByPrograms,
@@ -147,9 +145,7 @@ export default function Home() {
           ].map((item, index) => (
             <div key={index} className="w-full max-w-[390px] bg-white border-2 border-[#00712D] rounded-[15px]">
               <div className="w-full h-fill hover:opacity-30 flex flex-col items-center p-10 text-center cursor-pointer transition">
-                <div className="relative max-w-[120px] w-full aspect-square">
-                  <Image src={item.img} alt="By Programs" layout="fill" />
-                </div>
+                  <Image className="max-w-[120px] aspect-square" src={item.img} alt="By Programs" layout="responsive" />
 
                 <label className="font-[700] text-[24px] text-[#00712D] mt-6">{item.title}</label>
               </div>
@@ -187,12 +183,10 @@ export default function Home() {
               description: "Handle reservations at selected hotels, prioritizing safety, comfort, and proximity to program venues or key attractions, tailored to the group's needs",
             },
           ].map((item, index) => (
-            <div key={index} className="flex items-center gap-6 flex-col sm:flex-row">
-              <div className="relative min-w-[290px] w-full aspect-square rounded-xl">
-                <Image src={item.img} alt={item.title} layout="fill" className="object-cover" />
-              </div>
+            <div key={index} className="flex items-center gap-6 flex-col md:flex-row">
+                <Image src={item.img} alt={item.title} layout="responsive" className="flex-1 max-w-[290px] w-full aspect-square rounded-[20px] object-cover" />
 
-              <div className="sm:text-left text-center">
+              <div className="md:text-left text-center flex-1">
                 <h3 className="text-[24px] font-[900] mb-[25px] text-[#00712D]">{item.title}</h3>
 
                 <p className="text-[18px] font-[600] text-[#00712D]">{item.description}</p>
