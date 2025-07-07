@@ -25,7 +25,7 @@ export default function Header() {
     <Image src={Logo} alt="CAS-trip-logo" width={145} />
 
     <nav className="space-x-[16px] hidden md:block text-white">
-      <Link href="#" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/" className="hover:underline hover:font-[700] font-[600] text-[16px]">
         Home
       </Link>
       <Link href="/about-us" className="hover:underline hover:font-[700] font-[600] text-[16px]">

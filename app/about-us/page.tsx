@@ -12,15 +12,17 @@ import WhyChooseUs from '@/public/images/why_chosse_us.jpg'
 import Check from '@/public/images/check.svg'
 import SafetyExpertise1 from '@/public/images/safety_expertise_1.png'
 import SafetyExpertise2 from '@/public/images/safety_expertise_2.png'
+import Heading from '@/components/Heading'
+import Button from '@/components/Button'
 
 export default function AboutUs() {
   return (
     <main>
       {/* ABOUT US */}
       <Container background="bg-[#ECFAE5]" className="pb-0">
-      <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-8">
+      <Heading color="text-[#22C55E]">
           ABOUT US
-        </h2>
+        </Heading>
 
 <p className="text-[#00712D] text-center text-[18px] font-[600]">
 This website serves as a premier platform specializing in <b>Educational</b>, <b>Cultural</b>, and <b>Adventure</b> volunteer trips for international school students worldwide.
@@ -32,9 +34,9 @@ Through programs, students can <b>build real-world skills</b> and discover a dee
         </Container>
 
         <Container background="bg-[#ECFAE5]" className="pb-0">
-      <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-8">
+      <Heading color="text-[#22C55E]">
       MEET OUR TEAM
-        </h2>
+        </Heading>
 
 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-x-10">
 {[{
@@ -75,16 +77,16 @@ description: 'Former co-founder of opendoor varible Early staff Spotify and Clea
 </div>
 
 <div className="mt-10 flex justify-center">
-<button className="text-white px-8 py-4 rounded-xl bg-[#FFA726] text-[20px] font-[600]">
+<Button>
 Meet All Our member
-            </button>
+            </Button>
             </div>
         </Container>
 
         <Container background="bg-[#ECFAE5]">
-      <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-8">
+      <Heading color="text-[#22C55E]">
       OUR STORY
-        </h2>
+        </Heading>
 
 {[{
   img: OurStory1,
@@ -106,9 +108,9 @@ Meet All Our member
         </Container>
 
         <Container background="bg-[url('../public/images/our_mission_cover.jpg')]">
-      <h2 className="text-[32px] font-[800] text-center text-white mb-8">
+      <Heading color="text-white">
      OUR MISSION
-        </h2>
+        </Heading>
 
         <p className="font-[600] text-[18px] text-white text-center">
         To be the leading initiative in Southeast Asia for inspiring and empowering a new generation of international students through unique and impactful educational travel programs. We envision creating a vibrant programs where diverse perspectives converge, a deep appreciation for the region's rich heritage and dynamic future is cultivated.
@@ -117,9 +119,9 @@ Meet All Our member
 
         {/* OUR CORE VALUE */}
         <Container background="bg-[#ECFAE5]" className="pb-0">
-      <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-8">
+      <Heading color="text-[#22C55E]">
       OUR CORE VALUE
-        </h2>
+        </Heading>
 
         <p className="font-[600] text-[18px] text-[#00712D] text-center mb-20">
         We are dedicated to cultivating programs built upon foundational principles designed to empower every international student
@@ -150,7 +152,7 @@ Meet All Our member
 
 {/* WHAT WE DO */}
 <Container background="bg-[#ECFAE5]" className="pb-0">
-      <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-8">WHAT WE DO</h2>
+      <Heading color="text-[#22C55E]">WHAT WE DO</Heading>
 
       <p className="font-[600] text-[18px] text-[#00712D] text-center mb-20">
     We provide student travel programs to cultivate personal growth, leadership, and social impact, empowering students through a wide range of initiatives.
@@ -176,7 +178,7 @@ Meet All Our member
 
 {/* WHY CHOOSE US */}
 <Container background="bg-[#ECFAE5]" className="pb-0">
-      <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-8">WHY CHOOSE US</h2>
+      <Heading color="text-[#22C55E]">WHY CHOOSE US</Heading>
 
 <div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-10 last:mb-0">
 <div className="flex-1">
@@ -197,7 +199,7 @@ Meet All Our member
 
 {/* SAFETY & EXPERTISE */}
 <Container background="bg-[#ECFAE5]">
-      <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-8">SAFETY & EXPERTISE</h2>
+      <Heading color="text-[#22C55E]">SAFETY & EXPERTISE</Heading>
 
 <div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-10 last:mb-0">
 <div className="flex-1">
@@ -215,9 +217,9 @@ Meet All Our member
     ))}
   </ul>
 
-  <button className="text-white px-8 py-4 rounded-xl bg-[#FFA726] text-[20px] font-[600]">
+  <Button>
   Find Programs
-            </button>
+            </Button>
   </div>
 
   <div className="relative w-full flex-1">

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Carousel from '../components/Carousel'
+import Star from '@/public/images/star.svg'
 import WhereWeTravel1 from '@/public/images/where_we_travel_1.png'
 import WhereWeTravel2 from '@/public/images/where_we_travel_2.png'
 import WhereWeTravel3 from '@/public/images/where_we_travel_3.png'
@@ -17,6 +18,8 @@ import NatureCamp from '@/public/images/nature_camp.svg'
 import PopularProgram from '@/public/images/popular_program.jpg'
 import Container from '@/components/Layout/Container'
 import Sologan from '@/public/images/sologan.svg'
+import Heading from '@/components/Heading'
+import Button from '@/components/Button'
 
 const programs = [
   {
@@ -70,15 +73,15 @@ export default function Home() {
               CONNECT CULTURES, CREATE CHANGE
             </h2>
 
-            <button className="text-white px-8 py-4 rounded-xl bg-[#FFA726] text-[20px] font-[600]">
+            <Button>
               Explore Our Programs
-            </button>
+            </Button>
           </div>
         </div>
 
       {/* OUR PROGRAMS */}
       <Container background="bg-[#ECFAE5]">
-        <h2 className="text-center text-[32px] font-[800] text-[#22C55E] mb-8">OUR PROGRAMS</h2>
+        <Heading color="text-[#22C55E]">OUR PROGRAMS</Heading>
 
         <div className="text-[32px] font-[900] grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-7 text-white">
         {[
@@ -113,14 +116,14 @@ export default function Home() {
       {/* Popular Programs - Carousel */}
       <section className="bg-[#00712D]">
       <div className="py-20">
-      <h2 className="font-[800] text-[32px] text-center mb-[32px] text-white">POPULAR PROGRAMS</h2>
+      <Heading color="text-white">POPULAR PROGRAMS</Heading>
 
         <Carousel list={programs} />
 
         <div className="mt-10 flex justify-center">
-          <button className="text-white px-8 py-4 rounded-xl bg-[#FFA726] text-[20px] font-[600]">
+          <Button>
             View All 10+ Programs
-          </button>
+          </Button>
         </div>
         </div>
       </section>
@@ -128,9 +131,9 @@ export default function Home() {
       {/* CHOOSE YOUR FAVORITE PROGRAM */}
 
       <Container background="bg-[#ECFAE5]" className="pb-0">
-        <h2 className="text-[32px] font-[800] text-[#22C55E] text-center mb-8">
+        <Heading color="text-[#22C55E]">
           CHOOSE YOUR FAVORITE PROGRAM
-        </h2>
+        </Heading>
 
         <div className="flex md:flex-row flex-col justify-center md:gap-24 gap-6">
         {[
@@ -156,9 +159,9 @@ export default function Home() {
 
       {/* WE'LL HANDLE YOUR TRIP FOR YOU */}
       <Container background="bg-[#ECFAE5]">
-        <h2 className="text-[32px] font-[800] text-[#22C55E] text-center mb-8">
+        <Heading color="text-[#22C55E]">
           WE'LL HANDLE YOUR TRIP FOR YOU
-        </h2>
+        </Heading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
           {[
@@ -198,7 +201,7 @@ export default function Home() {
 
       {/* WHERE WE TRAVEL */}
       <Container background="bg-[#00712D]">
-        <h2 className="font-[800] text-[32px] text-center mb-[32px] text-white">WHERE WE TRAVEL</h2>
+      <Heading color="text-white">WHERE WE TRAVEL</Heading>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
           <div className="grid grid-cols-1 gap-8">
@@ -227,9 +230,9 @@ export default function Home() {
 
       {/* OUR FAVORITE TRAVELERS */}
         <Container background="bg-[url('../public/images/our_favorite_travelers_cover.png')]">
-        <h2 className="text-[32px] font-[800] text-center text-[#22C55E] mb-[72px]">
+        <Heading color="text-[#22C55E]">
           OUR FAVORITE TRAVELERS
-        </h2>
+        </Heading>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
@@ -261,21 +264,15 @@ export default function Home() {
                   <label className="font-[900] text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
 
                   <div className="flex space-x-2.5">
-                    <div className="text-[#FFA726] md:text-[40px] md:leading-10 text-[32px] leading-8">
-                      ★
-                    </div>
-                    <div className="text-[#FFA726] md:text-[40px] md:leading-10 text-[32px] leading-8">
-                      ★
-                    </div>
-                    <div className="text-[#FFA726] md:text-[40px] md:leading-10 text-[32px] leading-8">
-                      ★
-                    </div>
-                    <div className="text-[#FFA726] md:text-[40px] md:leading-10 text-[32px] leading-8">
-                      ★
-                    </div>
-                    <div className="text-[#FFA726] md:text-[40px] md:leading-10 text-[32px] leading-8">
-                      ★
-                    </div>
+                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+
+                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+
+                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+
+                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+                    
+                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
                   </div>
                 </div>
               </div>
