@@ -19,31 +19,47 @@ export default function NatureCamps() {
             <Image className="absolute px-3 md:px-0 max-h-[137px]" src={Sologan} layout="responsive" alt="reativity-activity-service" style={{ top: 'calc((100% - 80px) / 2)' }} />
         </div>
         
-      {/* What is NATURE CAMPS? */}
-      <Container background="bg-[#ECFAE5]">
+      {/* WHAT IS NATURE CAMPS? */}
+      <Container className="bg-[#ECFAE5]">
       <Heading color="text-[#22C55E]">
-      What is SUBJECT CAMPS?
+      WHAT IS SUBJECT CAMPS?
         </Heading>
 
 {[{
   imgs: [WhatIsSubjectCamps1, WhatIsSubjectCamps2],
-  description: `These programs designed learning journeys that go beyond the classroom. You'll explore new cultures and subjects, gaining real-world understanding through immersive experiences and volunteer activities.`,
+  descriptions: [`These programs are designed as transformative learning journeys that extend far beyond the traditional classroom setting. You'll explore new cultures and academic disciplines – from environmental science knowledge in books to sociology within vibrant local communities – directly in the real world.`],
 }, {
   imgs: [WhatIsSubjectCamps3, WhatIsSubjectCamps4],
-  description: 'Students apply your knowledge, share skills, and offer support to communities, helping to improve educational opportunities or cultural preservation.',
+  descriptions: ['Students apply their acquired knowledge, critical thinking, and problem-solving skills to address tangible, real-life challenges. Through immersive experiences and hands-on activities, students will directly contribute, sharing  expertise and offering practical support in cultural preservation, or enhancing local educational initiatives.'],
 }, {
   imgs: [WhatIsSubjectCamps5, WhatIsSubjectCamps6],
-  description: 'Now operating across more than 25 countries, with a dedicated team of over 40 full-time staff and hundreds of seasonal field leaders, our approach has evolved. Our fundamental purpose remains steadfast: equipping students to foster meaningful, positive change in communities globally.',
+  title: 'How the programs work?',
+  descriptions: [
+    '<b>Learning:</b> Visiting historical sites, cultural centers, or local schools to learn firsthand.',
+    '<b>Volunteer Work:</b> Engaging in literacy projects, helping with school renovations, teaching basic skills, or assisting in cultural exchange initiatives.',
+    '<b>Growth:</b> Developing critical thinking, cross-cultural communication, interpersonal skills, the ability to cooperate, leadership skill in a group and a deeper appreciation for global diversity.',
+  ],
 }].map((item, index) => (
 <div key={index} className={`flex flex-col items-center gap-6 mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
  
  <div className="flex gap-6 flex-1">
    {item.imgs.map(img => (
-    <Image src={img} className="object-cover max-h-[290px] rounded-[20px] aspect-square overflow-hidden" layout="responsive" alt={item.description} />
+    <Image src={img} className="object-cover max-h-[290px] rounded-[20px] aspect-square overflow-hidden" layout="responsive" alt="" />
    ))}
  </div>
   
-  <p className="font-[600] text-[18px] text-[#00712D] flex-1 text-center md:text-left">{item.description}</p>
+  <div className="flex-1 text-left text-[#00712D]">
+    {item.title && <div className="text-[18px] text-[24px] font-[900] mb-6">{item.title}</div>}
+
+<ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
+
+{item.descriptions.map((description, descriptionIndex) => (
+  <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'mb-6 last:mb-0' : ''}`}>
+    <p className="font-[600] text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
+  </li>
+))}
+  </ul>
+  </div>
 </div>
 ))}
         </Container>

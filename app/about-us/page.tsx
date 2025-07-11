@@ -19,7 +19,7 @@ export default function AboutUs() {
   return (
     <main>
       {/* ABOUT US */}
-      <Container background="bg-[#ECFAE5]" className="pb-0">
+      <Container className="bg-[#ECFAE5] pt-40 pb-0">
       <Heading color="text-[#22C55E]">
           ABOUT US
         </Heading>
@@ -33,7 +33,7 @@ Through programs, students can <b>build real-world skills</b> and discover a dee
 </p>
         </Container>
 
-        <Container background="bg-[#ECFAE5]" className="pb-0">
+        <Container className="bg-[#ECFAE5] pb-0">
       <Heading color="text-[#22C55E]">
       MEET OUR TEAM
         </Heading>
@@ -83,7 +83,7 @@ Meet All Our member
             </div>
         </Container>
 
-        <Container background="bg-[#ECFAE5]">
+        <Container className="bg-[#ECFAE5]">
       <Heading color="text-[#22C55E]">
       OUR STORY
         </Heading>
@@ -107,7 +107,7 @@ Meet All Our member
 ))}
         </Container>
 
-        <Container background="bg-[url('../public/images/our_mission_cover.jpg')]">
+        <Container className="bg-[url('../public/images/our_mission_cover.jpg')]">
       <Heading color="text-white">
      OUR MISSION
         </Heading>
@@ -118,7 +118,7 @@ Meet All Our member
         </Container>
 
         {/* OUR CORE VALUE */}
-        <Container background="bg-[#ECFAE5]" className="pb-0">
+        <Container className="bg-[#ECFAE5] pb-0">
       <Heading color="text-[#22C55E]">
       OUR CORE VALUE
         </Heading>
@@ -151,7 +151,7 @@ Meet All Our member
 </Container>
 
 {/* WHAT WE DO */}
-<Container background="bg-[#ECFAE5]" className="pb-0">
+<Container className="bg-[#ECFAE5] pb-0">
       <Heading color="text-[#22C55E]">WHAT WE DO</Heading>
 
       <p className="font-[600] text-[18px] text-[#00712D] text-center mb-20">
@@ -177,7 +177,7 @@ Meet All Our member
 </Container>
 
 {/* WHY CHOOSE US */}
-<Container background="bg-[#ECFAE5]" className="pb-0">
+<Container className="bg-[#ECFAE5] pb-0">
       <Heading color="text-[#22C55E]">WHY CHOOSE US</Heading>
 
 <div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-10 last:mb-0">
@@ -198,7 +198,7 @@ Meet All Our member
 </Container>
 
 {/* SAFETY & EXPERTISE */}
-<Container background="bg-[#ECFAE5]">
+<Container className="bg-[#ECFAE5]">
       <Heading color="text-[#22C55E]">SAFETY & EXPERTISE</Heading>
 
 <div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-10 last:mb-0">

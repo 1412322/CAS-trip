@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Carousel from '../components/Carousel'
 import Star from '@/public/images/star.svg'
-import WhereWeTravel1 from '@/public/images/where_we_travel_1.png'
-import WhereWeTravel2 from '@/public/images/where_we_travel_2.png'
-import WhereWeTravel3 from '@/public/images/where_we_travel_3.png'
-import WhereWeTravel4 from '@/public/images/where_we_travel_4.png'
-import WhereWeTravel5 from '@/public/images/where_we_travel_5.png'
+import WhereWeTravel1 from '@/public/images/where_we_travel_1.webp'
+import WhereWeTravel2 from '@/public/images/where_we_travel_2.webp'
+import WhereWeTravel3 from '@/public/images/where_we_travel_3.webp'
+import WhereWeTravel4 from '@/public/images/where_we_travel_4.webp'
+import WhereWeTravel5 from '@/public/images/where_we_travel_5.webp'
 import WeWillHandleTripForYou1 from '@/public/images/we_will_handle_your_trip_for_you_1.png'
 import WeWillHandleTripForYou2 from '@/public/images/we_will_handle_your_trip_for_you_2.png'
 import WeWillHandleTripForYou3 from '@/public/images/we_will_handle_your_trip_for_you_3.png'
@@ -15,7 +15,10 @@ import ByDestination from '@/public/images/by_destination.svg'
 import LeadershipCamp from '@/public/images/leadership_camp.svg'
 import SubjectCamp from '@/public/images/subject_camp.svg'
 import NatureCamp from '@/public/images/nature_camp.svg'
-import PopularProgram from '@/public/images/popular_program.jpg'
+import PopularPrograms1 from '@/public/images/popular_programs_1.webp'
+import PopularPrograms2 from '@/public/images/popular_programs_2.webp'
+import PopularPrograms3 from '@/public/images/popular_programs_3.webp'
+import PopularPrograms4 from '@/public/images/popular_programs_4.webp'
 import Container from '@/components/Layout/Container'
 import Sologan from '@/public/images/sologan.svg'
 import Heading from '@/components/Heading'
@@ -23,39 +26,32 @@ import Button from '@/components/Button'
 
 const programs = [
   {
-    title: 'Jungle Expedition Camp, Janda Baik',
+    title: 'JUNGLE EXPEDITION CAMP, JANDA BAIK',
     subTitle: '4D3N | Ages 14 & above | RM1090 estimate',
     description:
       'The trip packs survival campcraft, independent foraging, ending with community service',
-    img: PopularProgram,
+    img: PopularPrograms1,
   },
   {
-    title: 'Wilderness Skills Camp, Janda Baik',
+    title: 'WILDERNESS SKILLS CAMP, JANDA BAIK',
     subTitle: '3D2N | Ages 11-17 | RM850 estimate',
     description:
       'Embark on an unforgettable 3-day learning essential survival skills sharpening your collaborative edge',
-    img: PopularProgram,
+    img: PopularPrograms2,
   },
   {
-    title: 'Eco Conservation Camp, Penyabong',
+    title: 'ECO CONSERVATION CAMP, PENYABONG',
     subTitle: '3D2N | Ages 10-16 | RM790 estimate',
     description:
       'Get hands-on with campcraft. Learn to build shelters, dive into conservation and create idea for conservation',
-    img: PopularProgram,
+    img: PopularPrograms3,
   },
   {
-    title: 'Jungle Expedition Camp, Janda Baik',
+    title: 'JUNGLE EXPEDITION CAMP, JANDA BAIK',
     subTitle: '3D2N | Ages 10-16 | RM840 estimate',
     description:
       "Trekking up Sungai Chemperoh, riding horse and outdoor cooking. Experience nature's create lasting memories with us",
-    img: PopularProgram,
-  },
-  {
-    title: 'Leadership & Service Camp',
-    subTitle: '3D2N | Ages 12-17 | RM890 estimate',
-    description:
-      'Boost your leadership mindset through simulations, bonding challenges and service work',
-    img: PopularProgram,
+    img: PopularPrograms4,
   },
 ]
 
@@ -80,7 +76,7 @@ export default function Home() {
         </div>
 
       {/* OUR PROGRAMS */}
-      <Container background="bg-[#ECFAE5]">
+      <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E]">OUR PROGRAMS</Heading>
 
         <div className="text-[32px] font-[900] grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-7 text-white">
@@ -130,7 +126,7 @@ export default function Home() {
 
       {/* CHOOSE YOUR FAVORITE PROGRAM */}
 
-      <Container background="bg-[#ECFAE5]" className="pb-0">
+      <Container className="bg-[#ECFAE5] pb-0">
         <Heading color="text-[#22C55E]">
           CHOOSE YOUR FAVORITE PROGRAM
         </Heading>
@@ -158,7 +154,7 @@ export default function Home() {
       </Container>
 
       {/* WE'LL HANDLE YOUR TRIP FOR YOU */}
-      <Container background="bg-[#ECFAE5]">
+      <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E]">
           WE'LL HANDLE YOUR TRIP FOR YOU
         </Heading>
@@ -200,36 +196,48 @@ export default function Home() {
         </Container>
 
       {/* WHERE WE TRAVEL */}
-      <Container background="bg-[#00712D]">
+      <Container className="bg-[#00712D]">
       <Heading color="text-white">WHERE WE TRAVEL</Heading>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
           <div className="grid grid-cols-1 gap-8">
             <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
               <Image src={WhereWeTravel1} alt="Travel 1" layout="fill" className="object-cover" />
+
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center">THAILAND</h2>
             </div>
+
             <div className="rounded-lg overflow-hidden relative w-full  h-[50vw] md:h-full">
               <Image src={WhereWeTravel2} alt="Travel 2" layout="fill" className="object-cover" />
+
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center whitespace-break-spaces">{`VIETNAM\nHOIAN`}</h2>
             </div>
           </div>
          
             <div className="rounded-lg overflow-hidden relative w-full h-[100vw] md:h-[calc(40vw)]">
               <Image src={WhereWeTravel3} alt="Travel 3" layout="fill" className="object-cover" />
+
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center whitespace-break-spaces">{`VIETNAM\nSAPA`}</h2>
             </div>
 
           <div className="grid grid-cols-1 gap-8">
             <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
               <Image src={WhereWeTravel4} alt="Travel 4" layout="fill" className="object-cover" />
+
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center whitespace-break-spaces">{`VIETNAM\nDANANG`}</h2>
             </div>
+
             <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
               <Image src={WhereWeTravel5} alt="Travel 5" layout="fill" className="object-cover" />
+
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center">CHINA</h2>
             </div>
           </div>
         </div>
         </Container>
 
       {/* OUR FAVORITE TRAVELERS */}
-        <Container background="bg-[url('../public/images/our_favorite_travelers_cover.png')]">
+        <Container className="bg-[url('../public/images/our_favorite_travelers_cover.png')]">
         <Heading color="text-[#22C55E]">
           OUR FAVORITE TRAVELERS
         </Heading>
@@ -271,7 +279,7 @@ export default function Home() {
                     <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
 
                     <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
-                    
+
                     <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
                   </div>
                 </div>

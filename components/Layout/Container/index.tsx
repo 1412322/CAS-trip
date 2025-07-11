@@ -1,5 +1,5 @@
-export default function Container({ children, background, className }: { children: React.ReactNode, background: string, className?: string }) {
-  const customClassName = `bg-cover bg-center ${background} px-3 md:px-0 py-20 ${className || ""}`
+export default function Container({ children, className }: { children: React.ReactNode, className?: string }) {
+  const customClassName = `bg-cover bg-center px-3 md:px-0 py-20 ${className || ""}`
   
   return (
     <section className={customClassName}>

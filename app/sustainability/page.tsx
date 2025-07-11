@@ -1,32 +1,23 @@
-import Image from 'next/image'
-import MeetOurTeam1 from '@/public/images/meet_our_team.png'
-import PositiveCommunityAndEnvironmentalImpact1 from '@/public/images/positive_community_&_environmental_impact_1.png'
-import PositiveCommunityAndEnvironmentalImpact2 from '@/public/images/positive_community_&_environmental_impact_2.png'
-import PositiveCommunityAndEnvironmentalImpact3 from '@/public/images/positive_community_&_environmental_impact_3.png'
+import Button from '@/components/Button'
+import Heading from '@/components/Heading'
+import Container from '@/components/Layout/Container'
+import CareerAndAcadamicEnhancement from '@/public/images/career_and_academic_enhancement.svg'
 import ContinuousImprovementAndAccountability1 from '@/public/images/continuous_improvement_and_accountability_1.png'
 import ContinuousImprovementAndAccountability2 from '@/public/images/continuous_improvement_and_accountability_2.png'
 import ContinuousImprovementAndAccountability3 from '@/public/images/continuous_improvement_and_accountability_3.png'
 import PersonalGrowth from '@/public/images/personal_growth.svg'
+import PositiveCommunityAndEnvironmentalImpact1 from '@/public/images/positive_community_&_environmental_impact_1.png'
+import PositiveCommunityAndEnvironmentalImpact2 from '@/public/images/positive_community_&_environmental_impact_2.png'
+import PositiveCommunityAndEnvironmentalImpact3 from '@/public/images/positive_community_&_environmental_impact_3.png'
 import SkillDevelopment from '@/public/images/skill_development.svg'
-import CareerAndAcadamicEnhancement from '@/public/images/career_and_academic_enhancement.svg'
-import Container from '@/components/Layout/Container'
-import CircleCheck from '@/public/images/circle_check.svg'
-import SubjectCamps from '@/public/images/subject_camps.svg'
-import NatureCamps from '@/public/images/nature_camps.svg'
-import LeadershipCamps from '@/public/images/leadership_camps.svg'
-import WhyChooseUs from '@/public/images/why_chosse_us.jpg'
-import Check from '@/public/images/check.svg'
-import SafetyExpertise1 from '@/public/images/safety_expertise_1.png'
-import SafetyExpertise2 from '@/public/images/safety_expertise_2.png'
-import Heading from '@/components/Heading'
-import Button from '@/components/Button'
+import Image from 'next/image'
 
 export default function Sustainability() {
   return (
     <main>
       {/* ABOUT US */}
-      <Container background="bg-[#ECFAE5]" className="pb-0">
-      <Heading color="text-[#22C55E]">
+      <Container className="bg-[#ECFAE5] pb-0">
+      <Heading color="text-[#22C55E] pt-20">
       SUSTAINABILITY
         </Heading>
 
@@ -37,7 +28,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 </p>
         </Container>
 
-        <Container background="bg-[#ECFAE5]" className="pb-0">
+        <Container className="bg-[#ECFAE5] pb-0">
       <Heading color="text-[#22C55E]">
       POSITIVE COMMUNITY & ENVIRONMENT IMPACT
         </Heading>
@@ -68,7 +59,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 ))}
         </Container>
 
-        <Container background="bg-[#ECFAE5]" className="pb-0">
+        <Container className="bg-[#ECFAE5] pb-0">
       <Heading color="text-[#22C55E]">
       SELF-IMPACT ON STUDENTS
         </Heading>
@@ -100,7 +91,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 </div>
         </Container>
 
-        <Container background="bg-[#ECFAE5]">
+        <Container className="bg-[#ECFAE5] pb-0">
       <Heading color="text-[#22C55E]">
       CONTINUOUS IMPROVEMENT & ACCOUNTABILITY
         </Heading>
@@ -122,7 +113,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 <div key={index} className={`rounded-[15px] relative w-full aspect-square overflow-hidden flex flex-col h-[318px] items-stretch ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
  <Image src={item.img} className="object-cover w-full h-full" layout="fill" alt={item.description} />
 
-<div className="absolute inset-6 top-10 text-center">
+<div className="absolute inset-6 flex flex-col items-center justify-center text-center">
   <h3 className="font-[900] text-[24px] text-white mb-6">{item.title}</h3>
 
   <p className="font-[600] text-[18px] text-white whitespace-break-spaces">{item.description}</p>
@@ -132,7 +123,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 </div>
         </Container>
 
-        <Container background="bg-[#ECFAE5]">
+        <Container className="bg-[#ECFAE5]">
       <Heading color="text-[#00712D]">
       Contact us to find out how Our Volunteer Programs can help your students achieve their learning outcomes during a school trip abroad!
         </Heading>
