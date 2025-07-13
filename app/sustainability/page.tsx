@@ -10,6 +10,8 @@ import PositiveCommunityAndEnvironmentalImpact1 from '@/public/images/positive_c
 import PositiveCommunityAndEnvironmentalImpact2 from '@/public/images/positive_community_&_environmental_impact_2.png'
 import PositiveCommunityAndEnvironmentalImpact3 from '@/public/images/positive_community_&_environmental_impact_3.png'
 import SkillDevelopment from '@/public/images/skill_development.svg'
+import Sustainability1 from '@/public/images/sustainability_1.webp'
+import Sustainability2 from '@/public/images/sustainability_2.webp'
 import Image from 'next/image'
 
 export default function Sustainability() {
@@ -24,8 +26,15 @@ export default function Sustainability() {
 <p className="text-[#00712D] text-center text-[18px] font-[600]">
 Our commitment extends beyond facilitating meaningful volunteer experiences; it encompasses ensuring that our digital presence, our operations, and our projects contribute positively to the planet and its people for the long-term impact.
 <br/>
+<br/>
 The core of our mission is to promote volunteer programs that create genuine, lasting positive change. We carefully select partners and projects that deliver significant impact on both the community and the individual volunteer.
 </p>
+
+<div className="relative mt-10 w-full">
+<Image className="w-2/4" src={Sustainability1} alt="" />
+
+  {/* <Image className="absolute w-[60%] right-0 bottom-[-100px]" src={Sustainability2} alt="" /> */}
+</div>
         </Container>
 
         <Container className="bg-[#ECFAE5] pb-0">
@@ -125,7 +134,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 
         <Container className="bg-[#ECFAE5]">
       <Heading color="text-[#00712D]">
-      Contact us to find out how Our Volunteer Programs can help your students achieve their learning outcomes during a school trip abroad!
+      By choosing to volunteer through our platform, you're not just embarking on an incredible personal journey; you're contributing to a collective effort to build a more sustainable and equitable world for all.
         </Heading>
 
         <div className="mt-10 flex justify-center">

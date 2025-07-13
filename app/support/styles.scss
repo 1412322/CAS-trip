@@ -1,0 +1,22 @@
+.triangle {
+    width:  1.5rem;
+    height: 1.5rem;
+    border-top-right-radius: 20%;
+    background-color: red;
+  
+  
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      width:  100%;
+      height: 100%;
+      border-top-right-radius: 20%;
+    }
+  
+    &.right { transform: rotate(30deg) skewX(-30deg) scale(1,.866); transform-origin: 45% 75%; }
+  
+    &:before { transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%); }
+    &:after  { transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%); }
+  }

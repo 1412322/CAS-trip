@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 flex items-center justify-between h-[80px] z-20 w-full transition-all duration-300 ${
-        scrolled ? 'bg-[#00712D80]' : ['/about-us', '/sustainability'].includes(pathname) ? 'bg-[#00712D]' : 'bg-transparent'
+        scrolled ? 'bg-[#00712D80]' : ['/about-us', '/sustainability', '/support'].includes(pathname) ? 'bg-[#00712D]' : 'bg-transparent'
       }`}>
     <div className="m-auto w-full md:max-w-6xl flex justify-between items-center">
 
@@ -93,7 +93,7 @@ export default function Header() {
         Sustainability
       </Link>
 
-      <Link href="#" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/support" className="hover:underline hover:font-[700] font-[600] text-[16px]">
         Support
       </Link>
 
