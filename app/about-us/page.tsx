@@ -107,10 +107,14 @@ Meet All Our member
 ))}
         </Container>
 
-        <Container className="bg-[url('../public/images/our_mission_cover.jpg')]">
+        <Container className="relative bg-[url('../public/images/our_mission_cover.jpg')] z-0">
       <Heading color="text-white">
      OUR MISSION
         </Heading>
+
+        <div className="absolute inset-0 bg-[#00712D] opacity-50 z-[-1]" />
+
+<div className="absolute inset-0 bg-[#000] opacity-50 z-[-1]" />
 
         <p className="font-[600] text-[18px] text-white text-center">
         To be the leading initiative in Southeast Asia for inspiring and empowering a new generation of international students through unique and impactful educational travel programs. We envision creating a vibrant programs where diverse perspectives converge, a deep appreciation for the region's rich heritage and dynamic future is cultivated.
@@ -205,7 +209,7 @@ Meet All Our member
 <div className="flex-1">
   <p className="font-[600] text-[18px] text-[#00712D] mb-6">Student well-being and safety are paramount to our operations. Under the guidance of our experienced medical leadership, we implement industry-leading safety protocols, encompassing:</p>
 
-  <ul className="font-[700] text-[20px] text-[#00712D]">
+  <ul className="font-[700] text-[20px] text-[#00712D] mb-28">
     {['Rigorous pre-travel risk assessments to proactively identify and mitigate potential hazards.',
 'Annual safety certifications to ensure continuous staff preparedness and proficiency.',
 'Round-the-clock, on-the-ground support in every destination.',
@@ -225,7 +229,7 @@ Meet All Our member
   <div className="relative w-full flex-1">
   <Image src={SafetyExpertise1} className="object-cover rounded-[20px] overflow-hidden" layout="responsive" alt="why-choose-us" />
 
-  <Image src={SafetyExpertise2} className="absolute object-cover rounded-[20px] overflow-hidden" layout="responsive" alt="why-choose-us" />
+  {/* <Image src={SafetyExpertise2} className="absolute object-cover rounded-[20px] overflow-hidden" layout="responsive" alt="why-choose-us" /> */}
 </div>
 
 </div>

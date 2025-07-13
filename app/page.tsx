@@ -242,25 +242,35 @@ export default function Home() {
           OUR FAVORITE TRAVELERS
         </Heading>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex space-x-8 overflow-x-scroll no-scrollbar">
           {[
             {
-              name: 'Juan Gonzales',
-              text: 'The trip offered an unparalleled real-world extension to our curriculum, providing students with deep insights into sustainable development and community engagement that simply cannot be replicated in a classroom setting',
+              name: 'Marcus Lim\n(Singapore)',
+              text: 'The trip offered an unparalleled real-world extension to our curriculum, providing students with deep insights into sustainable development and community engagement that simply cannot be replicated in a classroom setting.',
               img: '/traveler1.jpg',
             },
             {
-              name: 'Kelly Cuambot',
-              text: "We observed significant growth in our students' soft skills, including leadership, intercultural communication, and problem-solving abilities. Their initiative and perseverance, especially during project work, were truly impressive",
+              name: 'Amir Hassan\n(Malaysia)',
+              text: "We observed significant growth in our students' soft skills, including leadership, intercultural communication, and problem-solving abilities. Their initiative and perseverance, especially during project work, were truly impressive.",
               img: '/traveler2.jpg',
             },
             {
-              name: 'Jasmine Bautista',
-              text: 'The Trip is a life-changing experience. Getting to work directly with the local community and seeing the impact of my efforts was incredibly rewarding. I learned so much about myself and the world',
+              name: 'Wijaya\n(Indonesia)',
+              text: 'The Trip is a life-changing experience. Getting to work directly with the local community and seeing the impact of my efforts was incredibly rewarding. I learned so much about myself and the world.',
+              img: '/traveler3.jpg',
+            },
+            {
+              name: 'Kai\n(Singapore)',
+              text: 'This trip was truly a transformative learning journey beyond classroom. Immersing myself in new cultures and academic disciplines, broadens my global perspective and understands culture.',
+              img: '/traveler3.jpg',
+            },
+            {
+              name: 'Miya\n(Thailand)',
+              text: `The trip perfectly blended exciting adventures with crucial environmental conservation efforts. I deeply understand the interconnectedness of ecosystems, which is something you can't fully grasp from a textbook.`,
               img: '/traveler3.jpg',
             },
           ].map((item, index) => (
-            <div key={index} className="flex flex-col justify-between bg-white py-10 px-6">
+            <div key={index} className="flex flex-col justify-between bg-white py-10 px-6 min-w-[397px]">
               <p className="mb-6 text-[22px] text-[#00712D] font-[600]">{item.text}</p>
 
               <div className="flex items-center gap-5">
