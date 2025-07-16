@@ -17,13 +17,13 @@ import Image from 'next/image'
 export default function Sustainability() {
   return (
     <main>
-      {/* ABOUT US */}
-      <Container className="bg-[#ECFAE5] pb-0">
-      <Heading color="text-[#22C55E] pt-20">
+      {/* SUSTAINABILITY */}
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
+      <Heading color="text-[#22C55E] pt-10 md:pt-20">
       SUSTAINABILITY
         </Heading>
 
-<p className="text-[#00712D] text-center text-[18px] font-[600]">
+<p className="text-[#00712D] text-center text-[14px] md:text-[18px] font-[600]">
 Our commitment extends beyond facilitating meaningful volunteer experiences; it encompasses ensuring that our digital presence, our operations, and our projects contribute positively to the planet and its people for the long-term impact.
 <br/>
 <br/>
@@ -37,7 +37,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 </div>
         </Container>
 
-        <Container className="bg-[#ECFAE5] pb-0">
+        <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">
       POSITIVE COMMUNITY & ENVIRONMENT IMPACT
         </Heading>
@@ -55,20 +55,20 @@ The core of our mission is to promote volunteer programs that create genuine, la
   title: 'Environmental Stewardship',
   description: 'We directly address environmental\nconservation, from marine protection to\nreforestation, promoting long-term\necological balance in the local area.',
 }].map((item, index) => (
-<div key={index} className={`flex flex-col h-[318px] items-stretch ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+<div key={index} className={`flex h-1/2 md:h-[318px] items-stretch ${index % 2 !== 0 ? 'flex-row-reverse' : 'flex-row'}`}>
  
   <Image src={item.img} className="object-cover h-full overflow-hidden flex-1" layout="responsive" alt={item.description} />
 
-<div className="flex-1 bg-[#00712D] h-full flex flex-col items-center justify-center text-center">
-  <label className="font-[900] text-[24px] text-white mb-6">{item.title}</label>
+<div className="flex-1 bg-[#00712D] h-full p-2.5 md:p-0 flex flex-col items-center justify-center text-center">
+  <label className="font-[900] text-[14px] md:text-[24px] text-white mb-2.5 md:mb-6">{item.title}</label>
 
-  <p className="font-[600] text-[18px] text-white whitespace-break-spaces">{item.description}</p>
+  <p className="font-[600] text-[10px] md:text-[18px] text-white whitespace-break-spaces">{item.description}</p>
   </div>
 </div>
 ))}
         </Container>
 
-        <Container className="bg-[#ECFAE5] pb-0">
+        <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">
       SELF-IMPACT ON STUDENTS
         </Heading>
@@ -88,19 +88,19 @@ The core of our mission is to promote volunteer programs that create genuine, la
   description: 'Our programs combine with networking opportunities, significantly boosts resumes and university applications, opening doors for future academic and professional pursuits.',
 }].map((item, index) => (
 <div key={index} className="flex flex-col items-center flex-1">
-<div className="flex items-center justify-center rounded-full bg-[#00712D] w-28 h-28 p-6 mb-5"><Image src={item.img} className="object-cover w-full h-full" layout="responsive" alt={item.description} /></div>
+<div className="flex items-center justify-center rounded-full bg-[#00712D] w-[72px] h-[72px] md:w-28 md:h-28 p-6 mb-2.5 md:mb-6"><Image src={item.img} className="object-cover w-full h-full" layout="responsive" alt={item.description} /></div>
 
 <div className="text-center">
-  <h3 className="font-[900] text-[24px] text-[#00712D] mb-6">{item.title}</h3>
+  <h3 className="font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-2.5 md:mb-6">{item.title}</h3>
 
-  <p className="font-[600] text-[18px] text-[#00712D] whitespace-break-spaces">{item.description}</p>
+  <p className="font-[600] text-[12px] md:text-[18px] text-[#00712D] whitespace-break-spaces">{item.description}</p>
   </div>
 </div>
 ))}
 </div>
         </Container>
 
-        <Container className="bg-[#ECFAE5] pb-0">
+        <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">
       CONTINUOUS IMPROVEMENT & ACCOUNTABILITY
         </Heading>
@@ -109,7 +109,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
         {[{
   img: ContinuousImprovementAndAccountability1,
   title: 'Environment',
-  description: 'Number of trees planted, cubic meters of waste removed, hectares of habitat restored.',
+  description: 'Number of trees planted, the continuous monitoring and protection of forested areas, and plastic waste collection initiatives.',
 }, {
   img: ContinuousImprovementAndAccountability2,
   title: 'Educational',
@@ -117,15 +117,15 @@ The core of our mission is to promote volunteer programs that create genuine, la
 }, {
   img: ContinuousImprovementAndAccountability3,
   title: 'Community Development',
-  description: 'Number of homes built, place of protection center for disadvantaged people are access clean water, food. Their living place are redecorate beautifully.',
+  description: 'Community support initiatives empowered by enhancing protection centers, and engaging students in educational activities to foster greater resilience.',
 }].map((item, index) => (
 <div key={index} className={`rounded-[15px] relative w-full aspect-square overflow-hidden flex flex-col h-[318px] items-stretch ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
  <Image src={item.img} className="object-cover w-full h-full" layout="fill" alt={item.description} />
 
-<div className="absolute inset-6 flex flex-col items-center justify-center text-center">
-  <h3 className="font-[900] text-[24px] text-white mb-6">{item.title}</h3>
+<div className="absolute inset-5 md:inset-6 flex flex-col items-center justify-center text-center">
+  <h3 className="font-[900] text-[20px] text-[24px] text-white mb-2.5 md:mb-6">{item.title}</h3>
 
-  <p className="font-[600] text-[18px] text-white whitespace-break-spaces">{item.description}</p>
+  <p className="font-[600] text-[14px] text-[18px] text-white whitespace-break-spaces">{item.description}</p>
   </div>
 </div>
 ))}

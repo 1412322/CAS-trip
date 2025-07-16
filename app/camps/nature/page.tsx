@@ -13,10 +13,12 @@ export default function NatureCamps() {
   return (
     <main>
                     {/* Hero Section */}
-                    <div className="relative h-screen md:max-h-[655px] bg-cover bg-no-repeat bg-center bg-[url('../public/images/nature_camps_cover.png')]">
+                    <div className="relative h-[100vw] md:h-screen md:max-h-[655px] bg-cover bg-no-repeat bg-center bg-[url('../public/images/mobile_nature_camps_cover.webp')] md:bg-[url('../public/images/nature_camps_cover.webp')]">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-            <Image className="absolute px-3 md:px-0 max-h-[137px]" src={Sologan} layout="responsive" alt="reativity-activity-service" style={{ top: 'calc((100% - 80px) / 2)' }} />
+          <div className="absolute px-5 md:px-[100px] z-1 flex flex-col items-center justify-center h-full w-full">
+            <Image src={Sologan} layout="responsive" alt="nature-camps" />
+</div>
         </div>
         
       {/* WHAT IS NATURE CAMPS? */}
@@ -27,7 +29,7 @@ export default function NatureCamps() {
 
 {[{
   imgs: [WhatIsNatureCamps1, WhatIsNatureCamps2],
-  descriptions: [`These programs combine exciting outdoor adventures with immersive, hands-on environmental conservation activities. You'll not only explore stunning natural landscapes but also actively work to protect them. This will foster a deep understanding of the importance of conservation, enhance awareness of interconnected ecosystems in the local environment and motivate positive environmental protection behaviors.`],
+  descriptions: [`Our <b>Nature Camps</b> blend outdoor activities with hands-on environmental conservation. Students explore stunning landscapes, <b>protect nature</b>, and gain a deep understanding of local ecosystems.`],
 }, {
   imgs: [WhatIsNatureCamps3, WhatIsNatureCamps4],
   descriptions: ['Journeys inspire students to take initiative and persevere through environmental team challenges to gain practical conservation scenic beauty skills. These hands-on experiences inherently cultivate students strong critical-thinking, problem-solving, effective communication and collaboration skills.'],
@@ -39,22 +41,21 @@ export default function NatureCamps() {
 '<b>Learning:</b> Understanding local ecosystems globally aware citizens and engaged contributors on the world stage and the importance of conservation from experts.',
   ],
 }].map((item, index) => (
-<div key={index} className={`flex flex-col items-center gap-6 mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+<div key={index} className={`flex flex-col items-center gap-5 md:gap-6 mb-5 md:mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
  
- <div className="flex gap-6 flex-1">
-   {item.imgs.map(img => (
-    <Image src={img} className="object-cover max-h-[290px] rounded-[20px] aspect-square overflow-hidden" layout="responsive" alt="" />
+ <div className="flex gap-2.5 md:gap-6 flex-1 w-full">
+   {item.imgs.map((img, index) => (
+    <Image key={index} src={img} className="w-full rounded-[10px] aspect-square overflow-hidden" layout="responsive" alt="" />
    ))}
  </div>
   
   <div className="flex-1 text-left text-[#00712D]">
-    {item.title && <div className="text-[18px] text-[24px] font-[900] mb-6">{item.title}</div>}
+    {item.title && <div className="text-[18px] md:text-[24px] font-[900] md:mb-6">{item.title}</div>}
 
 <ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
-
 {item.descriptions.map((description, descriptionIndex) => (
-  <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'mb-6 last:mb-0' : ''}`}>
-    <p className="font-[600] text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
+  <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'md:mb-6 last:mb-0' : ''}`}>
+    <p className="font-[600] text-[14px] md:text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
   </li>
 ))}
   </ul>

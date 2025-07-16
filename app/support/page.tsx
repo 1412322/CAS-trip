@@ -20,7 +20,7 @@ export default function Support() {
   return (
     <main>
       {/* ABOUT US */}
-      <Container className="bg-[#ECFAE5] pt-40 pb-0">
+      <Container className="bg-[#ECFAE5] pt-40 pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">
           OVERVIEW
         </Heading>
@@ -43,7 +43,7 @@ export default function Support() {
   </Container>
 
   {/* SAFETY COMMITMENT */}
-  <Container className="bg-[#ECFAE5] pb-0">
+  <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">SAFETY COMMITMENT</Heading>
 
       <p className="text-[#00712D] text-center text-[18px] font-[600] mb-9">
@@ -114,7 +114,7 @@ export default function Support() {
   </Container>
 
   {/* LUGGAGE SPLIT */}
-  <Container className="bg-[#ECFAE5] pb-0">
+  <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">YOUR LUGGAGE WILL BE DIVIDED INTO 3 PARTS:</Heading>
       
   <div className="text-[#00712D] text-[18px] font-[600] space-y-10 relative before:border-2 before:border-[#00712D] before:absolute before:top-0 before:left-[8px] before:h-full">
@@ -138,7 +138,7 @@ export default function Support() {
   </div>
   </Container>
 
-  <Container className="bg-[#ECFAE5] pb-0">
+  <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">PACKING ESSENTIALS</Heading>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-28">
@@ -205,7 +205,7 @@ export default function Support() {
       </div>
       </Container>
 
-      <Container className="bg-[#ECFAE5] pb-0">
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">
       FAQ
         </Heading>

@@ -19,10 +19,12 @@ import PopularPrograms1 from '@/public/images/popular_programs_1.webp'
 import PopularPrograms2 from '@/public/images/popular_programs_2.webp'
 import PopularPrograms3 from '@/public/images/popular_programs_3.webp'
 import PopularPrograms4 from '@/public/images/popular_programs_4.webp'
+import MarcusLim from '@/public/images/marcus_lim.png'
 import Container from '@/components/Layout/Container'
 import Sologan from '@/public/images/sologan.svg'
 import Heading from '@/components/Heading'
 import Button from '@/components/Button'
+import Link from 'next/link'
 
 const programs = [
   {
@@ -59,13 +61,13 @@ export default function Home() {
   return (
     <main>
               {/* Hero Section */}
-              <div className="relative h-screen md:max-h-[655px] bg-cover bg-no-repeat bg-center bg-[url('../public/images/cover.png')]">
+              <div className="relative h-[50vh] md:h-screen md:max-h-[655px] bg-cover bg-no-repeat bg-center bg-[url('../public/images/mobile_cover.webp')] md:bg-[url('../public/images/cover.png')]">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-          <div className="top-[10%] absolute px-3 md:px-0 z-1 flex flex-col items-center justify-center h-full w-full">
-            <Image src={Sologan} height={113} alt="reativity-activity-service" />
+          <div className="absolute px-5 md:px-[100px] z-1 flex flex-col items-center justify-center h-full w-full">
+            <Image src={Sologan} layout="responsive" alt="reativity-activity-service" />
 
-            <h2 className="text-[35px] font-[800] mt-3 mb-[77px] text-white text-center">
+            <h2 className="text-[16px] md:text-[35px] font-[800] mt-3 mb-[77px] text-white text-center">
               CONNECT CULTURES, CREATE CHANGE
             </h2>
 
@@ -79,39 +81,37 @@ export default function Home() {
       <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E]">OUR PROGRAMS</Heading>
 
-        <div className="text-[32px] font-[900] grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-7 text-white">
+        <div className="text-[14px] md:text-[32px] font-[900] grid grid-cols-1 gap-4 md:gap-6 text-white md:max-w-[600px] m-auto">
         {[
             {
               img: NatureCamp,
-              title: 'By Programs',
+              title: 'Nature Camps',
+              url: '/camps/nature'
             },
             {
               img: LeadershipCamp,
               title: 'Leadership Camps',
+              url: '/camps/leadership'
             },
             {
               img: SubjectCamp,
               title: 'Subject Camps',
-            },
-            {
-              img: undefined,
-              title: '//////',
+              url: '/camps/subject'
             },
           ].map((item, index) => (
-          <button key={index} className="relative h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]">
-            <div className="absolute start-0 flex p-5 items-center justify-center w-[105px] h-full border-2 border-white rounded-full">
+          <Link key={index} className="relative h-11 md:h-[105px] flex items-center justify-center gap-3 rounded-full bg-[#00712D]" href={item.url}>
+            <div className="absolute start-0 flex p-2 md:p-5 items-center justify-center w-11 md:w-[105px] h-full border-2 border-white rounded-full">
                 <Image src={item.img} layout="responsive" alt={item.title} />
             </div>
             
             {item.title}
-          </button>
+          </Link>
           ))}
         </div>
         </Container>
 
       {/* Popular Programs - Carousel */}
-      <section className="bg-[#00712D]">
-      <div className="py-20">
+      <Container className="bg-[#00712D] !px-0">
       <Heading color="text-white">POPULAR PROGRAMS</Heading>
 
         <Carousel list={programs} />
@@ -121,17 +121,16 @@ export default function Home() {
             View All 10+ Programs
           </Button>
         </div>
-        </div>
-      </section>
+      </Container>
 
       {/* CHOOSE YOUR FAVORITE PROGRAM */}
 
-      <Container className="bg-[#ECFAE5] pb-0">
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E]">
           CHOOSE YOUR FAVORITE PROGRAM
         </Heading>
 
-        <div className="flex md:flex-row flex-col justify-center md:gap-24 gap-6">
+        <div className="flex flex-row justify-center md:gap-24 gap-10">
         {[
             {
               img: ByPrograms,
@@ -142,11 +141,11 @@ export default function Home() {
               title: 'By Destinations',
             },
           ].map((item, index) => (
-            <div key={index} className="w-full max-w-[390px] bg-white border-2 border-[#00712D] rounded-[15px]">
-              <div className="w-full h-fill hover:opacity-30 flex flex-col items-center p-10 text-center cursor-pointer transition">
-                  <Image className="max-w-[120px] aspect-square" src={item.img} alt="By Programs" layout="responsive" />
+            <div key={index} className="w-full max-w-[390px] bg-white border-2 border-[#00712D] rounded-[10px] flex-1">
+              <div className="w-full h-full hover:opacity-30 flex flex-col items-center py-4 md:py-10 text-center cursor-pointer transition">
+                  <Image className="max-w-14 md:max-w-[120px] aspect-square" src={item.img} alt="By Programs" layout="responsive" />
 
-                <label className="font-[700] text-[24px] text-[#00712D] mt-6">{item.title}</label>
+                <label className="font-[700] text-[14px] md:text-[24px] text-[#00712D] mt-5">{item.title}</label>
               </div>
             </div>
           ))}
@@ -159,7 +158,7 @@ export default function Home() {
           WE'LL HANDLE YOUR TRIP FOR YOU
         </Heading>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-10 md:gap-x-6">
           {[
             {
               title: 'Flight Booking',
@@ -182,13 +181,13 @@ export default function Home() {
               description: "Handle reservations at selected hotels, prioritizing safety, comfort, and proximity to program venues or key attractions, tailored to the group's needs",
             },
           ].map((item, index) => (
-            <div key={index} className="flex items-center gap-6 flex-col md:flex-row">
-                <Image src={item.img} alt={item.title} layout="responsive" className="flex-1 max-w-[290px] w-full aspect-square rounded-[20px] object-cover" />
+            <div key={index} className="flex items-center gap-2.5 md:gap-6 flex-col md:flex-row">
+                <Image src={item.img} alt={item.title} layout="responsive" className="flex-1 w-full aspect-square rounded-[10px] object-cover" />
 
-              <div className="md:text-left text-center flex-1">
-                <h3 className="text-[24px] font-[900] mb-[25px] text-[#00712D]">{item.title}</h3>
+              <div className="text-left flex-1">
+                <h3 className="text-[18px] md:text-[24px] font-[900] mb-1.5 md:mb-6 text-[#00712D]">{item.title}</h3>
 
-                <p className="text-[18px] font-[600] text-[#00712D]">{item.description}</p>
+                <p className="text-[14px] md:text-[18px] font-[600] text-[#00712D]">{item.description}</p>
               </div>
             </div>
           ))}
@@ -199,38 +198,38 @@ export default function Home() {
       <Container className="bg-[#00712D]">
       <Heading color="text-white">WHERE WE TRAVEL</Heading>
 
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
-          <div className="grid grid-cols-1 gap-8">
-            <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
-              <Image src={WhereWeTravel1} alt="Travel 1" layout="fill" className="object-cover" />
-
-              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center">THAILAND</h2>
-            </div>
-
-            <div className="rounded-lg overflow-hidden relative w-full  h-[50vw] md:h-full">
-              <Image src={WhereWeTravel2} alt="Travel 2" layout="fill" className="object-cover" />
-
-              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center whitespace-break-spaces">{`VIETNAM\nHOIAN`}</h2>
-            </div>
-          </div>
-         
-            <div className="rounded-lg overflow-hidden relative w-full h-[100vw] md:h-[calc(40vw)]">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-2.5 md:gap-6 font-[900] text-[18px] md:text-[30px]">
+        <div className="md:order-2 rounded-lg overflow-hidden relative w-full h-[40vw] md:h-[calc(40vw)]">
               <Image src={WhereWeTravel3} alt="Travel 3" layout="fill" className="object-cover" />
 
-              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center whitespace-break-spaces">{`VIETNAM\nSAPA`}</h2>
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-center whitespace-break-spaces">{`VIETNAM\nSAPA`}</h2>
             </div>
 
-          <div className="grid grid-cols-1 gap-8">
-            <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-6">
+            <div className="rounded-lg overflow-hidden relative w-full h-[35vw] md:h-full">
+              <Image src={WhereWeTravel1} alt="Travel 1" layout="fill" className="object-cover" />
+
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  text-white text-center">THAILAND</h2>
+            </div>
+
+            <div className="rounded-lg overflow-hidden relative w-full h-[35vw] md:h-full">
+              <Image src={WhereWeTravel2} alt="Travel 2" layout="fill" className="object-cover" />
+
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-center whitespace-break-spaces">{`VIETNAM\nHOIAN`}</h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-6">
+            <div className="rounded-lg overflow-hidden relative w-full h-[35vw] md:h-full">
               <Image src={WhereWeTravel4} alt="Travel 4" layout="fill" className="object-cover" />
 
-              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center whitespace-break-spaces">{`VIETNAM\nDANANG`}</h2>
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-center whitespace-break-spaces">{`VIETNAM\nDANANG`}</h2>
             </div>
 
-            <div className="rounded-lg overflow-hidden relative w-full h-[50vw] md:h-full">
+            <div className="rounded-lg overflow-hidden relative w-full h-[35vw] md:h-full">
               <Image src={WhereWeTravel5} alt="Travel 5" layout="fill" className="object-cover" />
 
-              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-[900] text-[30px] text-white text-center">CHINA</h2>
+              <h2 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-center">CHINA</h2>
             </div>
           </div>
         </div>
@@ -242,55 +241,55 @@ export default function Home() {
           OUR FAVORITE TRAVELERS
         </Heading>
 
-        <div className="flex space-x-8 overflow-x-scroll no-scrollbar">
+        <div className="flex space-x-4 md:space-x-6 overflow-x-scroll no-scrollbar mx-[-20px] px-[20px] md:mx-[-100px] md:px-[100px]">
           {[
             {
               name: 'Marcus Lim\n(Singapore)',
               text: 'The trip offered an unparalleled real-world extension to our curriculum, providing students with deep insights into sustainable development and community engagement that simply cannot be replicated in a classroom setting.',
-              img: '/traveler1.jpg',
+              img: MarcusLim,
             },
             {
               name: 'Amir Hassan\n(Malaysia)',
               text: "We observed significant growth in our students' soft skills, including leadership, intercultural communication, and problem-solving abilities. Their initiative and perseverance, especially during project work, were truly impressive.",
-              img: '/traveler2.jpg',
+              img: MarcusLim,
             },
             {
               name: 'Wijaya\n(Indonesia)',
               text: 'The Trip is a life-changing experience. Getting to work directly with the local community and seeing the impact of my efforts was incredibly rewarding. I learned so much about myself and the world.',
-              img: '/traveler3.jpg',
+              img: MarcusLim,
             },
             {
               name: 'Kai\n(Singapore)',
               text: 'This trip was truly a transformative learning journey beyond classroom. Immersing myself in new cultures and academic disciplines, broadens my global perspective and understands culture.',
-              img: '/traveler3.jpg',
+              img: MarcusLim,
             },
             {
               name: 'Miya\n(Thailand)',
               text: `The trip perfectly blended exciting adventures with crucial environmental conservation efforts. I deeply understand the interconnectedness of ecosystems, which is something you can't fully grasp from a textbook.`,
-              img: '/traveler3.jpg',
+              img: MarcusLim,
             },
           ].map((item, index) => (
-            <div key={index} className="flex flex-col justify-between bg-white py-10 px-6 min-w-[397px]">
-              <p className="mb-6 text-[22px] text-[#00712D] font-[600]">{item.text}</p>
+            <div key={index} className="flex flex-col justify-between bg-white p-4 gap-4 md:gap-6 flex-1 min-w-[calc(100vw/1.7)] md:min-w-[calc(100vw/3.8)]">
+              <p className="text-[12px] md:text-[22px] text-[#00712D] font-[600]">{item.text}</p>
 
-              <div className="flex items-center gap-5">
-                <div className="min-w-16 min-h-16 md:min-w-[84px] md:min-h-[84px] relative rounded-full overflow-hidden border-4 border-[#00712D]">
-                  <Image src={item.img} alt={item.name} layout="fill" className="object-cover" />
-                </div>
+              <div className="flex items-center gap-2.5 md:gap-5">
+                <div className="relative w-[44px] min-w-[44px] h-[44px] md:min-w-[84px] md:h-[84px] rounded-full">
+                  <Image src={item.img} alt={item.name} className="absolute" layout="fill" />
+</div>
 
-                <div>
-                  <label className="font-[900] text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
+                <div className="flex-1">
+                  <label className="font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
 
-                  <div className="flex space-x-2.5">
-                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+                  <div className="flex space-x-1.5 md:space-x-2.5">
+                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
 
-                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
 
-                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
 
-                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
 
-                    <Image src={Star} alt='star' className="max-w-10 aspect-square" layout="responsive" />
+                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
                   </div>
                 </div>
               </div>

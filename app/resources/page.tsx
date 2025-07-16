@@ -13,7 +13,7 @@ export default function Resources() {
   return (
     <main>
       {/* ABOUT US */}
-      <Container className="bg-[#ECFAE5] pb-0">
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E] pt-20">
       MOST POPULAR ARTICLES
         </Heading>
@@ -42,7 +42,7 @@ export default function Resources() {
 ]} />
         </Container>
 
-        <Container className="bg-[#ECFAE5] pb-0">
+        <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">
       TRIP DIARIES
         </Heading>

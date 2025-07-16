@@ -31,7 +31,7 @@ export default function Gallery({ images }: GalleryProps) {
   };
 
   return (
-    <div className="relative w-full h-[530px] overflow-hidden">
+    <div className="relative w-full h-[145px] md:h-[532px] overflow-hidden">
       <div className="relative flex items-center justify-center h-full">
         {images.map((img, index) => (
           <div

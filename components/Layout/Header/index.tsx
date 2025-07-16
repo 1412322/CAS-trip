@@ -39,12 +39,12 @@ export default function Header() {
     }, []);
 
   return (
-    <header className={`fixed top-0 flex items-center justify-between h-[80px] z-[999] w-full transition-all duration-300 ${
+    <header className={`fixed top-0 flex items-center justify-between h-14 md:h-20 z-[999] w-full transition-all duration-300 ${
         scrolled ? 'bg-[#00712D80]' : ['/about-us', '/sustainability', '/support', '/resources'].includes(pathname) ? 'bg-[#00712D]' : 'bg-transparent'
       }`}>
-    <div className="m-auto w-full md:max-w-6xl flex justify-between items-center">
+    <div className="m-auto w-full px-5 md:px-[100px] flex justify-between items-center">
 
-    <Image src={Logo} alt="CAS-trip-logo" width={145} />
+    <Image src={Logo} alt="CAS-trip-logo" className="w-[68px] md:w-[145px]" />
 
     <nav className="space-x-[16px] hidden md:block text-white">
       <Link href="/" className="hover:underline hover:font-[700] font-[600] text-[16px]">
