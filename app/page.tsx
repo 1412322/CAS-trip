@@ -25,6 +25,7 @@ import Sologan from '@/public/images/sologan.svg'
 import Heading from '@/components/Heading'
 import Button from '@/components/Button'
 import Link from 'next/link'
+import Paragraph from '@/components/Paragraph'
 
 const programs = [
   {
@@ -158,7 +159,7 @@ export default function Home() {
           WE'LL HANDLE YOUR TRIP FOR YOU
         </Heading>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-10 md:gap-x-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-y-10 lg:gap-x-6">
           {[
             {
               title: 'Flight Booking',
@@ -187,7 +188,7 @@ export default function Home() {
               <div className="text-left flex-1">
                 <h3 className="text-[18px] md:text-[24px] font-[900] mb-1.5 md:mb-6 text-[#00712D]">{item.title}</h3>
 
-                <p className="text-[14px] md:text-[18px] font-[600] text-[#00712D]">{item.description}</p>
+                <Paragraph className="!text-left">{item.description}</Paragraph>
               </div>
             </div>
           ))}

@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '@/public/images/logo.svg'
+import Menu from '@/public/images/menu.svg'
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -46,7 +47,9 @@ export default function Header() {
 
     <Image src={Logo} alt="CAS-trip-logo" className="w-[68px] md:w-[145px]" />
 
-    <nav className="space-x-[16px] hidden md:block text-white">
+    <Image src={Menu} alt="CAS-trip-logo" className="lg:hidden" />
+
+    <nav className="space-x-[16px] hidden lg:block text-white">
       <Link href="/" className="hover:underline hover:font-[700] font-[600] text-[16px]">
         Home
       </Link>

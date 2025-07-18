@@ -1,6 +1,7 @@
 import Button from '@/components/Button'
 import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
+import Paragraph from '@/components/Paragraph'
 import Check from '@/public/images/check.svg'
 import CircleCheck from '@/public/images/circle_check.svg'
 import LeadershipCamps from '@/public/images/leadership_camps.svg'
@@ -19,17 +20,17 @@ export default function AboutUs() {
     <main>
       {/* ABOUT US */}
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E] pt-10 md:pt-20">
+      <Heading color="text-[#22C55E] pt-16 md:pt-20">
           ABOUT US
         </Heading>
 
-<p className="text-[#00712D] text-center text-[14px] md:text-[18px] font-[600]">
+<Paragraph>
 This website serves as a premier platform specializing in <b>Educational</b>, <b>Cultural</b>, and <b>Adventure</b> volunteer trips for international school students worldwide.
 <br/>
 Given on the spirit of established leaders in student travel, our platform is dedicated to helping young individuals put their <b>values into action</b> and facilitate profound youth changes.
 
 Through programs, students can <b>build real-world skills</b> and discover a deeper sense of purpose, transforming their journeys into <b>impactful contributions and learning experiences</b>.
-</p>
+</Paragraph>
         </Container>
 
         <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
@@ -37,7 +38,7 @@ Through programs, students can <b>build real-world skills</b> and discover a dee
       MEET OUR TEAM
         </Heading>
 
-<div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-x-10">
+<div className="flex overflow-x-auto no-scrollbar md:grid md:grid-cols-3 gap-5 md:gap-y-6 md:gap-x-10 mx-[-20px] px-5 md:mx-0 md:px-0">
 {[{
 img: MeetOurTeam1,
 title: 'Alisa Hester',
@@ -69,13 +70,25 @@ description: 'Former co-founder of opendoor varible Early staff Spotify and Clea
           subTitle: 'Founder & CEO',
           description: 'Former co-founder of opendoor varible Early staff Spotify and Clearbit',
           }].map((item, index) => (
-  <div key={index} className="relative">
+  <div key={index} className="relative group rounded-[20px] min-w-[70vw] md:min-w-full">
     <Image src={item.img} alt={item.title} />
+
+<div className="hidden group-hover:block group/profile overflow-hidden bg-[#FFFFFF99] absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6 shadow-[-4px_-4px_20px_0px_rgba(233,232,232,0.60)_inset] rounded-[20px] border-2 border-[#FFFFFF66]">
+  <div className="relative z-0 p-2.5 md:px-5">
+  <div className="absolute inset-0 backdrop-blur-md group-hover/profile:bg-white z-[-1]" />
+
+    <div className="text-[18px] font-[900] text-[#00712D] mb-2.5 md:mb-5">{item.title}</div>
+
+    <div className="text-[12px] md:text-[18px] font-[700] text-[#00712D]">{item.subTitle}</div>
+
+    <p className="text-[12px] md:text-[16px] font-[500] text-[#00712D]">{item.description}</p>
+</div>
+    </div>
   </div>
 ))}
 </div>
 
-<div className="mt-10 flex justify-center">
+<div className="mt-4 md:mt-10 flex justify-center">
 <Button>
 Meet All Our member
             </Button>
@@ -101,7 +114,9 @@ Meet All Our member
  
   <Image src={item.img} className="object-cover max-h-[152px] md:max-h-[290px] rounded-[10px] overflow-hidden flex-1" layout="responsive" alt={item.description} />
 
-  <p className="font-[600] text-[14px] md:text-[18px] text-[#00712D] flex-1">{item.description}</p>
+<div className="flex-1">
+  <Paragraph className="!text-left md:!text-center">{item.description}</Paragraph>
+  </div>
 </div>
 ))}
         </Container>
@@ -115,9 +130,9 @@ Meet All Our member
 
 <div className="absolute inset-0 bg-[#000] opacity-50 z-[-1]" />
 
-        <p className="font-[600] text-[14px] md:text-[18px] text-white text-center">
+        <Paragraph className="text-white">
         To be the leading initiative in Southeast Asia for inspiring and empowering a new generation of international students through unique and impactful educational travel programs. We envision creating a vibrant programs where diverse perspectives converge, a deep appreciation for the region's rich heritage and dynamic future is cultivated.
-        </p>
+        </Paragraph>
         </Container>
 
         {/* OUR CORE VALUE */}
@@ -126,9 +141,9 @@ Meet All Our member
       OUR CORE VALUE
         </Heading>
 
-        <p className="font-[600] text-[14px] md:text-[18px] text-[#00712D] text-center mb-6 md:mb-20">
+        <Paragraph className="mb-6 md:mb-20">
         We are dedicated to cultivating programs built upon foundational principles designed to empower every international student
-        </p>
+        </Paragraph>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-x-7 gap-y-5">
     {[
@@ -144,7 +159,7 @@ Meet All Our member
           <Image className="max-w-6 md:max-w-12 aspect-square rounded-full" src={CircleCheck} layout="responsive" alt={item.title} />
 
         <div className="text-left text-[#00712D] flex-1">
-          <div className="text-[14px] md:text-[24px] font-[900] mb-2.5">{item.title}</div>
+          <div className="text-[14px] md:text-[24px] font-[900] mb-1 md:mb-2.5">{item.title}</div>
 
           <div className="text-[12px] md:text-[18px] font-[600]">{item.description}</div>
         </div>
@@ -157,9 +172,9 @@ Meet All Our member
 <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">WHAT WE DO</Heading>
 
-      <p className="font-[600] text-[14px] md:text-[18px] text-[#00712D] text-center mb-4 md:mb-20">
+      <Paragraph className="mb-4 md:mb-20">
     We provide student travel programs to cultivate personal growth, leadership, and social impact, empowering students through a wide range of initiatives.
-  </p>
+  </Paragraph>
 
   <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-5">
     {[

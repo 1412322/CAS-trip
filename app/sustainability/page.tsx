@@ -1,6 +1,7 @@
 import Button from '@/components/Button'
 import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
+import Paragraph from '@/components/Paragraph'
 import CareerAndAcadamicEnhancement from '@/public/images/career_and_academic_enhancement.svg'
 import ContinuousImprovementAndAccountability1 from '@/public/images/continuous_improvement_and_accountability_1.png'
 import ContinuousImprovementAndAccountability2 from '@/public/images/continuous_improvement_and_accountability_2.png'
@@ -11,7 +12,6 @@ import PositiveCommunityAndEnvironmentalImpact2 from '@/public/images/positive_c
 import PositiveCommunityAndEnvironmentalImpact3 from '@/public/images/positive_community_&_environmental_impact_3.png'
 import SkillDevelopment from '@/public/images/skill_development.svg'
 import Sustainability1 from '@/public/images/sustainability_1.webp'
-import Sustainability2 from '@/public/images/sustainability_2.webp'
 import Image from 'next/image'
 
 export default function Sustainability() {
@@ -23,12 +23,12 @@ export default function Sustainability() {
       SUSTAINABILITY
         </Heading>
 
-<p className="text-[#00712D] text-center text-[14px] md:text-[18px] font-[600]">
+<Paragraph>
 Our commitment extends beyond facilitating meaningful volunteer experiences; it encompasses ensuring that our digital presence, our operations, and our projects contribute positively to the planet and its people for the long-term impact.
 <br/>
 <br/>
 The core of our mission is to promote volunteer programs that create genuine, lasting positive change. We carefully select partners and projects that deliver significant impact on both the community and the individual volunteer.
-</p>
+</Paragraph>
 
 <div className="relative mt-10 w-full">
 <Image className="w-2/4" src={Sustainability1} alt="" />
@@ -62,7 +62,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 <div className="flex-1 bg-[#00712D] h-full p-2.5 md:p-0 flex flex-col items-center justify-center text-center">
   <label className="font-[900] text-[14px] md:text-[24px] text-white mb-2.5 md:mb-6">{item.title}</label>
 
-  <p className="font-[600] text-[10px] md:text-[18px] text-white whitespace-break-spaces">{item.description}</p>
+  <Paragraph className="text-white whitespace-break-spaces">{item.description}</Paragraph>
   </div>
 </div>
 ))}
@@ -73,7 +73,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
       SELF-IMPACT ON STUDENTS
         </Heading>
 
-<div className="flex md:flex-row flex-col gap-6">
+<ul className="flex md:flex-row flex-col gap-6">
         {[{
   img: PersonalGrowth,
   title: 'PERSONAL GROWTH',
@@ -87,17 +87,17 @@ The core of our mission is to promote volunteer programs that create genuine, la
   title: 'CAREER & ACADEMIC ENHANCEMENT',
   description: 'Our programs combine with networking opportunities, significantly boosts resumes and university applications, opening doors for future academic and professional pursuits.',
 }].map((item, index) => (
-<div key={index} className="flex flex-col items-center flex-1">
-<div className="flex items-center justify-center rounded-full bg-[#00712D] w-[72px] h-[72px] md:w-28 md:h-28 p-6 mb-2.5 md:mb-6"><Image src={item.img} className="object-cover w-full h-full" layout="responsive" alt={item.description} /></div>
+<li key={index} className="flex flex-col items-center flex-1">
+<div className="flex items-center justify-center rounded-full bg-[#00712D] w-[72px] h-[72px] md:w-28 md:h-28 p-6 mb-2.5 md:mb-5"><Image src={item.img} className="object-cover w-full h-full" layout="responsive" alt={item.description} /></div>
 
 <div className="text-center">
-  <h3 className="font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-2.5 md:mb-6">{item.title}</h3>
+  <h3 className="font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-1 md:mb-4">{item.title}</h3>
 
-  <p className="font-[600] text-[12px] md:text-[18px] text-[#00712D] whitespace-break-spaces">{item.description}</p>
+  <Paragraph>{item.description}</Paragraph>
   </div>
-</div>
+</li>
 ))}
-</div>
+</ul>
         </Container>
 
         <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
@@ -125,7 +125,7 @@ The core of our mission is to promote volunteer programs that create genuine, la
 <div className="absolute inset-5 md:inset-6 flex flex-col items-center justify-center text-center">
   <h3 className="font-[900] text-[20px] text-[24px] text-white mb-2.5 md:mb-6">{item.title}</h3>
 
-  <p className="font-[600] text-[14px] text-[18px] text-white whitespace-break-spaces">{item.description}</p>
+  <Paragraph className="text-white whitespace-break-spaces">{item.description}</Paragraph>
   </div>
 </div>
 ))}
