@@ -50,22 +50,26 @@ export default function Header() {
     <Image src={Menu} alt="CAS-trip-logo" className="lg:hidden" />
 
     <nav className="space-x-[16px] hidden lg:block text-white">
-      <Link href="/" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/' ? 'underline font-[700]' : ''}`}>
         Home
       </Link>
 
-      <Link href="/about-us" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/about-us" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/about-us' ? 'underline font-[700]' : ''}`}>
         About Us
       </Link>
 {/* 
-      <Link href="#" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="#" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/' ? 'underline font-[700]' : ''}`}>
         Programs
       </Link> */}
 
                 {/* DROPDOWN */}
               
               <a className="relative" onMouseLeave={() => setActiveDropdown(null)}>
-            <button className="hover:underline hover:font-[700] font-[600] text-[16px]" onMouseEnter={() => toggleDropdown("programs")} onMouseDown={() => toggleDropdown("programs")}>Programs</button>
+            <button className="hover:underline hover:font-[700] font-[600] text-[16px]" onMouseEnter={() => toggleDropdown("programs")} onMouseDown={() => toggleDropdown("programs")}>
+            <Link href="/camps/nature" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${['/camps/nature', '/camps/leadership', '/camps/subject'].includes(pathname) ? 'underline font-[700]' : ''}`}>
+              Programs
+              </Link>
+              </button>
 
             {activeDropdown === "programs" && (
               <div ref={dropdownRef} className="absolute left-0 top-full pt-6">
@@ -93,15 +97,15 @@ export default function Header() {
               </ul></div>)}
               </a>
 
-      <Link href="/sustainability" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/sustainability" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/sustainability' ? 'underline font-[700]' : ''}`}>
         Sustainability
       </Link>
 
-      <Link href="/support" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/support" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/support' ? 'underline font-[700]' : ''}`}>
         Support
       </Link>
 
-      <Link href="/resources" className="hover:underline hover:font-[700] font-[600] text-[16px]">
+      <Link href="/resources" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/resources' ? 'underline font-[700]' : ''}`}>
         Resources
       </Link>
 
