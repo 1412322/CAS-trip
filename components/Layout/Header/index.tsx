@@ -64,11 +64,9 @@ export default function Header() {
 
                 {/* DROPDOWN */}
               
-              <a className="relative" onMouseLeave={() => setActiveDropdown(null)}>
+              <Link href="/camps/nature" className={`relative hover:underline hover:font-[700] font-[600] text-[16px] ${['/camps/nature', '/camps/leadership', '/camps/subject'].includes(pathname) ? 'underline font-[700]' : ''}`} onMouseLeave={() => setActiveDropdown(null)}>
             <button className="hover:underline hover:font-[700] font-[600] text-[16px]" onMouseEnter={() => toggleDropdown("programs")} onMouseDown={() => toggleDropdown("programs")}>
-            <Link href="/camps/nature" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${['/camps/nature', '/camps/leadership', '/camps/subject'].includes(pathname) ? 'underline font-[700]' : ''}`}>
               Programs
-              </Link>
               </button>
 
             {activeDropdown === "programs" && (
@@ -95,7 +93,7 @@ export default function Header() {
                   </Link>
                 </li>
               </ul></div>)}
-              </a>
+              </Link>
 
       <Link href="/sustainability" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/sustainability' ? 'underline font-[700]' : ''}`}>
         Sustainability
