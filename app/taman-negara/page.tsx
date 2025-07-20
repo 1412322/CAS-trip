@@ -202,6 +202,8 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
   <input id="faq" className="peer/faq hidden" type="radio" name="status" />
 
 {/* <div className="mb-10 flex justify-center"> */}
+<label className="inline-block w-[140px]" />
+
   <label htmlFor="accommodation" className="cursor-pointer w-fit inline py-1.5 px-2.5 items-center justify-center text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/accommodation:text-white peer-checked/accommodation:bg-[#00712D]">
     ACCOMMODATION
     </label>
@@ -217,6 +219,8 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
     <label htmlFor="faq" className="cursor-pointer w-fit inline py-1.5 px-2.5 items-center justify-center text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/faq:text-white peer-checked/faq:bg-[#00712D]">
     FAQ
     </label>
+
+    <label className="inline-block w-[140px]" />
 {/* </div> */}
 
 <div className="hidden peer-checked/accommodation:block border-b border-b-[#00712D]">
