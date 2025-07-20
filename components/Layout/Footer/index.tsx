@@ -21,7 +21,7 @@ export default function Footer() {
 
       <li><Link href="/about-us"><Paragraph className="text-white !text-left">About us</Paragraph></Link></li>
 
-      <li><Link href="/"><Paragraph className="text-white !text-left">News & Article</Paragraph></Link></li>
+      <li><Link href="/taman-negara"><Paragraph className="text-white !text-left">News & Article</Paragraph></Link></li>
 
       <li><Link href="/"><Paragraph className="text-white !text-left">Trip Diaries</Paragraph></Link></li>
     </ul>
