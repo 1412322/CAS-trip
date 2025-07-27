@@ -1,6 +1,7 @@
 import Button from '@/components/Button'
 import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
+import Paragraph from '@/components/Paragraph'
 import Slider from '@/components/Slider/page'
 import MostPopularArticles1 from '@/public/images/most_popular_articles_1.png'
 import MostPopularArticles2 from '@/public/images/most_popular_articles_2.png'
@@ -12,9 +13,9 @@ import Image from 'next/image'
 export default function Resources() {
   return (
     <main>
-      {/* ABOUT US */}
+      {/*  MOST POPULAR ARTICLES */}
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E] pt-20">
+      <Heading color="text-[#22C55E] pt-16 md:pt-20">
       MOST POPULAR ARTICLES
         </Heading>
 
@@ -74,22 +75,22 @@ export default function Resources() {
     thumbnail: "/videos/qa-thumb.png",
   },
 ].map((item, index) => (
-            <div key={index} className="flex flex-col md:flex-row md:items-center gap-28">
-              <div className="flex-1 border-2 border-[#00712D] rounded-[20px] w-full h-[355px] relative bg-white overflow-hidden">
-                <Image
+            <div key={index} className="flex flex-col md:flex-row md:items-center gap-2.5 md:gap-28">
+              <div className="flex-1 border-2 border-[#00712D] rounded-[10px] md:rounded-[20px] w-full min-h-[180px] md:min-h-[355px] relative bg-white overflow-hidden">
+                {/* <Image
                   src={item.thumbnail}
                   alt={item.title}
                   fill
                   className="object-contain"
-                />
+                /> */}
               </div>
 
               <div className="text-[#00712D] flex-1">
-                <h3 className="font-[900] text-[24px] mb-6">
+                <h3 className="font-[900] text-[14px] md:text-[24px] mb-1 md:mb-6">
                   {item.title}
                 </h3>
 
-                <p className="text-[18px] font-[600]">{item.description}</p>
+                <Paragraph className="!text-left">{item.description}</Paragraph>
               </div>
             </div>
           ))}

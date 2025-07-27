@@ -56,11 +56,7 @@ export default function TamanNegara() {
 <div className="absolute inset-0 bg-[#000] opacity-50 z-[-1]" />
 
         <Paragraph className="text-white">
-        Embark on a unique 7-day journey that seamlessly blends urban exploration, thrilling nature adventures, and authentic cultural immersion across Singapore and Malaysia. This program is designed for students seeking a dynamic experience that goes beyond the ordinary.
-
-Kick off in the vibrant city-state of Singapore, exploring its iconic landmarks. Then, transition to the lush natural beauty of Malaysia, delving into the serene landscapes of Janda Baik and the ancient wonders of Taman Negara.
-
-Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful cultural exchanges. It's a perfect blend of learning, adventure, and personal growth.
+        Experience a unique 7-day journey blending urban exploration, thrilling nature, and cultural immersion across Singapore and Malaysia. Discover Singapore's iconic landmarks before delving into Malaysia's serene landscapes and ancient wonders. Engage in hands-on challenges and cultural exchanges for a perfect blend of learning, adventure, and personal growth.
         </Paragraph>
 
         <div className="mt-10 flex justify-center">
@@ -75,7 +71,7 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
       HIGHLIGHTS
         </Heading>
 
-<ul className="grid grid-cols-1 md:grid-cols-3 gap-16">
+<ul className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
         {[{
   img: Highlights1,
   title: 'City-state of Singapore',
@@ -87,9 +83,9 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
   title: 'Outdoor challenges',
 }].map((item, index) => (
 <li key={index} className="flex flex-col items-center">
-<div className="flex items-center justify-center rounded-full w-full h-full"><Image src={item.img} className="object-cover w-full h-full" layout="responsive" alt="" /></div>
+<div className="flex items-center justify-center rounded-full w-full h-full"><Image src={item.img} className="object-cover max-w-60 md:max-w-full max-h-60 md:max-h-full" layout="responsive" alt="" /></div>
 
-<h3 className="font-[900] text-[14px] md:text-[24px] text-[#00712D] mt-10">{item.title}</h3>
+<h3 className="font-[900] text-[20px] md:text-[24px] text-[#00712D] mt-2.5 md:mt-10">{item.title}</h3>
 </li>
 ))}
 </ul>
@@ -127,12 +123,12 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
   title: 'Impact',
   description: 'Deepen knowledge\nSharpen soft skills',
 }].map((item, index) => (
-<li key={index} className="flex flex-col justify-start items-center space-y-2.5">
-<div className="flex items-center justify-center rounded-full w-[88px] h-[88px]"><Image src={item.img} className="object-cover w-full h-full" layout="responsive" alt="" /></div>
+<li key={index} className="flex flex-col justify-start items-center space-y-1 md:space-y-2.5">
+<div className="flex items-center justify-center rounded-full w-11 md:w-[88px] h-11 md:h-[88px]"><Image src={item.img} className="object-cover w-full h-full" layout="responsive" alt="" /></div>
 
-<div className="text-center text-[18px] font-[900] text-white">{item.title}</div>
+<div className="text-center text-[14px] md:text-[18px] font-[900] text-white">{item.title}</div>
 
-<div className="text-center text-[18px] font-[600] text-white break-spaces">{item.description}</div>
+<Paragraph className="text-white">{item.description}</Paragraph>
 </li>
 ))}
 </ul>
@@ -143,7 +139,7 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
       OUTCOMES
         </Heading>
 
-<div className="grid grid-cols-1 md:grid-cols-2 rounded-t-[10px] border border-[#00712D] overflow-hidden">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 rounded-t-[10px] border border-[#00712D] overflow-hidden">
 {[{
   title: 'Community Impact',
   contents: [
@@ -172,18 +168,20 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
 ]
 }].map((item, index) => (
 <div key={index} className="flex flex-col items-center flex-1 last:border-l last:border-[#00712D]">
-<div className="w-full text-white text-[32px] font-[800] text-center flex items-center justify-center bg-[#00712D] h-[76px]">{item.title}</div>
+<div className="w-full text-white text-[20px] md:text-[32px] font-[800] text-center flex items-center justify-center bg-[#00712D] h-10 md:h-[76px]">{item.title}</div>
 
-<ul className="py-8 px-10 text-[#00712D] flex-1">
+<ul className="py-6 md:py-8 px-2.5 md:px-10 text-[#00712D] flex-1">
   {item.contents.map((content, index) => (
-<li key={index} className="mb-10 last:mb-0">
+<li key={index} className="mb-2.5 md:mb-10 last:mb-0">
   <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+    <div className="relative w-4 md:w-5 aspect-square">
+  <Image src={Carret} alt="" layout="fill" />
+</div>
 
-  <div className="text-[24px] font-[900] mb-1.5">{content.title}</div>
+  <div className="text-[14px] md:text-[24px] font-[900] mb-1.5">{content.title}</div>
   </div>
 
-  <Paragraph className="ml-[30px] mb-1.5 !text-left">{content.description}</Paragraph>
+  <Paragraph className="ml-[26px] md:ml-[30px] mb-1.5 !text-left">{content.description}</Paragraph>
 </li>
   ))}
 </ul>
@@ -202,25 +200,25 @@ Engage in hands-on farm experiences, exciting outdoor challenges, and meaningful
   <input id="faq" className="peer/faq hidden" type="radio" name="status" />
 
 {/* <div className="mb-10 flex justify-center"> */}
-<label className="inline-block w-[140px]" />
+<label className="hidden md:inline-block w-[140px]" />
 
-  <label htmlFor="accommodation" className="cursor-pointer w-fit inline py-1.5 px-2.5 items-center justify-center text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/accommodation:text-white peer-checked/accommodation:bg-[#00712D]">
+  <label htmlFor="accommodation" className="cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/accommodation:text-white peer-checked/accommodation:bg-[#00712D]">
     ACCOMMODATION
     </label>
  
-  <label htmlFor="itinerary" className="cursor-pointer w-fit inline py-1.5 px-2.5 items-center justify-center text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/itinerary:text-white peer-checked/itinerary:bg-[#00712D]">
+  <label htmlFor="itinerary" className="cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/itinerary:text-white peer-checked/itinerary:bg-[#00712D]">
     ITINERARY
     </label>
 
-    <label htmlFor="general_note" className="cursor-pointer w-fit inline py-1.5 px-2.5 items-center justify-center text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/general_note:text-white peer-checked/general_note:bg-[#00712D]">
+    <label htmlFor="general_note" className="cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/general_note:text-white peer-checked/general_note:bg-[#00712D]">
     GENERAL NOTE
     </label>
 
-    <label htmlFor="faq" className="cursor-pointer w-fit inline py-1.5 px-2.5 items-center justify-center text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/faq:text-white peer-checked/faq:bg-[#00712D]">
+    <label htmlFor="faq" className="cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[10px] text-[#22C55E80] peer-checked/faq:text-white peer-checked/faq:bg-[#00712D]">
     FAQ
     </label>
 
-    <label className="inline-block w-[140px]" />
+    <label className="hidden md:inline-block w-[140px]" />
 {/* </div> */}
 
 <div className="hidden peer-checked/accommodation:block border-b border-b-[#00712D]">

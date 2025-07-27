@@ -15,30 +15,32 @@ import Transportation from '@/public/images/transportation.svg'
 import CircleCheck from '@/public/images/circle_check_2.svg'
 import Image from 'next/image'
 import "./styles.scss"
+import Paragraph from '@/components/Paragraph'
 
 export default function Support() {
   return (
     <main>
       {/* ABOUT US */}
-      <Container className="bg-[#ECFAE5] pt-40 pb-0 md:pb-0">
-      <Heading color="text-[#22C55E]">
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
+      <Heading color="text-[#22C55E] pt-16 md:pt-20">
           OVERVIEW
         </Heading>
 
-        <div className="flex flex-col md:flex-row items-center justify-center items-stretch">
+        <div className="grid grid-cols-2 md:grid-cols-3">
       <Image className="flex-1 w-full h-full object-cover" src={Overview1} alt="volunteer" layout="responsive" />
 
-    <div className="text-white bg-[#00712D] flex-1 p-6 flex flex-col items-center justify-center">
-      <p className="mb-5 text-[18px] font-[500]">This section provides essential information and resources to help you prepare, stay safe, and thrive during your volunteer trips.</p>
+    <div className="text-[8px] md:text-[18px] font-[600] text-white bg-[#00712D] flex-1 px-2.5 md:px-6 flex flex-col items-center justify-center">
+      <p>This section provides essential information and resources to help you prepare, stay safe, and thrive during your volunteer trips.
 
-      <ul className="text-[18px] font-[600]">
-        <li className="mb-5 flex items-center gap-2.5"><Image src={CircleCheck} width={16} height={16} alt="check-icon" /> Safety is the most priority of our criteria for both students, teachers and staff – without compromise.</li>
+      <ul>
+        <li className="my-4 md:my-5 flex items-center gap-1 md:gap-2.5"><div className="relative min-w-1.5 md:w-4 aspect-square"><Image src={CircleCheck} layout='fill' alt="check-icon" /></div>Safety is the most priority of our criteria for both students, teachers and staff – without compromise.</li>
 
-        <li className="flex items-center gap-2.5"><Image src={CircleCheck} width={16} height={16} alt="check-icon" /> All guides follow a comprehensive volunteer program assessed regularly.</li>
+        <li className="flex items-center gap-1 md:gap-2.5"><div className="relative min-w-1.5 md:w-4 aspect-square"><Image src={CircleCheck} layout='fill' alt="check-icon" /></div>All guides follow a comprehensive volunteer program assessed regularly.</li>
       </ul>
+      </p>
     </div>
 
-      <Image className="flex-1 w-full h-full object-cover" src={Overview2} alt="backpack" layout="responsive" />
+      <Image className="hidden md:block flex-1 w-full h-full object-cover" src={Overview2} alt="backpack" layout="responsive" />
   </div>
   </Container>
 
@@ -50,7 +52,7 @@ export default function Support() {
     We are committed to providing a secure and supportive environment for all our international students and our staffs.
   </p>
 
-  <div className="flex flex-col md:flex-row justify-center gap-6 mb-20">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 md:mb-20">
     {[
       {
         title: "Activities Development",
@@ -66,11 +68,11 @@ export default function Support() {
       },
     ].map((item, i) => (
       <div key={i} className="text-center">
-        <div className="font-[900] text-[24px] text-white mb-5 h-[52px] bg-[#00712D] flex items-center justify-center rounded-[10px]">
+        <div className="w-full font-[900] text-[20px] md:text-[24px] text-white h-10 md:h-[52px] bg-[#00712D] flex items-center justify-center rounded-[10px]">
           {item.title}
           </div>
 
-        <p className="text-[18px] font-[600] text-[#00712D]">{item.desc}</p>
+        {/* <p className="text-[18px] font-[600] text-[#00712D] mt-5">{item.desc}</p> */}
       </div>
     ))}
   </div>
@@ -78,13 +80,14 @@ export default function Support() {
 
   {/* HEALTH & SAFETY + VISA */}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
-    <div className="bg-[#00712D] p-6 rounded-[40px] flex flex-col item-center py-10 px-20">
-      <div className="font-[800] text-[32px] mb-6 text-center flex items-center justify-center gap-2.5">
-        <span className="rounded-full bg-white text-[#00712D] w-9 h-9 flex items-center justify-center">1</span> 
-      Health & Safety
+    <div className="bg-[#00712D] rounded-[20px] md:rounded-[40px] flex flex-col item-center px-1.5 py-8 md:py-10 md:px-20">
+      <div className="font-[800] text-[20px] md:text-[32px] mb-6 text-center flex items-center justify-center gap-2.5">
+        <span className="rounded-full bg-white text-[#00712D] w-5 md:w-9 h-5 md:h-9 flex items-center justify-center">1</span> 
+      <div>Health & Safety</div>
       </div>
 
-      <ul className="list-disc space-y-6 text-[18px] font-[600]">
+      <Paragraph className="!text-left text-white">
+      <ul className="list-disc list-inside space-y-4 md:space-y-6">
         <li>Health check updated 30 days before the tour departure. Find suggestions for physical preparation before the tour.</li>
 
         <li>Travel Insurance covering medical emergencies and personal liability.</li>
@@ -93,15 +96,17 @@ export default function Support() {
 
         <li>Stay hydrated in warm climates and follow local guidelines to prevent illness.</li>
       </ul>
+      </Paragraph>
     </div>
 
-    <div className="bg-[#00712D] p-6 rounded-[40px] flex flex-col item-center py-10 px-20">
-      <div className="font-[800] text-[32px] mb-6 text-center flex items-center justify-center gap-2.5">
-        <span className="rounded-full bg-white text-[#00712D] w-9 h-9 flex items-center justify-center">2</span> 
-        Visa Requirements
+    <div className="bg-[#00712D] rounded-[20px] md:rounded-[40px] flex flex-col item-center px-1.5 py-8 md:py-10 md:px-20">
+      <div className="font-[800] text-[20px] md:text-[32px] mb-6 text-center flex items-center justify-center gap-2.5">
+      <span className="rounded-full bg-white text-[#00712D] w-5 md:w-9 h-5 md:h-9 flex items-center justify-center">2</span> 
+        <div>Visa Requirements</div>
       </div>
 
-      <ul className="list-disc space-y-6 text-[18px] font-[600]">
+      <Paragraph className="!text-left text-white">
+      <ul className="list-disc list-inside space-y-4 md:space-y-6">
         <li>Obtaining the correct visa for the destination country is the  responsibility of the participant and checking the latest visa requirements for  nationality entering in advance of your departure date.
           <br />
           <div className="font-[400] italic mt-6 ml-[-16px]">We do not provide visas or visas on arrival (VOA), please plan for this independently from now on.</div>
@@ -109,31 +114,26 @@ export default function Support() {
 
         <li>Updated on the latest weather forecast for local places to have the best luggage preparation for your adventure ahead.</li>
       </ul>
+      </Paragraph>
     </div>
   </div>
   </Container>
 
   {/* LUGGAGE SPLIT */}
   <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E]">YOUR LUGGAGE WILL BE DIVIDED INTO 3 PARTS:</Heading>
+      <Heading color="text-[#22C55E]">LUGGAGE: 2 PARTS</Heading>
       
-  <div className="text-[#00712D] text-[18px] font-[600] space-y-10 relative before:border-2 before:border-[#00712D] before:absolute before:top-0 before:left-[8px] before:h-full">
+  <div className="text-[#00712D] text-[18px] font-[600] space-y-4 md:space-y-10 relative md:before:border-2 md:before:border-[#00712D] md:before:absolute md:before:top-0 md:before:left-[8px] md:before:h-full">
     <div className="flex items-start gap-3">
-      <div className="bg-[#00712D] w-5 h-5 rounded-full" />
+      <div className="hidden md:block bg-[#00712D] w-5 h-5 rounded-full" />
 
-      <p className="flex-1"><b className="font-[800]">A 15-20L backpack</b> containing daily and essential clothes and personal belongings. For certain multi-day treks, our support team assists these bags to project sites.</p>
+      <Paragraph className="md:!text-left flex-1"><b className="font-[800]">A 15-20L backpack</b> containing daily and essential clothes and personal belongings.</Paragraph>
     </div>
 
-    <div className="flex items-start gap-3">
-    <div className="bg-[#00712D] w-5 h-5 rounded-full" />
+    <div className="flex items-start gap-3 relative md:after:border-2 md:after:border-[#ECFAE5] md:after:absolute md:after:left-[8px] md:after:h-full z-0 md:after:z-[-1]">
+    <div className="hidden md:block bg-[#00712D] w-5 h-5 rounded-full" />
       
-      <p className="flex-1">Any <b className="font-[800]" >unnecessary luggage</b> can be safely stored in our designated base camp or program office at the start of the journey.</p>
-    </div>
-
-    <div className="flex items-start gap-3 relative after:border-2 after:border-[#ECFAE5] after:absolute after:left-[8px] after:h-full z-0 after:z-[-1]">
-    <div className="bg-[#00712D] w-5 h-5 rounded-full" />
-
-      <p className="flex-1"><b className="font-[800]">Prepare a 20L dry backpack</b> for extensive programs, multi-day community stays (common in Eco-Adventure, Critical Issues, Community Programs).</p>
+      <Paragraph className="md:!text-left flex-1">Any <b className="font-[800]" >unnecessary luggage</b> can be safely stored in base camp or program office.</Paragraph>
     </div>
   </div>
   </Container>
@@ -141,64 +141,64 @@ export default function Support() {
   <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">PACKING ESSENTIALS</Heading>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28">
 
 <div className="flex flex-col items-center">
-      <div className="text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[24px] font-[900] h-14 px-2.5 mb-9 rounded-[10px]">What you need to bring</div>
+      <div className="text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What you need to bring</div>
 
-      <ul className="space-y-5 text-[18px] font-[600] text-[#00712D]">
-        <li className="flex gap-6 items-center">
-          <Image src={Clothing} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+      <ul className="space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
+        <li className="flex gap-2.5 md:gap-6 items-center">
+          <Image src={Clothing} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Clothing:</b> Lightweight clothing suitable for warm climates and physical activity.</p>
+          <Paragraph className="!text-left">Lightweight clothing suitable for warm climates and physical activity.</Paragraph>
         </li>
 
-        <li className="flex gap-6 items-center">
-        <Image src={Footwear} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+        <li className="flex gap-2.5 md:gap-6 items-center">
+        <Image src={Footwear} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Footwear:</b> Walking shoes for daily activities.</p>
+          <Paragraph className="!text-left">Walking shoes for daily activities.</Paragraph>
         </li>
 
-        <li className="flex gap-6 items-center">
-        <Image src={Accessories} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+        <li className="flex gap-2.5 md:gap-6 items-center">
+        <Image src={Accessories} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Accessories: </b> Water bottle, hat, sunglasses, sunscreen, repellent.</p>
+          <Paragraph className="!text-left">Water bottle, hat, sunglasses, sunscreen, repellent.</Paragraph>
         </li>
 
-        <li className="flex gap-6 items-center">
-        <Image src={Documents} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+        <li className="flex gap-2.5 md:gap-6 items-center">
+        <Image src={Documents} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Documents:</b> Passport & Visa, Flight tickets, Emergency contact information (physical copy).</p>
+          <Paragraph className="!text-left">Passport & Visa, Flight tickets, Emergency contact information (physical copy).</Paragraph>
         </li>
       </ul>
       </div>
 
       <div className="flex flex-col items-center">
-      <div className="text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[24px] font-[900] h-14 px-2.5 mb-9 rounded-[10px]">What We Provide</div>
+      <div className="text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What We Provide</div>
 
-      <ul className="space-y-5 text-[18px] font-[600] text-[#00712D]">
-        <li className="flex gap-6 items-center">
-          <Image src={SupportIcon} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+      <ul className="space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
+        <li className="flex gap-2.5 md:gap-6 items-center">
+          <Image src={SupportIcon} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Support:</b> On-call support throughout the program for peace of mind.</p>
+          <Paragraph className="!text-left">On-call support throughout the program for peace of mind.</Paragraph>
         </li>
 
-        <li className="flex gap-6 items-center">
-        <Image src={Transportation} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+        <li className="flex gap-2.5 md:gap-6 items-center">
+        <Image src={Transportation} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Transportation:</b> Providing transportation between locations.</p>
+          <Paragraph className="!text-left">Providing transportation between locations.</Paragraph>
         </li>
 
-        <li className="flex gap-6 items-center">
-        <Image src={Meals} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+        <li className="flex gap-2.5 md:gap-6 items-center">
+        <Image src={Meals} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Meals:</b> Breakfast, lunch, and dinner throughout your stay.</p>
+          <Paragraph className="!text-left">Breakfast, lunch, and dinner throughout your stay.</Paragraph>
         </li>
 
-        <li className="flex gap-6 items-center">
-        <Image src={Lodging} className="max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+        <li className="flex gap-2.5 md:gap-6 items-center">
+        <Image src={Lodging} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <p><b className="font-[800]">Lodging:</b> All nights of comfortable accommodation will be provided.</p>
+          <Paragraph className="!text-left">All nights of comfortable accommodation will be provided.</Paragraph>
         </li>
       </ul>
       </div>

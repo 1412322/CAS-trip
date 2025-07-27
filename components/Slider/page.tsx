@@ -24,14 +24,14 @@ export default function Slider({ articles}: SliderProps) {
       <div>
         <div
           ref={scrollRef}
-          className="flex gap-7 overflow-x-auto no-scrollbar"
+          className="flex gap-3 md:gap-7 overflow-x-auto no-scrollbar mx-[-20px] px-5 md:mx-[-100px] md:px-[100px]"
         >
           {articles.map((item, idx) => (
             <div
               key={idx}
-              className="min-w-[340px] rounded-[20px] overflow-hidden"
+              className="min-w-[150px] md:min-w-[340px] rounded-[10px] md:rounded-[20px] overflow-hidden"
             >
-              <div className="h-[356px] relative">
+              <div className="h-[156px] md:h-[356px] relative">
                 <Image
                   src={item.img}
                   alt={item.title}
@@ -40,7 +40,7 @@ export default function Slider({ articles}: SliderProps) {
                 />
               </div>
 
-              <div className="bg-[#00712D] text-white text-[18px] p-4 text-center font-[900] h-32 flex items-center justify-center whitespace-break-spaces">
+              <div className="bg-[#00712D] text-white text-[8px] md:text-[18px] p-4 text-center font-[900] h-14 md:h-32 flex items-center justify-center whitespace-break-spaces">
                 {item.title}
               </div>
             </div>
@@ -48,10 +48,10 @@ export default function Slider({ articles}: SliderProps) {
         </div>
 
         {/* Navigation buttons */}
-        <div className="flex justify-center gap-4 mt-6">
-  <Image className="aspect-square max-w-[50px] cursor-pointer" src={ArrowLeft} layout="responsive" alt="arrow-left-icon"             onClick={() => scroll('left')}/>
+        <div className="flex justify-end md:justify-center gap-4 mt-6">
+  <Image className="aspect-square max-w-6 md:max-w-[50px] cursor-pointer" src={ArrowLeft} layout="responsive" alt="arrow-left-icon"             onClick={() => scroll('left')}/>
     
-<Image className="aspect-square max-w-[50px] cursor-pointer" src={ArrowRight} layout="responsive" alt="arrow-left-icon"    onClick={() => scroll('right')}/>
+<Image className="aspect-square max-w-6 md:max-w-[50px] cursor-pointer" src={ArrowRight} layout="responsive" alt="arrow-left-icon"    onClick={() => scroll('right')}/>
         </div>
       </div>
   );
