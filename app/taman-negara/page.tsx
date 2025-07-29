@@ -222,12 +222,8 @@ export default function TamanNegara() {
 {/* </div> */}
 
 <div className="hidden peer-checked/accommodation:block border-b border-b-[#00712D]">
-<Container className="bg-[#ECFAE5] pt-10 md:pt-10">
-        <Paragraph className="mb-10 !text-left">
-        During your journey with us, you'll experience a thoughtfully curated selection of accommodations, designed to provide comfort, safety, and unique insights into your surroundings.
-        </Paragraph>
-
-        <div className="text-[24px] font-[900] text-[#00712D] mb-1.5">
+<Container className="bg-[#ECFAE5] !p-2.5 md:pt-10">
+        <div className="text-[18px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
         Janda Baik Stay
         </div>
 
@@ -235,7 +231,7 @@ export default function TamanNegara() {
         Enjoy a comfortable and immersive stay at a well-situated resort in the Janda Baik area for the majority of your program. This provides a serene base amidst nature, offering a relaxing environment after your adventurous days. Specific details regarding rooming and facilities will be provided upon confirmation.
         </Paragraph>
 
-        <div className="text-[24px] font-[900] text-[#00712D] mb-1.5">
+        <div className="text-[18px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
         Immersive Community Experience
         </div>
 
@@ -254,12 +250,6 @@ export default function TamanNegara() {
 <li>Departure to Kuala Lumpur.</li>
         </ul>
         </Paragraph>
-
-        <div className="text-[24px] font-[900] text-[#00712D] mb-1.5">
-        Comfortable Departure
-        </div>
-
-        <Paragraph className="mb-10 !text-left list-inside">The program culminates with students returning to Kuala Lumpur or Singapore.</Paragraph>
         </Container>
         </div>
 
@@ -302,20 +292,18 @@ export default function TamanNegara() {
           </Container></div>
 
         <div className="hidden peer-checked/general_note:block border-b border-b-[#00712D]">
-        <Container className="bg-[#ECFAE5] pt-10 md:pt-10">
-          <Paragraph className="mb-8">Here is a detailed packing list for your time in across Singapore and Malaysia. Packing the right gear is the first step to an incredible travel experience.</Paragraph>
- 
+        <Container className="bg-[#ECFAE5] !p-2.5 pt-10 md:pt-10">
       <Heading color="text-[#22C55E]">
       WHAT YOU NEED TO BRING
         </Heading>
 
         <Paragraph>
-        <ul className="py-8 px-10 text-[#00712D] flex-1">
+        <ul className="p-5 md:py-8 md:px-10 text-[#00712D] flex-1">
 <li className="mb-10 last:mb-0">
   <div className="flex items-center gap-2.5">
   <Image src={Carret} alt="" width={20} />
 
-  <div className="text-[24px] font-[900] mb-1.5">Backpack</div>
+  <div className="text-[18px] md:text-[24px] font-[900] mb-1.5">Backpack</div>
   </div>
 
   <Paragraph className="ml-[30px] mb-1.5 !text-left">
@@ -333,7 +321,7 @@ export default function TamanNegara() {
   <div className="flex items-center gap-2.5">
   <Image src={Carret} alt="" width={20} />
 
-  <div className="text-[24px] font-[900] mb-1.5">Essential Documents</div>
+  <div className="text-[18px] md:text-[24px] font-[900] mb-1.5">Essential Documents</div>
   </div>
 
   <Paragraph className="ml-[30px] mb-1.5 !text-left">
@@ -353,7 +341,7 @@ export default function TamanNegara() {
   <div className="flex items-center gap-2.5">
   <Image src={Carret} alt="" width={20} />
 
-  <div className="text-[24px] font-[900] mb-1.5">Personal Daypack</div>
+  <div className="text-[18px] md:text-[24px] font-[900] mb-1.5">Personal Daypack</div>
   </div>
 
   <Paragraph className="ml-[30px] mb-1.5 !text-left">

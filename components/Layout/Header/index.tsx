@@ -86,6 +86,8 @@ export default function Header() {
                   <Link href="/camps/leadership" className="block px-4 py-2 hover:bg-[#00712D1A]">
                     Leadership Camps
                   </Link>
+
+                  <Link href="/taman-negara" className="text-[18px] font-[700] mx-8 mt-1">Taman Negara</Link>
                 </li>
                 <li>
                   <Link href="/camps/community" className="block px-4 py-2 hover:bg-[#00712D1A]">

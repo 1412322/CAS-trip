@@ -270,7 +270,7 @@ export default function Home() {
               img: MarcusLim,
             },
           ].map((item, index) => (
-            <div key={index} className="flex flex-col justify-between bg-white p-4 gap-4 md:gap-6 flex-1 min-w-[calc(100vw/1.7)] md:min-w-[calc(100vw/3.8)]">
+            <div key={index} className="flex flex-col justify-between bg-white p-3.5 md:px-7 md:py-9 gap-4 md:gap-6 flex-1 min-w-[calc(100vw/1.7)] md:min-w-[calc(100vw/3.8)]">
               <p className="text-[12px] md:text-[22px] text-[#00712D] font-[600]">{item.text}</p>
 
               <div className="flex items-center gap-2.5 md:gap-5">
@@ -279,18 +279,18 @@ export default function Home() {
 </div>
 
                 <div className="flex-1">
-                  <label className="font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
+                  <label className="break-all font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
 
-                  <div className="flex space-x-1.5 md:space-x-2.5">
-                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
+                  <div className="grid grid-cols-5 gap-1.5 md:gap-2.5">
+                    <Image src={Star} alt='star' className="w-full min-w-5 max-w-10 aspect-square" />
 
-                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
+                    <Image src={Star} alt='star' className="w-full min-w-5 max-w-10 aspect-square" />
 
-                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
+                    <Image src={Star} alt='star' className="w-full min-w-5 max-w-10 aspect-square" />
 
-                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
+                    <Image src={Star} alt='star' className="w-full min-w-5 max-w-10 aspect-square" />
 
-                    <Image src={Star} alt='star' className="w-[calc(100%/5)] aspect-square" />
+                    <Image src={Star} alt='star' className="w-full min-w-5 max-w-10 aspect-square" />
                   </div>
                 </div>
               </div>

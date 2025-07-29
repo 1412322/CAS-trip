@@ -53,25 +53,25 @@ export default function Resources() {
   {
     title: "A Week Teaching English in Rural Vietnam",
     description:
-      "Let’s watch our  in vibrant local culture and make a real difference by teaching English in rural Vietnamese communities. See how we bring joy and new opportunities to students, guided by our well-organized program.",
+      "See how we bring joy and meaningful new opportunities to students.",
     thumbnail: "/videos/vy-thumb.png", // Replace with your video/image path
   },
   {
     title: "Helping a Community Center in Vietnam\nThe Perfect Journey",
     description:
-      "Discover the power of collective effort! This video shows our dedicated teams working alongside local communities in Vietnam to build and support essential community centers, making positive changes together.",
+      "Discover the power of teamwork in supporting alongside local communities in Vietnam.",
     thumbnail: "/videos/community-thumb.png",
   },
   {
     title: "Meet Our Journey at  School in Thailand",
     description:
-      "Join us to see students’ heartwarming connections with the bright, eager children at a special school in Thailand. Witness the joy and progress coming from our genuine interaction and support.",
+      "Join us to see students’ heartwarming connections with the bright, eager children at a special school in Thailand.",
     thumbnail: "/videos/thailand-thumb.png",
   },
   {
     title: "Q&A Sessions with Our students",
     description:
-      "Want to know what our trips are really like? Hear directly from our incredible students as they share their honest experiences, personal growth, and the impact they've made on our trip programs.",
+      "Directly listen to our incredible students sharing experience and personal growth.",
     thumbnail: "/videos/qa-thumb.png",
   },
 ].map((item, index) => (

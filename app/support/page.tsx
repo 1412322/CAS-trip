@@ -13,8 +13,8 @@ import Overview2 from '@/public/images/overview_2.webp'
 import SupportIcon from '@/public/images/support.svg'
 import Transportation from '@/public/images/transportation.svg'
 import CircleCheck from '@/public/images/circle_check_2.svg'
+import Tag from '@/public/images/tag.svg'
 import Image from 'next/image'
-import "./styles.scss"
 import Paragraph from '@/components/Paragraph'
 
 export default function Support() {
@@ -27,7 +27,7 @@ export default function Support() {
         </Heading>
 
         <div className="grid grid-cols-2 md:grid-cols-3">
-      <Image className="flex-1 w-full h-full object-cover" src={Overview1} alt="volunteer" layout="responsive" />
+      <Image className="flex-1 w-full h-full object-cover" src={Overview1} alt="volunteer" />
 
     <div className="text-[8px] md:text-[18px] font-[600] text-white bg-[#00712D] flex-1 px-2.5 md:px-6 flex flex-col items-center justify-center">
       <p>This section provides essential information and resources to help you prepare, stay safe, and thrive during your volunteer trips.
@@ -40,7 +40,7 @@ export default function Support() {
       </p>
     </div>
 
-      <Image className="hidden md:block flex-1 w-full h-full object-cover" src={Overview2} alt="backpack" layout="responsive" />
+      <Image className="hidden md:block flex-1 w-full h-full object-cover" src={Overview2} alt="backpack" />
   </div>
   </Container>
 
@@ -52,7 +52,7 @@ export default function Support() {
     We are committed to providing a secure and supportive environment for all our international students and our staffs.
   </p>
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 md:mb-20">
+  <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-10 md:mb-20">
     {[
       {
         title: "Activities Development",
@@ -68,8 +68,11 @@ export default function Support() {
       },
     ].map((item, i) => (
       <div key={i} className="text-center">
-        <div className="w-full font-[900] text-[20px] md:text-[24px] text-white h-10 md:h-[52px] bg-[#00712D] flex items-center justify-center rounded-[10px]">
-          {item.title}
+        <div className="z-0 relative w-full h-[42px] md:h-[52px] flex items-center justify-center">
+          <Image
+  className="object-contain w-full h-full" src={Tag} fill alt="" />
+
+          <div className="font-[900] text-[20px] md:text-[24px] text-white z-[1]">{item.title}</div>
           </div>
 
         {/* <p className="text-[18px] font-[600] text-[#00712D] mt-5">{item.desc}</p> */}
@@ -81,7 +84,7 @@ export default function Support() {
   {/* HEALTH & SAFETY + VISA */}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
     <div className="bg-[#00712D] rounded-[20px] md:rounded-[40px] flex flex-col item-center px-1.5 py-8 md:py-10 md:px-20">
-      <div className="font-[800] text-[20px] md:text-[32px] mb-6 text-center flex items-center justify-center gap-2.5">
+      <div className="font-[800] text-[20px] md:text-[32px] mb-2.5 md:mb-6 text-center flex items-center justify-center gap-2.5">
         <span className="rounded-full bg-white text-[#00712D] w-5 md:w-9 h-5 md:h-9 flex items-center justify-center">1</span> 
       <div>Health & Safety</div>
       </div>
@@ -100,7 +103,7 @@ export default function Support() {
     </div>
 
     <div className="bg-[#00712D] rounded-[20px] md:rounded-[40px] flex flex-col item-center px-1.5 py-8 md:py-10 md:px-20">
-      <div className="font-[800] text-[20px] md:text-[32px] mb-6 text-center flex items-center justify-center gap-2.5">
+      <div className="font-[800] text-[20px] md:text-[32px] mb-2.5 md:mb-6 text-center flex items-center justify-center gap-2.5">
       <span className="rounded-full bg-white text-[#00712D] w-5 md:w-9 h-5 md:h-9 flex items-center justify-center">2</span> 
         <div>Visa Requirements</div>
       </div>
@@ -109,7 +112,7 @@ export default function Support() {
       <ul className="list-disc list-inside space-y-4 md:space-y-6">
         <li>Obtaining the correct visa for the destination country is the  responsibility of the participant and checking the latest visa requirements for  nationality entering in advance of your departure date.
           <br />
-          <div className="font-[400] italic mt-6 ml-[-16px]">We do not provide visas or visas on arrival (VOA), please plan for this independently from now on.</div>
+          <div className="font-[400] italic mt-6">We do not provide visas or visas on arrival (VOA), please plan for this independently from now on.</div>
         </li>
 
         <li>Updated on the latest weather forecast for local places to have the best luggage preparation for your adventure ahead.</li>
@@ -123,7 +126,7 @@ export default function Support() {
   <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">LUGGAGE: 2 PARTS</Heading>
       
-  <div className="text-[#00712D] text-[18px] font-[600] space-y-4 md:space-y-10 relative md:before:border-2 md:before:border-[#00712D] md:before:absolute md:before:top-0 md:before:left-[8px] md:before:h-full">
+  <div className="md:max-w-4xl md:m-auto text-[#00712D] text-[18px] font-[600] space-y-4 md:space-y-10 relative md:before:border-2 md:before:border-[#00712D] md:before:absolute md:before:top-0 md:before:left-[8px] md:before:h-full">
     <div className="flex items-start gap-3">
       <div className="hidden md:block bg-[#00712D] w-5 h-5 rounded-full" />
 
@@ -141,64 +144,64 @@ export default function Support() {
   <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">PACKING ESSENTIALS</Heading>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28 md:max-w-4xl md:m-auto">
 
 <div className="flex flex-col items-center">
-      <div className="text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What you need to bring</div>
+      <div className="w-full text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What you need to bring</div>
 
-      <ul className="space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
+      <ul className="w-full space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
         <li className="flex gap-2.5 md:gap-6 items-center">
           <Image src={Clothing} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">Lightweight clothing suitable for warm climates and physical activity.</Paragraph>
+          <Paragraph className="!text-left">Lightweight clothing.</Paragraph>
         </li>
 
         <li className="flex gap-2.5 md:gap-6 items-center">
         <Image src={Footwear} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">Walking shoes for daily activities.</Paragraph>
+          <Paragraph className="!text-left">Comfortable walking shoes.</Paragraph>
         </li>
 
         <li className="flex gap-2.5 md:gap-6 items-center">
         <Image src={Accessories} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">Water bottle, hat, sunglasses, sunscreen, repellent.</Paragraph>
+          <Paragraph className="!text-left">Sunscreen, hat, water bottle and any accessories.</Paragraph>
         </li>
 
         <li className="flex gap-2.5 md:gap-6 items-center">
         <Image src={Documents} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">Passport & Visa, Flight tickets, Emergency contact information (physical copy).</Paragraph>
+          <Paragraph className="!text-left">Documents: Passport, visa, tickets, contacts.</Paragraph>
         </li>
       </ul>
       </div>
 
       <div className="flex flex-col items-center">
-      <div className="text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What We Provide</div>
+      <div className="w-full text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What We Provide</div>
 
-      <ul className="space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
+      <ul className="w-full space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
         <li className="flex gap-2.5 md:gap-6 items-center">
           <Image src={SupportIcon} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">On-call support throughout the program for peace of mind.</Paragraph>
+          <Paragraph className="!text-left">On-call support.</Paragraph>
         </li>
 
         <li className="flex gap-2.5 md:gap-6 items-center">
         <Image src={Transportation} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">Providing transportation between locations.</Paragraph>
+          <Paragraph className="!text-left">Transportation between locations.</Paragraph>
         </li>
 
         <li className="flex gap-2.5 md:gap-6 items-center">
         <Image src={Meals} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">Breakfast, lunch, and dinner throughout your stay.</Paragraph>
+          <Paragraph className="!text-left">All meals provided.</Paragraph>
         </li>
 
         <li className="flex gap-2.5 md:gap-6 items-center">
         <Image src={Lodging} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
 
-          <Paragraph className="!text-left">All nights of comfortable accommodation will be provided.</Paragraph>
+          <Paragraph className="!text-left">Comfortable lodging provided.</Paragraph>
         </li>
       </ul>
       </div>

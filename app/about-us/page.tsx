@@ -25,11 +25,9 @@ export default function AboutUs() {
         </Heading>
 
 <Paragraph>
-This website serves as a premier platform specializing in <b>Educational</b>, <b>Cultural</b>, and <b>Adventure</b> volunteer trips for international school students worldwide.
-<br/>
-Given on the spirit of established leaders in student travel, our platform is dedicated to helping young individuals put their <b>values into action</b> and facilitate profound youth changes.
-
-Through programs, students can <b>build real-world skills</b> and discover a deeper sense of purpose, transforming their journeys into <b>impactful contributions and learning experiences</b>.
+This website serves as a premier platform specializing in <b>Creativity, Activity and Service volunteer trips</b> for international school students worldwide.
+<br/><br/>
+Given on the spirit of established leaders in student travel, our platform is dedicated to helping young individuals put their values into action and facilitate profound youth changes.
 </Paragraph>
         </Container>
 
@@ -102,20 +100,22 @@ Meet All Our member
 
 {[{
   img: OurStory1,
-  description: 'We began its pioneering work in adventure volunteer trips. The inaugural expedition saw a small cohort of students from a renowned international school venture into the remote area.\nThese early pioneers navigated rugged terrain in specialized vehicles, embarking on month-long, self-sufficient journeys where they lived off the land and exchanged goods with indigenous communities for essential provisions. This was truly a groundbreaking form of experiential education.',
+  description: `<b>Experience</b> groundbreaking adventure volunteer trips with Youth Ambassadors. <b>Ignite students' potential</b> to make a tangible difference in remote regions.`,
 }, {
   img: OurStory2,
-  description: 'The spirit of these transformative voyages endures to this day. For over three decades, we has empowered young people to actively engage with the world and connect deeply with its diverse cultures.',
+  description: `Our mission: <b>empowering</b> young people to truly engage with the world. <b>Connect</b> deeply with diverse cultures and <b>unlock</b> your potential for global impact.`,
 }, {
   img: OurStory3,
-  description: 'Now operating across more than 25 countries, with a dedicated team of over 40 full-time staff and hundreds of seasonal field leaders, our approach has evolved. Our fundamental purpose remains steadfast: equipping students to foster meaningful, positive change in communities globally.',
+  description: `We're expanding across <b>Asia countries</b>, equipping students to create meaningful, <b>positive change</b> in communities worldwide.`,
 }].map((item, index) => (
-<div key={index} className={`flex flex-col items-center gap-2.5 md:gap-6 mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+<div key={index} className={`flex flex-col items-center gap-2.5 md:gap-6 mb-8 md:mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
  
   <Image src={item.img} className="object-cover max-h-[152px] md:max-h-[290px] rounded-[10px] overflow-hidden flex-1" layout="responsive" alt={item.description} />
 
 <div className="flex-1">
-  <Paragraph className="!text-left md:!text-center">{item.description}</Paragraph>
+  <Paragraph className="!text-left md:!text-center">
+    <p dangerouslySetInnerHTML={{ __html: item.description }} />
+    </Paragraph>
   </div>
 </div>
 ))}
@@ -131,7 +131,7 @@ Meet All Our member
 <div className="absolute inset-0 bg-[#000] opacity-50 z-[-1]" />
 
         <Paragraph className="text-white">
-        To be the leading initiative in Southeast Asia for inspiring and empowering a new generation of international students through unique and impactful educational travel programs. We envision creating a vibrant programs where diverse perspectives converge, a deep appreciation for the region's rich heritage and dynamic future is cultivated.
+        To be the leading initiative in Southeast Asia for inspiring and empowering a new generation of international students through unique and impactful educational travel programs.
         </Paragraph>
         </Container>
 
@@ -141,8 +141,8 @@ Meet All Our member
       OUR CORE VALUE
         </Heading>
 
-        <Paragraph className="mb-6 md:mb-20">
-        We are dedicated to cultivating programs built upon foundational principles designed to empower every international student
+        <Paragraph className="mb-6 md:mb-10">
+        We are dedicated to cultivating programs built upon foundational principles.
         </Paragraph>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-x-7 gap-y-5">
@@ -172,7 +172,7 @@ Meet All Our member
 <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">WHAT WE DO</Heading>
 
-      <Paragraph className="mb-4 md:mb-20">
+      <Paragraph className="mb-4 md:mb-10">
     We provide student travel programs to cultivate personal growth, leadership, and social impact, empowering students through a wide range of initiatives.
   </Paragraph>
 
@@ -183,7 +183,7 @@ Meet All Our member
       {title:'LEADERSHIP CAMPS', img: LeadershipCamps},
     ].map((item, index) => (
       <div key={index} className="flex flex-col items-center flex-1">
-        <div className="mb-3.5 border-4 rounded-full border-[#00712D] aspect-square p-3 md:p-4 w-[74px] md:w-[108px]">
+        <div className="mb-3.5 border-2 md:border-4 rounded-full border-[#00712D] aspect-square p-3 md:p-4 w-[74px] md:w-[108px]">
           <Image src={item.img} alt={item.title} layout="responsive" />
         </div>
 
@@ -199,20 +199,22 @@ Meet All Our member
 <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">WHY CHOOSE US</Heading>
 
-<div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-10 last:mb-0">
+<div className="flex flex-col-reverse md:flex-row items-center gap-2.5 md:gap-6 mb-10 last:mb-0">
 <div className="flex-1">
-  <p className="font-[600] text-[14px] md:text-[18px] text-[#00712D] mb-6">Our commitment extends beyond typical student travel, focusing on generating sustainable, positive change in the communities we engage with:</p>
-
   <ul className="font-[700] text-[14px] md:text-[20px] text-[#00712D]">
-    {['Significant contributions in service hours to global initiatives and substantial funding directed towards local projects and scholarships.', ' Community partnerships that uphold principles of sustainable development and ethical tourism.', 'Environmental conservation efforts reaching across various continents.'].map((item, index) => (
-      <li key={index} className="flex items-center mb-6 last:mb-0 gap-2">
+    {[
+      'Global Impact: Significant service hours for global initiatives, local projects, and scholarships.',
+      'Sustainable Partnerships: Meaningful community collaborations upholding sustainable development and ethical tourism.',
+      'Worldwide Conservation: Active environmental conservation efforts spanning multiple continents.'
+    ].map((item, index) => (
+      <li key={index} className="flex items-center mb-5 md:mb-6 last:mb-0 gap-2">
     <Image src={Check} alt="check" width={16} height={16} /> {item}
     </li>
     ))}
   </ul>
   </div>
 
-  <Image className="object-cover max-h-[290px] rounded-[20px] overflow-hidden flex-1" src={WhyChooseUs} alt="why-choose-us" />
+  <Image className="object-cover max-h-[290px] rounded-[10px] md:rounded-[20px] overflow-hidden flex-1" src={WhyChooseUs} alt="why-choose-us" />
 </div>
 </Container>
 
@@ -220,29 +222,31 @@ Meet All Our member
 <Container className="bg-[#ECFAE5]">
       <Heading color="text-[#22C55E]">SAFETY & EXPERTISE</Heading>
 
-<div className="flex flex-col-reverse md:flex-row items-center gap-6 mb-10 last:mb-0">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-2.5 md:gap-6 mb-10 last:mb-0">
 <div className="flex-1">
-  <p className="font-[600] text-[14px] md:text-[18px] text-[#00712D] mb-6">Student well-being and safety are paramount to our operations. Under the guidance of our experienced medical leadership, we implement industry-leading safety protocols, encompassing:</p>
-
-  <ul className="font-[700] text-[14px] md:text-[20px] text-[#00712D] mb-28">
-    {['Rigorous pre-travel risk assessments to proactively identify and mitigate potential hazards.',
-'Annual safety certifications to ensure continuous staff preparedness and proficiency.',
-'Round-the-clock, on-the-ground support in every destination.',
-'Strict adherence to international health guidelines, upholding global safety standards.',
-'Comprehensive insurance coverage for complete peace of mind during all programs.'].map((item, index) => (
-      <li key={index} className="flex items-center mb-6 last:mb-0 gap-2">
+  <ul className="font-[700] text-[14px] md:text-[20px] text-[#00712D]">
+    {[
+      'Rigorous pre-travel risk assessments to proactively identify and mitigate potential hazards.',
+      'Annual safety certifications to ensure continuous staff preparedness and operational proficiency.',     
+      'Round-the-clock, reliable on-the-ground support in every destination.',     
+      'Strict adherence to international health guidelines, upholding recognized global safety standards.',      
+      'Comprehensive insurance coverage ensures your complete peace of mind during all our programs.' 
+    ].map((item, index) => (
+  <li key={index} className="flex items-center mb-5 md:mb-6 last:mb-0 gap-2">
     <Image src={Check} alt="check" width={16} height={16} /> {item}
     </li>
     ))}
   </ul>
 
+  <div className="mt-5 md:mt-20 flex justify-center md:justify-start">
   <Button>
   Find Programs
             </Button>
+            </div>
   </div>
 
   <div className="relative w-full flex-1">
-  <Image src={SafetyExpertise1} className="object-cover rounded-[20px] overflow-hidden" layout="responsive" alt="why-choose-us" />
+  <Image src={SafetyExpertise1} className="object-cover rounded-[10px] md:rounded-[20px] overflow-hidden" layout="responsive" alt="why-choose-us" />
 
   {/* <Image src={SafetyExpertise2} className="absolute object-cover rounded-[20px] overflow-hidden" layout="responsive" alt="why-choose-us" /> */}
 </div>
