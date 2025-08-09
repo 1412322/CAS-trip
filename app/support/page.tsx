@@ -2,7 +2,9 @@ import Accordion from '@/components/Accordion'
 import Button from '@/components/Button'
 import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
+import Paragraph from '@/components/Paragraph'
 import Accessories from '@/public/images/accessories.svg'
+import CircleCheck from '@/public/images/circle_check_2.svg'
 import Clothing from '@/public/images/clothing.svg'
 import Documents from '@/public/images/documents.svg'
 import Footwear from '@/public/images/footwear.svg'
@@ -11,11 +13,9 @@ import Meals from '@/public/images/meals.svg'
 import Overview1 from '@/public/images/overview_1.webp'
 import Overview2 from '@/public/images/overview_2.webp'
 import SupportIcon from '@/public/images/support.svg'
-import Transportation from '@/public/images/transportation.svg'
-import CircleCheck from '@/public/images/circle_check_2.svg'
 import Tag from '@/public/images/tag.svg'
+import Transportation from '@/public/images/transportation.svg'
 import Image from 'next/image'
-import Paragraph from '@/components/Paragraph'
 
 export default function Support() {
   return (
@@ -277,7 +277,7 @@ Accommodation varies by program and location, but common options include:
         </Heading>
 
         <div className="mt-10 flex justify-center">
-        <Button>Contact Us</Button>
+        <Button path="/contact-us">Contact Us</Button>
         </div>
 </Container>
     </main>

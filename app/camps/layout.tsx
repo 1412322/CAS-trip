@@ -37,7 +37,7 @@ export default function CampsLayout({ children }: { children: React.ReactNode })
         </Heading>
 
         <div className="mt-10 flex justify-center">
-        <Button>Contact Us</Button>
+        <Button path="/contact-us">Contact Us</Button>
         </div>
 </Container>
     </>

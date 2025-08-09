@@ -31,16 +31,16 @@ export default function Gallery({ images }: GalleryProps) {
   };
 
   return (
-    <div className="relative w-full h-[145px] md:h-[532px] overflow-hidden">
+    <div className="relative w-[106px] md:w-full h-[145px] md:h-[532px] overflow-hidden">
       <div className="relative flex items-center justify-center h-full">
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute w-[390px] h-full transition-all duration-500 rounded-[20px] overflow-hidden text-white flex flex-col items-center justify-center text-center text-[32px] font-[900] ${getPositionClass(index)} fill-black`}
+            className={`absolute w-[390px] h-full transition-all duration-500 rounded-[20px] overflow-hidden text-white flex flex-col items-center justify-center ${getPositionClass(index)} fill-black`}
           >
             <Image src={img.src} alt={img.title} layout="fill" objectFit="cover" />
             
-            <div className="z-10 relative">
+            <div className="text-center text-[10px] md:text-[32px] font-[900] z-10 relative">
               {img.title && <h3>{img.title}</h3>}
 
               {img.subTitle && <h3>{img.subTitle}</h3>}

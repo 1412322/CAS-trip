@@ -2,19 +2,19 @@ import Button from '@/components/Button'
 import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
 import Paragraph from '@/components/Paragraph'
-import Sologan from '@/public/images/taman_negara_sologan.svg'
+import Ages from '@/public/images/ages.svg'
+import Carret from '@/public/images/carret.svg'
+import Cost from '@/public/images/cost.svg'
+import Duration from '@/public/images/duration.svg'
+import EnrollmentDeadline from '@/public/images/enrollment_deadline.svg'
 import Highlights1 from '@/public/images/highlights_1.webp'
 import Highlights2 from '@/public/images/highlights_2.webp'
 import Highlights3 from '@/public/images/highlights_3.webp'
-import EnrollmentDeadline from '@/public/images/enrollment_deadline.svg'
-import Ages from '@/public/images/ages.svg'
-import Cost from '@/public/images/cost.svg'
-import Duration from '@/public/images/duration.svg'
-import ProgramTypes from '@/public/images/program_types.svg'
 import Impact from '@/public/images/impact.svg'
-import Image from 'next/image'
-import Carret from '@/public/images/carret.svg'
 import Itinerary1 from '@/public/images/itinerary_1.webp'
+import ProgramTypes from '@/public/images/program_types.svg'
+import Sologan from '@/public/images/taman_negara_sologan.svg'
+import Image from 'next/image'
 
 export default function TamanNegara() {
   return (
@@ -173,12 +173,14 @@ export default function TamanNegara() {
 <ul className="py-6 md:py-8 px-2.5 md:px-10 text-[#00712D] flex-1">
   {item.contents.map((content, index) => (
 <li key={index} className="mb-2.5 md:mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
+  <div className="flex items-center gap-2.5 mb-1.5">
     <div className="relative w-4 md:w-5 aspect-square">
   <Image src={Carret} alt="" layout="fill" />
 </div>
 
-  <div className="text-[14px] md:text-[24px] font-[900] mb-1.5">{content.title}</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">{content.title}</div>
+
+  {/* <Image className={activeDropdown === "programs" ? 'rotate-180' : ''} src={ArrowDown} width={12} alt="arrow-down-icon" /> */}
   </div>
 
   <Paragraph className="ml-[26px] md:ml-[30px] mb-1.5 !text-left">{content.description}</Paragraph>
@@ -452,7 +454,7 @@ export default function TamanNegara() {
         </Heading>
 
         <div className="mt-10 flex justify-center">
-        <Button>Contact Us</Button>
+        <Button path="/contact-us">Contact Us</Button>
         </div>
 </Container>
     </main>

@@ -31,7 +31,7 @@ Given on the spirit of established leaders in student travel, our platform is de
 </Paragraph>
         </Container>
 
-        <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
+        {/* <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
       <Heading color="text-[#22C55E]">
       MEET OUR TEAM
         </Heading>
@@ -91,7 +91,7 @@ description: 'Former co-founder of opendoor varible Early staff Spotify and Clea
 Meet All Our member
             </Button>
             </div>
-        </Container>
+        </Container> */}
 
         <Container className="bg-[#ECFAE5]">
       <Heading color="text-[#22C55E]">
