@@ -44,7 +44,7 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 flex items-center justify-between h-14 md:h-20 z-[999] w-full transition-all duration-300 ${
-        scrolled ? 'bg-[#00712D80]' : ['/about-us', '/sustainability', '/support', '/resources', '/contact-us'].includes(pathname) ? 'bg-[#00712D]' : 'bg-transparent'
+        scrolled ? 'bg-[#00712D80]' : ['/about-us', '/sustainability', '/support', '/resources', '/contact-us', '/our-programs'].includes(pathname) ? 'bg-[#00712D]' : 'bg-transparent'
       }`}>
     <div className="m-auto w-full px-5 md:px-[100px] flex justify-between items-center">
 

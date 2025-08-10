@@ -3,7 +3,7 @@ import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
 import Paragraph from '@/components/Paragraph'
 
-export default function AboutUs() {
+export default function ContactUs() {
   return (
     <main>
       {/* ABOUT US */}

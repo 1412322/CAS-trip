@@ -72,7 +72,7 @@ export default function Home() {
               CONNECT CULTURES, CREATE CHANGE
             </h2>
 
-            <Button>
+            <Button path="/our-programs">
               Explore Our Programs
             </Button>
           </div>
