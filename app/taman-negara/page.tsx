@@ -113,7 +113,7 @@ export default function TamanNegara() {
 {
   img: Duration,
   title: 'Duration',
-  description: '7 days',
+  description: '5 days',
 },{
   img: ProgramTypes,
   title: 'Program Types',

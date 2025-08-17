@@ -179,7 +179,7 @@ export default function Home() {
             {
               title: 'Hotel Bookings',
               img: WeWillHandleTripForYou4,
-              description: "Handle reservations at selected hotels, prioritizing safety, comfort, and proximity to program venues or key attractions, tailored to the group's needs",
+              description: "Discover unique local stays that prioritize both comfort and safety. Immerse in authentic cultural experiences, knowing quality and well-being are assured at every curated venue.",
             },
           ].map((item, index) => (
             <div key={index} className="flex items-center gap-2.5 md:gap-6 flex-col md:flex-row">
@@ -279,7 +279,7 @@ export default function Home() {
 </div>
 
                 <div className="flex-1">
-                  <label className="break-all font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
+                  <label className="whitespace-break-spaces font-[900] text-[14px] md:text-[24px] text-[#00712D] mb-[5px]">{item.name}</label>
 
                   <div className="grid grid-cols-5 gap-1.5 md:gap-2.5">
                     <Image src={Star} alt='star' className="w-full min-w-5 max-w-10 aspect-square" />
@@ -298,6 +298,32 @@ export default function Home() {
           ))}
         </div>
         </Container>
+
+        <Container className="bg-[#ECFAE5]">
+          <div className="flex flex-col md:flex-row gap-x-16 gap-y-2.5">
+            <div className="flex-1">
+        <Heading color="text-[#00712D] !text-left">
+      GET LATEST & UPDATES TRIP PROGRAMS
+        </Heading>
+
+        <Paragraph className="!text-left">
+Curious how we can elevate student hiring and empower your team? Join our demo to explore the future of seamless recruitment.
+</Paragraph>
+</div>
+
+<div className="space-y-2.5 flex-auto w-full md:w-64">
+  <input className="p-2.5 md:p-5 text-[#00712D] text-[12px] md:text-[24px] font-[600] rounded-[10px] border border-[#00712D] h-8 md:h-16 w-full bg-[#00712D1A] border-none placeholder:text-[#00712D80]" placeholder="Name"></input>
+
+  <input className="p-2.5 md:p-5 text-[#00712D] text-[12px] md:text-[24px] font-[600] rounded-[10px] border border-[#00712D] h-8 md:h-16 w-full bg-[#00712D1A] border-none placeholder:text-[#00712D80]" placeholder="Email" type="email"></input>
+
+  <input className="p-2.5 md:p-5 text-[#00712D] text-[12px] md:text-[24px] font-[600] rounded-[10px] border border-[#00712D] h-8 md:h-16 w-full bg-[#00712D1A] border-none placeholder:text-[#00712D80]" placeholder="Inquiries"></input>
+  </div>
+  </div>
+  
+        <div className="mt-3.5 md:mt-10 flex justify-center">
+        <Button path="/contact-us">Subscribe</Button>
+        </div>
+</Container>
     </main>
   )
 }

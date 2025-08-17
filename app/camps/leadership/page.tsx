@@ -29,17 +29,17 @@ export default function NatureCamps() {
 
 {[{
   imgs: [WhatIsLeadershipCamps1, WhatIsLeadershipCamps2],
-  descriptions: [`These camps immerse students in real-world challenges through deep exploration and understand complex societal issues firsthand. Students will engage in meaningful volunteer work, supporting initiatives related to society, healthcare access, human rights or vulnerable populations. Through active engagement, students will participate in discussions and hands-on initiatives driving positive change.`],
+  descriptions: [`<b>Our Leadership Camps</b> immerse students in <b>real-world challenges</b> and meaningful <b>volunteer work</b>. This drives students' <b>positive change</b> through active discussions and impactful community initiatives.`],
 }, {
   imgs: [WhatIsLeadershipCamps3, WhatIsLeadershipCamps4],
-  descriptions: ['Students collaborate in dynamic group projects, directly contributing to initiatives that address these real-world problems. This hands-on experience is pivotal in fostering their capacity for impactful leadership, equipping them to develop innovative solutions and soft skills, as crucial as academics for their future success.'],
+  descriptions: ['<b>Students collaborate</b> on group projects and directly address <b>real-world problems</b>. Through discussion, students develop crucial <b>soft skills</b>.'],
 }, {
   imgs: [WhatIsLeadershipCamps5, WhatIsLeadershipCamps6],
-  title: 'How the programs work?',
+  title: 'How it works:',
   descriptions: [
-    '<b>Exploration:</b> Visiting NGOs, community organizations, and local cities to understand complex issues.',
-    '<b>Volunteer Work:</b> Supporting initiatives related to fair trade, healthcare access, human rights, community resilience projects or supporting vulnerable populations.',
-    '<b>Engagement:</b> Participating in discussions, research, and hands-on projects that drive positive change.',
+    '<b>Explore</b> local cities or organizations.',
+    '<b>Volunteer</b> by supporting vital initiatives for community.',
+    '<b>Engage</b> in hands-on projects, research, and discussions.',
   ]
 }].map((item, index) => (
 <div key={index} className={`flex flex-col items-center gap-5 md:gap-6 mb-5 md:mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
@@ -51,11 +51,11 @@ export default function NatureCamps() {
  </div>
   
   <div className="flex-1 text-left text-[#00712D]">
-    {item.title && <div className="text-[18px] md:text-[24px] font-[900] md:mb-6">{item.title}</div>}
+    {item.title && <div className="font-[600] text-[14px] md:text-[18px]">{item.title}</div>}
 
 <ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
 {item.descriptions.map((description, descriptionIndex) => (
-  <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'md:mb-6 last:mb-0' : ''}`}>
+  <li key={descriptionIndex}>
     <p className="font-[600] text-[14px] md:text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
   </li>
 ))}

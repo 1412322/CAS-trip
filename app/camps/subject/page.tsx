@@ -29,17 +29,17 @@ export default function NatureCamps() {
 
 {[{
   imgs: [WhatIsSubjectCamps1, WhatIsSubjectCamps2],
-  descriptions: [`These programs are designed as transformative learning journeys that extend far beyond the traditional classroom setting. You'll explore new cultures and academic disciplines – from environmental science knowledge in books to sociology within vibrant local communities – directly in the real world.`],
+  descriptions: [`Our <b>Subject Camps</b> are transformative learning journeys that go far beyond traditional classrooms. Students explore new cultures and <b>academic disciplines</b> directly in the vibrant real world.`],
 }, {
   imgs: [WhatIsSubjectCamps3, WhatIsSubjectCamps4],
-  descriptions: ['Students apply their acquired knowledge, critical thinking, and problem-solving skills to address tangible, real-life challenges. Through immersive experiences and hands-on activities, students will directly contribute, sharing  expertise and offering practical support in cultural preservation, or enhancing local educational initiatives.'],
+  descriptions: ['Students apply knowledge, critical thinking, and problem-solving to <b>tangible, real-life challenges</b>. Through <b>immersive experiences</b>, students directly contribute to practical support.'],
 }, {
   imgs: [WhatIsSubjectCamps5, WhatIsSubjectCamps6],
-  title: 'How the programs work?',
+  title: 'How it works:',
   descriptions: [
-    '<b>Learning:</b> Visiting historical sites, cultural centers, or local schools to learn firsthand.',
-    '<b>Volunteer Work:</b> Engaging in literacy projects, helping with school renovations, teaching basic skills, or assisting in cultural exchange initiatives.',
-    '<b>Growth:</b> Developing critical thinking, cross-cultural communication, interpersonal skills, the ability to cooperate, leadership skill in a group and a deeper appreciation for global diversity.',
+    '<b>Explore & Learn</b> local cultures, history, math, geology...',
+    '<b>Engage</b> in vital volunteer projects, ranging from literacy to cultural exchange.',
+    '<b>Develop essential skills</b> critical thinking, communication, teamwork, problem solving and global leadership.',
   ],
 }].map((item, index) => (
 <div key={index} className={`flex flex-col items-center gap-5 md:gap-6 mb-5 md:mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
@@ -51,11 +51,11 @@ export default function NatureCamps() {
  </div>
   
   <div className="flex-1 text-left text-[#00712D]">
-    {item.title && <div className="text-[18px] md:text-[24px] font-[900] md:mb-6">{item.title}</div>}
+    {item.title && <div className="font-[600] text-[14px] md:text-[18px]">{item.title}</div>}
 
 <ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
 {item.descriptions.map((description, descriptionIndex) => (
-  <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'md:mb-6 last:mb-0' : ''}`}>
+  <li key={descriptionIndex}>
     <p className="font-[600] text-[14px] md:text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
   </li>
 ))}
