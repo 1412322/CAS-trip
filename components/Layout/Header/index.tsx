@@ -73,7 +73,7 @@ export default function Header() {
               </button>
 
             {activeDropdown === "programs" && (
-              <div ref={dropdownRef} className="absolute left-0 top-full">
+              <div ref={dropdownRef} className="absolute left-0 top-full pt-5">
               <ul className="py-8 w-[300px] bg-white text-[#00712D] text-[18px] font-[900] rounded-[10px] border-[rgba(0, 113, 45, 0.50)] shadow-[3px 3px 2px 0px rgba(0, 113, 45, 0.30)] z-50">
                 <li>
                   <Link href="/camps/nature" className={`block px-8 h-[30px] flex items-center hover:bg-[#00712D1A] ${pathname === '/camps/nature' ? 'underline' : ''}`}>

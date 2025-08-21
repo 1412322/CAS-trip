@@ -14,6 +14,7 @@ import SafetyExpertise1 from '@/public/images/safety_expertise_1.png'
 import SubjectCamps from '@/public/images/subject_camps.svg'
 import WhyChooseUs from '@/public/images/why_chosse_us.jpg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function AboutUs() {
   return (
@@ -178,11 +179,11 @@ Meet All Our member
 
   <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-5">
     {[
-      {title: 'NATURE CAMPS', img: NatureCamps},
-      {title:'SUBJECT CAMPS', img: SubjectCamps},
-      {title:'LEADERSHIP CAMPS', img: LeadershipCamps},
+      {title: 'NATURE CAMPS', img: NatureCamps, path: '/camps/nature'},
+      {title:'SUBJECT CAMPS', img: SubjectCamps, path: '/camps/subject'},
+      {title:'LEADERSHIP CAMPS', img: LeadershipCamps, path: '/camps/leadership'},
     ].map((item, index) => (
-      <div key={index} className="flex flex-col items-center flex-1">
+      <Link key={index} href={item.path} className="flex flex-col items-center flex-1">
         <div className="mb-3.5 border-2 md:border-4 rounded-full border-[#00712D] aspect-square p-3 md:p-4 w-[74px] md:w-[108px]">
           <Image src={item.img} alt={item.title} layout="responsive" />
         </div>
@@ -190,7 +191,7 @@ Meet All Our member
         <div className="flex justify-center items-center bg-[#00712D] w-full text-center text-white py-4 px-8 md:py-6 rounded-full font-[900] text-[16px] md:text-[24px]">
           {item.title}
           </div>
-      </div>
+      </Link>
     ))}
   </div>
 </Container>

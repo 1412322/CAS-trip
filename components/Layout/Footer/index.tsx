@@ -13,7 +13,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
 <footer className="bg-[#00712D] text-white px-5 md:px-[100px] py-7 md:py-20">
-<div className="flex md:flex-row flex-col gap-10 md:gap-12 w-full flex-wrap">
+<div className="flex md:flex-row flex-col md:justify-start lg:justify-between gap-10 w-full flex-wrap">
     <Image className="w-1/2 md:w-[160px] h-fit" src={Logo} alt="CAS-trip-logo" />
 
   <div>
@@ -60,24 +60,24 @@ export default function Footer() {
 
       <li className="flex items-center space-x-1.5"><Image className="w-3 md:w-4 aspect-square" src={Email} alt="email" /><Paragraph className="text-white !text-left">fionag@transinex.com.sg</Paragraph></li>
 
-      <li className="flex items-center space-x-1.5"><Image className="w-3 md:w-4 aspect-square" src={Address} alt="address" /><Paragraph className="text-white !text-left">Coleman St, #04-31, Singapore 179803</Paragraph></li>
+      <li className="flex items-center space-x-1.5"><Image className="w-3 md:w-4 aspect-square" src={Address} alt="address" /><Paragraph className="text-white !text-left">Coleman St, #04-31,<br/>Singapore 179803</Paragraph></li>
     </ul>
     
     <div className="flex gap-6 mt-[25px]">
       <Link href="#">
-        <Image className="w-8 md:w-12 aspect-square" src={Facebook} alt="facebook" />
+        <Image className="w-6 md:w-7 aspect-square" src={Facebook} alt="facebook" />
       </Link>
       
       <Link href="#">
-      <Image className="w-8 md:w-12 aspect-square" src={Instagram} alt="instagram" />
+      <Image className="w-6 md:w-7 aspect-square" src={Instagram} alt="instagram" />
       </Link>
 
       <Link href="#">
-       <Image className="w-8 md:w-12 aspect-square" src={Tiktok} alt="tiktok" />
+       <Image className="w-6 md:w-7 aspect-square" src={Tiktok} alt="tiktok" />
       </Link>
 
       <Link href="#">
-         <Image className="w-8 md:w-12 aspect-square" src={Youtube} alt="youtube" />
+         <Image className="w-6 md:w-7 aspect-square" src={Youtube} alt="youtube" />
       </Link>
     </div>
   </div>
