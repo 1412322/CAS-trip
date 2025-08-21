@@ -22,264 +22,376 @@ export default function Support() {
     <main>
       {/* ABOUT US */}
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E] pt-16 md:pt-20">
-          OVERVIEW
-        </Heading>
+        <Heading color="text-[#22C55E] pt-16 md:pt-20">OVERVIEW</Heading>
 
         <div className="grid grid-cols-2 md:grid-cols-3">
-      <Image className="flex-1 w-full h-full object-cover" src={Overview1} alt="volunteer" />
+          <Image className="h-full w-full flex-1 object-cover" src={Overview1} alt="volunteer" />
 
-    <div className="text-[8px] md:text-[18px] font-[600] text-white bg-[#00712D] flex-1 px-2.5 md:px-6 flex flex-col items-center justify-center">
-      <p>This section provides essential information and resources to help you prepare, stay safe, and thrive during your volunteer trips.
+          <div className="flex flex-1 flex-col items-center justify-center bg-[#00712D] px-2.5 text-[8px] font-[600] text-white md:px-6 md:text-[18px]">
+            <p>
+              This section provides essential information and resources to help you prepare, stay
+              safe, and thrive during your volunteer trips.
+              <ul>
+                <li className="my-4 flex items-center gap-1 md:my-5 md:gap-2.5">
+                  <div className="relative aspect-square min-w-1.5 md:w-4">
+                    <Image src={CircleCheck} layout="fill" alt="check-icon" />
+                  </div>
+                  Safety is the most priority of our criteria for both students, teachers and staff
+                  – without compromise.
+                </li>
 
-      <ul>
-        <li className="my-4 md:my-5 flex items-center gap-1 md:gap-2.5"><div className="relative min-w-1.5 md:w-4 aspect-square"><Image src={CircleCheck} layout='fill' alt="check-icon" /></div>Safety is the most priority of our criteria for both students, teachers and staff – without compromise.</li>
-
-        <li className="flex items-center gap-1 md:gap-2.5"><div className="relative min-w-1.5 md:w-4 aspect-square"><Image src={CircleCheck} layout='fill' alt="check-icon" /></div>All guides follow a comprehensive volunteer program assessed regularly.</li>
-      </ul>
-      </p>
-    </div>
-
-      <Image className="hidden md:block flex-1 w-full h-full object-cover" src={Overview2} alt="backpack" />
-  </div>
-  </Container>
-
-  {/* SAFETY COMMITMENT */}
-  <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E]">SAFETY COMMITMENT</Heading>
-
-      <p className="text-[#00712D] text-center text-[18px] font-[600] mb-9">
-    We are committed to providing a secure and supportive environment for all our international students and our staffs.
-  </p>
-
-  <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-10 md:mb-20">
-    {[
-      {
-        title: "Activities Development",
-        desc: "Activity programs are designed to be engaging, impactful and safe under the supervision of experienced local staff or project leaders.",
-      },
-      {
-        title: "Partnerships",
-        desc: "We closely with organization, international schools, community with volunteers, local staff, and our head office.",
-      },
-      {
-        title: "Cultural Awareness",
-        desc: "Pre-departure information and in-country orientation helps you understand local customs, social norms, and laws.",
-      },
-    ].map((item, i) => (
-      <div key={i} className="text-center">
-        <div className="z-0 relative w-full h-[42px] md:h-[52px] flex items-center justify-center">
-          <Image
-  className="object-contain w-full h-full" src={Tag} fill alt="" />
-
-          <div className="font-[900] text-[20px] md:text-[24px] text-white z-[1]">{item.title}</div>
+                <li className="flex items-center gap-1 md:gap-2.5">
+                  <div className="relative aspect-square min-w-1.5 md:w-4">
+                    <Image src={CircleCheck} layout="fill" alt="check-icon" />
+                  </div>
+                  All guides follow a comprehensive volunteer program assessed regularly.
+                </li>
+              </ul>
+            </p>
           </div>
 
-        {/* <p className="text-[18px] font-[600] text-[#00712D] mt-5">{item.desc}</p> */}
-      </div>
-    ))}
-  </div>
+          <Image
+            className="hidden h-full w-full flex-1 object-cover md:block"
+            src={Overview2}
+            alt="backpack"
+          />
+        </div>
+      </Container>
 
+      {/* SAFETY COMMITMENT */}
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
+        <Heading color="text-[#22C55E]">SAFETY COMMITMENT</Heading>
 
-  {/* HEALTH & SAFETY + VISA */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
-    <div className="bg-[#00712D] rounded-[20px] md:rounded-[40px] flex flex-col item-center px-1.5 py-8 md:py-10 md:px-20">
-      <div className="font-[800] text-[20px] md:text-[32px] mb-2.5 md:mb-6 text-center flex items-center justify-center gap-2.5">
-        <span className="rounded-full bg-white text-[#00712D] w-5 md:w-9 h-5 md:h-9 flex items-center justify-center">1</span> 
-      <div>Health & Safety</div>
-      </div>
+        <p className="mb-9 text-center text-[18px] font-[600] text-[#00712D]">
+          We are committed to providing a secure and supportive environment for all our
+          international students and our staffs.
+        </p>
 
-      <Paragraph className="!text-left text-white">
-      <ul className="list-disc list-inside space-y-4 md:space-y-6">
-        <li>Health check updated 30 days before the tour departure. Find suggestions for physical preparation before the tour.</li>
+        <div className="mb-10 grid grid-cols-1 gap-6 md:mb-20 xl:grid-cols-3">
+          {[
+            {
+              title: 'Activities Development',
+              desc: 'Activity programs are designed to be engaging, impactful and safe under the supervision of experienced local staff or project leaders.',
+            },
+            {
+              title: 'Partnerships',
+              desc: 'We closely with organization, international schools, community with volunteers, local staff, and our head office.',
+            },
+            {
+              title: 'Cultural Awareness',
+              desc: 'Pre-departure information and in-country orientation helps you understand local customs, social norms, and laws.',
+            },
+          ].map((item, i) => (
+            <div key={i} className="text-center">
+              <div className="relative z-0 flex h-[42px] w-full items-center justify-center md:h-[52px]">
+                <Image className="h-full w-full object-contain" src={Tag} fill alt="" />
 
-        <li>Travel Insurance covering medical emergencies and personal liability.</li>
+                <div className="z-[1] text-[20px] font-[900] text-white md:text-[24px]">
+                  {item.title}
+                </div>
+              </div>
 
-        <li>Dietary Needs need to be informed in advance.</li>
+              {/* <p className="text-[18px] font-[600] text-[#00712D] mt-5">{item.desc}</p> */}
+            </div>
+          ))}
+        </div>
 
-        <li>Stay hydrated in warm climates and follow local guidelines to prevent illness.</li>
-      </ul>
-      </Paragraph>
-    </div>
+        {/* HEALTH & SAFETY + VISA */}
+        <div className="grid grid-cols-1 gap-6 text-white md:grid-cols-2">
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-20 md:py-10">
+            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-center text-[20px] font-[800] md:mb-6 md:text-[32px]">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:w-9">
+                1
+              </span>
+              <div>Health & Safety</div>
+            </div>
 
-    <div className="bg-[#00712D] rounded-[20px] md:rounded-[40px] flex flex-col item-center px-1.5 py-8 md:py-10 md:px-20">
-      <div className="font-[800] text-[20px] md:text-[32px] mb-2.5 md:mb-6 text-center flex items-center justify-center gap-2.5">
-      <span className="rounded-full bg-white text-[#00712D] w-5 md:w-9 h-5 md:h-9 flex items-center justify-center">2</span> 
-        <div>Visa Requirements</div>
-      </div>
+            <Paragraph className="!text-left text-white">
+              <ul className="list-inside list-disc space-y-4 md:space-y-6">
+                <li>
+                  Health check updated 30 days before the tour departure. Find suggestions for
+                  physical preparation before the tour.
+                </li>
 
-      <Paragraph className="!text-left text-white">
-      <ul className="list-disc list-inside space-y-4 md:space-y-6">
-        <li>Obtaining the correct visa for the destination country is the  responsibility of the participant and checking the latest visa requirements for  nationality entering in advance of your departure date.
-          <br />
-          <div className="font-[400] italic mt-6">We do not provide visas or visas on arrival (VOA), please plan for this independently from now on.</div>
-        </li>
+                <li>Travel Insurance covering medical emergencies and personal liability.</li>
 
-        <li>Updated on the latest weather forecast for local places to have the best luggage preparation for your adventure ahead.</li>
-      </ul>
-      </Paragraph>
-    </div>
-  </div>
-  </Container>
+                <li>Dietary Needs need to be informed in advance.</li>
 
-  {/* LUGGAGE SPLIT */}
-  <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E]">LUGGAGE: 2 PARTS</Heading>
-      
-  <div className="md:max-w-4xl md:m-auto text-[#00712D] text-[18px] font-[600] space-y-4 md:space-y-10 relative md:before:border-2 md:before:border-[#00712D] md:before:absolute md:before:top-0 md:before:left-[8px] md:before:h-full">
-    <div className="flex items-start gap-3">
-      <div className="hidden md:block bg-[#00712D] w-5 h-5 rounded-full" />
+                <li>
+                  Stay hydrated in warm climates and follow local guidelines to prevent illness.
+                </li>
+              </ul>
+            </Paragraph>
+          </div>
 
-      <Paragraph className="md:!text-left flex-1"><b className="font-[800]">A 15-20L backpack</b> containing daily and essential clothes and personal belongings.</Paragraph>
-    </div>
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-20 md:py-10">
+            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-center text-[20px] font-[800] md:mb-6 md:text-[32px]">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:w-9">
+                2
+              </span>
+              <div>Visa Requirements</div>
+            </div>
 
-    <div className="flex items-start gap-3 relative md:after:border-2 md:after:border-[#ECFAE5] md:after:absolute md:after:left-[8px] md:after:h-full z-0 md:after:z-[-1]">
-    <div className="hidden md:block bg-[#00712D] w-5 h-5 rounded-full" />
-      
-      <Paragraph className="md:!text-left flex-1">Any <b className="font-[800]" >unnecessary luggage</b> can be safely stored in base camp or program office.</Paragraph>
-    </div>
-  </div>
-  </Container>
+            <Paragraph className="!text-left text-white">
+              <ul className="list-inside list-disc space-y-4 md:space-y-6">
+                <li>
+                  Obtaining the correct visa for the destination country is the responsibility of
+                  the participant and checking the latest visa requirements for nationality entering
+                  in advance of your departure date.
+                  <br />
+                  <div className="mt-6 font-[400] italic">
+                    We do not provide visas or visas on arrival (VOA), please plan for this
+                    independently from now on.
+                  </div>
+                </li>
 
-  <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E]">PACKING ESSENTIALS</Heading>
+                <li>
+                  Updated on the latest weather forecast for local places to have the best luggage
+                  preparation for your adventure ahead.
+                </li>
+              </ul>
+            </Paragraph>
+          </div>
+        </div>
+      </Container>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28 md:max-w-4xl md:m-auto">
+      {/* LUGGAGE SPLIT */}
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
+        <Heading color="text-[#22C55E]">LUGGAGE: 2 PARTS</Heading>
 
-<div className="flex flex-col items-center">
-      <div className="w-full text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What you need to bring</div>
+        <div className="relative space-y-4 text-[18px] font-[600] text-[#00712D] md:m-auto md:max-w-4xl md:space-y-10 md:before:absolute md:before:left-[8px] md:before:top-0 md:before:h-full md:before:border-2 md:before:border-[#00712D]">
+          <div className="flex items-start gap-3">
+            <div className="hidden h-5 w-5 rounded-full bg-[#00712D] md:block" />
 
-      <ul className="w-full space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
-        <li className="flex gap-2.5 md:gap-6 items-center">
-          <Image src={Clothing} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
+            <Paragraph className="flex-1 md:!text-left">
+              <b className="font-[800]">A 15-20L backpack</b> containing daily and essential clothes
+              and personal belongings.
+            </Paragraph>
+          </div>
 
-          <Paragraph className="!text-left">Lightweight clothing.</Paragraph>
-        </li>
+          <div className="relative z-0 flex items-start gap-3 md:after:absolute md:after:left-[8px] md:after:z-[-1] md:after:h-full md:after:border-2 md:after:border-[#ECFAE5]">
+            <div className="hidden h-5 w-5 rounded-full bg-[#00712D] md:block" />
 
-        <li className="flex gap-2.5 md:gap-6 items-center">
-        <Image src={Footwear} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
-
-          <Paragraph className="!text-left">Comfortable walking shoes.</Paragraph>
-        </li>
-
-        <li className="flex gap-2.5 md:gap-6 items-center">
-        <Image src={Accessories} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
-
-          <Paragraph className="!text-left">Sunscreen, hat, water bottle and any accessories.</Paragraph>
-        </li>
-
-        <li className="flex gap-2.5 md:gap-6 items-center">
-        <Image src={Documents} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
-
-          <Paragraph className="!text-left">Documents: Passport, visa, tickets, contacts.</Paragraph>
-        </li>
-      </ul>
-      </div>
-
-      <div className="flex flex-col items-center">
-      <div className="w-full text-[#00712D] flex items-center justify-center border-2 border-[#00712D] bg-white text-center text-[20px] md:text-[24px] font-[900] h-12 md:h-14 px-2.5 mb-4 md:mb-9 rounded-[10px]">What We Provide</div>
-
-      <ul className="w-full space-y-2.5 md:space-y-5 text-[18px] font-[600] text-[#00712D]">
-        <li className="flex gap-2.5 md:gap-6 items-center">
-          <Image src={SupportIcon} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
-
-          <Paragraph className="!text-left">On-call support.</Paragraph>
-        </li>
-
-        <li className="flex gap-2.5 md:gap-6 items-center">
-        <Image src={Transportation} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
-
-          <Paragraph className="!text-left">Transportation between locations.</Paragraph>
-        </li>
-
-        <li className="flex gap-2.5 md:gap-6 items-center">
-        <Image src={Meals} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
-
-          <Paragraph className="!text-left">All meals provided.</Paragraph>
-        </li>
-
-        <li className="flex gap-2.5 md:gap-6 items-center">
-        <Image src={Lodging} className="max-w-8 md:max-w-[60px] aspect-square" layout="responsive" alt="icon" />
-
-          <Paragraph className="!text-left">Comfortable lodging provided.</Paragraph>
-        </li>
-      </ul>
-      </div>
-      </div>
+            <Paragraph className="flex-1 md:!text-left">
+              Any <b className="font-[800]">unnecessary luggage</b> can be safely stored in base
+              camp or program office.
+            </Paragraph>
+          </div>
+        </div>
       </Container>
 
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-      <Heading color="text-[#22C55E]">
-      FAQ
-        </Heading>
-     
-     <Accordion title="What types of student trips/programs are available?" description={
-      <div>
-     We offer diverse programs across the region:
-     <ul className="list-disc list-inside	">
-<li><b>Nature Camps:</b> These programs allow you to explore and protect stunning natural landscapes, fostering a profound understanding of environment and inspiring positive environmental behaviors.</li>
+        <Heading color="text-[#22C55E]">PACKING ESSENTIALS</Heading>
 
-<li><b>Subject Camps:</b> These programs offer transformative, real-world learning experiences beyond the classroom, allowing students to explore new cultures and academic subjects.</li>
+        <div className="grid grid-cols-1 gap-8 md:m-auto md:max-w-4xl md:grid-cols-2 md:gap-28">
+          <div className="flex flex-col items-center">
+            <div className="mb-4 flex h-12 w-full items-center justify-center rounded-[10px] border-2 border-[#00712D] bg-white px-2.5 text-center text-[20px] font-[900] text-[#00712D] md:mb-9 md:h-14 md:text-[24px]">
+              What you need to bring
+            </div>
 
-<li><b>Leadership Camps:</b> These programs immerse students in real-world contexts, engaging them in deep exploration of societal issues, meaningful volunteer work, active discussions, and hands-on initiatives that drive positive change.</li>
-</ul>
-     </div>
-     }/>
+            <ul className="w-full space-y-2.5 text-[18px] font-[600] text-[#00712D] md:space-y-5">
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={Clothing}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
 
-<Accordion title="How do I apply for a volunteer program?" description={
-      <div>
-     You can follow up these guideline to apply for our programs:
+                <Paragraph className="!text-left">Lightweight clothing.</Paragraph>
+              </li>
 
-     <ul className="list-disc list-inside	">
-<li>Explore our programs and choose a program that fits your interests and availability.</li>
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={Footwear}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
 
-<li>Submit online application on our website.</li>
+                <Paragraph className="!text-left">Comfortable walking shoes.</Paragraph>
+              </li>
 
-<li>Acceptance & Confirmation to complete the necessary paperwork and payment.</li>
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={Accessories}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
 
-<li>You'll receive our Pre-Departure Preparation for your journey.</li>
-</ul>
-     </div>
-     }/>
+                <Paragraph className="!text-left">
+                  Sunscreen, hat, water bottle and any accessories.
+                </Paragraph>
+              </li>
 
-<Accordion title="What are the eligibility criteria for international students?" description={
-      <div>
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={Documents}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
 
-Generally, you should:
-     <ul className="list-disc list-inside	">
-<li>Be 14 - 18 or 19 - 22 years old.</li>
+                <Paragraph className="!text-left">
+                  Documents: Passport, visa, tickets, contacts.
+                </Paragraph>
+              </li>
+            </ul>
+          </div>
 
-<li>Demonstrate enthusiasm, adaptability, and an open mind.</li>
+          <div className="flex flex-col items-center">
+            <div className="mb-4 flex h-12 w-full items-center justify-center rounded-[10px] border-2 border-[#00712D] bg-white px-2.5 text-center text-[20px] font-[900] text-[#00712D] md:mb-9 md:h-14 md:text-[24px]">
+              What We Provide
+            </div>
 
-<li>Possess a valid passport and be eligible for the required visa.</li>
-</ul>
-     </div>
-     }/>
+            <ul className="w-full space-y-2.5 text-[18px] font-[600] text-[#00712D] md:space-y-5">
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={SupportIcon}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
 
-<Accordion title="What kind of accommodation will I have?" description={
-      <div>
+                <Paragraph className="!text-left">On-call support.</Paragraph>
+              </li>
 
-Accommodation varies by program and location, but common options include:
-     <ul className="list-disc list-inside	">
-<li>Local Homestays to experience deep cultural immersion.</li>
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={Transportation}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
 
-<li>Guesthouses or Dorms.</li>
+                <Paragraph className="!text-left">Transportation between locations.</Paragraph>
+              </li>
 
-<li>Project-Specific Housing with basic facilities at remote conservation sites. Details for each specific program's accommodation will be provided on its dedicated page.</li>
-</ul>
-     </div>
-     }/>
-</Container>
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={Meals}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
+
+                <Paragraph className="!text-left">All meals provided.</Paragraph>
+              </li>
+
+              <li className="flex items-center gap-2.5 md:gap-6">
+                <Image
+                  src={Lodging}
+                  className="aspect-square max-w-8 md:max-w-[60px]"
+                  layout="responsive"
+                  alt="icon"
+                />
+
+                <Paragraph className="!text-left">Comfortable lodging provided.</Paragraph>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Container>
+
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
+        <Heading color="text-[#22C55E]">FAQ</Heading>
+
+        <Accordion
+          title="What types of student trips/programs are available?"
+          description={
+            <div>
+              We offer diverse programs across the region:
+              <ul className="list-inside list-disc">
+                <li>
+                  <b>Nature Camps:</b> These programs allow you to explore and protect stunning
+                  natural landscapes, fostering a profound understanding of environment and
+                  inspiring positive environmental behaviors.
+                </li>
+
+                <li>
+                  <b>Subject Camps:</b> These programs offer transformative, real-world learning
+                  experiences beyond the classroom, allowing students to explore new cultures and
+                  academic subjects.
+                </li>
+
+                <li>
+                  <b>Leadership Camps:</b> These programs immerse students in real-world contexts,
+                  engaging them in deep exploration of societal issues, meaningful volunteer work,
+                  active discussions, and hands-on initiatives that drive positive change.
+                </li>
+              </ul>
+            </div>
+          }
+        />
+
+        <Accordion
+          title="How do I apply for a volunteer program?"
+          description={
+            <div>
+              You can follow up these guideline to apply for our programs:
+              <ul className="list-inside list-disc">
+                <li>
+                  Explore our programs and choose a program that fits your interests and
+                  availability.
+                </li>
+
+                <li>Submit online application on our website.</li>
+
+                <li>Acceptance & Confirmation to complete the necessary paperwork and payment.</li>
+
+                <li>You'll receive our Pre-Departure Preparation for your journey.</li>
+              </ul>
+            </div>
+          }
+        />
+
+        <Accordion
+          title="What are the eligibility criteria for international students?"
+          description={
+            <div>
+              Generally, you should:
+              <ul className="list-inside list-disc">
+                <li>Be 14 - 18 or 19 - 22 years old.</li>
+
+                <li>Demonstrate enthusiasm, adaptability, and an open mind.</li>
+
+                <li>Possess a valid passport and be eligible for the required visa.</li>
+              </ul>
+            </div>
+          }
+        />
+
+        <Accordion
+          title="What kind of accommodation will I have?"
+          description={
+            <div>
+              Accommodation varies by program and location, but common options include:
+              <ul className="list-inside list-disc">
+                <li>Local Homestays to experience deep cultural immersion.</li>
+
+                <li>Guesthouses or Dorms.</li>
+
+                <li>
+                  Project-Specific Housing with basic facilities at remote conservation sites.
+                  Details for each specific program's accommodation will be provided on its
+                  dedicated page.
+                </li>
+              </ul>
+            </div>
+          }
+        />
+      </Container>
 
       <Container className="bg-[#ECFAE5]">
-      <Heading color="text-[#00712D]">
-      Ready to make an impact? Explore our programs and start your ASEAN adventure today!
+        <Heading color="text-[#00712D]">
+          Ready to make an impact? Explore our programs and start your ASEAN adventure today!
         </Heading>
 
         <div className="mt-10 flex justify-center">
-        <Button path="/contact-us">Contact Us</Button>
+          <Button path="/contact-us">Contact Us</Button>
         </div>
-</Container>
+      </Container>
     </main>
   )
 }
