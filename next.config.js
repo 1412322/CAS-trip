@@ -4,6 +4,6 @@ const nextConfig = {
   sassOptions: {
     additionalData: `$var: red;`,
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
