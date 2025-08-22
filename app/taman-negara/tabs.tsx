@@ -6,6 +6,7 @@ import Container from '@/components/Layout/Container'
 import Paragraph from '@/components/Paragraph'
 import Carret from '@/public/images/carret.svg'
 import Itinerary1 from '@/public/images/itinerary_1.webp'
+import Tag from '@/public/images/small_tag.svg'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -34,7 +35,6 @@ export default function Tabs() {
 </div>
 
 <div className={`${activeTab === 1 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
-<Container className="bg-[#ECFAE5] !p-2.5 md:pt-10">
         <div className="text-[18px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
         Janda Baik Stay
         </div>
@@ -62,49 +62,73 @@ export default function Tabs() {
 <li>Departure to Kuala Lumpur.</li>
         </ul>
         </Paragraph>
-        </Container>
         </div>
 
         <div className={`${activeTab === 2 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
-        <Container className="bg-[#ECFAE5] pt-10 md:pt-10">
+     
         {[{
   imgs: [Itinerary1, Itinerary1],
   title: 'Singapore Arrival & Welcome',
-  descriptions: [`Check in to accommodation and get acquainted with your fellow. Brief orientation of the trip program and key highlights.`],
+  descriptions: ['Check in and meet your group, followed by a trip orientation and key highlights overview.'],
 }, {
   imgs: [Itinerary1, Itinerary1],
-  title: 'Singapore Exploration & Journey to Janda Baik',
-  descriptions: [`Discover the National University of Singapore and the stunning Gardens by the Bay before traveling to Janda Baik and checking into your resort.Discover the National University of Singapore and the stunning Gardens by the Bay before traveling to Janda Baik and checking into your resort.`],
+  title: 'Singapore Exploration\n& Journey to Janda Baik',
+  descriptions: [`Explore NUS and Gardens by the Bay, then travel to Janda Baik for resort check-in.`],
 }, {
   imgs: [Itinerary1, Itinerary1],
   title: 'Farm Life & River Trekking',
-  descriptions: [`Experience a Goat Farm and an Organic Fitrah Farm, followed by an exhilarating Sg Benus River Trekking adventure.`],
+  descriptions: ['Visit a Goat Farm and Organic Fitrah Farm, then enjoy an exhilarating Sg Benus River trek.'],
+}, {
+  imgs: [Itinerary1],
+  title: 'Team Challenges & Rafting',
+  descriptions: ['Join the GEMS Olympic challenges, then take on a thrilling Raft Building water mission.'],
+}, {
+  imgs: [Itinerary1],
+  title: 'Taman Negara Immersion',
+  descriptions: ['Head to Taman Negara for a scenic boat ride to Lata Berkoh and a visit to the Fish Sanctuary.'],
+}, {
+  imgs: [Itinerary1],
+  title: 'Culture & Canopy Walks',
+  descriptions: ['Enjoy Rapid Shooting, visit a Batek Tribe village, then hike Teresek Hill and explore the Canopy Walk.'],
+}, {
+  imgs: [Itinerary1],
+  title: 'Departure',
+  descriptions: ['Head back to KL or Singapore to begin your journey home with lasting memories.'],
 }].map((item, index) => (
-<div key={index} className={`flex flex-col items-start gap-5 md:gap-6 mb-5 md:mb-10 last:mb-0 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
- 
+<div key={index} className={`relative flex items-start gap-5 md:gap-12 pb-5 md:pb-10 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
  <div className="flex gap-2.5 md:gap-6 flex-1 w-full">
    {item.imgs.map((img, index) => (
     <Image key={index} src={img} className="w-full rounded-[10px] aspect-square overflow-hidden" layout="responsive" alt="" />
    ))}
  </div>
   
-  <div className={`flex-1 ${index % 2 !== 0 ? 'text-right' : 'text-left'} text-[#00712D]`}>
-    {item.title && <div className="text-[18px] md:text-[24px] font-[900] md:mb-6">{item.title}</div>}
+  <div>
+  <div className="absolute left-[calc(50%-2px)] w-[4px] bg-[#00712D] h-full" />
+
+  <div className="absolute h-5 w-5 rounded-full bg-[#00712D] left-[calc(50%-10px)]" />
+</div>
+
+  <div className={`flex-1 ${index % 2 === 0 ? 'text-left' : 'text-right'} text-[#00712D]`}>
+  <div className='md:mb-6 mb-1 relative z-[1] font-[800] text-[12px] md:text-[32px] text-white'>
+  <div className={`w-full h-full absolute z-[-1] bg-[url('../public/images/small_tag.svg')] bg-contain bg-no-repeat ${index % 2 === 0 ? '' : 'rotate-180'}`} />
+
+<label className="mx-6">DAY {index + 1}</label>
+</div>
+
+    {item.title && <div className="text-[12px] md:text-[24px] font-[900] md:mb-2.5">{item.title}</div>}
 
 <ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
 {item.descriptions.map((description, descriptionIndex) => (
   <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'md:mb-6 last:mb-0' : ''}`}>
-    <p className="font-[600] text-[14px] md:text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
+    <p className="font-[600] text-[12px] md:text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
   </li>
 ))}
   </ul>
   </div>
 </div>
-))}
-          </Container></div>
+))}</div>
 
           <div className={`${activeTab === 3 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
-        <Container className="bg-[#ECFAE5] !p-2.5 pt-10 md:pt-10">
       <Heading color="text-[#22C55E]">
       WHAT YOU NEED TO BRING
         </Heading>
@@ -168,12 +192,10 @@ export default function Tabs() {
   </Paragraph>
 </li>
 </ul>
-        </Container>
         </div>
 
         <div className={`${activeTab === 4 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
-        <Container className="bg-[#ECFAE5] !p-2.5 pt-10 md:pt-10">
-        <ul className="py-8 px-10 text-[#00712D] flex-1">
+        <ul className="p-5 md:py-8 md:px-10 text-[#00712D] flex-1">
 <li className="mb-10 last:mb-0">
   <div className="flex items-center gap-2.5">
   <Image src={Carret} alt="" width={20} />
@@ -240,7 +262,6 @@ export default function Tabs() {
   </Paragraph>
 </li>
 </ul>
-        </Container>
         </div>
         </Container>
 
