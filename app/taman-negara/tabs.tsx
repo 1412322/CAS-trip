@@ -6,7 +6,7 @@ import Container from '@/components/Layout/Container'
 import Paragraph from '@/components/Paragraph'
 import Carret from '@/public/images/carret.svg'
 import Itinerary1 from '@/public/images/itinerary_1.webp'
-import Tag from '@/public/images/small_tag.svg'
+import WhiteCarret from '@/public/images/white_carret.svg'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -16,7 +16,7 @@ export default function Tabs() {
   return (
     <>
         <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-<div className="flex items-center justify-center">
+<div className="flex items-center justify-center mb-2.5 md:mb-10">
   <div onClick={() => setActiveTab(1)} className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 1 ? 'text-white bg-[#00712D]' : ''}`}>
     ACCOMMODATION
     </div>
@@ -103,9 +103,9 @@ export default function Tabs() {
  </div>
   
   <div>
-  <div className="absolute left-[calc(50%-2px)] w-[4px] bg-[#00712D] h-full" />
+  <div className="absolute left-[calc(50%-1px)] md:left-[calc(50%-2px)] w-[2px] md:w-[4px] bg-[#00712D] h-full" />
 
-  <div className="absolute h-5 w-5 rounded-full bg-[#00712D] left-[calc(50%-10px)]" />
+  <div className="absolute h-2 md:h-5 w-2 md:w-5 rounded-full bg-[#00712D] left-[calc(50%-4px)] md:left-[calc(50%-10px)]" />
 </div>
 
   <div className={`flex-1 ${index % 2 === 0 ? 'text-left' : 'text-right'} text-[#00712D]`}>
@@ -133,15 +133,15 @@ export default function Tabs() {
       WHAT YOU NEED TO BRING
         </Heading>
 
-        <ul className="p-5 md:py-8 md:px-10 text-[#00712D] flex-1">
-<li className="mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+        <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
+<li>
+  <div className="flex items-center gap-2.5 mb-1.5">
+  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[18px] md:text-[24px] font-[900] mb-1.5">Backpack</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">Backpack</div>
   </div>
 
-  <Paragraph className="mb-10 !text-left">
+  <p className="text-[12px] md:text-[18px] font-[600]">
     <ul className="list-inside list-disc">
 <li>Bring versatile, lightweight, and quick-drying clothes and school uniform.</li>
 
@@ -149,17 +149,17 @@ export default function Tabs() {
 
 <li>Comfortable crocs, walking shoes for outdoor activities.</li>
     </ul>
-  </Paragraph>
+  </p>
 </li>
 
-<li className="mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+<li>
+  <div className="flex items-center gap-2.5 mb-1.5">
+  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[18px] md:text-[24px] font-[900] mb-1.5">Essential Documents</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">Essential Documents</div>
   </div>
 
-  <Paragraph className="mb-10 !text-left">
+  <p className="text-[12px] md:text-[18px] font-[600]">
     <ul className="list-inside list-disc">
 <li>{`Passport (with validity > 6 months) and a photocopy of passport.`}</li>
 
@@ -169,17 +169,17 @@ export default function Tabs() {
 
 <li>Money (you’ll be responsible for carrying).</li>
     </ul>
-  </Paragraph>
+  </p>
 </li>
 
-<li className="mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+<li>
+  <div className="flex items-center gap-2.5 mb-1.5">
+  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[18px] md:text-[24px] font-[900] mb-1.5">Personal Daypack</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">Personal Daypack</div>
   </div>
 
-  <Paragraph className="mb-10 !text-left">
+  <p className="text-[12px] md:text-[18px] font-[600]">
     <ul className="list-inside list-disc">
 <li>Reusable water bottle, sunglasses, hat for sun protection.</li>
 
@@ -189,9 +189,53 @@ export default function Tabs() {
 
 <li>Extra paperwork for service hours credit (if needed).</li>
     </ul>
-  </Paragraph>
+  </p>
 </li>
 </ul>
+
+<div className="bg-[#76B588] rounded-[10px] p-4 md:py-8 md:px-28 mt-10">
+<Heading color="text-white">
+WHAT'S INCLUDED
+        </Heading>
+
+<div className="space-y-2.5 md:space-y-5">
+        <div className="flex items-center gap-2.5">
+  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+
+  <div className="text-[14px] md:text-[24px] font-[600] text-white">Adventure Leader for the entire trip.</div>
+  </div>
+
+  <div className="flex items-center gap-2.5">
+  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+
+  <div className="text-[14px] md:text-[24px] font-[600] text-white">All meals for the entire trip.</div>
+  </div>
+
+  <div className="flex items-center gap-2.5">
+  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+
+  <div className="text-[14px] md:text-[24px] font-[600] text-white">All transportation costs, including airport pick-up and drop-off.</div>
+  </div>
+
+  <div className="flex items-center gap-2.5">
+  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+
+  <div className="text-[14px] md:text-[24px] font-[600] text-white">All activities listed in the itinerary.</div>
+  </div>
+
+  <div className="flex items-center gap-2.5">
+  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+
+  <div className="text-[14px] md:text-[24px] font-[600] text-white">24-hour emergency contact support during the trip.</div>
+  </div>
+
+  <div className="flex items-center gap-2.5">
+  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+
+  <div className="text-[14px] md:text-[24px] font-[600] text-white">Detailed pre-departure summary & briefing.</div>
+  </div>
+  </div>
+</div>
         </div>
 
         <div className={`${activeTab === 4 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>

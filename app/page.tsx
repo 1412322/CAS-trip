@@ -120,7 +120,7 @@ export default function Home() {
         <Carousel list={programs} />
 
         <div className="mt-10 flex justify-center">
-          <Button>View All 10+ Programs</Button>
+          <Button path='/our-programs'>View All 10+ Programs</Button>
         </div>
       </Container>
 
