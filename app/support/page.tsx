@@ -22,13 +22,12 @@ export default function Support() {
     <main>
       {/* ABOUT US */}
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-        <Heading color="text-[#22C55E] pt-16 md:pt-20">OVERVIEW</Heading>
+        <Heading color="text-[#22C55E] pt-16 md:pt-20">SUPPORT</Heading>
 
         <div className="grid grid-cols-1 md:grid-cols-3">
           <Image className="hidden h-full w-full flex-1 object-cover md:block" src={Overview1} alt="volunteer" />
 
           <div className="flex flex-1 flex-col items-center justify-center bg-[#00712D] p-2.5 text-[12px] font-[600] text-white md:px-6 md:text-[18px]">
-            <p>
               This section provides essential information and resources to help you prepare, stay
               safe, and thrive during your volunteer trips.
               <ul>
@@ -47,7 +46,6 @@ export default function Support() {
                   All guides follow a comprehensive volunteer program assessed regularly.
                 </li>
               </ul>
-            </p>
           </div>
 
           <Image
@@ -106,7 +104,7 @@ export default function Support() {
               <div>Health & Safety</div>
             </div>
 
-            <p className="text-[12px] md:text-[18px] font-[600] text-white">
+            <div className="text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-inside list-disc space-y-4 md:space-y-6">
 <li><b>Ensure a pre-tour health check-up</b> (30 days prior) and physical preparation.</li>
 
@@ -116,7 +114,7 @@ export default function Support() {
 
 <li><b>Stay hydrated</b> and follow local guidelines.</li>
               </ul>
-            </p>
+            </div>
           </div>
 
           <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-20 md:py-10">
@@ -127,7 +125,7 @@ export default function Support() {
               <div>Visa Requirements</div>
             </div>
 
-            <p className="text-[12px] md:text-[18px] font-[600] text-white">
+            <div className="text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-inside list-disc space-y-4 md:space-y-6">
                 <li>
                 <b>Obtain the correct visa</b> for destination and check latest requirements before departure.
@@ -141,7 +139,7 @@ export default function Support() {
                 <b>Stay updated</b> on the <b>local weather forecast</b> for optimal luggage preparation.
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
         </div>
       </Container>
@@ -184,8 +182,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={Clothing}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 
@@ -195,8 +192,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={Footwear}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 
@@ -206,8 +202,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={Accessories}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 
@@ -219,8 +214,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={Documents}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 
@@ -240,8 +234,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={SupportIcon}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 
@@ -251,8 +244,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={Transportation}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 
@@ -262,8 +254,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={Meals}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 
@@ -273,8 +264,7 @@ export default function Support() {
               <li className="flex items-center gap-2.5 md:gap-6">
                 <Image
                   src={Lodging}
-                  className="aspect-square max-w-8 md:max-w-[60px]"
-                  layout="responsive"
+                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
                   alt="icon"
                 />
 

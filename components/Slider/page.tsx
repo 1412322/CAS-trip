@@ -31,8 +31,12 @@ export default function Slider({ articles }: SliderProps) {
             key={idx}
             className="min-w-[150px] overflow-hidden rounded-[10px] md:min-w-[340px] md:rounded-[20px]"
           >
-            <div className="relative h-[156px] md:h-[356px]">
+            <div className="relative h-[156px] md:h-[356px] group">
               <Image src={item.img} alt={item.title} fill className="object-cover" />
+
+<div className="absolute hidden group-hover:flex inset-0 items-center justify-center bg-[#00000080]">
+              <div className="text-[24px] font-[700] text-[#00712D] cursor-pointer bg-white rounded-full p-2">Read More</div>
+              </div>
             </div>
 
             <div className="flex h-14 items-center justify-center whitespace-break-spaces bg-[#00712D] p-4 text-center text-[8px] font-[900] text-white md:h-32 md:text-[18px]">

@@ -24,7 +24,7 @@ export default function TamanNegara() {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         <div className="z-1 absolute flex h-full w-full flex-col items-center justify-center px-5 md:px-[100px]">
-          <Image src={Sologan} layout="responsive" alt="reativity-activity-service" />
+          <Image src={Sologan} className="max-w-4xl w-full h-auto" alt="reativity-activity-service" />
 
           <h2 className="mb-[77px] mt-3 text-center text-[16px] font-[800] text-white md:text-[35px]">
             22 OCTOBER – 26 OCTOBER 2025

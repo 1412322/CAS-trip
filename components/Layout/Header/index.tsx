@@ -14,10 +14,15 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const toggleDropdown = (menu: string) => {
     setActiveDropdown(activeDropdown === menu ? null : menu)
+  }
+
+  const toggleMobileDropdown = (menu: string) => {
+    setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu)
   }
 
   useEffect(() => {
@@ -195,7 +200,7 @@ export default function Header() {
 
             <button
               className="flex h-[30px] w-full items-center justify-between px-[30px] active:bg-[rgba(0,113,45,0.10)]"
-              onClick={() => toggleDropdown('programs')}
+              onClick={() => toggleMobileDropdown('programs')}
             >
               <label
                 className={`${['/camps/nature', '/camps/leadership', '/camps/subject'].includes(pathname) ? 'underline' : ''}`}
@@ -204,14 +209,14 @@ export default function Header() {
               </label>
 
               <Image
-                className={activeDropdown === 'programs' ? 'rotate-180' : ''}
+                className={activeMobileDropdown === 'programs' ? 'rotate-180' : ''}
                 src={ArrowDown}
                 width={12}
                 alt="arrow-down-icon"
               />
             </button>
 
-            {activeDropdown === 'programs' && (
+            {activeMobileDropdown === 'programs' && (
               <ul className="mt-2.5 space-y-2.5 px-[30px] text-[16px] font-[800]">
                 <li>
                   <Link

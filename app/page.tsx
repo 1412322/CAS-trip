@@ -17,10 +17,10 @@ import Traveler4 from '@/public/images/travelers/kai_truong.png'
 import Traveler1 from '@/public/images/travelers/marcus_lim.png'
 import Traveler5 from '@/public/images/travelers/miya_matte.png'
 import Traveler3 from '@/public/images/travelers/wijaya.png'
-import WeWillHandleTripForYou1 from '@/public/images/we_will_handle_your_trip_for_you_1.png'
-import WeWillHandleTripForYou2 from '@/public/images/we_will_handle_your_trip_for_you_2.png'
-import WeWillHandleTripForYou3 from '@/public/images/we_will_handle_your_trip_for_you_3.png'
-import WeWillHandleTripForYou4 from '@/public/images/we_will_handle_your_trip_for_you_4.png'
+import WeWillHandleTripForYou1 from '@/public/images/we_will_handle_your_trip_for_you_1.webp'
+import WeWillHandleTripForYou2 from '@/public/images/we_will_handle_your_trip_for_you_2.webp'
+import WeWillHandleTripForYou3 from '@/public/images/we_will_handle_your_trip_for_you_3.webp'
+import WeWillHandleTripForYou4 from '@/public/images/we_will_handle_your_trip_for_you_4.webp'
 import WhereWeTravel1 from '@/public/images/where_we_travel_1.webp'
 import WhereWeTravel2 from '@/public/images/where_we_travel_2.webp'
 import WhereWeTravel3 from '@/public/images/where_we_travel_3.webp'
@@ -214,12 +214,13 @@ export default function Home() {
             },
           ].map((item, index) => (
             <div key={index} className="flex flex-col items-center gap-2.5 md:flex-row md:gap-6">
+              <div className="flex-1 w-full">
               <Image
                 src={item.img}
                 alt={item.title}
-                layout="responsive"
-                className="aspect-square w-full flex-1 rounded-[10px] object-cover"
+                className="aspect-square w-full rounded-[10px] object-cover"
               />
+              </div>
 
               <div className="flex-1 text-left">
                 <h3 className="mb-1.5 text-[18px] font-[900] text-[#00712D] md:mb-6 md:text-[24px]">
@@ -238,13 +239,7 @@ export default function Home() {
         <Heading color="text-white">WHERE WE TRAVEL</Heading>
 
         <div className="grid grid-cols-1 gap-2.5 text-[18px] font-[900] md:grid-cols-3 md:gap-6 md:text-[30px]">
-          <div className="relative h-[40vw] w-full overflow-hidden rounded-lg md:order-2 md:h-[calc(40vw)]">
-            <Image src={WhereWeTravel3} alt="Travel 3" layout="fill" className="object-cover" />
-
-            <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nSAPA`}</h2>
-          </div>
-
-          <div className="grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-6">
+          <div className="order-1 md:order-0 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-6">
             <div className="relative h-[35vw] w-full overflow-hidden rounded-lg md:h-full">
               <Image src={WhereWeTravel1} alt="Travel 1" layout="fill" className="object-cover" />
 
@@ -260,7 +255,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-6">
+          <div className="order-0 md:order-1 relative h-[40vw] w-full overflow-hidden rounded-lg md:h-[calc(40vw)]">
+            <Image src={WhereWeTravel3} alt="Travel 3" layout="fill" className="object-cover" />
+
+            <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nSAPA`}</h2>
+          </div>
+
+          <div className="order-2 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-6">
             <div className="relative h-[35vw] w-full overflow-hidden rounded-lg md:h-full">
               <Image src={WhereWeTravel4} alt="Travel 4" layout="fill" className="object-cover" />
 
@@ -381,8 +382,7 @@ export default function Home() {
             <Heading color="text-[#00712D] !text-left">GET LATEST & UPDATES TRIP PROGRAMS</Heading>
 
             <Paragraph className="!text-left">
-              Curious how we can elevate student hiring and empower your team? Join our demo to
-              explore the future of seamless recruitment.
+            Subscribe here to receive comprehensive updates on all current and upcoming Our CAS Trips.
             </Paragraph>
           </div>
 

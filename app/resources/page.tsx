@@ -3,11 +3,11 @@ import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
 import Paragraph from '@/components/Paragraph'
 import Slider from '@/components/Slider/page'
-import MostPopularArticles1 from '@/public/images/most_popular_articles_1.png'
-import MostPopularArticles2 from '@/public/images/most_popular_articles_2.png'
-import MostPopularArticles3 from '@/public/images/most_popular_articles_3.png'
-import MostPopularArticles4 from '@/public/images/most_popular_articles_4.png'
-import MostPopularArticles5 from '@/public/images/most_popular_articles_5.png'
+import MostPopularArticles1 from '@/public/images/most_popular_articles_1.webp'
+import MostPopularArticles2 from '@/public/images/most_popular_articles_2.webp'
+import MostPopularArticles3 from '@/public/images/most_popular_articles_3.webp'
+import MostPopularArticles4 from '@/public/images/most_popular_articles_4.webp'
+import MostPopularArticles5 from '@/public/images/most_popular_articles_5.webp'
 
 export default function Resources() {
   return (

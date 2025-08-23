@@ -47,7 +47,7 @@ export default function Tabs() {
         Immersive Community Experience
         </div>
 
-        <Paragraph className="mb-10 !text-left">
+        <div className="mb-10 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
         <ul className="list-disc list-inside">
 <li>Discover the National University of Singapore and travel to Janda Baik.</li>
 
@@ -61,7 +61,7 @@ export default function Tabs() {
 
 <li>Departure to Kuala Lumpur.</li>
         </ul>
-        </Paragraph>
+        </div>
         </div>
 
         <div className={`${activeTab === 2 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
@@ -141,7 +141,7 @@ export default function Tabs() {
   <div className="text-[14px] md:text-[24px] font-[900]">Backpack</div>
   </div>
 
-  <p className="text-[12px] md:text-[18px] font-[600]">
+  <div className="text-[12px] md:text-[18px] font-[600]">
     <ul className="list-inside list-disc">
 <li>Bring versatile, lightweight, and quick-drying clothes and school uniform.</li>
 
@@ -149,7 +149,7 @@ export default function Tabs() {
 
 <li>Comfortable crocs, walking shoes for outdoor activities.</li>
     </ul>
-  </p>
+  </div>
 </li>
 
 <li>
@@ -159,7 +159,7 @@ export default function Tabs() {
   <div className="text-[14px] md:text-[24px] font-[900]">Essential Documents</div>
   </div>
 
-  <p className="text-[12px] md:text-[18px] font-[600]">
+  <div className="text-[12px] md:text-[18px] font-[600]">
     <ul className="list-inside list-disc">
 <li>{`Passport (with validity > 6 months) and a photocopy of passport.`}</li>
 
@@ -169,7 +169,7 @@ export default function Tabs() {
 
 <li>Money (you’ll be responsible for carrying).</li>
     </ul>
-  </p>
+  </div>
 </li>
 
 <li>
@@ -179,7 +179,7 @@ export default function Tabs() {
   <div className="text-[14px] md:text-[24px] font-[900]">Personal Daypack</div>
   </div>
 
-  <p className="text-[12px] md:text-[18px] font-[600]">
+  <div className="text-[12px] md:text-[18px] font-[600]">
     <ul className="list-inside list-disc">
 <li>Reusable water bottle, sunglasses, hat for sun protection.</li>
 
@@ -189,7 +189,7 @@ export default function Tabs() {
 
 <li>Extra paperwork for service hours credit (if needed).</li>
     </ul>
-  </p>
+  </div>
 </li>
 </ul>
 
@@ -259,7 +259,7 @@ WHAT'S INCLUDED
   <div className="text-[24px] font-[900] mb-1.5">Activities</div>
   </div>
 
-  <Paragraph className="ml-[30px] mb-1.5 !text-left">
+  <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
   Students will engage directly in diverse experiences:
     <ul className="list-inside list-disc">
 <li><b>Urban & Rural Exploration:</b> Discover Singapore's landmarks and participate in unique farm experiences and cultural exchanges.</li>
@@ -270,7 +270,7 @@ WHAT'S INCLUDED
 
 <li><b>Our goal</b> is a comprehensive experience combining learning, adventure, and cultural immersion.</li>
     </ul>
-  </Paragraph>
+  </div>
 </li>
 
 <li className="mb-10 last:mb-0">
@@ -280,7 +280,7 @@ WHAT'S INCLUDED
   <div className="text-[24px] font-[900] mb-1.5">Health and Safety</div>
   </div>
 
-  <Paragraph className="ml-[30px] mb-1.5 !text-left">
+  <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
   Ensuring your teen's safety is paramount. We maintain this through:
     <ul className="list-inside list-disc">
 <li><b>Trained Local Teams</b> and comprehensive Safety Briefings for all activities.</li>
@@ -291,7 +291,7 @@ WHAT'S INCLUDED
 
 <li>Emphasis on <b>Cultural Sensitivity</b> for respectful community interactions.</li>
     </ul>
-  </Paragraph>
+  </div>
 </li>
 
 <li className="mb-10 last:mb-0">

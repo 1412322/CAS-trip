@@ -120,15 +120,12 @@ Meet All Our member
           >
             <Image
               src={item.img}
-              className="max-h-[152px] flex-1 overflow-hidden rounded-[10px] object-cover md:max-h-[290px]"
-              layout="responsive"
+              className="w-full h-auto max-h-[152px] flex-1 overflow-hidden rounded-[10px] object-cover md:max-h-[290px]"
               alt={item.description}
             />
 
             <div className="flex-1">
-              <Paragraph className="!text-left">
-                <p dangerouslySetInnerHTML={{ __html: item.description }} />
-              </Paragraph>
+              <p className="text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]" dangerouslySetInnerHTML={{ __html: item.description }} />
             </div>
           </div>
         ))}
@@ -179,9 +176,8 @@ Meet All Our member
               className="flex items-center gap-3 rounded-[10px] border border-[#00712D] bg-white pl-5 py-1.5 md:gap-6 md:rounded-[20px] md:pl-10 md:py-3"
             >
               <Image
-                className="aspect-square max-w-6 rounded-full md:max-w-12"
+                className="w-full h-auto aspect-square max-w-6 rounded-full md:max-w-12"
                 src={CircleCheck}
-                layout="responsive"
                 alt={item.title}
               />
 
@@ -213,7 +209,7 @@ Meet All Our member
           ].map((item, index) => (
             <Link key={index} href={item.path} className="flex flex-1 flex-col items-center">
               <div className="mb-3.5 aspect-square w-[74px] rounded-full border-2 border-[#00712D] p-3 md:w-[108px] md:border-4 md:p-4">
-                <Image src={item.img} alt={item.title} layout="responsive" />
+                <Image src={item.img} alt={item.title} className="h-auto w-full" />
               </div>
 
               <div className="flex w-full items-center justify-center rounded-full bg-[#00712D] px-8 py-4 text-center text-[16px] font-[900] text-white md:py-6 md:text-[24px]">
