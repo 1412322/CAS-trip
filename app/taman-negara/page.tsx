@@ -38,7 +38,7 @@ export default function TamanNegara() {
         <Heading color="text-[#22C55E]">LET'S TAKE A LOOK OUR JOURNEY</Heading>
 
         <div className="mt-10 flex justify-center">
-          <Button>Watch more our trips</Button>
+          <Button path="/our-programs">Watch more our trips</Button>
         </div>
       </Container>
 

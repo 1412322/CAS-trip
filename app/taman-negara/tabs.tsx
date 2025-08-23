@@ -5,7 +5,18 @@ import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
 import Paragraph from '@/components/Paragraph'
 import Carret from '@/public/images/carret.svg'
-import Itinerary1 from '@/public/images/itinerary_1.webp'
+import Itinerary1 from '@/public/images/taman-negara/itinerary_1.webp'
+import Itinerary2 from '@/public/images/taman-negara/itinerary_2.webp'
+import Itinerary3 from '@/public/images/taman-negara/itinerary_3.webp'
+import Itinerary4 from '@/public/images/taman-negara/itinerary_4.webp'
+import Itinerary5 from '@/public/images/taman-negara/itinerary_5.webp'
+import Itinerary6 from '@/public/images/taman-negara/itinerary_6.webp'
+import Itinerary7 from '@/public/images/taman-negara/itinerary_7.webp'
+import Itinerary8 from '@/public/images/taman-negara/itinerary_8.webp'
+import Itinerary9 from '@/public/images/taman-negara/itinerary_9.webp'
+import Itinerary10 from '@/public/images/taman-negara/itinerary_10.webp'
+import Itinerary11 from '@/public/images/taman-negara/itinerary_11.webp'
+import Itinerary12 from '@/public/images/taman-negara/itinerary_12.webp'
 import WhiteCarret from '@/public/images/white_carret.svg'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -34,7 +45,7 @@ export default function Tabs() {
     </div>
 </div>
 
-<div className={`${activeTab === 1 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
+<div className={`${activeTab === 1 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
         <div className="text-[18px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
         Janda Baik Stay
         </div>
@@ -47,7 +58,7 @@ export default function Tabs() {
         Immersive Community Experience
         </div>
 
-        <div className="mb-10 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
+        <div className="text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
         <ul className="list-disc list-inside">
 <li>Discover the National University of Singapore and travel to Janda Baik.</li>
 
@@ -64,41 +75,43 @@ export default function Tabs() {
         </div>
         </div>
 
-        <div className={`${activeTab === 2 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
+        <div className={`${activeTab === 2 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
      
         {[{
-  imgs: [Itinerary1, Itinerary1],
+  imgs: [Itinerary1, Itinerary2],
   title: 'Singapore Arrival & Welcome',
   descriptions: ['Check in and meet your group, followed by a trip orientation and key highlights overview.'],
 }, {
-  imgs: [Itinerary1, Itinerary1],
+  imgs: [Itinerary3, Itinerary4],
   title: 'Singapore Exploration\n& Journey to Janda Baik',
   descriptions: [`Explore NUS and Gardens by the Bay, then travel to Janda Baik for resort check-in.`],
 }, {
-  imgs: [Itinerary1, Itinerary1],
+  imgs: [Itinerary5, Itinerary6],
   title: 'Farm Life & River Trekking',
   descriptions: ['Visit a Goat Farm and Organic Fitrah Farm, then enjoy an exhilarating Sg Benus River trek.'],
 }, {
-  imgs: [Itinerary1],
+  imgs: [Itinerary7],
   title: 'Team Challenges & Rafting',
   descriptions: ['Join the GEMS Olympic challenges, then take on a thrilling Raft Building water mission.'],
 }, {
-  imgs: [Itinerary1],
+  imgs: [Itinerary8],
   title: 'Taman Negara Immersion',
   descriptions: ['Head to Taman Negara for a scenic boat ride to Lata Berkoh and a visit to the Fish Sanctuary.'],
 }, {
-  imgs: [Itinerary1],
+  imgs: [Itinerary9, Itinerary10],
   title: 'Culture & Canopy Walks',
   descriptions: ['Enjoy Rapid Shooting, visit a Batek Tribe village, then hike Teresek Hill and explore the Canopy Walk.'],
 }, {
-  imgs: [Itinerary1],
+  imgs: [Itinerary11, Itinerary12],
   title: 'Departure',
   descriptions: ['Head back to KL or Singapore to begin your journey home with lasting memories.'],
 }].map((item, index) => (
-<div key={index} className={`relative flex items-start gap-5 md:gap-12 pb-5 md:pb-10 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+<div key={index} className={`relative flex items-start gap-5 md:gap-12 pb-10 md:pb-20 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
  <div className="flex gap-2.5 md:gap-6 flex-1 w-full">
    {item.imgs.map((img, index) => (
-    <Image key={index} src={img} className="w-full rounded-[10px] aspect-square overflow-hidden" layout="responsive" alt="" />
+     <div className={`w-3/4 bg-white p-1.5 md:p-5 shadow-[3.526px_3.526px_3.526px_0_rgba(0,0,0,0.50)] ${index === 1 ? "rotate-12 translate-x-[-50%]" : ''}`}>
+    <Image key={index} src={img} className={`${item.imgs.length === 1 ? '' : 'aspect-square'} overflow-hidden object-cover`} alt="" />
+    </div>
    ))}
  </div>
   
@@ -112,7 +125,7 @@ export default function Tabs() {
   <div className='md:mb-6 mb-1 relative z-[1] font-[800] text-[12px] md:text-[32px] text-white'>
   <div className={`w-full h-full absolute z-[-1] bg-[url('../public/images/small_tag.svg')] bg-contain bg-no-repeat ${index % 2 === 0 ? '' : 'rotate-180'}`} />
 
-<label className="mx-6">DAY {index + 1}</label>
+<label className="mx-4 md:mx-6">DAY {index + 1}</label>
 </div>
 
     {item.title && <div className="text-[12px] md:text-[24px] font-[900] md:mb-2.5">{item.title}</div>}
@@ -128,7 +141,7 @@ export default function Tabs() {
 </div>
 ))}</div>
 
-          <div className={`${activeTab === 3 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
+          <div className={`${activeTab === 3 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
       <Heading color="text-[#22C55E]">
       WHAT YOU NEED TO BRING
         </Heading>
@@ -238,13 +251,13 @@ WHAT'S INCLUDED
 </div>
         </div>
 
-        <div className={`${activeTab === 4 ? 'block' : 'hidden'} border-b border-b-[#00712D]`}>
-        <ul className="p-5 md:py-8 md:px-10 text-[#00712D] flex-1">
-<li className="mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+        <div className={`${activeTab === 4 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
+        <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
+<li>
+<div className="flex items-center gap-2.5 mb-1.5">
+  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[24px] font-[900] mb-1.5">Accommodation</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">Accommodation</div>
   </div>
 
   <Paragraph className="ml-[30px] mb-1.5 !text-left">
@@ -252,11 +265,11 @@ WHAT'S INCLUDED
   </Paragraph>
 </li>
 
-<li className="mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+<li>
+<div className="flex items-center gap-2.5 mb-1.5">
+  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[24px] font-[900] mb-1.5">Activities</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">Activities</div>
   </div>
 
   <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
@@ -273,11 +286,11 @@ WHAT'S INCLUDED
   </div>
 </li>
 
-<li className="mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+<li>
+<div className="flex items-center gap-2.5 mb-1.5">
+  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[24px] font-[900] mb-1.5">Health and Safety</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">Health and Safety</div>
   </div>
 
   <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
@@ -294,11 +307,11 @@ WHAT'S INCLUDED
   </div>
 </li>
 
-<li className="mb-10 last:mb-0">
-  <div className="flex items-center gap-2.5">
-  <Image src={Carret} alt="" width={20} />
+<li>
+<div className="flex items-center gap-2.5 mb-1.5">
+  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[24px] font-[900] mb-1.5">Insurance</div>
+  <div className="text-[14px] md:text-[24px] font-[900]">Insurance</div>
   </div>
 
   <Paragraph className="ml-[30px] mb-1.5 !text-left">

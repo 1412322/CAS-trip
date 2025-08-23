@@ -4,6 +4,8 @@ import Close from '@/public/images/close.svg'
 import ArrowDown from '@/public/images/green_arrow_down.svg'
 import Logo from '@/public/images/logo.png'
 import Menu from '@/public/images/menu.svg'
+import Search from '@/public/images/search.svg'
+import GreenSearch from '@/public/images/green_search.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -12,10 +14,12 @@ import { useEffect, useRef, useState } from 'react'
 export default function Header() {
   const pathname = usePathname()
   const [isVisible, setIsVisible] = useState<boolean>(false)
+  const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const searchRef = useRef<HTMLDivElement>(null)
 
   const toggleDropdown = (menu: string) => {
     setActiveDropdown(activeDropdown === menu ? null : menu)
@@ -35,6 +39,9 @@ export default function Header() {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setActiveDropdown(null)
       }
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setIsSearchVisible(false)
+      }
     }
     document.addEventListener('mousedown', handleClickOutside)
 
@@ -43,6 +50,10 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
+
+  useEffect(() => {
+    setIsVisible(false)
+  }, [pathname])
 
   return (
     <header
@@ -64,14 +75,8 @@ export default function Header() {
       <div className="m-auto flex w-full items-center justify-between px-5 md:px-[100px]">
         <Image src={Logo} alt="CAS-trip-logo" className="h-[46px] w-auto md:h-16" />
 
-        <Image
-          src={Menu}
-          alt="CAS-trip-logo"
-          className="lg:hidden"
-          onClick={() => setIsVisible(!isVisible)}
-        />
-
-        <nav className="hidden space-x-[16px] text-white lg:block">
+        <div className="flex items-center justify-end gap-4 md:gap-6">
+        <nav className="hidden space-x-4 text-white lg:block">
           <Link
             href="/"
             className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/' ? 'font-[700] underline' : ''}`}
@@ -174,6 +179,33 @@ export default function Header() {
             Contact Us
           </Link>
         </nav>
+
+        <Image
+          src={Search}
+          alt="search-logo"
+          className="w-4 md:w-8 aspect-square cursor-pointer"
+          onClick={() => { setIsSearchVisible(!isSearchVisible); setIsVisible(false) }}
+        />
+
+        <Image
+          src={Menu}
+          alt="menu-logo"
+          className="lg:hidden"
+          onClick={() => { setIsVisible(!isVisible); setIsSearchVisible(false) }}
+        />
+        </div>
+
+        {isSearchVisible && (
+          <div ref={searchRef} className="absolute flex items-center right-0 md:top-0 top-[56px] w-full bg-white p-6 md:p-24 text-[20px] md:text-[80px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)]">
+            <input className="w-full border-0 border-b border-[#00712D] placeholder:text-[#00712D] outline-0" placeholder="Search" />
+
+            <Image
+          src={GreenSearch}
+          alt="search-logo"
+          className="w-3 md:w-12 aspect-square"
+        />
+          </div>
+        )}
 
         {isVisible && (
           <div className="absolute right-0 top-[56px] block flex w-[calc(100vw-56px)] flex-col rounded-l-[10px] bg-white py-[30px] text-[18px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)] lg:hidden">
