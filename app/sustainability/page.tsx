@@ -67,7 +67,7 @@ export default function Sustainability() {
             />
 
             <div className="flex h-full flex-1 flex-col items-center justify-center bg-[#00712D] px-1.5 py-10 text-center md:p-0">
-              <div className="mb-2.5 text-[14px] font-[900] text-white md:mb-6 md:text-[24px]">
+              <div className="mb-2.5 text-[14px] font-[900] text-white md:text-[24px]">
                 {item.title}
               </div>
 
@@ -157,7 +157,7 @@ export default function Sustainability() {
                 alt={item.description}
               />
 
-              <div className="absolute inset-2 flex flex-col items-center justify-center text-center md:inset-5 md:inset-6">
+              <div className="absolute inset-2 flex flex-col items-center justify-center text-center">
                 <div className="mb-2.5 text-[20px] font-[900] text-white md:mb-6 md:text-[24px]">
                   {item.title}
                 </div>
@@ -172,14 +172,12 @@ export default function Sustainability() {
       </Container>
 
       <Container className="bg-[#ECFAE5]">
-        <Heading color="text-[#00712D]">
-          By choosing to volunteer through our platform, you're not just embarking on an incredible
-          personal journey; you're contributing to a collective effort to build a more sustainable
-          and equitable world for all.
-        </Heading>
+        <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
+        By choosing to volunteer through our programs, you're contributing to build a more sustainable world for all.
+        </p>
 
-        <div className="mt-10 flex justify-center">
-          <Button>Explore our programs</Button>
+        <div className="mt-5 md:mt-10 flex justify-center">
+          <Button path='/our-programs'>Explore our programs</Button>
         </div>
       </Container>
     </main>

@@ -28,13 +28,13 @@ import Link from 'next/link'
 import Carousel from '../components/Carousel'
 
 const programs = [
-  {
-    title: 'JUNGLE EXPEDITION CAMP, JANDA BAIK',
-    subTitle: '4D3N | Ages 14 & above | RM1090 estimate',
-    description:
-      'The trip packs survival campcraft, independent foraging, ending with community service',
-    img: PopularPrograms1,
-  },
+  // {
+  //   title: 'JUNGLE EXPEDITION CAMP, JANDA BAIK',
+  //   subTitle: '4D3N | Ages 14 & above | RM1090 estimate',
+  //   description:
+  //     'The trip packs survival campcraft, independent foraging, ending with community service',
+  //   img: PopularPrograms1,
+  // },
   {
     title: 'WILDERNESS SKILLS CAMP, JANDA BAIK',
     subTitle: '3D2N | Ages 11-17 | RM850 estimate',
@@ -80,34 +80,34 @@ export default function Home() {
       <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E]">OUR PROGRAMS</Heading>
 
-        <div className="m-auto grid grid-cols-1 gap-4 text-[14px] font-[900] text-white md:max-w-[600px] md:gap-6 md:text-[32px]">
+        <div className="m-auto grid grid-cols-1 gap-4 text-[14px] font-[900] text-white max-w-64 md:max-w-2xl md:gap-6 md:text-[32px]">
           {[
             {
               img: NatureCamp,
-              title: 'Nature Camps',
+              title: 'NATURE CAMPS',
               url: '/camps/nature',
             },
             {
               img: LeadershipCamp,
-              title: 'Leadership Camps',
+              title: 'LEADERSHIP CAMPS',
               url: '/camps/leadership',
             },
             {
               img: SubjectCamp,
-              title: 'Subject Camps',
+              title: 'SUBJECT CAMPS',
               url: '/camps/subject',
             },
           ].map((item, index) => (
             <Link
               key={index}
-              className="relative flex h-11 items-center justify-center gap-3 rounded-full bg-[#00712D] md:h-[105px]"
+              className="relative flex h-11 items-center justify-center gap-3 rounded-full bg-[#00712D] md:h-28"
               href={item.url}
             >
-              <div className="absolute start-0 flex h-full w-11 items-center justify-center rounded-full border-2 border-white p-2 md:w-[105px] md:p-5">
+              <div className="absolute start-0 flex h-full w-11 items-center justify-center rounded-full border-2 border-white p-2 md:w-28 md:p-5">
                 <Image src={item.img} layout="responsive" alt={item.title} />
               </div>
 
-              {item.title}
+              <div className="ml-11 md:ml-28">{item.title}</div>
             </Link>
           ))}
         </div>
@@ -115,7 +115,7 @@ export default function Home() {
 
       {/* Popular Programs - Carousel */}
       <Container className="bg-[#00712D] !px-0">
-        <Heading color="text-white">POPULAR PROGRAMS</Heading>
+        <Heading color="text-white">POPULAR DESTINATIONS</Heading>
 
         <Carousel list={programs} />
 
@@ -129,7 +129,7 @@ export default function Home() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E]">CHOOSE YOUR FAVORITE PROGRAM</Heading>
 
-        <div className="flex flex-row justify-center gap-10 md:gap-24">
+        <div className="flex flex-row justify-center gap-5 md:gap-24">
           {[
             {
               img: ByPrograms,
@@ -145,7 +145,7 @@ export default function Home() {
             <Link
               key={index}
               href={item.path}
-              className="w-full max-w-[390px] flex-1 rounded-[10px] border-2 border-[#00712D] bg-white"
+              className="w-full max-w-[390px] flex-1 rounded-[10px] border md:border-2 border-[#00712D] bg-white"
             >
               <div className="flex h-full w-full cursor-pointer flex-col items-center py-4 text-center transition hover:opacity-30 md:py-10">
                 <Image
@@ -155,7 +155,7 @@ export default function Home() {
                   layout="responsive"
                 />
 
-                <label className="mt-5 text-[14px] font-[700] text-[#00712D] md:text-[24px]">
+                <label className="mt-4 text-[14px] font-[700] text-[#00712D] md:text-[24px]">
                   {item.title}
                 </label>
               </div>
@@ -262,7 +262,7 @@ export default function Home() {
 
       {/* OUR FAVORITE TRAVELERS */}
       <Container className="bg-[url('../public/images/our_favorite_travelers_cover.png')]">
-        <Heading color="text-[#22C55E]">OUR FAVORITE TRAVELERS</Heading>
+        <Heading color="text-white">OUR FAVORITE TRAVELERS</Heading>
 
         <div className="no-scrollbar mx-[-20px] flex space-x-4 overflow-x-scroll px-[20px] md:mx-[-100px] md:space-x-6 md:px-[100px]">
           {[
@@ -359,18 +359,18 @@ export default function Home() {
 
           <div className="w-full flex-auto space-y-2.5 md:w-64">
             <input
-              className="h-8 w-full rounded-[10px] border border-none border-[#00712D] bg-[#00712D1A] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[#00712D80] md:h-16 md:p-5 md:text-[24px]"
+              className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-none border-[#00712D] bg-[#00712D1A] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[#00712D80] md:h-16 md:p-5 md:text-[24px]"
               placeholder="Name"
             ></input>
 
             <input
-              className="h-8 w-full rounded-[10px] border border-none border-[#00712D] bg-[#00712D1A] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[#00712D80] md:h-16 md:p-5 md:text-[24px]"
+              className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-none border-[#00712D] bg-[#00712D1A] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[#00712D80] md:h-16 md:p-5 md:text-[24px]"
               placeholder="Email"
               type="email"
             ></input>
 
             <input
-              className="h-8 w-full rounded-[10px] border border-none border-[#00712D] bg-[#00712D1A] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[#00712D80] md:h-16 md:p-5 md:text-[24px]"
+              className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-none border-[#00712D] bg-[#00712D1A] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[#00712D80] md:h-16 md:p-5 md:text-[24px]"
               placeholder="Inquiries"
             ></input>
           </div>

@@ -95,12 +95,12 @@ export default function Resources() {
       </Container>
 
       <Container className="bg-[#ECFAE5]">
-        <Heading color="text-[#00712D]">
-          Ready to make an impact? Explore our programs and start your ASEAN adventure today!
-        </Heading>
+      <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
+        Ready to make an impact? Explore our programs and start your ASEAN adventure today!
+        </p>
 
-        <div className="mt-10 flex justify-center">
-          <Button>Explore our programs</Button>
+        <div className="mt-5 md:mt-10 flex justify-center">
+        <Button path="/contact-us">Contact Us</Button>
         </div>
       </Container>
     </main>

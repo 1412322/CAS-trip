@@ -19,7 +19,7 @@ export default function Accordion({ title, description }: AccordionProps) {
         className={`flex h-14 cursor-pointer items-center justify-between bg-[#00712D] px-2.5 text-[14px] font-[800] text-white md:px-8 md:text-[18px] ${isActive ? 'rounded-t-[10px]' : 'rounded-[10px]'}`}
         onClick={() => setIsActive(!isActive)}
       >
-        {title}
+        <div className="flex-1">{title}</div>
 
         <div className="relative aspect-square w-4 md:w-6">
           <Image

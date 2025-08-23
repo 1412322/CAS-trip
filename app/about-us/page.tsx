@@ -125,7 +125,7 @@ Meet All Our member
             />
 
             <div className="flex-1">
-              <Paragraph className="!text-left md:!text-center">
+              <Paragraph className="!text-left">
                 <p dangerouslySetInnerHTML={{ __html: item.description }} />
               </Paragraph>
             </div>
@@ -151,7 +151,7 @@ Meet All Our member
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E]">OUR CORE VALUE</Heading>
 
-        <Paragraph className="mb-6 md:mb-10">
+        <Paragraph className="mb-2.5 md:mb-10">
           We are dedicated to cultivating programs built upon foundational principles.
         </Paragraph>
 
@@ -175,7 +175,7 @@ Meet All Our member
           ].map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 rounded-[10px] border border-[#00712D] bg-white px-5 py-1.5 md:gap-6 md:rounded-[20px] md:px-10 md:py-3"
+              className="flex items-center gap-3 rounded-[10px] border border-[#00712D] bg-white pl-5 py-1.5 md:gap-6 md:rounded-[20px] md:pl-10 md:py-3"
             >
               <Image
                 className="aspect-square max-w-6 rounded-full md:max-w-12"
@@ -185,7 +185,7 @@ Meet All Our member
               />
 
               <div className="flex-1 text-left text-[#00712D]">
-                <div className="mb-1 text-[14px] font-[900] md:mb-2.5 md:text-[24px]">
+                <div className="mb-1 text-[14px] font-[900] md:text-[24px]">
                   {item.title}
                 </div>
 
@@ -201,8 +201,7 @@ Meet All Our member
         <Heading color="text-[#22C55E]">WHAT WE DO</Heading>
 
         <Paragraph className="mb-4 md:mb-10">
-          We provide student travel programs to cultivate personal growth, leadership, and social
-          impact, empowering students through a wide range of initiatives.
+        We cultivate personal growth, leadership, and social impact, empowering students skills through:
         </Paragraph>
 
         <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-5">

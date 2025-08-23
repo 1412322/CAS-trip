@@ -24,10 +24,10 @@ export default function Support() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E] pt-16 md:pt-20">OVERVIEW</Heading>
 
-        <div className="grid grid-cols-2 md:grid-cols-3">
-          <Image className="h-full w-full flex-1 object-cover" src={Overview1} alt="volunteer" />
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          <Image className="hidden h-full w-full flex-1 object-cover md:block" src={Overview1} alt="volunteer" />
 
-          <div className="flex flex-1 flex-col items-center justify-center bg-[#00712D] px-2.5 text-[8px] font-[600] text-white md:px-6 md:text-[18px]">
+          <div className="flex flex-1 flex-col items-center justify-center bg-[#00712D] p-2.5 text-[12px] font-[600] text-white md:px-6 md:text-[18px]">
             <p>
               This section provides essential information and resources to help you prepare, stay
               safe, and thrive during your volunteer trips.
@@ -62,10 +62,10 @@ export default function Support() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E]">SAFETY COMMITMENT</Heading>
 
-        <p className="mb-9 text-center text-[18px] font-[600] text-[#00712D]">
+        <Paragraph className="mb-2.5 md:mb-10">
           We are committed to providing a secure and supportive environment for all our
           international students and our staffs.
-        </p>
+        </Paragraph>
 
         <div className="mb-10 grid grid-cols-1 gap-6 md:mb-20 xl:grid-cols-3">
           {[
@@ -106,22 +106,17 @@ export default function Support() {
               <div>Health & Safety</div>
             </div>
 
-            <Paragraph className="!text-left text-white">
+            <p className="text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-inside list-disc space-y-4 md:space-y-6">
-                <li>
-                  Health check updated 30 days before the tour departure. Find suggestions for
-                  physical preparation before the tour.
-                </li>
+<li><b>Ensure a pre-tour health check-up</b> (30 days prior) and physical preparation.</li>
 
-                <li>Travel Insurance covering medical emergencies and personal liability.</li>
+<li><b>Travel insurance</b> covers medical emergencies and personal liability.</li>
 
-                <li>Dietary Needs need to be informed in advance.</li>
+<li><b>Dietary needs</b> need to be informed in advance.</li>
 
-                <li>
-                  Stay hydrated in warm climates and follow local guidelines to prevent illness.
-                </li>
+<li><b>Stay hydrated</b> and follow local guidelines.</li>
               </ul>
-            </Paragraph>
+            </p>
           </div>
 
           <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-20 md:py-10">
@@ -132,25 +127,21 @@ export default function Support() {
               <div>Visa Requirements</div>
             </div>
 
-            <Paragraph className="!text-left text-white">
+            <p className="text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-inside list-disc space-y-4 md:space-y-6">
                 <li>
-                  Obtaining the correct visa for the destination country is the responsibility of
-                  the participant and checking the latest visa requirements for nationality entering
-                  in advance of your departure date.
+                <b>Obtain the correct visa</b> for destination and check latest requirements before departure.
                   <br />
                   <div className="mt-6 font-[400] italic">
-                    We do not provide visas or visas on arrival (VOA), please plan for this
-                    independently from now on.
+                  We do not provide visas or visas on arrival (VOA); please plan this independently.
                   </div>
                 </li>
 
                 <li>
-                  Updated on the latest weather forecast for local places to have the best luggage
-                  preparation for your adventure ahead.
+                <b>Stay updated</b> on the <b>local weather forecast</b> for optimal luggage preparation.
                 </li>
               </ul>
-            </Paragraph>
+            </p>
           </div>
         </div>
       </Container>
@@ -384,12 +375,12 @@ export default function Support() {
       </Container>
 
       <Container className="bg-[#ECFAE5]">
-        <Heading color="text-[#00712D]">
-          Ready to make an impact? Explore our programs and start your ASEAN adventure today!
-        </Heading>
+        <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
+        Ready to make an impact? Explore our programs and start your ASEAN adventure today!
+        </p>
 
-        <div className="mt-10 flex justify-center">
-          <Button path="/contact-us">Contact Us</Button>
+        <div className="mt-5 md:mt-10 flex justify-center">
+        <Button path="/contact-us">Contact Us</Button>
         </div>
       </Container>
     </main>
