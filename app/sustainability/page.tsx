@@ -12,6 +12,7 @@ import PositiveCommunityAndEnvironmentalImpact2 from '@/public/images/positive_c
 import PositiveCommunityAndEnvironmentalImpact3 from '@/public/images/positive_community_&_environmental_impact_3.png'
 import SkillDevelopment from '@/public/images/skill_development.svg'
 import Sustainability1 from '@/public/images/sustainability_1.webp'
+import Sustainability2 from '@/public/images/sustainability_2.webp'
 import Image from 'next/image'
 
 export default function Sustainability() {
@@ -22,15 +23,13 @@ export default function Sustainability() {
         <Heading color="text-[#22C55E] pt-16 md:pt-20">SUSTAINABILITY</Heading>
 
         <Paragraph>
-          Our commitment extends beyond facilitating meaningful volunteer experiences; it
-          encompasses ensuring that our digital presence, our operations, and our projects
-          contribute positively to the planet and its people for the long-term impact.
+        Our commitment extends beyond facilitating meaningful volunteer experiences; it encompasses ensuring that our digital presence, our operations, and our projects contribute positively to the planet and its people for the long-term impact.
         </Paragraph>
 
-        <div className="relative mt-10 w-full">
-          <Image className="w-2/4" src={Sustainability1} alt="" />
+        <div className="relative mt-10 w-full pb-20 md:pb-40">
+          <Image className="w-1/2 rounded-[5px] md:rounded-[20px]" src={Sustainability1} alt="" />
 
-          {/* <Image className="absolute w-[60%] right-0 bottom-[-100px]" src={Sustainability2} alt="" /> */}
+          <Image className="w-2/3 rounded-[5px] md:rounded-[20px] absolute bottom-0 right-0" src={Sustainability2} alt="" />
         </div>
       </Container>
 

@@ -17,7 +17,7 @@ export default function NatureCamps() {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         <div className="z-1 absolute flex h-full w-full flex-col items-center justify-center px-5 md:px-[100px]">
-          <Image src={Sologan} layout="responsive" alt="nature-camps" />
+          <Image src={Sologan} className="max-w-4xl" layout="responsive" alt="nature-camps" />
         </div>
       </div>
 

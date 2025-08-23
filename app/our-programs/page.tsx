@@ -10,38 +10,38 @@ const destinations = [
   {
     country: 'AISA - VIETNAM',
     places: [
-      { name: 'HA NOI', img: WhereWeTravel2, path: '/taman-negara' },
-      { name: 'HA GIANG', img: '/images/vietnam/ha-giang.jpg', path: '/taman-negara' },
-      { name: 'SAPA', img: '/images/vietnam/sapa.jpg', path: '/taman-negara' },
-      { name: 'HO CHI MINH', img: '/images/vietnam/ho-chi-minh.jpg', path: '/taman-negara' },
-      { name: 'NHA TRANG', img: '/images/vietnam/nha-trang.jpg', path: '/taman-negara' },
-      { name: 'PHU QUOC', img: '/images/vietnam/phu-quoc.jpg', path: '/taman-negara' },
-      { name: 'DA NANG', img: '/images/vietnam/da-nang.jpg', path: '/taman-negara' },
-      { name: 'HOI AN', img: '/images/vietnam/hoi-an.jpg', path: '/taman-negara' },
-      { name: 'HUE', img: '/images/vietnam/hue.jpg', path: '/taman-negara' },
-      { name: 'BEN TRE', img: '/images/vietnam/ben-tre.jpg', path: '/taman-negara' },
-      { name: 'TRA VINH', img: '/images/vietnam/tra-vinh.jpg', path: '/taman-negara' },
-      { name: 'VINH LONG', img: '/images/vietnam/vinh-long.jpg', path: '/taman-negara' },
-      { name: 'MAI CHAU', img: '/images/vietnam/mai-chau.jpg', path: '/taman-negara' },
-      { name: 'HOA BINH', img: '/images/vietnam/hoa-binh.jpg', path: '/taman-negara' },
-      { name: 'DA LAT', img: '/images/vietnam/da-lat.jpg', path: '/taman-negara' },
-      { name: 'NAM CAT TIEN', img: '/images/vietnam/nam-cat-tien.jpg', path: '/taman-negara' },
-      { name: 'CU CHI', img: '/images/vietnam/cu-chi.jpg', path: '/taman-negara' },
-      { name: 'MADAGUI', img: '/images/vietnam/madagui.jpg', path: '/taman-negara' },
+      { name: 'HA NOI', img: '/images/programs/ha-noi.webp', path: '/taman-negara' },
+      { name: 'HA GIANG', img: '/images/programs/ha-giang.webp', path: '/taman-negara' },
+      { name: 'SAPA', img: '/images/programs/sapa.webp', path: '/taman-negara' },
+      { name: 'HO CHI MINH', img: '/images/programs/ho-chi-minh.webp', path: '/taman-negara' },
+      { name: 'NHA TRANG', img: '/images/programs/nha-trang.webp', path: '/taman-negara' },
+      { name: 'PHU QUOC', img: '/images/programs/phu-quoc.webp', path: '/taman-negara' },
+      { name: 'DA NANG', img: '/images/programs/da-nang.webp', path: '/taman-negara' },
+      { name: 'HOI AN', img: '/images/programs/hoi-an.webp', path: '/taman-negara' },
+      { name: 'HUE', img: '/images/programs/hue.webp', path: '/taman-negara' },
+      { name: 'BEN TRE', img: '/images/programs/ben-tre.webp', path: '/taman-negara' },
+      { name: 'TRA VINH', img: '/images/programs/tra-vinh.webp', path: '/taman-negara' },
+      { name: 'VINH LONG', img: '/images/programs/vinh-long.webp', path: '/taman-negara' },
+      { name: 'MAI CHAU', img: '/images/programs/mai-chau.webp', path: '/taman-negara' },
+      { name: 'HOA BINH', img: '/images/programs/hoa-binh.webp', path: '/taman-negara' },
+      { name: 'DA LAT', img: '/images/programs/da-lat.webp', path: '/taman-negara' },
+      { name: 'NAM CAT TIEN', img: '/images/programs/nam-cat-tien.webp', path: '/taman-negara' },
+      { name: 'CU CHI', img: '/images/programs/cu-chi.webp', path: '/taman-negara' },
+      { name: 'MADAGUI', img: '/images/programs/madagui.webp', path: '/taman-negara' },
     ],
   },
   {
     country: 'AISA - MALAYSIA',
     places: [
-      { name: 'PENANG', img: '/images/malaysia/penang.jpg', path: '/taman-negara' },
-      { name: 'KUANTAN', img: '/images/malaysia/kuantan.jpg', path: '/taman-negara' },
-      { name: 'SARAWAK', img: '/images/malaysia/sarawak.jpg', path: '/taman-negara' },
-      { name: 'TAMAN NEGARA', img: '/images/malaysia/taman-negara.jpg', path: '/taman-negara' },
-      { name: 'GOPENG ADVENTURE', img: '/images/malaysia/gopeng.jpg', path: '/taman-negara' },
-      { name: 'KUALA LUMPUR', img: '/images/malaysia/kuala-lumpur.jpg', path: '/taman-negara' },
-      { name: 'CAMERON', img: '/images/malaysia/cameron.jpg', path: '/taman-negara' },
-      { name: 'LANGKAWI', img: '/images/malaysia/langkawi.jpg', path: '/taman-negara' },
-      { name: 'SABAH', img: '/images/malaysia/sabah.jpg', path: '/taman-negara' },
+      { name: 'PENANG', img: '/images/programs/penang.webp', path: '/taman-negara' },
+      { name: 'KUANTAN', img: '/images/programs/kuantan.webp', path: '/taman-negara' },
+      { name: 'SARAWAK', img: '/images/programs/sarawak.webp', path: '/taman-negara' },
+      { name: 'TAMAN NEGARA', img: '/images/programs/taman-negara.webp', path: '/taman-negara' },
+      { name: 'GOPENG ADVENTURE', img: '/images/programs/gopeng-adventure.webp', path: '/taman-negara' },
+      { name: 'KUALA LUMPUR', img: '/images/programs/kuala-lumpur.webp', path: '/taman-negara' },
+      { name: 'CAMERON', img: '/images/programs/cameron.webp', path: '/taman-negara' },
+      { name: 'LANGKAWI', img: '/images/programs/langkawi.webp', path: '/taman-negara' },
+      { name: 'SABAH', img: '/images/programs/sabah.webp', path: '/taman-negara' },
     ],
   },
 ]
@@ -82,9 +82,9 @@ export default function OurPrograms() {
       </Container>
 
       <Container className="relative z-0 bg-[url('../public/images/our_mission_cover.jpg')]">
-        <Heading color="text-white">
-          PLANS CAN CHANGE — THAT’S WHY OUR POLICY IS DESIGNED TO GIVE YOU SECURITY AND CONFIDENCE.
-        </Heading>
+        <h2 className='text-center text-[20px] font-[800] md:text-[32px] text-white'>
+        PLANS CAN CHANGE — THAT’S WHY OUR POLICY IS DESIGNED TO GIVE YOU SECURITY AND CONFIDENCE.
+    </h2>
 
         <div className="absolute inset-0 z-[-1] bg-[#00712D] opacity-50" />
 

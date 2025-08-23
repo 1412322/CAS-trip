@@ -5,15 +5,18 @@ import Paragraph from '@/components/Paragraph'
 import ByDestination from '@/public/images/by_destination.svg'
 import ByPrograms from '@/public/images/by_programs.svg'
 import LeadershipCamp from '@/public/images/leadership_camp.svg'
-import MarcusLim from '@/public/images/marcus_lim.png'
 import NatureCamp from '@/public/images/nature_camp.svg'
-import PopularPrograms1 from '@/public/images/popular_programs_1.webp'
 import PopularPrograms2 from '@/public/images/popular_programs_2.webp'
 import PopularPrograms3 from '@/public/images/popular_programs_3.webp'
 import PopularPrograms4 from '@/public/images/popular_programs_4.webp'
 import Sologan from '@/public/images/sologan.svg'
 import Star from '@/public/images/star.svg'
 import SubjectCamp from '@/public/images/subject_camp.svg'
+import Traveler2 from '@/public/images/travelers/amir_hassan.png'
+import Traveler4 from '@/public/images/travelers/kai_truong.png'
+import Traveler1 from '@/public/images/travelers/marcus_lim.png'
+import Traveler5 from '@/public/images/travelers/miya_matte.png'
+import Traveler3 from '@/public/images/travelers/wijaya.png'
 import WeWillHandleTripForYou1 from '@/public/images/we_will_handle_your_trip_for_you_1.png'
 import WeWillHandleTripForYou2 from '@/public/images/we_will_handle_your_trip_for_you_2.png'
 import WeWillHandleTripForYou3 from '@/public/images/we_will_handle_your_trip_for_you_3.png'
@@ -23,9 +26,24 @@ import WhereWeTravel2 from '@/public/images/where_we_travel_2.webp'
 import WhereWeTravel3 from '@/public/images/where_we_travel_3.webp'
 import WhereWeTravel4 from '@/public/images/where_we_travel_4.webp'
 import WhereWeTravel5 from '@/public/images/where_we_travel_5.webp'
+import Partner1 from '@/public/images/partners/partner_1.svg'
+import Partner2 from '@/public/images/partners/partner_2.svg'
+import Partner3 from '@/public/images/partners/partner_3.svg'
+import Partner4 from '@/public/images/partners/partner_4.svg'
+import Partner5 from '@/public/images/partners/partner_5.svg'
+import Partner6 from '@/public/images/partners/partner_6.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import Carousel from '../components/Carousel'
+
+const partners = [
+  {img: Partner1},
+  {img: Partner2},
+  {img: Partner3},
+  {img: Partner4},
+  {img: Partner5},
+  {img: Partner6},
+]
 
 const programs = [
   // {
@@ -260,6 +278,17 @@ export default function Home() {
         </div>
       </Container>
 
+
+      <Container className="bg-[#ECFAE5]">
+        <Heading color="text-[#22C55E]">OUR PARTNERS</Heading>
+
+        <Carousel list={partners} />
+
+        <Paragraph className="mb-4 md:mb-10">
+        Embark on an unforgettable 3-day wilderness adventure! Learning essential survival skills sharpens your collaborative edge.
+        </Paragraph>
+      </Container>
+
       {/* OUR FAVORITE TRAVELERS */}
       <Container className="bg-[url('../public/images/our_favorite_travelers_cover.png')]">
         <Heading color="text-white">OUR FAVORITE TRAVELERS</Heading>
@@ -269,27 +298,27 @@ export default function Home() {
             {
               name: 'Marcus Lim\n(Singapore)',
               text: 'The trip offered an unparalleled real-world extension to our curriculum, providing students with deep insights into sustainable development and community engagement that simply cannot be replicated in a classroom setting.',
-              img: MarcusLim,
+              img: Traveler1,
             },
             {
               name: 'Amir Hassan\n(Malaysia)',
               text: "We observed significant growth in our students' soft skills, including leadership, intercultural communication, and problem-solving abilities. Their initiative and perseverance, especially during project work, were truly impressive.",
-              img: MarcusLim,
+              img: Traveler2,
             },
             {
               name: 'Wijaya\n(Indonesia)',
               text: 'The Trip is a life-changing experience. Getting to work directly with the local community and seeing the impact of my efforts was incredibly rewarding. I learned so much about myself and the world.',
-              img: MarcusLim,
+              img: Traveler3,
             },
             {
-              name: 'Kai\n(Singapore)',
+              name: 'Kai Truong\n(Singapore)',
               text: 'This trip was truly a transformative learning journey beyond classroom. Immersing myself in new cultures and academic disciplines, broadens my global perspective and understands culture.',
-              img: MarcusLim,
+              img: Traveler4,
             },
             {
-              name: 'Miya\n(Thailand)',
+              name: 'Miya Matte\n(Thailand)',
               text: `The trip perfectly blended exciting adventures with crucial environmental conservation efforts. I deeply understand the interconnectedness of ecosystems, which is something you can't fully grasp from a textbook.`,
-              img: MarcusLim,
+              img: Traveler5,
             },
           ].map((item, index) => (
             <div

@@ -9,7 +9,8 @@ import NatureCamps from '@/public/images/nature_camps.svg'
 import OurStory1 from '@/public/images/our_story_1.jpg'
 import OurStory2 from '@/public/images/our_story_2.jpg'
 import OurStory3 from '@/public/images/our_story_3.png'
-import SafetyExpertise1 from '@/public/images/safety_expertise_1.png'
+import SafetyExpertise1 from '@/public/images/safety_expertise_1.webp'
+import SafetyExpertise2 from '@/public/images/safety_expertise_2.webp'
 import SubjectCamps from '@/public/images/subject_camps.svg'
 import WhyChooseUs from '@/public/images/why_chosse_us.jpg'
 import Image from 'next/image'
@@ -275,16 +276,11 @@ Meet All Our member
             </div>
           </div>
 
-          <div className="relative w-full flex-1">
-            <Image
-              src={SafetyExpertise1}
-              className="overflow-hidden rounded-[10px] object-cover md:rounded-[20px]"
-              layout="responsive"
-              alt="why-choose-us"
-            />
+          <div className="relative w-full flex-1 pb-10 md:pb-20 pl-20">
+          <Image className="w-auto h-[270px] md:h-[560px] rounded-[5px] md:rounded-[20px] object-cover" src={SafetyExpertise1} alt="" />
 
-            {/* <Image src={SafetyExpertise2} className="absolute object-cover rounded-[20px] overflow-hidden" layout="responsive" alt="why-choose-us" /> */}
-          </div>
+          <Image className="w-2/3 h-[156px] md:h-[324px] rounded-[5px] md:rounded-[20px] absolute bottom-0 left-0 object-cover" src={SafetyExpertise2} alt="" />
+        </div>
         </div>
       </Container>
     </main>

@@ -50,7 +50,7 @@ export default function Carousel({ list }: { list: any[] }) {
     >
       {list.map((item, index) => (
         <div key={index} className="group w-full max-w-[240px] flex-none md:max-w-[398px]">
-          <div className="relative mb-5 h-[300px] w-full overflow-hidden rounded-[10px] md:h-[507px]">
+          <div className="relative h-[300px] w-full overflow-hidden rounded-[10px] md:h-[507px]">
             <Image
               src={item.img}
               alt={item.title}
@@ -60,11 +60,11 @@ export default function Carousel({ list }: { list: any[] }) {
           </div>
 
           <div className="text-left text-white md:text-center">
-            <h3 className="mb-2.5 text-[18px] font-[900] md:mb-6">{item.title}</h3>
+            {item.title && <h3 className="mt-5 mb-2.5 text-[18px] font-[900] md:mb-6">{item.title}</h3>}
 
-            <p className="mb-2.5 text-[16px] font-[700] md:text-[18px]">{item.subTitle}</p>
+            {item.subTitle && <p className="mb-2.5 text-[16px] font-[700] md:text-[18px]">{item.subTitle}</p>}
 
-            <p className="text-[14px] font-[500] md:text-[16px]">{item.description}</p>
+            {item.description && <p className="text-[14px] font-[500] md:text-[16px]">{item.description}</p>}
           </div>
         </div>
       ))}
