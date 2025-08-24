@@ -35,8 +35,8 @@ export default function Gallery({ images }: GalleryProps) {
   }
 
   return (
-    <div className="relative h-[145px] w-[106px] overflow-hidden md:h-[532px] md:w-full">
-      <div className="relative flex h-full items-center justify-center">
+    <div className="relative overflow-hidden h-[532px] w-full">
+      <div className="relative flex h-full items-center justify-center scale-[0.32] md:scale-50 lg:scale-100">
         {images.map((img, index) => (
           <div
             key={index}
@@ -44,7 +44,7 @@ export default function Gallery({ images }: GalleryProps) {
           >
             <Image src={img.src} alt={img.title} layout="fill" objectFit="cover" />
 
-            <div className="relative z-10 text-center text-[10px] font-[900] md:text-[32px]">
+            <div className="relative z-10 text-center font-[900] text-[32px]">
               {img.title && <h3>{img.title}</h3>}
 
               {img.subTitle && <h3>{img.subTitle}</h3>}

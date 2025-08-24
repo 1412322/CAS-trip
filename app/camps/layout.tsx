@@ -2,11 +2,11 @@ import Button from '@/components/Button'
 import Gallery from '@/components/Gallery'
 import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
-import DiscoverOurEstablishedDestinations1 from '@/public/images/discover_our_established_destinations_1.webp'
-import DiscoverOurEstablishedDestinations2 from '@/public/images/discover_our_established_destinations_2.webp'
-import DiscoverOurEstablishedDestinations3 from '@/public/images/discover_our_established_destinations_3.webp'
-import DiscoverOurEstablishedDestinations4 from '@/public/images/discover_our_established_destinations_4.webp'
-import DiscoverOurEstablishedDestinations5 from '@/public/images/discover_our_established_destinations_5.webp'
+import DiscoverOurEstablishedDestinations1 from '@/public/images/where_we_travel_1.webp'
+import DiscoverOurEstablishedDestinations2 from '@/public/images/where_we_travel_2.webp'
+import DiscoverOurEstablishedDestinations3 from '@/public/images/where_we_travel_3.webp'
+import DiscoverOurEstablishedDestinations4 from '@/public/images/where_we_travel_4.webp'
+import DiscoverOurEstablishedDestinations5 from '@/public/images/where_we_travel_5.webp'
 
 const images = [
   { src: DiscoverOurEstablishedDestinations1, title: 'VIETNAM', subTitle: 'SAPA' },
