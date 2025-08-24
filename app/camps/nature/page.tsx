@@ -49,7 +49,7 @@ export default function NatureCamps() {
         ].map((item, index) => (
           <div
             key={index}
-            className={`mb-5 flex flex-col items-center gap-5 last:mb-0 md:mb-10 md:gap-6 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+            className={`mb-5 flex flex-col items-center gap-2.5 last:mb-0 md:mb-10 md:gap-6 ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
           >
             <div className="flex w-full flex-1 gap-2.5 md:gap-6">
               {item.imgs.map((img, index) => (

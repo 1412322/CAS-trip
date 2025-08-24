@@ -75,7 +75,7 @@ export default function ContactUs() {
                   id="default-checkbox"
                   type="checkbox"
                   value=""
-                  className="h-[15px] w-[15px] rounded-sm border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
+                  className="h-[15px] w-[15px] rounded-[5px] md:rounded-[10px] border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
                 />
 
                 <label
@@ -91,7 +91,7 @@ export default function ContactUs() {
                   id="default-checkbox"
                   type="checkbox"
                   value=""
-                  className="h-[15px] w-[15px] rounded-sm border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
+                  className="h-[15px] w-[15px] rounded-[5px] md:rounded-[10px] border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
                 />
 
                 <label
@@ -107,7 +107,7 @@ export default function ContactUs() {
                   id="default-checkbox"
                   type="checkbox"
                   value=""
-                  className="h-[15px] w-[15px] rounded-sm border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
+                  className="h-[15px] w-[15px] rounded-[5px] md:rounded-[10px] border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
                 />
 
                 <label
@@ -123,7 +123,7 @@ export default function ContactUs() {
                   id="default-checkbox"
                   type="checkbox"
                   value=""
-                  className="h-[15px] w-[15px] rounded-sm border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
+                  className="h-[15px] w-[15px] rounded-[5px] md:rounded-[10px] border-[#00712D] bg-gray-100 text-[#00712D] focus:ring-2 focus:ring-[#00712D] md:h-[30px] md:w-[30px]"
                 />
 
                 <label

@@ -197,7 +197,7 @@ export default function Header() {
 
         {isSearchVisible && (
           <div ref={searchRef} className="absolute flex items-center right-0 md:top-0 top-[56px] w-full bg-white p-6 md:p-24 text-[20px] md:text-[80px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)]">
-            <input className="w-full border-0 border-b border-[#00712D] placeholder:text-[#00712D] outline-0" placeholder="Search" />
+            <input className="w-full rounded-none border-0 border-b border-[#00712D] placeholder:text-[#00712D] outline-0" placeholder="Search" />
 
             <Image
           src={GreenSearch}

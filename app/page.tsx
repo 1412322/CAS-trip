@@ -26,24 +26,10 @@ import WhereWeTravel2 from '@/public/images/where_we_travel_2.webp'
 import WhereWeTravel3 from '@/public/images/where_we_travel_3.webp'
 import WhereWeTravel4 from '@/public/images/where_we_travel_4.webp'
 import WhereWeTravel5 from '@/public/images/where_we_travel_5.webp'
-import Partner1 from '@/public/images/partners/partner_1.svg'
-import Partner2 from '@/public/images/partners/partner_2.svg'
-import Partner3 from '@/public/images/partners/partner_3.svg'
-import Partner4 from '@/public/images/partners/partner_4.svg'
-import Partner5 from '@/public/images/partners/partner_5.svg'
-import Partner6 from '@/public/images/partners/partner_6.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import Carousel from '../components/Carousel'
-
-const partners = [
-  {img: Partner1},
-  {img: Partner2},
-  {img: Partner3},
-  {img: Partner4},
-  {img: Partner5},
-  {img: Partner6},
-]
+import Partners from './Partners'
 
 const programs = [
   // {
@@ -283,7 +269,7 @@ export default function Home() {
       <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E]">OUR PARTNERS</Heading>
 
-        <Carousel list={partners} />
+        <Partners />
 
         <Paragraph className="mb-4 md:mb-10">
         Embark on an unforgettable 3-day wilderness adventure! Learning essential survival skills sharpens your collaborative edge.
@@ -406,7 +392,7 @@ export default function Home() {
         </div>
 
         <div className="mt-3.5 flex justify-center md:mt-10">
-          <Button path="/contact-us">Subscribe</Button>
+          <Button path="/">Subscribe</Button>
         </div>
       </Container>
     </main>
