@@ -45,7 +45,7 @@ export default function Tabs() {
     </div>
 </div>
 
-<div className={`${activeTab === 1 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
+<div className={`${activeTab === 1 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
         <div className="text-[18px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
         Janda Baik Stay
         </div>
@@ -75,7 +75,7 @@ export default function Tabs() {
         </div>
         </div>
 
-        <div className={`${activeTab === 2 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
+        <div className={`${activeTab === 2 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
      
         {[{
   imgs: [Itinerary1, Itinerary2],
@@ -141,7 +141,7 @@ export default function Tabs() {
 </div>
 ))}</div>
 
-          <div className={`${activeTab === 3 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
+          <div className={`${activeTab === 3 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
       <Heading color="text-[#22C55E]">
       WHAT YOU NEED TO BRING
         </Heading>
@@ -155,7 +155,7 @@ export default function Tabs() {
   </div>
 
   <div className="text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-inside list-disc">
+    <ul className="list-disc">
 <li>Bring versatile, lightweight, and quick-drying clothes and school uniform.</li>
 
 <li>Long, loose-fitting shorts/skirts for daily activities and service projects; T-shirts with sleeves, lightweight hoodie are good.</li>
@@ -173,7 +173,7 @@ export default function Tabs() {
   </div>
 
   <div className="text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-inside list-disc">
+    <ul className="list-disc">
 <li>{`Passport (with validity > 6 months) and a photocopy of passport.`}</li>
 
 <li>Visa documentation.</li>
@@ -193,7 +193,7 @@ export default function Tabs() {
   </div>
 
   <div className="text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-inside list-disc">
+    <ul className="list-disc">
 <li>Reusable water bottle, sunglasses, hat for sun protection.</li>
 
 <li>Personal medication.</li>
@@ -251,7 +251,7 @@ WHAT'S INCLUDED
 </div>
         </div>
 
-        <div className={`${activeTab === 4 ? 'block' : 'hidden'} border-b border-b-[#00712D] pb-10`}>
+        <div className={`${activeTab === 4 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
         <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
 <li>
 <div className="flex items-center gap-2.5 mb-1.5">
@@ -274,7 +274,7 @@ WHAT'S INCLUDED
 
   <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
   Students will engage directly in diverse experiences:
-    <ul className="list-inside list-disc">
+    <ul className="list-disc">
 <li><b>Urban & Rural Exploration:</b> Discover Singapore's landmarks and participate in unique farm experiences and cultural exchanges.</li>
 
 <li><b>Nature Adventures:</b> Embark on thrilling river treks, raft building, jungle hikes, and wildlife encounters in Malaysia's Janda Baik and Taman Negara.</li>
@@ -295,7 +295,7 @@ WHAT'S INCLUDED
 
   <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
   Ensuring your teen's safety is paramount. We maintain this through:
-    <ul className="list-inside list-disc">
+    <ul className="list-disc">
 <li><b>Trained Local Teams</b> and comprehensive Safety Briefings for all activities.</li>
 
 <li><b>Medical Recommendations</b> and a basic first-aid kit, with <b>24/7 in-country</b>. <b>Emergency Support</b> and clear protocols.</li>
@@ -320,6 +320,8 @@ WHAT'S INCLUDED
 </li>
 </ul>
         </div>
+
+        <hr className="border-t-2 border-[#00712D] w-72 m-auto" />
         </Container>
 
         <Container className="bg-[#ECFAE5]">

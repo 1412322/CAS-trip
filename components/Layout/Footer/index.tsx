@@ -63,19 +63,19 @@ export default function Footer() {
     
     <div className="flex gap-6 mt-[25px]">
       <Link href="#">
-        <Image className="w-6 md:w-7 aspect-square" src={Facebook} alt="facebook" />
+        <Image className="w-6 md:h-7 w-auto" src={Facebook} alt="facebook" />
       </Link>
       
       <Link href="#">
-      <Image className="w-6 md:w-7 aspect-square" src={Instagram} alt="instagram" />
+      <Image className="w-6 md:h-7 w-auto" src={Instagram} alt="instagram" />
       </Link>
 
       <Link href="#">
-       <Image className="w-6 md:w-7 aspect-square" src={Tiktok} alt="tiktok" />
+       <Image className="w-6 md:h-7 w-auto" src={Tiktok} alt="tiktok" />
       </Link>
 
       <Link href="#">
-         <Image className="w-6 md:w-7 aspect-square" src={Youtube} alt="youtube" />
+         <Image className="w-6 md:h-7 w-auto" src={Youtube} alt="youtube" />
       </Link>
     </div>
   </div>

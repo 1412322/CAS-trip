@@ -23,7 +23,7 @@ export default function AboutUs() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E] pt-16 md:pt-20">ABOUT US</Heading>
 
-        <Paragraph>
+        <Paragraph className="md:max-w-4xl m-auto">
           This website serves as a premier platform specializing in{' '}
           <b>Creativity, Activity and Service volunteer trips</b> for international school students
           worldwide.
@@ -138,7 +138,7 @@ Meet All Our member
 
         <div className="absolute inset-0 z-[-1] bg-[#000] opacity-50" />
 
-        <Paragraph className="text-white">
+        <Paragraph className="text-white md:max-w-4xl m-auto">
           To be the leading initiative in Southeast Asia for inspiring and empowering a new
           generation of international students through unique and impactful educational travel
           programs.
@@ -153,7 +153,7 @@ Meet All Our member
           We are dedicated to cultivating programs built upon foundational principles.
         </Paragraph>
 
-        <div className="grid grid-cols-1 gap-4 gap-x-7 gap-y-5 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 gap-x-7 gap-y-5 lg:grid-cols-2">
           {[
             {
               title: 'Develop Global Leadership',
@@ -201,18 +201,18 @@ Meet All Our member
         We cultivate personal growth, leadership, and social impact, empowering students skills through:
         </Paragraph>
 
-        <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-5">
+        <div className="flex flex-col items-center justify-center gap-8 lg:flex-row md:items-start md:gap-5 md:max-w-4xl m-auto">
           {[
             { title: 'NATURE CAMPS', img: NatureCamps, path: '/camps/nature' },
             { title: 'SUBJECT CAMPS', img: SubjectCamps, path: '/camps/subject' },
             { title: 'LEADERSHIP CAMPS', img: LeadershipCamps, path: '/camps/leadership' },
           ].map((item, index) => (
-            <Link key={index} href={item.path} className="flex flex-1 flex-col items-center">
+            <Link key={index} href={item.path} className="flex flex-1 flex-col items-center w-full">
               <div className="mb-3.5 aspect-square w-[74px] rounded-full border-2 border-[#00712D] p-3 md:w-[108px] md:border-4 md:p-4">
                 <Image src={item.img} alt={item.title} className="h-auto w-full" />
               </div>
 
-              <div className="flex w-full items-center justify-center rounded-full bg-[#00712D] px-8 py-4 text-center text-[16px] font-[900] text-white md:py-6 md:text-[24px]">
+              <div className="flex w-full max-w-[200px] md:max-w-full items-center justify-center rounded-full bg-[#00712D] px-2 py-4 text-center text-[16px] font-[900] text-white md:py-6 md:text-[24px]">
                 {item.title}
               </div>
             </Link>

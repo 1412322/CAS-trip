@@ -18,6 +18,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null)
+  const [activeSubMenuDropdown, setActiveSubMenuDropdown] = useState<string | null>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const searchRef = useRef<HTMLDivElement>(null)
 
@@ -27,6 +28,10 @@ export default function Header() {
 
   const toggleMobileDropdown = (menu: string) => {
     setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu)
+  }
+
+  const toggleSubMenuDropdown = (menu: string) => {
+    setActiveSubMenuDropdown(activeSubMenuDropdown === menu ? null : menu)
   }
 
   useEffect(() => {
@@ -135,16 +140,25 @@ export default function Header() {
                       className={`block flex h-[30px] items-center justify-between px-8 hover:bg-[#00712D1A] ${pathname === '/camps/leadership' ? 'underline' : ''}`}
                     >
                       Leadership Camps
-                      <Image src={ArrowDown} width={16} height={16} alt="arrow-down-icon" />
+                      <Image src={ArrowDown} width={16} height={16} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
                     </Link>
 
+                    {activeSubMenuDropdown === 'leadership' && (
                     <ul>
                       <li>
                         <Link href="/taman-negara" className="px-8 text-[18px] font-[700]">
                           Taman Negara
                         </Link>
                       </li>
-                    </ul>
+                    </ul>)}
+                  </li>
+                  <li>
+                    <Link
+                      href="/our-programs"
+                      className={`block flex h-[30px] items-center px-8 hover:bg-[#00712D1A] ${pathname === '/our-programs' ? 'underline' : ''}`}
+                    >
+                      Explore Our Programs
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -278,9 +292,10 @@ export default function Header() {
                       Leadership Camps
                     </Link>
 
-                    <Image src={ArrowDown} width={12} alt="arrow-down-icon" />
+                    <Image src={ArrowDown} width={12} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
                   </div>
 
+                  {activeSubMenuDropdown === 'leadership' && (
                   <ul className="mt-1 space-y-1 text-[14px] font-[600]">
                     <li>
                       <Link
@@ -290,7 +305,16 @@ export default function Header() {
                         Taman Negara
                       </Link>
                     </li>
-                  </ul>
+                  </ul>)}
+                </li>
+
+                <li>
+                  <Link
+                    className={pathname === '/our-programs' ? 'underline' : ''}
+                    href="/our-programs"
+                  >
+                    Explore Our Programs
+                  </Link>
                 </li>
               </ul>
             )}

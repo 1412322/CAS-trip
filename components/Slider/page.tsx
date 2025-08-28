@@ -35,7 +35,7 @@ export default function Slider({ articles }: SliderProps) {
               <Image src={item.img} alt={item.title} fill className="object-cover" />
 
 <div className="absolute hidden group-hover:flex inset-0 items-center justify-center bg-[#00000080]">
-              <div className="text-[14px] md:text-[24px] font-[700] text-[#00712D] cursor-pointer bg-white rounded-full p-2">Read More</div>
+              <div className="text-[14px] md:text-[22px] border border-[#00712D] font-[700] text-[#00712D] cursor-pointer bg-white rounded-full p-2">Read More</div>
               </div>
             </div>
 

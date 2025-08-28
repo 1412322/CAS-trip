@@ -10,9 +10,8 @@ export default function ContactUs() {
       <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E] pt-16 md:pt-20">CONTACT US</Heading>
 
-        <Paragraph>
-          Curious how we can elevate student hiring and empower your team? Join our demo to explore
-          the future of seamless recruitment.
+        <Paragraph className="md:max-w-4xl m-auto">
+        Curious how we can elevate student hiring and empower your team? Join our demo to explore the future of seamless recruitment.
         </Paragraph>
 
         <div className="my-10 space-y-10">
@@ -22,7 +21,7 @@ export default function ContactUs() {
                 First Name*
               </label>
 
-              <input className="h-8 w-full rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"></input>
+              <input className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"></input>
             </div>
 
             <div className="space-y-2.5">
@@ -30,7 +29,7 @@ export default function ContactUs() {
                 Last Name*
               </label>
 
-              <input className="h-8 w-full rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"></input>
+              <input className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"></input>
             </div>
           </div>
 
@@ -40,7 +39,7 @@ export default function ContactUs() {
 
               <input
                 type="email"
-                className="h-8 w-full rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"
+                className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"
               ></input>
             </div>
 
@@ -51,20 +50,12 @@ export default function ContactUs() {
 
               <input
                 type="tel"
-                className="h-8 w-full rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"
+                className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"
               ></input>
             </div>
           </div>
 
-          <div className="space-y-2.5">
-            <label className="text-[14px] font-[900] text-[#00712D] md:text-[24px]">
-              Your Office Address
-            </label>
-
-            <input className="h-8 w-full rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] md:h-16 md:p-5 md:text-[24px]"></input>
-          </div>
-
-          <div className="flex space-x-2.5">
+          <div className="flex space-x-2.5 md:space-x-10">
             <label className="text-[14px] font-[900] text-[#00712D] md:text-[24px]">
               Your Subject
             </label>
@@ -140,7 +131,7 @@ export default function ContactUs() {
             <label className="text-[14px] font-[900] text-[#00712D] md:text-[24px]">Message</label>
 
             <textarea
-              className="h-[50px] w-full rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[12px] placeholder:font-[600] placeholder:text-[#00712D4D] md:h-[200px] md:p-5 md:text-[24px] md:placeholder:text-[24px]"
+              className="h-[50px] w-full rounded-[5px] md:rounded-[10px] border border-[#00712D] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[12px] placeholder:font-[600] placeholder:text-[#00712D4D] md:h-[200px] md:p-5 md:text-[24px] md:placeholder:text-[24px]"
               placeholder="Where do you want to go? How many people? Expected dates? Budget?..."
             ></textarea>
           </div>

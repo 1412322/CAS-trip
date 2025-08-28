@@ -92,14 +92,14 @@ export default function Home() {
               url: '/camps/nature',
             },
             {
-              img: LeadershipCamp,
-              title: 'LEADERSHIP CAMPS',
-              url: '/camps/leadership',
-            },
-            {
               img: SubjectCamp,
               title: 'SUBJECT CAMPS',
               url: '/camps/subject',
+            },
+            {
+              img: LeadershipCamp,
+              title: 'LEADERSHIP CAMPS',
+              url: '/camps/leadership',
             },
           ].map((item, index) => (
             <Link
@@ -178,19 +178,19 @@ export default function Home() {
               title: 'Flight Booking',
               img: WeWillHandleTripForYou1,
               description:
-                'Assist with securing the most convenient and cost-effective flight options for participants, managing itineraries, and providing timely updates on flight statuses',
+                'Assist with securing the most convenient and cost-effective flight options for participants, managing itineraries, and providing timely updates on flight statuses.',
             },
             {
               title: 'Tours & Activities',
               img: WeWillHandleTripForYou2,
               description:
-                'Engaging tours and activities that complement the main program, offering cultural immersion, local exploration trips and deeply memorable leisure experience',
+                'Engaging tours and activities that complement the main program, offering cultural immersion, local exploration trips and deeply memorable leisure experience.',
             },
             {
               title: 'Airport Transfers',
               img: WeWillHandleTripForYou3,
               description:
-                'Arrange reliable transportation from the airport to the accommodation to ensure a comfortable and stress-free arrival and smooth departure experience for all attendees',
+                'Arrange reliable transportation from the airport to the accommodation to ensure a comfortable and stress-free arrival and  smooth departure experience for all attendees.',
             },
             {
               title: 'Hotel Bookings',
@@ -224,9 +224,9 @@ export default function Home() {
       <Container className="bg-[#00712D]">
         <Heading color="text-white">WHERE WE TRAVEL</Heading>
 
-        <div className="grid grid-cols-1 gap-2.5 text-[18px] font-[900] md:grid-cols-3 md:gap-6 md:text-[30px]">
-          <div className="order-1 md:order-0 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-6">
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-lg md:h-full">
+        <div className="grid grid-cols-1 gap-2.5 text-[18px] font-[900] md:grid-cols-3 md:gap-8 md:text-[30px]">
+          <div className="order-1 md:order-0 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-8">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel1} alt="Travel 1" layout="fill" className="object-cover" />
 
               <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-white">
@@ -234,27 +234,27 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-lg md:h-full">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel2} alt="Travel 2" layout="fill" className="object-cover" />
 
               <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nHOIAN`}</h2>
             </div>
           </div>
 
-          <div className="order-0 md:order-1 relative h-[40vw] w-full overflow-hidden rounded-lg md:h-[calc(40vw)]">
+          <div className="order-0 md:order-1 relative h-[40vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-[calc(40vw)]">
             <Image src={WhereWeTravel3} alt="Travel 3" layout="fill" className="object-cover" />
 
             <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nSAPA`}</h2>
           </div>
 
-          <div className="order-2 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-6">
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-lg md:h-full">
+          <div className="order-2 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-8">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel4} alt="Travel 4" layout="fill" className="object-cover" />
 
               <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nDANANG`}</h2>
             </div>
 
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-lg md:h-full">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel5} alt="Travel 5" layout="fill" className="object-cover" />
 
               <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-white">
@@ -266,14 +266,10 @@ export default function Home() {
       </Container>
 
 
-      <Container className="bg-[#ECFAE5]">
+      <Container className="bg-[#ECFAE5] !pb-0">
         <Heading color="text-[#22C55E]">OUR PARTNERS</Heading>
 
         <Partners />
-
-        <Paragraph className="mb-4 md:mb-10">
-        Embark on an unforgettable 3-day wilderness adventure! Learning essential survival skills sharpens your collaborative edge.
-        </Paragraph>
       </Container>
 
       {/* OUR FAVORITE TRAVELERS */}
@@ -310,7 +306,7 @@ export default function Home() {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex min-w-[calc(100vw/1.7)] flex-1 flex-col justify-between gap-4 bg-white p-3.5 md:min-w-[calc(100vw/3.8)] md:gap-6 md:px-7 md:py-9"
+              className="flex min-w-[calc(60vw)] flex-1 flex-col justify-between gap-4 bg-white p-3.5 md:min-w-[calc(35vw)] lg:min-w-[calc(25vw)] md:gap-6 md:px-7 md:py-9"
             >
               <p className="text-[12px] font-[600] text-[#00712D] md:text-[22px]">{item.text}</p>
 
@@ -363,16 +359,16 @@ export default function Home() {
       </Container>
 
       <Container className="bg-[#ECFAE5]">
-        <div className="flex flex-col gap-x-16 gap-y-2.5 md:flex-row">
+        <div className="flex flex-col gap-x-16 gap-y-2.5 lg:flex-row">
           <div className="flex-1">
-            <Heading color="text-[#00712D] !text-left">GET LATEST & UPDATES TRIP PROGRAMS</Heading>
+            <Heading color="text-[#00712D] !text-left">LATEST TRIP UPDATES</Heading>
 
             <Paragraph className="!text-left">
             Subscribe here to receive comprehensive updates on all current and upcoming Our CAS Trips.
             </Paragraph>
           </div>
 
-          <div className="w-full flex-auto space-y-2.5 md:w-64">
+          <div className="w-full flex-auto space-y-2.5 lg:w-64">
             <input
               className="h-8 w-full rounded-[5px] md:rounded-[10px] border border-none border-[#00712D] bg-[#00712D1A] p-2.5 text-[12px] font-[600] text-[#00712D] placeholder:text-[#00712D80] md:h-16 md:p-5 md:text-[24px]"
               placeholder="Name"

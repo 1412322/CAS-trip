@@ -38,7 +38,7 @@ export default function TamanNegara() {
         <Heading color="text-[#22C55E]">LET'S TAKE A LOOK OUR JOURNEY</Heading>
 
         <div className="mt-10 flex justify-center">
-          <Button path="/our-programs">Watch more our trips</Button>
+          <Button path="/our-programs">Watch More Our Trips</Button>
         </div>
       </Container>
 
@@ -49,12 +49,8 @@ export default function TamanNegara() {
 
         <div className="absolute inset-0 z-[-1] bg-[#000] opacity-50" />
 
-        <Paragraph className="text-white">
-          Experience a unique 7-day journey blending urban exploration, thrilling nature, and
-          cultural immersion across Singapore and Malaysia. Discover Singapore's iconic landmarks
-          before delving into Malaysia's serene landscapes and ancient wonders. Engage in hands-on
-          challenges and cultural exchanges for a perfect blend of learning, adventure, and personal
-          growth.
+        <Paragraph className="text-white md:max-w-4xl m-auto">
+        Experience a unique 7-day journey blending urban exploration, thrilling nature, and cultural immersion across Singapore and Malaysia. Discover Singapore's iconic landmarks before delving into Malaysia's serene landscapes and ancient wonders. Engage in hands-on challenges and cultural exchanges for a perfect blend of learning, adventure, and personal growth.
         </Paragraph>
 
         <div className="mt-10 flex justify-center">
@@ -77,7 +73,7 @@ export default function TamanNegara() {
             },
             {
               img: Highlights3,
-              title: 'Outdoor challenges',
+              title: 'Outdoor Challenges',
             },
           ].map((item, index) => (
             <li key={index} className="flex flex-col items-center">

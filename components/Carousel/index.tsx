@@ -49,7 +49,7 @@ export default function Carousel({ list }: { list: any[] }) {
       className="no-scrollbar flex space-x-5 overflow-x-scroll md:space-x-20"
     >
       {[...list, ...list].map((item, index) => (
-        <div key={index} className="group w-full max-w-[240px] flex-none md:max-w-[398px]">
+        <div key={index} className="group w-full max-w-[240px] flex-none md:max-w-[400px]">
           <div className="relative h-[300px] w-full overflow-hidden rounded-[10px] md:h-[507px]">
             <Image
               src={item.img}

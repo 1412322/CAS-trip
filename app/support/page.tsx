@@ -24,15 +24,15 @@ export default function Support() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E] pt-16 md:pt-20">SUPPORT</Heading>
 
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          <Image className="hidden h-full w-full flex-1 object-cover md:block" src={Overview1} alt="volunteer" />
+        <div className="grid grid-cols-1 lg:grid-cols-3">
+          <Image className="hidden h-full w-full flex-1 object-cover lg:block" src={Overview1} alt="volunteer" />
 
           <div className="flex flex-1 flex-col items-center justify-center bg-[#00712D] p-2.5 text-[12px] font-[600] text-white md:px-6 md:text-[18px]">
-              This section provides essential information and resources to help you prepare, stay
-              safe, and thrive during your volunteer trips.
+              <p className="font-[500]">This section provides essential information and resources to help you prepare, stay
+              safe, and thrive during your volunteer trips.</p>
               <ul>
                 <li className="my-4 flex items-center gap-1 md:my-5 md:gap-2.5">
-                  <div className="relative aspect-square min-w-1.5 md:w-4">
+                  <div className="relative aspect-square min-w-1.5 md:min-w-4">
                     <Image src={CircleCheck} layout="fill" alt="check-icon" />
                   </div>
                   Safety is the most priority of our criteria for both students, teachers and staff
@@ -40,7 +40,7 @@ export default function Support() {
                 </li>
 
                 <li className="flex items-center gap-1 md:gap-2.5">
-                  <div className="relative aspect-square min-w-1.5 md:w-4">
+                  <div className="relative aspect-square min-w-1.5 md:min-w-4">
                     <Image src={CircleCheck} layout="fill" alt="check-icon" />
                   </div>
                   All guides follow a comprehensive volunteer program assessed regularly.
@@ -49,7 +49,7 @@ export default function Support() {
           </div>
 
           <Image
-            className="hidden h-full w-full flex-1 object-cover md:block"
+            className="hidden h-full w-full flex-1 object-cover lg:block"
             src={Overview2}
             alt="backpack"
           />
@@ -60,7 +60,7 @@ export default function Support() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E]">SAFETY COMMITMENT</Heading>
 
-        <Paragraph className="mb-2.5 md:mb-10">
+        <Paragraph className="mb-2.5 md:mb-10 md:max-w-4xl m-auto">
           We are committed to providing a secure and supportive environment for all our
           international students and our staffs.
         </Paragraph>
@@ -95,48 +95,49 @@ export default function Support() {
         </div>
 
         {/* HEALTH & SAFETY + VISA */}
-        <div className="grid grid-cols-1 gap-6 text-white md:grid-cols-2">
-          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-20 md:py-10">
-            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-center text-[20px] font-[800] md:mb-6 md:text-[32px]">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:w-9">
+        <div className="grid grid-cols-1 gap-6 text-white lg:grid-cols-2">
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
+            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
+              <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:min-w-9">
                 1
               </span>
               <div>Health & Safety</div>
             </div>
 
             <div className="text-[12px] md:text-[18px] font-[600] text-white">
-              <ul className="list-inside list-disc space-y-4 md:space-y-6">
-<li><b>Ensure a pre-tour health check-up</b> (30 days prior) and physical preparation.</li>
+              <ul className="list-disc space-y-4 md:space-y-6">
+<li><span className="font-[800]">Ensure a pre-tour health check-up</span> (30 days prior) and physical preparation.</li>
 
-<li><b>Travel insurance</b> covers medical emergencies and personal liability.</li>
+<li><span className="font-[800]">Travel insurance</span> covers medical emergencies and personal liability.</li>
 
-<li><b>Dietary needs</b> need to be informed in advance.</li>
+<li><span className="font-[800]">Dietary needs</span> need to be informed in advance.</li>
 
-<li><b>Stay hydrated</b> and follow local guidelines.</li>
+<li><span className="font-[800]">Stay hydrated</span> and follow local guidelines.</li>
               </ul>
             </div>
           </div>
 
-          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-20 md:py-10">
-            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-center text-[20px] font-[800] md:mb-6 md:text-[32px]">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:w-9">
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
+            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
+              <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:min-w-9">
                 2
               </span>
               <div>Visa Requirements</div>
             </div>
 
             <div className="text-[12px] md:text-[18px] font-[600] text-white">
-              <ul className="list-inside list-disc space-y-4 md:space-y-6">
+              <ul className="list-disc space-y-4 md:space-y-6">
                 <li>
-                <b>Obtain the correct visa</b> for destination and check latest requirements before departure.
+                <span className="font-[800]">Obtain the correct visa</span> for destination and check latest requirements before departure.
                   <br />
-                  <div className="mt-6 font-[400] italic">
+
+                  <div className="mt-6 font-[400] italic md:ml-[-16px]">
                   We do not provide visas or visas on arrival (VOA); please plan this independently.
                   </div>
                 </li>
 
                 <li>
-                <b>Stay updated</b> on the <b>local weather forecast</b> for optimal luggage preparation.
+                <span className="font-[800]">Stay updated</span> on the <b>local weather forecast</b> for optimal luggage preparation.
                 </li>
               </ul>
             </div>

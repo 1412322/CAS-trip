@@ -22,8 +22,8 @@ export default function CampsLayout({ children }: { children: React.ReactNode })
       {children}
 
       <Container className="bg-[#00712D]">
-        <h2 className={`text-center text-[20px] font-[800] md:text-[32px] text-white mb-3 md:mb-8`}>
-        DISCOVER OUR <span className="text-[#FFA726]">ESTABLISHED DESTINATIONS</span>
+        <h2 className={`flex flex-col md:flex-row justify-center md:gap-2 text-center text-[20px] font-[800] md:text-[32px] text-white mb-3 md:mb-8`}>
+        DISCOVER OUR<div className="text-[#FFA726]">ESTABLISHED DESTINATIONS</div>
     </h2>
 
         <Gallery images={images} />

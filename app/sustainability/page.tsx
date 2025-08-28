@@ -22,7 +22,7 @@ export default function Sustainability() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E] pt-16 md:pt-20">SUSTAINABILITY</Heading>
 
-        <Paragraph>
+        <Paragraph className="md:max-w-4xl m-auto">
         Our commitment extends beyond facilitating meaningful volunteer experiences; it encompasses ensuring that our digital presence, our operations, and our projects contribute positively to the planet and its people for the long-term impact.
         </Paragraph>
 
@@ -40,7 +40,7 @@ export default function Sustainability() {
           {
             img: PositiveCommunityAndEnvironmentalImpact1,
             title: 'Local Ownership',
-            description: 'Our community-led projects ensure\nsustainable impact beyond volunteers.',
+            description: 'Our community-led projects ensure sustainable impact beyond volunteers.',
           },
           {
             img: PositiveCommunityAndEnvironmentalImpact2,
@@ -70,7 +70,7 @@ export default function Sustainability() {
                 {item.title}
               </div>
 
-              <p className="whitespace-break-spaces text-center text-[10px] font-[600] text-white md:text-[18px]">
+              <p className="whitespace-break-spaces text-center text-[10px] font-[600] text-white md:text-[18px] lg:px-24">
                 {item.description}
               </p>
             </div>
@@ -122,9 +122,9 @@ export default function Sustainability() {
       </Container>
 
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-        <Heading color="text-[#22C55E]">CONTINUOUS IMPROVEMENT & ACCOUNTABILITY</Heading>
+        <Heading color="text-[#22C55E]">PROGRESS & RESPONSIBILITY</Heading>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {[
             {
               img: ContinuousImprovementAndAccountability1,
@@ -147,7 +147,7 @@ export default function Sustainability() {
           ].map((item, index) => (
             <div
               key={index}
-              className={`relative flex aspect-square h-[318px] w-full flex-col items-stretch overflow-hidden rounded-[15px] ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+              className={`relative flex aspect-square w-full flex-col items-stretch overflow-hidden rounded-[15px] ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
             >
               <Image
                 src={item.img}
@@ -156,12 +156,12 @@ export default function Sustainability() {
                 alt={item.description}
               />
 
-              <div className="absolute inset-2 flex flex-col items-center justify-center text-center">
+              <div className="absolute top-1/4 flex flex-col items-center justify-center text-center">
                 <div className="mb-2.5 text-[20px] font-[900] text-white md:mb-6 md:text-[24px]">
                   {item.title}
                 </div>
 
-                <Paragraph className="whitespace-break-spaces text-white">
+                <Paragraph className="px-4 whitespace-break-spaces text-white">
                   {item.description}
                 </Paragraph>
               </div>
