@@ -131,7 +131,7 @@ export default function Home() {
       {/* CHOOSE YOUR FAVORITE PROGRAM */}
 
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-        <Heading color="text-[#22C55E]">CHOOSE YOUR FAVORITE PROGRAM</Heading>
+        <Heading color="text-[#22C55E] whitespace-break-spaces md:whitespace-normal">{`CHOOSE YOUR\nFAVORITE PROGRAM`}</Heading>
 
         <div className="flex flex-row justify-center gap-5 md:gap-24">
           {[
@@ -170,7 +170,7 @@ export default function Home() {
 
       {/* WE'LL HANDLE YOUR TRIP FOR YOU */}
       <Container className="bg-[#ECFAE5]">
-        <Heading color="text-[#22C55E]">WE'LL HANDLE YOUR TRIP FOR YOU</Heading>
+        <Heading color="text-[#22C55E] whitespace-break-spaces md:whitespace-normal">{`WE'LL HANDLE\nYOUR TRIP`}</Heading>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-10">
           {[
@@ -224,9 +224,9 @@ export default function Home() {
       <Container className="bg-[#00712D]">
         <Heading color="text-white">WHERE WE TRAVEL</Heading>
 
-        <div className="grid grid-cols-1 gap-2.5 text-[18px] font-[900] md:grid-cols-3 md:gap-8 md:text-[30px]">
-          <div className="order-1 md:order-0 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-8">
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
+        <div className="grid grid-cols-1 gap-2.5 text-[18px] font-[900] md:grid-cols-3 lg:gap-8 lg:text-[30px]">
+          <div className="order-1 md:order-0 grid grid-cols-2 gap-2.5 md:grid-cols-1 lg:gap-8">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] lg:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel1} alt="Travel 1" layout="fill" className="object-cover" />
 
               <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-white">
@@ -234,27 +234,27 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] lg:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel2} alt="Travel 2" layout="fill" className="object-cover" />
 
-              <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nHOIAN`}</h2>
+              <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nHOI AN`}</h2>
             </div>
           </div>
 
-          <div className="order-0 md:order-1 relative h-[40vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-[calc(40vw)]">
+          <div className="order-0 md:order-1 relative h-[40vw] w-full overflow-hidden rounded-[10px] lg:rounded-[20px] md:h-[calc(40vw)]">
             <Image src={WhereWeTravel3} alt="Travel 3" layout="fill" className="object-cover" />
 
             <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nSAPA`}</h2>
           </div>
 
-          <div className="order-2 grid grid-cols-2 gap-2.5 md:grid-cols-1 md:gap-8">
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
+          <div className="order-2 grid grid-cols-2 gap-2.5 md:grid-cols-1 lg:gap-8">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] lg:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel4} alt="Travel 4" layout="fill" className="object-cover" />
 
-              <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nDANANG`}</h2>
+              <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] whitespace-break-spaces text-center text-white">{`VIETNAM\nDA NANG`}</h2>
             </div>
 
-            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] md:rounded-[20px] md:h-full">
+            <div className="relative h-[35vw] w-full overflow-hidden rounded-[10px] lg:rounded-[20px] md:h-full">
               <Image src={WhereWeTravel5} alt="Travel 5" layout="fill" className="object-cover" />
 
               <h2 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-white">
@@ -266,7 +266,7 @@ export default function Home() {
       </Container>
 
 
-      <Container className="bg-[#ECFAE5] !pb-0">
+      <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E]">OUR PARTNERS</Heading>
 
         <Partners />

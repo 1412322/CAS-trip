@@ -31,17 +31,17 @@ export default function Support() {
               <p className="font-[500]">This section provides essential information and resources to help you prepare, stay
               safe, and thrive during your volunteer trips.</p>
               <ul>
-                <li className="my-4 flex items-center gap-1 md:my-5 md:gap-2.5">
-                  <div className="relative aspect-square min-w-1.5 md:min-w-4">
-                    <Image src={CircleCheck} layout="fill" alt="check-icon" />
+                <li className="my-4 flex items-start gap-1 md:my-5 md:gap-2.5">
+                  <div className="relative aspect-square min-w-3 md:min-w-4">
+                    <Image className="mt-1" src={CircleCheck} layout="fill" alt="check-icon" />
                   </div>
                   Safety is the most priority of our criteria for both students, teachers and staff
                   – without compromise.
                 </li>
 
-                <li className="flex items-center gap-1 md:gap-2.5">
-                  <div className="relative aspect-square min-w-1.5 md:min-w-4">
-                    <Image src={CircleCheck} layout="fill" alt="check-icon" />
+                <li className="flex items-start gap-1 md:gap-2.5">
+                  <div className="relative aspect-square min-w-3 md:min-w-4">
+                    <Image className="mt-1" src={CircleCheck} layout="fill" alt="check-icon" />
                   </div>
                   All guides follow a comprehensive volunteer program assessed regularly.
                 </li>
@@ -96,7 +96,7 @@ export default function Support() {
 
         {/* HEALTH & SAFETY + VISA */}
         <div className="grid grid-cols-1 gap-6 text-white lg:grid-cols-2">
-          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-4 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
             <div className="mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
               <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:min-w-9">
                 1
@@ -117,7 +117,7 @@ export default function Support() {
             </div>
           </div>
 
-          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-1.5 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-4 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
             <div className="mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
               <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:min-w-9">
                 2
@@ -131,7 +131,7 @@ export default function Support() {
                 <span className="font-[800]">Obtain the correct visa</span> for destination and check latest requirements before departure.
                   <br />
 
-                  <div className="mt-6 font-[400] italic md:ml-[-16px]">
+                  <div className="mt-6 font-[400] italic ml-[-16px]">
                   We do not provide visas or visas on arrival (VOA); please plan this independently.
                   </div>
                 </li>

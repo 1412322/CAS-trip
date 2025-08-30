@@ -14,7 +14,9 @@ export default function Footer() {
   return (
 <footer className="bg-[#00712D] text-white px-5 md:px-[100px] py-7 md:py-20">
 <div className="flex md:flex-row flex-col md:justify-start lg:justify-between gap-10 w-full flex-wrap">
+  <Link href="/">
     <Image className="w-1/2 md:w-[160px] h-fit" src={Logo} alt="CAS-trip-logo" />
+</Link>
 
   <div>
     <h4 className="font-[900] text-[18px] md:text-[24px] mb-2.5 md:mb-6">Explore</h4>

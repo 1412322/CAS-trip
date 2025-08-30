@@ -275,7 +275,7 @@ Meet All Our member
           <div className="relative w-full flex-1 pb-10 md:pb-20 pl-20">
           <Image className="w-auto h-[270px] md:h-[560px] rounded-[5px] md:rounded-[20px] object-cover" src={SafetyExpertise1} alt="" />
 
-          <Image className="w-2/3 h-[156px] md:h-[324px] rounded-[5px] md:rounded-[20px] absolute bottom-0 left-0 object-cover" src={SafetyExpertise2} alt="" />
+          <Image className="w-2/3 h-[156px] md:h-[324px] rounded-[5px] md:rounded-[20px] absolute bottom-0 left-0 object-cover shadow-[0.964px_-0.964px_1.446px_0_#FFF]" src={SafetyExpertise2} alt="" />
         </div>
         </div>
       </Container>

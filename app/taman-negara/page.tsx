@@ -15,6 +15,7 @@ import ProgramTypes from '@/public/images/program_types.svg'
 import Sologan from '@/public/images/taman_negara_sologan.svg'
 import Image from 'next/image'
 import Tabs from './tabs'
+import Play from '@/public/images/play.svg'
 
 export default function TamanNegara() {
   return (
@@ -36,6 +37,14 @@ export default function TamanNegara() {
 
       <Container className="bg-[#ECFAE5]">
         <Heading color="text-[#22C55E]">LET'S TAKE A LOOK OUR JOURNEY</Heading>
+
+        <div className="flex items-center justify-center bg-[#00000033] relative min-h-[180px] w-full flex-1 overflow-hidden rounded-[10px] border-2 border-[#00712D] md:max-w-4xl m-auto md:min-h-[460px] md:rounded-[20px]">
+                <Image
+                  src={Play}
+                  alt=""
+                  className="w-[50px] md:w-[100px] aspect-square object-contain"
+                />
+              </div>
 
         <div className="mt-10 flex justify-center">
           <Button path="/our-programs">Watch More Our Trips</Button>
@@ -97,11 +106,11 @@ export default function TamanNegara() {
       <Container className="bg-[#00712D]">
         <Heading color="text-white">TRIP OVERVIEW</Heading>
 
-        <ul className="grid grid-cols-3 md:grid-cols-6">
+        <ul className="grid grid-cols-3 md:grid-cols-6 gap-y-2.5">
           {[
             {
               img: EnrollmentDeadline,
-              title: 'Enrollment Deadline',
+              title: 'Deadline',
               description: 'July 25th 2025',
             },
             {
@@ -112,17 +121,17 @@ export default function TamanNegara() {
             {
               img: Ages,
               title: 'Ages',
-              description: 'Senior: Ages 19 - 22\nJunior: Ages 14 - 18',
+              description: 'Senior: 19 - 22\nJunior: 14 - 18',
             },
             {
               img: Duration,
               title: 'Duration',
-              description: '5 days',
+              description: '7 days',
             },
             {
               img: ProgramTypes,
               title: 'Program Types',
-              description: '7 days',
+              description: 'Leadership Camps',
             },
             {
               img: Impact,
@@ -143,11 +152,11 @@ export default function TamanNegara() {
                 />
               </div>
 
-              <div className="text-center text-[14px] font-[900] text-white md:text-[18px]">
+              <div className="text-center text-[12px] font-[900] text-white md:text-[18px]">
                 {item.title}
               </div>
 
-              <Paragraph className="text-white">{item.description}</Paragraph>
+              <p className="whitespace-break-spaces text-center text-[10px] md:text-[14px] font-[600] leading-3 md:leading-[18px] text-white">{item.description}</p>
             </li>
           ))}
         </ul>

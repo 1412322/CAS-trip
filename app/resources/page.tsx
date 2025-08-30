@@ -8,6 +8,8 @@ import MostPopularArticles2 from '@/public/images/most_popular_articles_2.webp'
 import MostPopularArticles3 from '@/public/images/most_popular_articles_3.webp'
 import MostPopularArticles4 from '@/public/images/most_popular_articles_4.webp'
 import MostPopularArticles5 from '@/public/images/most_popular_articles_5.webp'
+import Play from '@/public/images/play.svg'
+import Image from 'next/image'
 
 export default function Resources() {
   return (
@@ -50,44 +52,43 @@ export default function Resources() {
             {
               title: 'Week Teaching in Rural Vietnam',
               description: 'See how we bring joy and meaningful new opportunities to students.',
-              thumbnail: '/videos/vy-thumb.png', // Replace with your video/image path
+              thumbnail: '', // Replace with your video/image path
             },
             {
               title: 'Helping a Community Center in\nVietnam The Perfect Journey',
               description:
                 'Discover the power of teamwork in supporting alongside local communities in Vietnam.',
-              thumbnail: '/videos/community-thumb.png',
+              thumbnail: '',
             },
             {
               title: 'Meet Our Journey at School\nin Thailand',
               description:
                 'Join us to see the students’ truly heartwarming connections with the bright, eager children at a special school in Thailand.',
-              thumbnail: '/videos/thailand-thumb.png',
+              thumbnail: '',
             },
             {
               title: 'Q&A Sessions with Our students',
               description:
                 'Directly listen to our incredible students sharing experience and personal growth.',
-              thumbnail: '/videos/qa-thumb.png',
+              thumbnail: '',
             },
           ].map((item, index) => (
             <div
               key={index}
               className="flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-28"
             >
-              <div className="relative min-h-[180px] w-full flex-1 overflow-hidden rounded-[10px] border-2 border-[#00712D] bg-white md:min-h-[355px] md:rounded-[20px]">
-                {/* <Image
-                  src={item.thumbnail}
+              <div className="flex items-center justify-center bg-[#00000033] relative min-h-[180px] w-full flex-1 overflow-hidden rounded-[10px] border-2 border-[#00712D] bg-white md:min-h-[355px] md:rounded-[20px]">
+                <Image
+                  src={item.thumbnail || Play}
                   alt={item.title}
-                  fill
-                  className="object-contain"
-                /> */}
+                  className="w-[50px] md:w-[100px] aspect-square object-contain"
+                />
               </div>
 
               <div className="flex-1 text-[#00712D] lg:whitespace-break-spaces">
                 <h3 className="mb-1 text-[14px] font-[900] md:mb-6 md:text-[24px]">{item.title}</h3>
 
-                <Paragraph className="!text-left leading-6">{item.description}</Paragraph>
+                <Paragraph className="!text-left">{item.description}</Paragraph>
               </div>
             </div>
           ))}

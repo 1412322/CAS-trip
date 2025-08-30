@@ -9,10 +9,10 @@ import DiscoverOurEstablishedDestinations4 from '@/public/images/where_we_travel
 import DiscoverOurEstablishedDestinations5 from '@/public/images/where_we_travel_5.webp'
 
 const images = [
-  { src: DiscoverOurEstablishedDestinations1, title: 'VIETNAM', subTitle: 'SAPA' },
-  { src: DiscoverOurEstablishedDestinations2, title: 'THAILAND', subTitle: '' },
-  { src: DiscoverOurEstablishedDestinations3, title: 'VIETNAM', subTitle: 'HOIAN' },
-  { src: DiscoverOurEstablishedDestinations4, title: 'VIETNAM', subTitle: 'DANANG' },
+  { src: DiscoverOurEstablishedDestinations3, title: 'VIETNAM', subTitle: 'SAPA' },
+  { src: DiscoverOurEstablishedDestinations1, title: 'THAILAND', subTitle: '' },
+  { src: DiscoverOurEstablishedDestinations2, title: 'VIETNAM', subTitle: 'HOI AN' },
+  { src: DiscoverOurEstablishedDestinations4, title: 'VIETNAM', subTitle: 'DA NANG' },
   { src: DiscoverOurEstablishedDestinations5, title: 'CHINA', subTitle: '' },
 ]
 
@@ -22,7 +22,7 @@ export default function CampsLayout({ children }: { children: React.ReactNode })
       {children}
 
       <Container className="bg-[#00712D]">
-        <h2 className={`flex flex-col md:flex-row justify-center md:gap-2 text-center text-[20px] font-[800] md:text-[32px] text-white mb-3 md:mb-8`}>
+        <h2 className={`flex flex-col lg:flex-row justify-center md:gap-2 text-center text-[20px] font-[800] md:text-[32px] text-white mb-3 md:mb-8`}>
         DISCOVER OUR<div className="text-[#FFA726]">ESTABLISHED DESTINATIONS</div>
     </h2>
 

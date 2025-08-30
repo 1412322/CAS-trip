@@ -35,16 +35,16 @@ export default function Gallery({ images }: GalleryProps) {
   }
 
   return (
-    <div className="relative overflow-hidden h-[532px] w-full">
-      <div className="relative flex h-full items-center justify-center scale-[0.32] md:scale-50 lg:scale-100">
+    <div className="relative overflow-hidden h-[145px] lg:h-[532px] w-full">
+      <div className="relative flex h-full items-center justify-center">
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute flex h-full w-[390px] flex-col items-center justify-center overflow-hidden rounded-[20px] text-white transition-all duration-500 ${getPositionClass(index)} fill-black`}
+            className={`absolute flex h-full w-[106px] lg:w-[390px] flex-col items-center justify-center overflow-hidden rounded-[5px] lg:rounded-[20px] text-white transition-all duration-500 ${getPositionClass(index)} fill-black`}
           >
             <Image src={img.src} alt={img.title} layout="fill" objectFit="cover" />
 
-            <div className="relative z-10 text-center font-[900] text-[32px]">
+            <div className="relative z-10 text-center font-[900] text-[10px] md:text-[32px]">
               {img.title && <h3>{img.title}</h3>}
 
               {img.subTitle && <h3>{img.subTitle}</h3>}
@@ -53,11 +53,11 @@ export default function Gallery({ images }: GalleryProps) {
             {/* <div className="absolute inset-0 fill-[#00000080] z-0" /> */}
 
             <div
-              className="absolute inset-0 z-40 flex items-center justify-between px-5"
+              className="absolute inset-0 z-40 flex items-center justify-between lg:px-5"
               style={{ display: index - current === 0 ? 'flex' : 'none' }}
             >
               <Image
-                className="aspect-square max-w-[50px] cursor-pointer"
+                className="aspect-square max-w-[14px] lg:max-w-[50px] cursor-pointer"
                 src={ArrowLeft}
                 layout="responsive"
                 alt="arrow-left-icon"
@@ -65,7 +65,7 @@ export default function Gallery({ images }: GalleryProps) {
               />
 
               <Image
-                className="aspect-square max-w-[50px] cursor-pointer"
+                className="aspect-square max-w-[14px] lg:max-w-[50px] cursor-pointer"
                 src={ArrowRight}
                 layout="responsive"
                 alt="arrow-left-icon"

@@ -29,7 +29,7 @@ export default function Sustainability() {
         <div className="relative mt-10 w-full pb-20 md:pb-40">
           <Image className="w-1/2 rounded-[5px] md:rounded-[20px]" src={Sustainability1} alt="" />
 
-          <Image className="w-2/3 rounded-[5px] md:rounded-[20px] absolute bottom-0 right-0" src={Sustainability2} alt="" />
+          <Image className="w-2/3 rounded-[5px] md:rounded-[20px] absolute bottom-0 right-0 shadow-[-0.519px_-0.519px_0.779px_0_#FFF]" src={Sustainability2} alt="" />
         </div>
       </Container>
 
@@ -81,7 +81,7 @@ export default function Sustainability() {
       <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
         <Heading color="text-[#22C55E]">SELF-IMPACT ON STUDENTS</Heading>
 
-        <ul className="flex flex-col gap-6 md:flex-row">
+        <ul className="flex flex-col gap-6 md:flex-row md:max-w-5xl m-auto">
           {[
             {
               img: PersonalGrowth,

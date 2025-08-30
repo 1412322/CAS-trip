@@ -2,17 +2,18 @@
 
 import Close from '@/public/images/close.svg'
 import ArrowDown from '@/public/images/green_arrow_down.svg'
+import GreenSearch from '@/public/images/green_search.svg'
 import Logo from '@/public/images/logo.png'
 import Menu from '@/public/images/menu.svg'
 import Search from '@/public/images/search.svg'
-import GreenSearch from '@/public/images/green_search.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
 export default function Header() {
   const pathname = usePathname()
+  const router = useRouter()
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false)
   const [scrolled, setScrolled] = useState(false)
@@ -78,7 +79,7 @@ export default function Header() {
       }`}
     >
       <div className="m-auto flex w-full items-center justify-between px-5 md:px-[100px]">
-        <Image src={Logo} alt="CAS-trip-logo" className="h-[46px] w-auto md:h-16" />
+        <Image src={Logo} alt="CAS-trip-logo" className="cursor-pointer h-[46px] w-auto md:h-16" onClick={() => router.push('/')}/>
 
         <div className="flex items-center justify-end gap-4 md:gap-6">
         <nav className="hidden space-x-4 text-white lg:block">
@@ -140,13 +141,13 @@ export default function Header() {
                       className={`block flex h-[30px] items-center justify-between px-8 hover:bg-[#00712D1A] ${pathname === '/camps/leadership' ? 'underline' : ''}`}
                     >
                       Leadership Camps
-                      <Image src={ArrowDown} width={16} height={16} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
+                      <Image className={activeSubMenuDropdown === 'leadership' ? 'rotate-180' : ''} src={ArrowDown} width={16} height={16} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
                     </Link>
 
                     {activeSubMenuDropdown === 'leadership' && (
-                    <ul>
-                      <li>
-                        <Link href="/taman-negara" className="px-8 text-[18px] font-[700]">
+                    <ul className="w-full">
+                      <li className="hover:bg-[#00712D1A]">
+                        <Link href="/taman-negara" className={`px-8 text-[18px] font-[700] ${pathname === '/taman-negara' ? 'underline' : ''}`}>
                           Taman Negara
                         </Link>
                       </li>
@@ -292,7 +293,7 @@ export default function Header() {
                       Leadership Camps
                     </Link>
 
-                    <Image src={ArrowDown} width={12} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
+                    <Image className={activeSubMenuDropdown === 'leadership' ? 'rotate-180' : ''} src={ArrowDown} width={12} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
                   </div>
 
                   {activeSubMenuDropdown === 'leadership' && (
