@@ -9,7 +9,6 @@ import Partner6 from '@/public/images/partners/partner_6.svg'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import 'swiper/css'
-import 'swiper/css/pagination'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -33,19 +32,18 @@ export default function Partners() {
   }, []);
 
   return (
-    <div className="mr-[-20px] md:mr-[-100px]">
     <Swiper
     slidesPerView={isMobile ? 1.5 : 2.3}
     autoplay={{
       delay: 2000,
       disableOnInteraction: true,
     }}
-    loop={true}
+    loop
     modules={[Autoplay]}
   >
       {partners.map((item, index) => (
            <SwiperSlide key={index}>
-             <div className="h-32 md:h-56 lg:h-56">
+             <div className="ml-[20px] md:ml-[100px] h-32 md:h-56 lg:h-56">
               <Image
               src={item.img}
               alt=""
@@ -55,6 +53,5 @@ export default function Partners() {
         </SwiperSlide>
       ))} 
   </Swiper>
-  </div>
   )
 }

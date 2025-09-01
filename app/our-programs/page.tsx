@@ -98,7 +98,7 @@ export default function OurPrograms() {
       </Container>
 
       <Container className="bg-[#ECFAE5]">
-        <div className="mt-10 flex justify-center">
+        <div className="mt-5 md:mt-10 flex justify-center">
           <Button path="/contact-us">Contact Us</Button>
         </div>
       </Container>

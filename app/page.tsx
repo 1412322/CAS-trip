@@ -6,9 +6,6 @@ import ByDestination from '@/public/images/by_destination.svg'
 import ByPrograms from '@/public/images/by_programs.svg'
 import LeadershipCamp from '@/public/images/leadership_camp.svg'
 import NatureCamp from '@/public/images/nature_camp.svg'
-import PopularPrograms2 from '@/public/images/popular_programs_2.webp'
-import PopularPrograms3 from '@/public/images/popular_programs_3.webp'
-import PopularPrograms4 from '@/public/images/popular_programs_4.webp'
 import Sologan from '@/public/images/sologan.svg'
 import Star from '@/public/images/star.svg'
 import SubjectCamp from '@/public/images/subject_camp.svg'
@@ -28,39 +25,8 @@ import WhereWeTravel4 from '@/public/images/where_we_travel_4.webp'
 import WhereWeTravel5 from '@/public/images/where_we_travel_5.webp'
 import Image from 'next/image'
 import Link from 'next/link'
-import Carousel from '../components/Carousel'
+import Destinations from './Destinations'
 import Partners from './Partners'
-
-const programs = [
-  // {
-  //   title: 'JUNGLE EXPEDITION CAMP, JANDA BAIK',
-  //   subTitle: '4D3N | Ages 14 & above | RM1090 estimate',
-  //   description:
-  //     'The trip packs survival campcraft, independent foraging, ending with community service',
-  //   img: PopularPrograms1,
-  // },
-  {
-    title: 'WILDERNESS SKILLS CAMP, JANDA BAIK',
-    subTitle: '3D2N | Ages 11-17 | RM850 estimate',
-    description:
-      'Embark on an unforgettable 3-day learning essential survival skills sharpening your collaborative edge',
-    img: PopularPrograms2,
-  },
-  {
-    title: 'ECO CONSERVATION CAMP, PENYABONG',
-    subTitle: '3D2N | Ages 10-16 | RM790 estimate',
-    description:
-      'Get hands-on with campcraft. Learn to build shelters, dive into conservation and create idea for conservation',
-    img: PopularPrograms3,
-  },
-  {
-    title: 'JUNGLE EXPEDITION CAMP, JANDA BAIK',
-    subTitle: '3D2N | Ages 10-16 | RM840 estimate',
-    description:
-      "Trekking up Sungai Chemperoh, riding horse and outdoor cooking. Experience nature's create lasting memories with us",
-    img: PopularPrograms4,
-  },
-]
 
 export default function Home() {
   return (
@@ -121,9 +87,9 @@ export default function Home() {
       <Container className="bg-[#00712D] !px-0">
         <Heading color="text-white">POPULAR DESTINATIONS</Heading>
 
-        <Carousel list={programs} />
+        <Destinations />
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-5 md:mt-10 flex justify-center">
           <Button path='/our-programs'>View All 10+ Programs</Button>
         </div>
       </Container>
@@ -266,7 +232,7 @@ export default function Home() {
       </Container>
 
 
-      <Container className="bg-[#ECFAE5]">
+      <Container className="bg-[#ECFAE5] !px-0">
         <Heading color="text-[#22C55E]">OUR PARTNERS</Heading>
 
         <Partners />

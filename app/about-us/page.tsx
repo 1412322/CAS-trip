@@ -90,7 +90,7 @@ description: 'Former co-founder of opendoor varible Early staff Spotify and Clea
 ))}
 </div>
 
-<div className="mt-4 md:mt-10 flex justify-center">
+<div className="mt-4 md:mt-5 md:mt-10 flex justify-center">
 <Button>
 Meet All Our member
             </Button>

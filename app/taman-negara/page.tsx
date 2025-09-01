@@ -46,7 +46,7 @@ export default function TamanNegara() {
                 />
               </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-5 md:mt-10 flex justify-center">
           <Button path="/our-programs">Watch More Our Trips</Button>
         </div>
       </Container>
@@ -62,7 +62,7 @@ export default function TamanNegara() {
         Experience a unique 7-day journey blending urban exploration, thrilling nature, and cultural immersion across Singapore and Malaysia. Discover Singapore's iconic landmarks before delving into Malaysia's serene landscapes and ancient wonders. Engage in hands-on challenges and cultural exchanges for a perfect blend of learning, adventure, and personal growth.
         </Paragraph>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-5 md:mt-10 flex justify-center">
           <Button>Download Trip Itinerary</Button>
         </div>
       </Container>

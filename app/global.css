@@ -15,3 +15,35 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.swiper .swiper-slide {
+  height: auto;
+}
+
+.swiper .swiper-pagination {
+position: unset;
+margin-top: 40px;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: #D9D9D9;
+    opacity: 1;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #FFA726;
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper .swiper-pagination {
+    position: unset;
+    margin-top: 32px;
+  }
+
+    .swiper .swiper-pagination .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+  }
+}

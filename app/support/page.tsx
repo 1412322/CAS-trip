@@ -25,7 +25,7 @@ export default function Support() {
         <Heading color="text-[#22C55E] pt-16 md:pt-20">SUPPORT</Heading>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
-          <Image className="hidden h-full w-full flex-1 object-cover lg:block" src={Overview1} alt="volunteer" />
+          <Image className="rounded-s-[20px] hidden h-full w-full flex-1 object-cover lg:block" src={Overview1} alt="volunteer" />
 
           <div className="flex flex-1 flex-col items-center justify-center bg-[#00712D] p-2.5 text-[12px] font-[600] text-white md:px-6 md:text-[18px]">
               <p className="font-[500]">This section provides essential information and resources to help you prepare, stay
@@ -33,7 +33,7 @@ export default function Support() {
               <ul>
                 <li className="my-4 flex items-start gap-1 md:my-5 md:gap-2.5">
                   <div className="relative aspect-square min-w-3 md:min-w-4">
-                    <Image className="mt-1" src={CircleCheck} layout="fill" alt="check-icon" />
+                    <Image className="mt-1" src={CircleCheck} fill alt="check-icon" />
                   </div>
                   Safety is the most priority of our criteria for both students, teachers and staff
                   – without compromise.
@@ -41,7 +41,7 @@ export default function Support() {
 
                 <li className="flex items-start gap-1 md:gap-2.5">
                   <div className="relative aspect-square min-w-3 md:min-w-4">
-                    <Image className="mt-1" src={CircleCheck} layout="fill" alt="check-icon" />
+                    <Image className="mt-1" src={CircleCheck} fill alt="check-icon" />
                   </div>
                   All guides follow a comprehensive volunteer program assessed regularly.
                 </li>
@@ -49,7 +49,7 @@ export default function Support() {
           </div>
 
           <Image
-            className="hidden h-full w-full flex-1 object-cover lg:block"
+            className="rounded-e-[20px] hidden h-full w-full flex-1 object-cover lg:block"
             src={Overview2}
             alt="backpack"
           />
