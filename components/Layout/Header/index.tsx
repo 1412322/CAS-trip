@@ -44,6 +44,7 @@ export default function Header() {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setActiveDropdown(null)
+        setIsVisible(false)
       }
       if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
         setIsSearchVisible(false)
@@ -189,7 +190,12 @@ export default function Header() {
 
           <Link
             // className="rounded-[8px] bg-[#FFA726] p-[8px] text-[16px] font-[600]"
-            className="rounded-[8px] bg-[#FFA726] p-[8px] text-[16px] font-[600] text-white from-slate-800 to-slate-700 focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(-45deg,transparent_25%,theme(colors.white/.8)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1500ms]"
+            className="rounded-[8px] bg-[#FFA726] p-[8px] text-[16px] font-[600] text-white from-slate-800 to-slate-700 focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative
+            before:absolute before:inset-0 before:rounded-[inherit]
+            before:bg-[linear-gradient(-45deg,transparent_25%,theme(colors.white/.8)_50%,transparent_50%,transparent_25%)]
+            before:bg-[length:200%_200%,5%_5%]
+            before:bg-no-repeat
+            before:animate-[shine_3s_linear_infinite] hover:before:animate-[shine-hover_0.3s_linear]"
             href="/contact-us"
           >
             Contact Us
@@ -224,7 +230,7 @@ export default function Header() {
         )}
 
         {isVisible && (
-          <div className="absolute right-0 top-[56px] block flex w-[calc(100vw-56px)] flex-col rounded-l-[10px] bg-white py-[30px] text-[18px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)] lg:hidden">
+          <div ref={dropdownRef} className="absolute right-0 top-[56px] block flex w-[calc(100vw-56px)] flex-col rounded-l-[10px] bg-white py-[30px] text-[18px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)] lg:hidden">
             <div className="flex h-[30px] items-center justify-between px-[30px] active:bg-[rgba(0,113,45,0.10)]">
               <Link href="/" className={`flex-1 ${pathname === '/' ? 'underline' : ''}`}>
                 Home

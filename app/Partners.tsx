@@ -35,11 +35,14 @@ export default function Partners() {
     <Swiper
     slidesPerView={isMobile ? 1.5 : 2.3}
     autoplay={{
-      delay: 2000,
+      delay: 0,
       disableOnInteraction: true,
+      pauseOnMouseEnter: true,
     }}
     loop
     modules={[Autoplay]}
+    speed={6000}
+    className='swiper-transition'
   >
       {partners.map((item, index) => (
            <SwiperSlide key={index}>

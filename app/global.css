@@ -25,6 +25,12 @@ position: unset;
 margin-top: 40px;
 }
 
+.swiper-transition .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
 .swiper .swiper-pagination .swiper-pagination-bullet {
     width: 16px;
     height: 16px;

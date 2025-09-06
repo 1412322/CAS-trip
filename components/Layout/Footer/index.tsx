@@ -60,7 +60,7 @@ export default function Footer() {
 
       <li className="flex items-center space-x-1.5"><Image className="w-3 md:w-4 aspect-square" src={Email} alt="email" /><Paragraph className="text-white !text-left">fionag@transinex.com.sg</Paragraph></li>
 
-      <li className="flex items-center space-x-1.5"><Image className="w-3 md:w-4 aspect-square" src={Address} alt="address" /><Paragraph className="text-white !text-left">Coleman St, #04-31,<br/>Singapore 179803</Paragraph></li>
+      <li className="flex items-center space-x-1.5"><Image className="w-3 md:w-4 aspect-square" src={Address} alt="address" /><p className="text-white text-left text-[14px] font-[600] text-[#00712D] md:text-[18px] md:whitespace-break-spaces">{`Coleman St, #04-31,\nSingapore 179803`}</p></li>
     </ul>
     
     <div className="flex gap-6 mt-[25px]">

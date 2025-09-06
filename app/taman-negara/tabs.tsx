@@ -27,7 +27,7 @@ export default function Tabs() {
   return (
     <>
         <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-<div className="flex items-center justify-center mb-2.5 md:mb-10">
+<div className="flex items-center justify-between md:justify-center mb-2.5 md:mb-10">
   <div onClick={() => setActiveTab(1)} className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 1 ? 'text-white bg-[#00712D]' : ''}`}>
     ACCOMMODATION
     </div>
@@ -45,20 +45,20 @@ export default function Tabs() {
     </div>
 </div>
 
-<div className={`${activeTab === 1 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
-        <div className="text-[18px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
+<div className={`${activeTab === 1 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
+        <div className="text-[14px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
         Janda Baik Stay
         </div>
 
-        <Paragraph className="mb-10 !text-left">
+        <div className="text-[12px] md:text-[18px] font-[600] text-[#00712D] mb-2.5 md:mb-10">
         Enjoy a comfortable and immersive stay at a well-situated resort in the Janda Baik area for the majority of your program. This provides a serene base amidst nature, offering a relaxing environment after your adventurous days. Specific details regarding rooming and facilities will be provided upon confirmation.
-        </Paragraph>
+        </div>
 
-        <div className="text-[18px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
+        <div className="text-[14px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
         Immersive Community Experience
         </div>
 
-        <div className="text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
+        <div className="text-[12px] md:text-[18px] font-[600] text-[#00712D]">
         <ul className="list-disc list-inside">
 <li>Discover the National University of Singapore and travel to Janda Baik.</li>
 
@@ -75,8 +75,7 @@ export default function Tabs() {
         </div>
         </div>
 
-        <div className={`${activeTab === 2 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
-     
+        <div className={`${activeTab === 2 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-0 md:px-14 m-auto`}>
         {[{
   imgs: [Itinerary1, Itinerary2],
   title: 'Singapore Arrival & Welcome',
@@ -106,7 +105,7 @@ export default function Tabs() {
   title: 'Departure',
   descriptions: ['Head back to KL or Singapore to begin your journey home with lasting memories.'],
 }].map((item, index) => (
-<div key={index} className={`relative flex items-start gap-5 md:gap-12 pb-10 md:pb-20 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+<div key={index} className={`relative flex items-start gap-2 md:gap-12 pb-2.5 md:pb-20 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
  <div className="flex gap-2.5 md:gap-6 flex-1 w-full">
    {item.imgs.map((img, index) => (
      <div className={`w-3/4 bg-white p-1.5 md:p-5 shadow-[3.526px_3.526px_3.526px_0_rgba(0,0,0,0.50)] ${index === 1 ? "rotate-12 translate-x-[-50%]" : ''}`}>
@@ -128,12 +127,12 @@ export default function Tabs() {
 <label className="mx-4 md:mx-6">DAY {index + 1}</label>
 </div>
 
-    {item.title && <div className="text-[12px] md:text-[24px] font-[900] md:mb-2.5">{item.title}</div>}
+    {item.title && <div className="text-[12px] md:text-[24px] font-[900] md:mb-2.5 md:whitespace-break-spaces">{item.title}</div>}
 
 <ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
 {item.descriptions.map((description, descriptionIndex) => (
   <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'md:mb-6 last:mb-0' : ''}`}>
-    <p className="font-[600] text-[12px] md:text-[18px]" dangerouslySetInnerHTML={{ __html: description }} />
+    <p className="font-[600] text-[12px] md:text-[18px] md:whitespace-break-spaces" dangerouslySetInnerHTML={{ __html: description }} />
   </li>
 ))}
   </ul>
@@ -141,21 +140,21 @@ export default function Tabs() {
 </div>
 ))}</div>
 
-          <div className={`${activeTab === 3 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
+          <div className={`${activeTab === 3 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
       <Heading color="text-[#22C55E]">
       WHAT YOU NEED TO BRING
         </Heading>
 
         <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
 <li>
-  <div className="flex items-center gap-2.5 mb-1.5">
+  <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
   <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
   <div className="text-[14px] md:text-[24px] font-[900]">Backpack</div>
   </div>
 
-  <div className="text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-disc">
+  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+    <ul className="list-disc list-inside">
 <li>Bring versatile, lightweight, and quick-drying clothes and school uniform.</li>
 
 <li>Long, loose-fitting shorts/skirts for daily activities and service projects; T-shirts with sleeves, lightweight hoodie are good.</li>
@@ -166,14 +165,14 @@ export default function Tabs() {
 </li>
 
 <li>
-  <div className="flex items-center gap-2.5 mb-1.5">
+  <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
   <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
   <div className="text-[14px] md:text-[24px] font-[900]">Essential Documents</div>
   </div>
 
-  <div className="text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-disc">
+  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+    <ul className="list-disc list-inside">
 <li>{`Passport (with validity > 6 months) and a photocopy of passport.`}</li>
 
 <li>Visa documentation.</li>
@@ -186,14 +185,14 @@ export default function Tabs() {
 </li>
 
 <li>
-  <div className="flex items-center gap-2.5 mb-1.5">
+  <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
   <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
   <div className="text-[14px] md:text-[24px] font-[900]">Personal Daypack</div>
   </div>
 
-  <div className="text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-disc">
+  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+    <ul className="list-disc list-inside">
 <li>Reusable water bottle, sunglasses, hat for sun protection.</li>
 
 <li>Personal medication.</li>
@@ -206,7 +205,7 @@ export default function Tabs() {
 </li>
 </ul>
 
-<div className="bg-[#76B588] rounded-[10px] p-4 md:py-8 md:px-28 mt-10">
+<div className="bg-[#76B588] rounded-[10px] p-4 md:py-8 md:px-24 mt-10">
 <Heading color="text-white">
 WHAT'S INCLUDED
         </Heading>
@@ -251,30 +250,30 @@ WHAT'S INCLUDED
 </div>
         </div>
 
-        <div className={`${activeTab === 4 ? 'block' : 'hidden'} pb-10 md:max-w-5xl m-auto`}>
+        <div className={`${activeTab === 4 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
         <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
 <li>
-<div className="flex items-center gap-2.5 mb-1.5">
+<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
   <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
   <div className="text-[14px] md:text-[24px] font-[900]">Accommodation</div>
   </div>
 
-  <Paragraph className="ml-[30px] mb-1.5 !text-left">
+  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
   Hotels: Students will be staying at a hotel where they can expect to stay two students per room with en suite bathrooms with toilets and hot water.
-  </Paragraph>
+  </div>
 </li>
 
 <li>
-<div className="flex items-center gap-2.5 mb-1.5">
+<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
   <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
   <div className="text-[14px] md:text-[24px] font-[900]">Activities</div>
   </div>
 
-  <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
+  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
   Students will engage directly in diverse experiences:
-    <ul className="list-disc">
+    <ul className="list-disc list-inside">
 <li><b>Urban & Rural Exploration:</b> Discover Singapore's landmarks and participate in unique farm experiences and cultural exchanges.</li>
 
 <li><b>Nature Adventures:</b> Embark on thrilling river treks, raft building, jungle hikes, and wildlife encounters in Malaysia's Janda Baik and Taman Negara.</li>
@@ -287,16 +286,16 @@ WHAT'S INCLUDED
 </li>
 
 <li>
-<div className="flex items-center gap-2.5 mb-1.5">
+<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
   <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
   <div className="text-[14px] md:text-[24px] font-[900]">Health and Safety</div>
   </div>
 
-  <div className="ml-[30px] mb-1.5 text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]">
+  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
   Ensuring your teen's safety is paramount. We maintain this through:
-    <ul className="list-disc">
-<li><b>Trained Local Teams</b> and comprehensive Safety Briefings for all activities.</li>
+    <ul className="list-disc list-inside">
+<li><b>Trained Local Teams</b> and comprehensive <b>Safety Briefings</b> for all activities.</li>
 
 <li><b>Medical Recommendations</b> and a basic first-aid kit, with <b>24/7 in-country</b>. <b>Emergency Support</b> and clear protocols.</li>
 
@@ -308,23 +307,23 @@ WHAT'S INCLUDED
 </li>
 
 <li>
-<div className="flex items-center gap-2.5 mb-1.5">
+<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
   <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
   <div className="text-[14px] md:text-[24px] font-[900]">Insurance</div>
   </div>
 
-  <Paragraph className="ml-[30px] mb-1.5 !text-left">
+  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
   Our Protection Plan helps protect our participants, their belongings, and their travel investment in those unforeseen circumstances that may arise during travel.
-  </Paragraph>
+  </div>
 </li>
 </ul>
         </div>
 
-        <hr className="border-t-2 border-[#00712D] w-72 m-auto" />
+        <hr className="border-t-1 md:border-t-2 border-[#00712D] w-24 md:w-72 m-auto" />
         </Container>
 
-        <Container className="bg-[#ECFAE5]">
+        <Container className="bg-[#ECFAE5] pt-2.5">
         <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
         Contact us to find out how Our Volunteer Programs can help your students achieve their
           learning outcomes during a school trip abroad!

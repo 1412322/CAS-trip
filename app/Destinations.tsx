@@ -58,6 +58,7 @@ export default function Destinations() {
     autoplay={{
       delay: 2000,
       disableOnInteraction: true,
+      pauseOnMouseEnter: true,
     }}
     loop
     modules={[Autoplay, Pagination]}

@@ -47,7 +47,7 @@ export default function Slider({ articles }: SliderProps) {
       </div>
 
       {/* Navigation buttons */}
-      <div className="mt-6 flex justify-end gap-4 md:justify-center">
+      <div className="mt-6 flex gap-4 justify-center">
         <Image
           className="aspect-square max-w-6 cursor-pointer md:max-w-[50px]"
           src={ArrowLeft}

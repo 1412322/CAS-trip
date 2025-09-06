@@ -32,7 +32,7 @@ export default function Accordion({ title, description }: AccordionProps) {
       </div>
 
       {isActive && (
-        <div className="rounded-b-[10px] bg-white px-2.5 py-4 shadow-[3px_3px_2px_0px_rgba(0,113,45,0.30)] md:px-8 md:py-10">
+        <div className="rounded-b-[10px] bg-white px-2.5 py-4 shadow-[3px_3px_2px_0px_rgba(0,113,45,0.30)] md:px-8 md:py-10 lg:pr-80">
           <Paragraph className="!text-left">{description}</Paragraph>
         </div>
       )}

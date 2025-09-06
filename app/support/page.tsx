@@ -96,15 +96,15 @@ export default function Support() {
 
         {/* HEALTH & SAFETY + VISA */}
         <div className="grid grid-cols-1 gap-6 text-white lg:grid-cols-2">
-          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-4 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
-            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] py-8 md:rounded-[40px] md:py-10">
+            <div className="px-4 md:px-[70px] mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
               <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:min-w-9">
                 1
               </span>
               <div>Health & Safety</div>
             </div>
 
-            <div className="text-[12px] md:text-[18px] font-[600] text-white">
+            <div className="pl-4 md:px-[70px] text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-disc space-y-4 md:space-y-6">
 <li><span className="font-[800]">Ensure a pre-tour health check-up</span> (30 days prior) and physical preparation.</li>
 
@@ -117,21 +117,21 @@ export default function Support() {
             </div>
           </div>
 
-          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] px-4 py-8 md:rounded-[40px] md:px-[70px] md:py-10">
-            <div className="mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
+          <div className="item-center flex flex-col rounded-[20px] bg-[#00712D] py-8 md:rounded-[40px] md:py-10">
+            <div className="px-4 md:px-[70px] mb-2.5 flex items-center justify-center gap-2.5 text-[20px] font-[800] md:mb-6 md:text-[32px]">
               <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-white text-[#00712D] md:h-9 md:min-w-9">
                 2
               </span>
               <div>Visa Requirements</div>
             </div>
 
-            <div className="text-[12px] md:text-[18px] font-[600] text-white">
+            <div className="pl-4 md:px-[70px] text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-disc space-y-4 md:space-y-6">
                 <li>
                 <span className="font-[800]">Obtain the correct visa</span> for destination and check latest requirements before departure.
                   <br />
 
-                  <div className="mt-6 font-[400] italic ml-[-16px]">
+                  <div className="mt-4 md:mt-6 font-[400] italic ml-[-16px]">
                   We do not provide visas or visas on arrival (VOA); please plan this independently.
                   </div>
                 </li>
