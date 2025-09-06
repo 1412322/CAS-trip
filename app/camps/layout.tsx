@@ -27,6 +27,10 @@ export default function CampsLayout({ children }: { children: React.ReactNode })
     </h2>
 
         <Gallery images={images} />
+
+        <div className="mt-5 md:mt-10 flex justify-center">
+        <Button path="/our-programs">View More Our Programs</Button>
+        </div>
       </Container>
 
       <Container className="bg-[#ECFAE5]">
