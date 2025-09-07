@@ -7,13 +7,7 @@ import ByPrograms from '@/public/images/by_programs.svg'
 import LeadershipCamp from '@/public/images/leadership_camp.svg'
 import NatureCamp from '@/public/images/nature_camp.svg'
 import Sologan from '@/public/images/sologan.svg'
-import Star from '@/public/images/star.svg'
 import SubjectCamp from '@/public/images/subject_camp.svg'
-import Traveler2 from '@/public/images/travelers/amir_hassan.png'
-import Traveler4 from '@/public/images/travelers/kai_truong.png'
-import Traveler1 from '@/public/images/travelers/marcus_lim.png'
-import Traveler5 from '@/public/images/travelers/miya_matte.png'
-import Traveler3 from '@/public/images/travelers/wijaya.png'
 import WeWillHandleTripForYou1 from '@/public/images/we_will_handle_your_trip_for_you_1.webp'
 import WeWillHandleTripForYou2 from '@/public/images/we_will_handle_your_trip_for_you_2.webp'
 import WeWillHandleTripForYou3 from '@/public/images/we_will_handle_your_trip_for_you_3.webp'
@@ -25,6 +19,7 @@ import WhereWeTravel4 from '@/public/images/where_we_travel_4.webp'
 import WhereWeTravel5 from '@/public/images/where_we_travel_5.webp'
 import Image from 'next/image'
 import Link from 'next/link'
+import 'swiper/css'
 import Destinations from './Destinations'
 import Partners from './Partners'
 import Travelers from './Travelers'
@@ -233,7 +228,7 @@ export default function Home() {
       </Container>
 
 
-      <Container className="bg-[#ECFAE5] !px-0">
+      <Container className="bg-[#ECFAE5] !px-0 !pb-0">
         <Heading color="text-[#22C55E]">OUR PARTNERS</Heading>
 
         <Partners />
