@@ -26,313 +26,397 @@ export default function Tabs() {
 
   return (
     <>
-        <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
-<div className="flex items-center justify-between md:justify-center mb-2.5 md:mb-10">
-  <div onClick={() => setActiveTab(1)} className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 1 ? 'text-white bg-[#00712D]' : ''}`}>
-    ACCOMMODATION
-    </div>
- 
-    <div onClick={() => setActiveTab(2)} className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 2 ? 'text-white bg-[#00712D]' : ''}`}>
-    ITINERARY
-    </div>
+      <Container className="bg-[#ECFAE5] pb-0 md:pb-0">
+        <div className="flex items-center justify-between md:justify-center mb-2.5 md:mb-10">
+          <div
+            onClick={() => setActiveTab(1)}
+            className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 1 ? 'text-white bg-[#00712D]' : ''}`}
+          >
+            ACCOMMODATION
+          </div>
 
-    <div onClick={() => setActiveTab(3)} className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 3 ? 'text-white bg-[#00712D]' : ''}`}>
-    GENERAL NOTE
-    </div>
+          <div
+            onClick={() => setActiveTab(2)}
+            className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 2 ? 'text-white bg-[#00712D]' : ''}`}
+          >
+            ITINERARY
+          </div>
 
-    <div onClick={() => setActiveTab(4)} className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 4 ? 'text-white bg-[#00712D]' : ''}`}>
-    FAQ
-    </div>
-</div>
+          <div
+            onClick={() => setActiveTab(3)}
+            className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 3 ? 'text-white bg-[#00712D]' : ''}`}
+          >
+            GENERAL NOTE
+          </div>
 
-<div className={`${activeTab === 1 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
-        <div className="text-[14px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
-        Janda Baik Stay
+          <div
+            onClick={() => setActiveTab(4)}
+            className={`cursor-pointer w-fit inline py-0.5 md:py-1.5 px-1.5 md:px-2.5 items-center justify-center text-[10px] md:text-[32px] font-[800] text-center rounded-[4px] md:rounded-[10px] text-[#22C55E80] ${activeTab === 4 ? 'text-white bg-[#00712D]' : ''}`}
+          >
+            FAQ
+          </div>
         </div>
 
-        <div className="text-[12px] md:text-[18px] font-[600] text-[#00712D] mb-2.5 md:mb-10">
-        Enjoy a comfortable and immersive stay at a well-situated resort in the Janda Baik area for the majority of your program. This provides a serene base amidst nature, offering a relaxing environment after your adventurous days. Specific details regarding rooming and facilities will be provided upon confirmation.
-        </div>
+        <div className={`${activeTab === 1 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
+          <div className="text-[14px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">Janda Baik Stay</div>
 
-        <div className="text-[14px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
-        Immersive Community Experience
-        </div>
+          <div className="text-[12px] md:text-[18px] font-[600] text-[#00712D] mb-2.5 md:mb-10">
+            Enjoy a comfortable and immersive stay at a well-situated resort in the Janda Baik area for the majority of
+            your program. This provides a serene base amidst nature, offering a relaxing environment after your
+            adventurous days. Specific details regarding rooming and facilities will be provided upon confirmation.
+          </div>
 
-        <div className="text-[12px] md:text-[18px] font-[600] text-[#00712D]">
-        <ul className="list-disc list-inside">
-<li>Discover the National University of Singapore and travel to Janda Baik.</li>
+          <div className="text-[14px] md:text-[24px] font-[900] text-[#00712D] mb-1.5">
+            Immersive Community Experience
+          </div>
 
-<li>Experience a Goat Farm (feeding/milking) and an Organic Fitrah Farm.</li>
+          <div className="text-[12px] md:text-[18px] font-[600] text-[#00712D]">
+            <ul className="list-disc list-inside">
+              <li>Discover the National University of Singapore and travel to Janda Baik.</li>
 
-<li>Participate in the GEMS Olympic challenges and embark on a thrilling Raft Building & Mission on the water.</li>
+              <li>Experience a Goat Farm (feeding/milking) and an Organic Fitrah Farm.</li>
 
-<li>Travel to Taman Negara, enjoy a scenic Boat Ride to Lata Berkoh.</li>
+              <li>
+                Participate in the GEMS Olympic challenges and embark on a thrilling Raft Building & Mission on the
+                water.
+              </li>
 
-<li>Experience Rapid Shooting, visit a Batek Tribe village, hike to Teresek Hill and enjoy a Canopy Walk.</li>
+              <li>Travel to Taman Negara, enjoy a scenic Boat Ride to Lata Berkoh.</li>
 
-<li>Departure to Kuala Lumpur.</li>
-        </ul>
-        </div>
+              <li>
+                Experience Rapid Shooting, visit a Batek Tribe village, hike to Teresek Hill and enjoy a Canopy Walk.
+              </li>
+
+              <li>Departure to Kuala Lumpur.</li>
+            </ul>
+          </div>
         </div>
 
         <div className={`${activeTab === 2 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-0 md:px-14 m-auto`}>
-        {[{
-  imgs: [Itinerary1, Itinerary2],
-  title: 'Singapore Arrival & Welcome',
-  descriptions: ['Check in and meet your group, followed by a trip orientation and key highlights overview.'],
-}, {
-  imgs: [Itinerary3, Itinerary4],
-  title: 'Singapore Exploration\n& Journey to Janda Baik',
-  descriptions: [`Explore NUS and Gardens by the Bay, then travel to Janda Baik for resort check-in.`],
-}, {
-  imgs: [Itinerary5, Itinerary6],
-  title: 'Farm Life & River Trekking',
-  descriptions: ['Visit a Goat Farm and Organic Fitrah Farm, then enjoy an exhilarating Sg Benus River trek.'],
-}, {
-  imgs: [Itinerary7],
-  title: 'Team Challenges & Rafting',
-  descriptions: ['Join the GEMS Olympic challenges, then take on a thrilling Raft Building water mission.'],
-}, {
-  imgs: [Itinerary8],
-  title: 'Taman Negara Immersion',
-  descriptions: ['Head to Taman Negara for a scenic boat ride to Lata Berkoh and a visit to the Fish Sanctuary.'],
-}, {
-  imgs: [Itinerary9, Itinerary10],
-  title: 'Culture & Canopy Walks',
-  descriptions: ['Enjoy Rapid Shooting, visit a Batek Tribe village, then hike Teresek Hill and explore the Canopy Walk.'],
-}, {
-  imgs: [Itinerary11, Itinerary12],
-  title: 'Departure',
-  descriptions: ['Head back to KL or Singapore to begin your journey home with lasting memories.'],
-}].map((item, index) => (
-<div key={index} className={`relative flex items-start gap-2 md:gap-12 pb-2.5 md:pb-20 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
- <div className="flex gap-2.5 md:gap-6 flex-1 w-full">
-   {item.imgs.map((img, index) => (
-     <div className={`w-3/4 bg-white p-1.5 md:p-5 shadow-[3.526px_3.526px_3.526px_0_rgba(0,0,0,0.50)] ${index === 1 ? "rotate-12 translate-x-[-50%]" : ''}`}>
-    <Image key={index} src={img} className={`${item.imgs.length === 1 ? '' : 'aspect-square'} overflow-hidden object-cover`} alt="" />
-    </div>
-   ))}
- </div>
-  
-  <div>
-  <div className="absolute left-[calc(50%-1px)] md:left-[calc(50%-2px)] w-[2px] md:w-[4px] bg-[#00712D] h-full" />
+          {[
+            {
+              imgs: [Itinerary1, Itinerary2],
+              title: 'Singapore Arrival & Welcome',
+              descriptions: [
+                'Check in and meet your group, followed by a trip orientation and key highlights overview.',
+              ],
+            },
+            {
+              imgs: [Itinerary3, Itinerary4],
+              title: 'Singapore Exploration\n& Journey to Janda Baik',
+              descriptions: [`Explore NUS and Gardens by the Bay, then travel to Janda Baik for resort check-in.`],
+            },
+            {
+              imgs: [Itinerary5, Itinerary6],
+              title: 'Farm Life & River Trekking',
+              descriptions: [
+                'Visit a Goat Farm and Organic Fitrah Farm, then enjoy an exhilarating Sg Benus River trek.',
+              ],
+            },
+            {
+              imgs: [Itinerary7],
+              title: 'Team Challenges & Rafting',
+              descriptions: ['Join the GEMS Olympic challenges, then take on a thrilling Raft Building water mission.'],
+            },
+            {
+              imgs: [Itinerary8],
+              title: 'Taman Negara Immersion',
+              descriptions: [
+                'Head to Taman Negara for a scenic boat ride to Lata Berkoh and a visit to the Fish Sanctuary.',
+              ],
+            },
+            {
+              imgs: [Itinerary9, Itinerary10],
+              title: 'Culture & Canopy Walks',
+              descriptions: [
+                'Enjoy Rapid Shooting, visit a Batek Tribe village, then hike Teresek Hill and explore the Canopy Walk.',
+              ],
+            },
+            {
+              imgs: [Itinerary11, Itinerary12],
+              title: 'Departure',
+              descriptions: ['Head back to KL or Singapore to begin your journey home with lasting memories.'],
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`relative flex items-start gap-2 md:gap-12 pb-2.5 md:pb-20 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+            >
+              <div className="flex gap-2.5 md:gap-6 flex-1 w-full">
+                {item.imgs.map((img, index) => (
+                  <div
+                    className={`w-3/4 bg-white p-1.5 md:p-5 shadow-[3.526px_3.526px_3.526px_0_rgba(0,0,0,0.50)] ${index === 1 ? 'rotate-12 translate-x-[-50%]' : ''}`}
+                  >
+                    <Image
+                      key={index}
+                      src={img}
+                      className={`${item.imgs.length === 1 ? '' : 'aspect-square'} overflow-hidden object-cover`}
+                      alt=""
+                    />
+                  </div>
+                ))}
+              </div>
 
-  <div className="absolute h-2 md:h-5 w-2 md:w-5 rounded-full bg-[#00712D] left-[calc(50%-4px)] md:left-[calc(50%-10px)]" />
-</div>
+              <div>
+                <div className="absolute left-[calc(50%-1px)] md:left-[calc(50%-2px)] w-[2px] md:w-[4px] bg-[#00712D] h-full" />
 
-  <div className={`flex-1 ${index % 2 === 0 ? 'text-left' : 'text-right'} text-[#00712D]`}>
-  <div className='md:mb-6 mb-1 relative z-[1] font-[800] text-[12px] md:text-[32px] text-white'>
-  <div className={`w-full h-full absolute z-[-1] bg-[url('../public/images/small_tag.svg')] bg-contain bg-no-repeat ${index % 2 === 0 ? '' : 'rotate-180'}`} />
+                <div className="absolute h-2 md:h-5 w-2 md:w-5 rounded-full bg-[#00712D] left-[calc(50%-4px)] md:left-[calc(50%-10px)]" />
+              </div>
 
-<label className="mx-4 md:mx-6">DAY {index + 1}</label>
-</div>
+              <div className={`flex-1 ${index % 2 === 0 ? 'text-left' : 'text-right'} text-[#00712D]`}>
+                <div className="md:mb-6 mb-1 relative z-[1] font-[800] text-[12px] md:text-[32px] text-white">
+                  <div
+                    className={`w-full h-full absolute z-[-1] bg-[url('../public/images/small_tag.svg')] bg-contain bg-no-repeat ${index % 2 === 0 ? '' : 'rotate-180'}`}
+                  />
 
-    {item.title && <div className="text-[12px] md:text-[24px] font-[900] md:mb-2.5 md:whitespace-break-spaces">{item.title}</div>}
+                  <label className="mx-4 md:mx-6">DAY {index + 1}</label>
+                </div>
 
-<ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
-{item.descriptions.map((description, descriptionIndex) => (
-  <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'md:mb-6 last:mb-0' : ''}`}>
-    <p className="font-[600] text-[12px] md:text-[18px] md:whitespace-break-spaces" dangerouslySetInnerHTML={{ __html: description }} />
-  </li>
-))}
-  </ul>
-  </div>
-</div>
-))}</div>
+                {item.title && (
+                  <div className="text-[12px] md:text-[24px] font-[900] md:mb-2.5 md:whitespace-break-spaces">
+                    {item.title}
+                  </div>
+                )}
 
-          <div className={`${activeTab === 3 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
-      <Heading color="text-[#22C55E]">
-      WHAT YOU NEED TO BRING
-        </Heading>
+                <ul className={`${item.descriptions.length > 1 ? 'list-disc ml-4' : ''}`}>
+                  {item.descriptions.map((description, descriptionIndex) => (
+                    <li key={descriptionIndex} className={`${item.descriptions.length > 1 ? 'md:mb-6 last:mb-0' : ''}`}>
+                      <p
+                        className="font-[600] text-[12px] md:text-[18px] md:whitespace-break-spaces"
+                        dangerouslySetInnerHTML={{ __html: description }}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
 
-        <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
-<li>
-  <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
-  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+        <div className={`${activeTab === 3 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
+          <Heading color="text-[#22C55E]">WHAT YOU NEED TO BRING</Heading>
 
-  <div className="text-[14px] md:text-[24px] font-[900]">Backpack</div>
-  </div>
+          <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
+            <li>
+              <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
+                <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-disc list-inside">
-<li>Bring versatile, lightweight, and quick-drying clothes and school uniform.</li>
+                <div className="text-[14px] md:text-[24px] font-[900]">Backpack</div>
+              </div>
 
-<li>Long, loose-fitting shorts/skirts for daily activities and service projects; T-shirts with sleeves, lightweight hoodie are good.</li>
+              <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+                <ul className="list-disc list-inside">
+                  <li>Bring versatile, lightweight, and quick-drying clothes and school uniform.</li>
 
-<li>Comfortable crocs, walking shoes for outdoor activities.</li>
-    </ul>
-  </div>
-</li>
+                  <li>
+                    Long, loose-fitting shorts/skirts for daily activities and service projects; T-shirts with sleeves,
+                    lightweight hoodie are good.
+                  </li>
 
-<li>
-  <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
-  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+                  <li>Comfortable crocs, walking shoes for outdoor activities.</li>
+                </ul>
+              </div>
+            </li>
 
-  <div className="text-[14px] md:text-[24px] font-[900]">Essential Documents</div>
-  </div>
+            <li>
+              <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
+                <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-disc list-inside">
-<li>{`Passport (with validity > 6 months) and a photocopy of passport.`}</li>
+                <div className="text-[14px] md:text-[24px] font-[900]">Essential Documents</div>
+              </div>
 
-<li>Visa documentation.</li>
+              <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+                <ul className="list-disc list-inside">
+                  <li>{`Passport (with validity > 6 months) and a photocopy of passport.`}</li>
 
-<li>Our emergency contacts list.</li>
+                  <li>Visa documentation.</li>
 
-<li>Money (you’ll be responsible for carrying).</li>
-    </ul>
-  </div>
-</li>
+                  <li>Our emergency contacts list.</li>
 
-<li>
-  <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
-  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+                  <li>Money (you’ll be responsible for carrying).</li>
+                </ul>
+              </div>
+            </li>
 
-  <div className="text-[14px] md:text-[24px] font-[900]">Personal Daypack</div>
-  </div>
+            <li>
+              <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
+                <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
-    <ul className="list-disc list-inside">
-<li>Reusable water bottle, sunglasses, hat for sun protection.</li>
+                <div className="text-[14px] md:text-[24px] font-[900]">Personal Daypack</div>
+              </div>
 
-<li>Personal medication.</li>
+              <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+                <ul className="list-disc list-inside">
+                  <li>Reusable water bottle, sunglasses, hat for sun protection.</li>
 
-<li>Mobile phone, portable charger, camera.</li>
+                  <li>Personal medication.</li>
 
-<li>Extra paperwork for service hours credit (if needed).</li>
-    </ul>
-  </div>
-</li>
-</ul>
+                  <li>Mobile phone, portable charger, camera.</li>
 
-<div className="bg-[#76B588] rounded-[10px] p-4 md:py-8 md:px-24 mt-10">
-<Heading color="text-white">
-WHAT'S INCLUDED
-        </Heading>
+                  <li>Extra paperwork for service hours credit (if needed).</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
 
-<div className="space-y-2.5 md:space-y-5">
-        <div className="flex items-center gap-2.5">
-  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+          <div className="bg-[#76B588] rounded-[10px] p-4 md:py-8 md:px-24 mt-10">
+            <Heading color="text-white">WHAT'S INCLUDED</Heading>
 
-  <div className="text-[14px] md:text-[24px] font-[600] text-white">Adventure Leader for the entire trip.</div>
-  </div>
+            <div className="space-y-2.5 md:space-y-5">
+              <div className="flex items-center gap-2.5">
+                <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="flex items-center gap-2.5">
-  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+                <div className="text-[14px] md:text-[24px] font-[600] text-white">
+                  Adventure Leader for the entire trip.
+                </div>
+              </div>
 
-  <div className="text-[14px] md:text-[24px] font-[600] text-white">All meals for the entire trip.</div>
-  </div>
+              <div className="flex items-center gap-2.5">
+                <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="flex items-center gap-2.5">
-  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+                <div className="text-[14px] md:text-[24px] font-[600] text-white">All meals for the entire trip.</div>
+              </div>
 
-  <div className="text-[14px] md:text-[24px] font-[600] text-white">All transportation costs, including airport pick-up and drop-off.</div>
-  </div>
+              <div className="flex items-center gap-2.5">
+                <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="flex items-center gap-2.5">
-  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+                <div className="text-[14px] md:text-[24px] font-[600] text-white">
+                  All transportation costs, including airport pick-up and drop-off.
+                </div>
+              </div>
 
-  <div className="text-[14px] md:text-[24px] font-[600] text-white">All activities listed in the itinerary.</div>
-  </div>
+              <div className="flex items-center gap-2.5">
+                <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="flex items-center gap-2.5">
-  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+                <div className="text-[14px] md:text-[24px] font-[600] text-white">
+                  All activities listed in the itinerary.
+                </div>
+              </div>
 
-  <div className="text-[14px] md:text-[24px] font-[600] text-white">24-hour emergency contact support during the trip.</div>
-  </div>
+              <div className="flex items-center gap-2.5">
+                <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="flex items-center gap-2.5">
-  <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+                <div className="text-[14px] md:text-[24px] font-[600] text-white">
+                  24-hour emergency contact support during the trip.
+                </div>
+              </div>
 
-  <div className="text-[14px] md:text-[24px] font-[600] text-white">Detailed pre-departure summary & briefing.</div>
-  </div>
-  </div>
-</div>
+              <div className="flex items-center gap-2.5">
+                <Image src={WhiteCarret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+
+                <div className="text-[14px] md:text-[24px] font-[600] text-white">
+                  Detailed pre-departure summary & briefing.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className={`${activeTab === 4 ? 'block' : 'hidden'} pb-10 md:max-w-6xl px-4 md:px-14 m-auto`}>
-        <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
-<li>
-<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
-  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+          <ul className="text-[#00712D] space-y-2.5 md:space-y-10">
+            <li>
+              <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
+                <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[14px] md:text-[24px] font-[900]">Accommodation</div>
-  </div>
+                <div className="text-[14px] md:text-[24px] font-[900]">Accommodation</div>
+              </div>
 
-  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
-  Hotels: Students will be staying at a hotel where they can expect to stay two students per room with en suite bathrooms with toilets and hot water.
-  </div>
-</li>
+              <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+                Hotels: Students will be staying at a hotel where they can expect to stay two students per room with en
+                suite bathrooms with toilets and hot water.
+              </div>
+            </li>
 
-<li>
-<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
-  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+            <li>
+              <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
+                <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[14px] md:text-[24px] font-[900]">Activities</div>
-  </div>
+                <div className="text-[14px] md:text-[24px] font-[900]">Activities</div>
+              </div>
 
-  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
-  Students will engage directly in diverse experiences:
-    <ul className="list-disc list-inside">
-<li><b>Urban & Rural Exploration:</b> Discover Singapore's landmarks and participate in unique farm experiences and cultural exchanges.</li>
+              <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+                Students will engage directly in diverse experiences:
+                <ul className="list-disc list-inside">
+                  <li>
+                    <b>Urban & Rural Exploration:</b> Discover Singapore's landmarks and participate in unique farm
+                    experiences and cultural exchanges.
+                  </li>
 
-<li><b>Nature Adventures:</b> Embark on thrilling river treks, raft building, jungle hikes, and wildlife encounters in Malaysia's Janda Baik and Taman Negara.</li>
+                  <li>
+                    <b>Nature Adventures:</b> Embark on thrilling river treks, raft building, jungle hikes, and wildlife
+                    encounters in Malaysia's Janda Baik and Taman Negara.
+                  </li>
 
-<li><b>Team Challenges:</b> Engage in fun, challenging team-building activities.</li>
+                  <li>
+                    <b>Team Challenges:</b> Engage in fun, challenging team-building activities.
+                  </li>
 
-<li><b>Our goal</b> is a comprehensive experience combining learning, adventure, and cultural immersion.</li>
-    </ul>
-  </div>
-</li>
+                  <li>
+                    <b>Our goal</b> is a comprehensive experience combining learning, adventure, and cultural immersion.
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-<li>
-<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
-  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+            <li>
+              <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
+                <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[14px] md:text-[24px] font-[900]">Health and Safety</div>
-  </div>
+                <div className="text-[14px] md:text-[24px] font-[900]">Health and Safety</div>
+              </div>
 
-  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
-  Ensuring your teen's safety is paramount. We maintain this through:
-    <ul className="list-disc list-inside">
-<li><b>Trained Local Teams</b> and comprehensive <b>Safety Briefings</b> for all activities.</li>
+              <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+                Ensuring your teen's safety is paramount. We maintain this through:
+                <ul className="list-disc list-inside">
+                  <li>
+                    <b>Trained Local Teams</b> and comprehensive <b>Safety Briefings</b> for all activities.
+                  </li>
 
-<li><b>Medical Recommendations</b> and a basic first-aid kit, with <b>24/7 in-country</b>. <b>Emergency Support</b> and clear protocols.</li>
+                  <li>
+                    <b>Medical Recommendations</b> and a basic first-aid kit, with <b>24/7 in-country</b>.{' '}
+                    <b>Emergency Support</b> and clear protocols.
+                  </li>
 
-<li><b>Mandatory Travel Insurance</b> covering medical emergencies, evacuation, and activity-related incidents.</li>
+                  <li>
+                    <b>Mandatory Travel Insurance</b> covering medical emergencies, evacuation, and activity-related
+                    incidents.
+                  </li>
 
-<li>Emphasis on <b>Cultural Sensitivity</b> for respectful community interactions.</li>
-    </ul>
-  </div>
-</li>
+                  <li>
+                    Emphasis on <b>Cultural Sensitivity</b> for respectful community interactions.
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-<li>
-<div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
-  <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
+            <li>
+              <div className="flex items-center gap-1.5 md:gap-2.5 mb-1.5">
+                <Image src={Carret} className="w-2 md:w-5 h-2 md:h-5" alt="" />
 
-  <div className="text-[14px] md:text-[24px] font-[900]">Insurance</div>
-  </div>
+                <div className="text-[14px] md:text-[24px] font-[900]">Insurance</div>
+              </div>
 
-  <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
-  Our Protection Plan helps protect our participants, their belongings, and their travel investment in those unforeseen circumstances that may arise during travel.
-  </div>
-</li>
-</ul>
+              <div className="ml-[14px] md:ml-[30px] text-[12px] md:text-[18px] font-[600]">
+                Our Protection Plan helps protect our participants, their belongings, and their travel investment in
+                those unforeseen circumstances that may arise during travel.
+              </div>
+            </li>
+          </ul>
         </div>
 
         <hr className="border-t-1 md:border-t-2 border-[#00712D] w-24 md:w-72 m-auto" />
-        </Container>
+      </Container>
 
-        <Container className="bg-[#ECFAE5] pt-2.5">
+      <Container className="bg-[#ECFAE5] pt-2.5">
         <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
-        Contact us to find out how Our Volunteer Programs can help your students achieve their
-          learning outcomes during a school trip abroad!
+          Contact us to find out how Our Volunteer Programs can help your students achieve their learning outcomes
+          during a school trip abroad!
         </p>
 
         <div className="mt-5 md:mt-10 flex justify-center">
-        <Button path="/contact-us">Contact Us</Button>
+          <Button path="/contact-us">Contact Us</Button>
         </div>
-</Container>
-</>
+      </Container>
+    </>
   )
 }

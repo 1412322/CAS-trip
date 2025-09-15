@@ -30,12 +30,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Navbar */}
         <Header />
 
-<div className="relative">
-        {children}
+        <div className="relative">
+          {children}
 
-                {/* BACK TO TOP BUTTON */}
-                <BackToTopButton />
-</div>
+          {/* BACK TO TOP BUTTON */}
+          <BackToTopButton />
+        </div>
 
         {/* FOOTER */}
         <Footer />

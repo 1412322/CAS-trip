@@ -27,15 +27,14 @@ export default function Slider({ articles }: SliderProps) {
         className="no-scrollbar mx-[-20px] flex gap-3 overflow-x-auto px-5 md:mx-[-100px] md:gap-7 md:px-[100px]"
       >
         {articles.map((item, idx) => (
-          <div
-            key={idx}
-            className="min-w-[150px] overflow-hidden rounded-[10px] md:min-w-[340px] md:rounded-[20px]"
-          >
+          <div key={idx} className="min-w-[150px] overflow-hidden rounded-[10px] md:min-w-[340px] md:rounded-[20px]">
             <div className="relative h-[156px] md:h-[356px] group">
               <Image src={item.img} alt={item.title} fill className="object-cover" />
 
-<div className="absolute hidden group-hover:flex inset-0 items-center justify-center bg-[#00000080]">
-              <div className="text-[14px] md:text-[22px] border border-[#00712D] font-[700] text-[#00712D] cursor-pointer bg-white rounded-full p-2">Read More</div>
+              <div className="absolute hidden group-hover:flex inset-0 items-center justify-center bg-[#00000080]">
+                <div className="text-[14px] md:text-[22px] border border-[#00712D] font-[700] text-[#00712D] cursor-pointer bg-white rounded-full p-2">
+                  Read More
+                </div>
               </div>
             </div>
 

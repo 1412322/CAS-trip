@@ -23,13 +23,19 @@ export default function Sustainability() {
         <Heading color="text-[#22C55E] pt-16 md:pt-20">SUSTAINABILITY</Heading>
 
         <Paragraph className="md:max-w-4xl m-auto">
-        Our commitment extends beyond facilitating meaningful volunteer experiences; it encompasses ensuring that our digital presence, our operations, and our projects contribute positively to the planet and its people for the long-term impact.
+          Our commitment extends beyond facilitating meaningful volunteer experiences; it encompasses ensuring that our
+          digital presence, our operations, and our projects contribute positively to the planet and its people for the
+          long-term impact.
         </Paragraph>
 
         <div className="relative mt-10 w-full pb-20 md:pb-40">
           <Image className="w-1/2 rounded-[5px] md:rounded-[20px]" src={Sustainability1} alt="" />
 
-          <Image className="w-2/3 rounded-[5px] md:rounded-[20px] absolute bottom-0 right-0 shadow-[-0.519px_-0.519px_0.779px_0_#FFF]" src={Sustainability2} alt="" />
+          <Image
+            className="w-2/3 rounded-[5px] md:rounded-[20px] absolute bottom-0 right-0 shadow-[-0.519px_-0.519px_0.779px_0_#FFF]"
+            src={Sustainability2}
+            alt=""
+          />
         </div>
       </Container>
 
@@ -50,8 +56,7 @@ export default function Sustainability() {
           {
             img: PositiveCommunityAndEnvironmentalImpact3,
             title: 'Environmental Stewardship',
-            description:
-              'Directly addressing environmental\nconservation for lasting ecological balance.',
+            description: 'Directly addressing environmental\nconservation for lasting ecological balance.',
           },
         ].map((item, index) => (
           <div
@@ -66,9 +71,7 @@ export default function Sustainability() {
             />
 
             <div className="flex h-full flex-1 flex-col items-center justify-center bg-[#00712D] px-1.5 py-10 text-center md:p-0">
-              <div className="mb-2.5 text-[14px] font-[900] text-white md:text-[24px]">
-                {item.title}
-              </div>
+              <div className="mb-2.5 text-[14px] font-[900] text-white md:text-[24px]">{item.title}</div>
 
               <p className="whitespace-break-spaces text-center text-[10px] font-[600] text-white md:text-[18px] lg:px-24">
                 {item.description}
@@ -110,9 +113,7 @@ export default function Sustainability() {
               </div>
 
               <div className="text-center">
-                <div className="mb-1 text-[14px] font-[900] text-[#00712D] md:mb-4 md:text-[24px]">
-                  {item.title}
-                </div>
+                <div className="mb-1 text-[14px] font-[900] text-[#00712D] md:mb-4 md:text-[24px]">{item.title}</div>
 
                 <Paragraph>{item.description}</Paragraph>
               </div>
@@ -149,21 +150,12 @@ export default function Sustainability() {
               key={index}
               className={`relative flex aspect-square w-full flex-col items-stretch overflow-hidden rounded-[15px] ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
             >
-              <Image
-                src={item.img}
-                className="h-full w-full object-cover"
-                layout="fill"
-                alt={item.description}
-              />
+              <Image src={item.img} className="h-full w-full object-cover" layout="fill" alt={item.description} />
 
               <div className="absolute top-1/4 flex flex-col items-center justify-center text-center">
-                <div className="mb-2.5 text-[20px] font-[900] text-white md:mb-6 md:text-[24px]">
-                  {item.title}
-                </div>
+                <div className="mb-2.5 text-[20px] font-[900] text-white md:mb-6 md:text-[24px]">{item.title}</div>
 
-                <Paragraph className="px-4 whitespace-break-spaces text-white">
-                  {item.description}
-                </Paragraph>
+                <Paragraph className="px-4 whitespace-break-spaces text-white">{item.description}</Paragraph>
               </div>
             </div>
           ))}
@@ -172,11 +164,11 @@ export default function Sustainability() {
 
       <Container className="bg-[#ECFAE5]">
         <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
-        By choosing to volunteer through our programs, you're contributing to build a more sustainable world for all.
+          By choosing to volunteer through our programs, you're contributing to build a more sustainable world for all.
         </p>
 
         <div className="mt-5 md:mt-10 flex justify-center">
-          <Button path='/our-programs'>Explore our programs</Button>
+          <Button path="/our-programs">Explore Our Programs</Button>
         </div>
       </Container>
     </main>

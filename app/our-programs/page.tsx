@@ -2,7 +2,6 @@ import Button from '@/components/Button'
 import Heading from '@/components/Heading'
 import Container from '@/components/Layout/Container'
 import Paragraph from '@/components/Paragraph'
-import WhereWeTravel2 from '@/public/images/where_we_travel_2.webp'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -51,9 +50,7 @@ export default function OurPrograms() {
     <main>
       {/* TOP DESTINATIONS FOR STUDENT TRAVEL EXPERIENCES */}
       <Container className="bg-[#ECFAE5]">
-        <Heading color="text-[#22C55E] pt-16 md:pt-20">
-          TOP DESTINATIONS FOR STUDENT TRAVEL EXPERIENCES
-        </Heading>
+        <Heading color="text-[#22C55E] pt-16 md:pt-20">TOP DESTINATIONS FOR STUDENT TRAVEL EXPERIENCES</Heading>
 
         <Paragraph className="block md:hidden">{'Uncover amazing places\nwe take you to worldwide.'}</Paragraph>
 
@@ -68,12 +65,14 @@ export default function OurPrograms() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                 {section.places.map((place) => (
-                  <Link key={place.name} href={place.path} className="border border-[#00712D] relative h-[100px] cursor-pointer md:h-[252px]">
+                  <Link
+                    key={place.name}
+                    href={place.path}
+                    className="border border-[#00712D] relative h-[100px] cursor-pointer md:h-[252px]"
+                  >
                     <Image src={place.img} alt={place.name} fill className="object-cover" />
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                      <span className="text-center text-[30px] font-[800] text-white md:text-[50px]">
-                        {place.name}
-                      </span>
+                      <span className="text-center text-[30px] font-[800] text-white md:text-[50px]">{place.name}</span>
                     </div>
                   </Link>
                 ))}
@@ -84,13 +83,13 @@ export default function OurPrograms() {
       </Container>
 
       <Container className="relative z-0 bg-[url('../public/images/our_mission_cover.jpg')]">
-        <h2 className='hidden lg:block text-center text-[20px] font-[800] md:text-[32px] text-white whitespace-break-spaces'>
-        {'PLANS CAN CHANGE — THAT’S WHY OUR POLICY IS\nDESIGNED TO GIVE YOU SECURITY AND CONFIDENCE.'}
-    </h2>
+        <h2 className="hidden lg:block text-center text-[20px] font-[800] md:text-[32px] text-white whitespace-break-spaces">
+          {'PLANS CAN CHANGE — THAT’S WHY OUR POLICY IS\nDESIGNED TO GIVE YOU SECURITY AND CONFIDENCE.'}
+        </h2>
 
-    <h2 className='lg:hidden text-center text-[20px] font-[800] md:text-[32px] text-white whitespace-break-spaces'>
-        {'PLANS CAN CHANGE\nTHAT’S WHY OUR POLICY IS\nDESIGNED TO GIVE YOU\nSECURITY AND CONFIDENCE.'}
-    </h2>
+        <h2 className="lg:hidden text-center text-[20px] font-[800] md:text-[32px] text-white whitespace-break-spaces">
+          {'PLANS CAN CHANGE\nTHAT’S WHY OUR POLICY IS\nDESIGNED TO GIVE YOU\nSECURITY AND CONFIDENCE.'}
+        </h2>
 
         <div className="absolute inset-0 z-[-1] bg-[#00712D] opacity-50" />
 

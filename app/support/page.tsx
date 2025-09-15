@@ -25,27 +25,32 @@ export default function Support() {
         <Heading color="text-[#22C55E] pt-16 md:pt-20">SUPPORT</Heading>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
-          <Image className="rounded-s-[20px] hidden h-full w-full flex-1 object-cover lg:block" src={Overview1} alt="volunteer" />
+          <Image
+            className="rounded-s-[20px] hidden h-full w-full flex-1 object-cover lg:block"
+            src={Overview1}
+            alt="volunteer"
+          />
 
           <div className="flex flex-1 flex-col items-center justify-center bg-[#00712D] p-2.5 text-[12px] font-[600] text-white md:px-6 md:text-[18px]">
-              <p className="font-[500]">This section provides essential information and resources to help you prepare, stay
-              safe, and thrive during your volunteer trips.</p>
-              <ul>
-                <li className="my-4 flex items-start gap-1 md:my-5 md:gap-2.5">
-                  <div className="relative aspect-square min-w-3 md:min-w-4">
-                    <Image className="mt-1" src={CircleCheck} fill alt="check-icon" />
-                  </div>
-                  Safety is the most priority of our criteria for both students, teachers and staff
-                  – without compromise.
-                </li>
+            <p className="font-[500]">
+              This section provides essential information and resources to help you prepare, stay safe, and thrive
+              during your volunteer trips.
+            </p>
+            <ul>
+              <li className="my-4 flex items-start gap-1 md:my-5 md:gap-2.5">
+                <div className="relative aspect-square min-w-3 md:min-w-4">
+                  <Image className="mt-1" src={CircleCheck} fill alt="check-icon" />
+                </div>
+                Safety is the most priority of our criteria for both students, teachers and staff – without compromise.
+              </li>
 
-                <li className="flex items-start gap-1 md:gap-2.5">
-                  <div className="relative aspect-square min-w-3 md:min-w-4">
-                    <Image className="mt-1" src={CircleCheck} fill alt="check-icon" />
-                  </div>
-                  All guides follow a comprehensive volunteer program assessed regularly.
-                </li>
-              </ul>
+              <li className="flex items-start gap-1 md:gap-2.5">
+                <div className="relative aspect-square min-w-3 md:min-w-4">
+                  <Image className="mt-1" src={CircleCheck} fill alt="check-icon" />
+                </div>
+                All guides follow a comprehensive volunteer program assessed regularly.
+              </li>
+            </ul>
           </div>
 
           <Image
@@ -61,8 +66,8 @@ export default function Support() {
         <Heading color="text-[#22C55E]">SAFETY COMMITMENT</Heading>
 
         <Paragraph className="mb-2.5 md:mb-10 md:max-w-4xl m-auto">
-          We are committed to providing a secure and supportive environment for all our
-          international students and our staffs.
+          We are committed to providing a secure and supportive environment for all our international students and our
+          staffs.
         </Paragraph>
 
         <div className="mb-10 grid grid-cols-1 gap-6 md:mb-20 xl:grid-cols-3">
@@ -84,9 +89,7 @@ export default function Support() {
               <div className="relative z-0 flex h-[42px] w-full items-center justify-center md:h-[52px]">
                 <Image className="h-full w-full object-contain" src={Tag} fill alt="" />
 
-                <div className="z-[1] text-[20px] font-[900] text-white md:text-[24px]">
-                  {item.title}
-                </div>
+                <div className="z-[1] text-[20px] font-[900] text-white md:text-[24px]">{item.title}</div>
               </div>
 
               {/* <p className="text-[18px] font-[600] text-[#00712D] mt-5">{item.desc}</p> */}
@@ -106,13 +109,23 @@ export default function Support() {
 
             <div className="pl-4 md:px-[70px] text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-disc space-y-4 md:space-y-6">
-<li><span className="font-[800]">Ensure a pre-tour health check-up</span> (30 days prior) and physical preparation.</li>
+                <li>
+                  <span className="font-[800]">Ensure a pre-tour health check-up</span> (30 days prior) and physical
+                  preparation.
+                </li>
 
-<li><span className="font-[800]">Travel insurance</span> covers medical emergencies and personal liability.</li>
+                <li>
+                  <span className="font-[800]">Travel insurance</span> covers medical emergencies and personal
+                  liability.
+                </li>
 
-<li><span className="font-[800]">Dietary needs</span> need to be informed in advance.</li>
+                <li>
+                  <span className="font-[800]">Dietary needs</span> need to be informed in advance.
+                </li>
 
-<li><span className="font-[800]">Stay hydrated</span> and follow local guidelines.</li>
+                <li>
+                  <span className="font-[800]">Stay hydrated</span> and follow local guidelines.
+                </li>
               </ul>
             </div>
           </div>
@@ -128,16 +141,17 @@ export default function Support() {
             <div className="pl-4 md:px-[70px] text-[12px] md:text-[18px] font-[600] text-white">
               <ul className="list-disc space-y-4 md:space-y-6">
                 <li>
-                <span className="font-[800]">Obtain the correct visa</span> for destination and check latest requirements before departure.
+                  <span className="font-[800]">Obtain the correct visa</span> for destination and check latest
+                  requirements before departure.
                   <br />
-
                   <div className="mt-4 md:mt-6 font-[400] italic ml-[-16px]">
-                  We do not provide visas or visas on arrival (VOA); please plan this independently.
+                    We do not provide visas or visas on arrival (VOA); please plan this independently.
                   </div>
                 </li>
 
                 <li>
-                <span className="font-[800]">Stay updated</span> on the <b>local weather forecast</b> for optimal luggage preparation.
+                  <span className="font-[800]">Stay updated</span> on the <b>local weather forecast</b> for optimal
+                  luggage preparation.
                 </li>
               </ul>
             </div>
@@ -154,8 +168,8 @@ export default function Support() {
             <div className="hidden h-5 w-5 rounded-full bg-[#00712D] md:block" />
 
             <Paragraph className="flex-1 md:!text-left">
-              <b className="font-[800]">A 15-20L backpack</b> containing daily and essential clothes
-              and personal belongings.
+              <b className="font-[800]">A 15-20L backpack</b> containing daily and essential clothes and personal
+              belongings.
             </Paragraph>
           </div>
 
@@ -163,8 +177,7 @@ export default function Support() {
             <div className="hidden h-5 w-5 rounded-full bg-[#00712D] md:block" />
 
             <Paragraph className="flex-1 md:!text-left">
-              Any <b className="font-[800]">unnecessary luggage</b> can be safely stored in base
-              camp or program office.
+              Any <b className="font-[800]">unnecessary luggage</b> can be safely stored in base camp or program office.
             </Paragraph>
           </div>
         </div>
@@ -181,47 +194,27 @@ export default function Support() {
 
             <ul className="w-full space-y-2.5 text-[18px] font-[600] text-[#00712D] md:space-y-5">
               <li className="flex items-center gap-2.5 md:gap-6">
-                <Image
-                  src={Clothing}
-                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
-                  alt="icon"
-                />
+                <Image src={Clothing} className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]" alt="icon" />
 
                 <Paragraph className="!text-left">Lightweight clothing.</Paragraph>
               </li>
 
               <li className="flex items-center gap-2.5 md:gap-6">
-                <Image
-                  src={Footwear}
-                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
-                  alt="icon"
-                />
+                <Image src={Footwear} className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]" alt="icon" />
 
                 <Paragraph className="!text-left">Comfortable walking shoes.</Paragraph>
               </li>
 
               <li className="flex items-center gap-2.5 md:gap-6">
-                <Image
-                  src={Accessories}
-                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
-                  alt="icon"
-                />
+                <Image src={Accessories} className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]" alt="icon" />
 
-                <Paragraph className="!text-left">
-                  Sunscreen, hat, water bottle and any accessories.
-                </Paragraph>
+                <Paragraph className="!text-left">Sunscreen, hat, water bottle and any accessories.</Paragraph>
               </li>
 
               <li className="flex items-center gap-2.5 md:gap-6">
-                <Image
-                  src={Documents}
-                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
-                  alt="icon"
-                />
+                <Image src={Documents} className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]" alt="icon" />
 
-                <Paragraph className="!text-left">
-                  Documents: Passport, visa, tickets, contacts.
-                </Paragraph>
+                <Paragraph className="!text-left">Documents: Passport, visa, tickets, contacts.</Paragraph>
               </li>
             </ul>
           </div>
@@ -233,11 +226,7 @@ export default function Support() {
 
             <ul className="w-full space-y-2.5 text-[18px] font-[600] text-[#00712D] md:space-y-5">
               <li className="flex items-center gap-2.5 md:gap-6">
-                <Image
-                  src={SupportIcon}
-                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
-                  alt="icon"
-                />
+                <Image src={SupportIcon} className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]" alt="icon" />
 
                 <Paragraph className="!text-left">On-call support.</Paragraph>
               </li>
@@ -253,21 +242,13 @@ export default function Support() {
               </li>
 
               <li className="flex items-center gap-2.5 md:gap-6">
-                <Image
-                  src={Meals}
-                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
-                  alt="icon"
-                />
+                <Image src={Meals} className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]" alt="icon" />
 
                 <Paragraph className="!text-left">All meals provided.</Paragraph>
               </li>
 
               <li className="flex items-center gap-2.5 md:gap-6">
-                <Image
-                  src={Lodging}
-                  className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]"
-                  alt="icon"
-                />
+                <Image src={Lodging} className="w-full h-auto aspect-square max-w-8 md:max-w-[60px]" alt="icon" />
 
                 <Paragraph className="!text-left">Comfortable lodging provided.</Paragraph>
               </li>
@@ -286,21 +267,19 @@ export default function Support() {
               We offer diverse programs across the region:
               <ul className="list-inside list-disc">
                 <li>
-                  <b>Nature Camps:</b> These programs allow you to explore and protect stunning
-                  natural landscapes, fostering a profound understanding of environment and
-                  inspiring positive environmental behaviors.
+                  <b>Nature Camps:</b> These programs allow you to explore and protect stunning natural landscapes,
+                  fostering a profound understanding of environment and inspiring positive environmental behaviors.
                 </li>
 
                 <li>
-                  <b>Subject Camps:</b> These programs offer transformative, real-world learning
-                  experiences beyond the classroom, allowing students to explore new cultures and
-                  academic subjects.
+                  <b>Subject Camps:</b> These programs offer transformative, real-world learning experiences beyond the
+                  classroom, allowing students to explore new cultures and academic subjects.
                 </li>
 
                 <li>
-                  <b>Leadership Camps:</b> These programs immerse students in real-world contexts,
-                  engaging them in deep exploration of societal issues, meaningful volunteer work,
-                  active discussions, and hands-on initiatives that drive positive change.
+                  <b>Leadership Camps:</b> These programs immerse students in real-world contexts, engaging them in deep
+                  exploration of societal issues, meaningful volunteer work, active discussions, and hands-on
+                  initiatives that drive positive change.
                 </li>
               </ul>
             </div>
@@ -313,10 +292,7 @@ export default function Support() {
             <div>
               You can follow up these guideline to apply for our programs:
               <ul className="list-inside list-disc">
-                <li>
-                  Explore our programs and choose a program that fits your interests and
-                  availability.
-                </li>
+                <li>Explore Our Programs and choose a program that fits your interests and availability.</li>
 
                 <li>Submit online application on our website.</li>
 
@@ -355,9 +331,8 @@ export default function Support() {
                 <li>Guesthouses or Dorms.</li>
 
                 <li>
-                  Project-Specific Housing with basic facilities at remote conservation sites.
-                  Details for each specific program's accommodation will be provided on its
-                  dedicated page.
+                  Project-Specific Housing with basic facilities at remote conservation sites. Details for each specific
+                  program's accommodation will be provided on its dedicated page.
                 </li>
               </ul>
             </div>
@@ -367,11 +342,11 @@ export default function Support() {
 
       <Container className="bg-[#ECFAE5]">
         <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
-        Ready to make an impact? Explore our programs and start your ASEAN adventure today!
+          Ready to make an impact? Explore Our Programs and start your ASEAN adventure today!
         </p>
 
         <div className="mt-5 md:mt-10 flex justify-center">
-        <Button path="/contact-us">Contact Us</Button>
+          <Button path="/contact-us">Contact Us</Button>
         </div>
       </Container>
     </main>

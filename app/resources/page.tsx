@@ -56,8 +56,7 @@ export default function Resources() {
             },
             {
               title: 'Helping a Community Center in\nVietnam The Perfect Journey',
-              description:
-                'Discover the power of teamwork in supporting alongside local communities in Vietnam.',
+              description: 'Discover the power of teamwork in supporting alongside local communities in Vietnam.',
               thumbnail: '',
             },
             {
@@ -68,15 +67,11 @@ export default function Resources() {
             },
             {
               title: 'Q&A Sessions with Our students',
-              description:
-                'Directly listen to our incredible students sharing experience and personal growth.',
+              description: 'Directly listen to our incredible students sharing experience and personal growth.',
               thumbnail: '',
             },
           ].map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-28"
-            >
+            <div key={index} className="flex flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-28">
               <div className="flex items-center justify-center bg-[#00000033] relative min-h-[180px] w-full flex-1 overflow-hidden rounded-[10px] border-2 border-[#00712D] bg-white md:min-h-[355px] md:rounded-[20px]">
                 <Image
                   src={item.thumbnail || Play}
@@ -96,12 +91,12 @@ export default function Resources() {
       </Container>
 
       <Container className="bg-[#ECFAE5]">
-      <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
-        Ready to make an impact? Explore our programs and start your ASEAN adventure today!
+        <p className="text-[10px] md:text-[32px] font-[800] text-center text-[#00712D]">
+          Ready to make an impact? Explore Our Programs and start your ASEAN adventure today!
         </p>
 
         <div className="mt-5 md:mt-10 flex justify-center">
-        <Button path="/contact-us">Contact Us</Button>
+          <Button path="/contact-us">Contact Us</Button>
         </div>
       </Container>
     </main>

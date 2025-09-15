@@ -67,182 +67,198 @@ export default function Header() {
       className={`fixed top-0 z-[999] flex h-14 w-full items-center justify-between transition-all duration-300 md:h-20 ${
         scrolled
           ? 'bg-[#00712D80]'
-          : [
-                '/about-us',
-                '/sustainability',
-                '/support',
-                '/resources',
-                '/contact-us',
-                '/our-programs',
-              ].includes(pathname)
+          : ['/about-us', '/sustainability', '/support', '/resources', '/contact-us', '/our-programs'].includes(
+                pathname
+              )
             ? 'bg-[#00712D]'
             : 'bg-transparent'
       }`}
     >
       <div className="m-auto flex w-full items-center justify-between px-5 md:px-[100px]">
-        <Image src={Logo} alt="CAS-trip-logo" className="cursor-pointer h-[46px] w-auto md:h-16" onClick={() => router.push('/')}/>
+        <Image
+          src={Logo}
+          alt="CAS-trip-logo"
+          className="cursor-pointer h-[46px] w-auto md:h-16"
+          onClick={() => router.push('/')}
+        />
 
         <div className="flex items-center justify-end gap-4 md:gap-6">
-        <nav className="hidden space-x-4 text-white lg:block">
-          <Link
-            href="/"
-            className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/' ? 'font-[700] underline' : ''}`}
-          >
-            Home
-          </Link>
+          <nav className="hidden space-x-4 text-white lg:block">
+            <Link
+              href="/"
+              className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/' ? 'font-[700] underline' : ''}`}
+            >
+              Home
+            </Link>
 
-          <Link
-            href="/about-us"
-            className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/about-us' ? 'font-[700] underline' : ''}`}
-          >
-            About Us
-          </Link>
-          {/* 
+            <Link
+              href="/about-us"
+              className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/about-us' ? 'font-[700] underline' : ''}`}
+            >
+              About Us
+            </Link>
+            {/* 
       <Link href="#" className={`hover:underline hover:font-[700] font-[600] text-[16px] ${pathname === '/' ? 'underline font-[700]' : ''}`}>
         Programs
       </Link> */}
 
-          {/* DROPDOWN */}
+            {/* DROPDOWN */}
 
-          <Link
-            href="/camps/nature"
-            className={`relative text-[16px] font-[600] hover:font-[700] hover:underline ${['/camps/nature', '/camps/leadership', '/camps/subject'].includes(pathname) ? 'font-[700] underline' : ''}`}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button
-              className="text-[16px] font-[600] hover:font-[700] hover:underline"
-              onMouseEnter={() => toggleDropdown('programs')}
-              onMouseDown={() => toggleDropdown('programs')}
+            <Link
+              href="/camps/nature"
+              className={`relative text-[16px] font-[600] hover:font-[700] hover:underline ${['/camps/nature', '/camps/leadership', '/camps/subject'].includes(pathname) ? 'font-[700] underline' : ''}`}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              Programs
-            </button>
+              <button
+                className="text-[16px] font-[600] hover:font-[700] hover:underline"
+                onMouseEnter={() => toggleDropdown('programs')}
+                onMouseDown={() => toggleDropdown('programs')}
+              >
+                Programs
+              </button>
 
-            {activeDropdown === 'programs' && (
-              <div ref={dropdownRef} className="absolute left-0 top-full pt-5">
-                <ul className="border-[rgba(0, 113, 45, 0.50)] shadow-[3px 3px 2px 0px rgba(0, 113, 45, 0.30)] z-50 w-[300px] rounded-[10px] bg-white py-8 text-[18px] font-[900] text-[#00712D]">
-                  <li>
-                    <Link
-                      href="/camps/nature"
-                      className={`block flex h-[30px] items-center px-8 hover:bg-[#00712D1A] ${pathname === '/camps/nature' ? 'underline' : ''}`}
-                    >
-                      Nature Camps
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/camps/subject"
-                      className={`block flex h-[30px] items-center px-8 hover:bg-[#00712D1A] ${pathname === '/camps/subject' ? 'underline' : ''}`}
-                    >
-                      Subject Camps
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/camps/leadership"
-                      className={`block flex h-[30px] items-center justify-between px-8 hover:bg-[#00712D1A] ${pathname === '/camps/leadership' ? 'underline' : ''}`}
-                    >
-                      Leadership Camps
-                      <Image className={activeSubMenuDropdown === 'leadership' ? 'rotate-180' : ''} src={ArrowDown} width={16} height={16} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
-                    </Link>
+              {activeDropdown === 'programs' && (
+                <div ref={dropdownRef} className="absolute left-0 top-full pt-5">
+                  <ul className="border-[rgba(0, 113, 45, 0.50)] shadow-[3px 3px 2px 0px rgba(0, 113, 45, 0.30)] z-50 w-[300px] rounded-[10px] bg-white py-8 text-[18px] font-[900] text-[#00712D]">
+                    <li>
+                      <Link
+                        href="/camps/nature"
+                        className={`block flex h-[30px] items-center px-8 hover:bg-[#00712D1A] ${pathname === '/camps/nature' ? 'underline' : ''}`}
+                      >
+                        Nature Camps
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/camps/subject"
+                        className={`block flex h-[30px] items-center px-8 hover:bg-[#00712D1A] ${pathname === '/camps/subject' ? 'underline' : ''}`}
+                      >
+                        Subject Camps
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/camps/leadership"
+                        className={`block flex h-[30px] items-center justify-between px-8 hover:bg-[#00712D1A] ${pathname === '/camps/leadership' ? 'underline' : ''}`}
+                      >
+                        Leadership Camps
+                        <Image
+                          className={activeSubMenuDropdown === 'leadership' ? 'rotate-180' : ''}
+                          src={ArrowDown}
+                          width={16}
+                          height={16}
+                          alt="arrow-down-icon"
+                          onClick={() => toggleSubMenuDropdown('leadership')}
+                        />
+                      </Link>
 
-                    {activeSubMenuDropdown === 'leadership' && (
-                    <ul className="w-full">
-                      <li className="hover:bg-[#00712D1A]">
-                        <Link href="/taman-negara" className={`px-8 text-[18px] font-[700] ${pathname === '/taman-negara' ? 'underline' : ''}`}>
-                          Taman Negara
-                        </Link>
-                      </li>
-                    </ul>)}
-                  </li>
-                  <li>
-                    <Link
-                      href="/our-programs"
-                      className={`block flex h-[30px] items-center px-8 hover:bg-[#00712D1A] ${pathname === '/our-programs' ? 'underline' : ''}`}
-                    >
-                      Explore Our Programs
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
-          </Link>
+                      {activeSubMenuDropdown === 'leadership' && (
+                        <ul className="w-full">
+                          <li className="hover:bg-[#00712D1A]">
+                            <Link
+                              href="/taman-negara"
+                              className={`px-8 text-[18px] font-[700] ${pathname === '/taman-negara' ? 'underline' : ''}`}
+                            >
+                              Taman Negara
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
+                    <li>
+                      <Link
+                        href="/our-programs"
+                        className={`block flex h-[30px] items-center px-8 hover:bg-[#00712D1A] ${pathname === '/our-programs' ? 'underline' : ''}`}
+                      >
+                        Explore Our Programs
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </Link>
 
-          <Link
-            href="/sustainability"
-            className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/sustainability' ? 'font-[700] underline' : ''}`}
-          >
-            Sustainability
-          </Link>
+            <Link
+              href="/sustainability"
+              className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/sustainability' ? 'font-[700] underline' : ''}`}
+            >
+              Sustainability
+            </Link>
 
-          <Link
-            href="/support"
-            className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/support' ? 'font-[700] underline' : ''}`}
-          >
-            Support
-          </Link>
+            <Link
+              href="/support"
+              className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/support' ? 'font-[700] underline' : ''}`}
+            >
+              Support
+            </Link>
 
-          <Link
-            href="/resources"
-            className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/resources' ? 'font-[700] underline' : ''}`}
-          >
-            Resources
-          </Link>
+            <Link
+              href="/resources"
+              className={`text-[16px] font-[600] hover:font-[700] hover:underline ${pathname === '/resources' ? 'font-[700] underline' : ''}`}
+            >
+              Resources
+            </Link>
 
-          <Link
-            // className="rounded-[8px] bg-[#FFA726] p-[8px] text-[16px] font-[600]"
-            className="rounded-[8px] bg-[#FFA726] p-[8px] text-[16px] font-[600] text-white from-slate-800 to-slate-700 focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative
+            <Link
+              // className="rounded-[8px] bg-[#FFA726] p-[8px] text-[16px] font-[600]"
+              className="rounded-[8px] bg-[#FFA726] p-[8px] text-[16px] font-[600] text-white from-slate-800 to-slate-700 focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative
             before:absolute before:inset-0 before:rounded-[inherit]
             before:bg-[linear-gradient(-45deg,transparent_25%,theme(colors.white/.8)_50%,transparent_50%,transparent_25%)]
             before:bg-[length:200%_200%,5%_5%]
             before:bg-no-repeat
             before:animate-[shine_3s_linear_infinite] hover:before:animate-[shine-hover_0.3s_linear]"
-            href="/contact-us"
-          >
-            Contact Us
-          </Link>
-        </nav>
+              href="/contact-us"
+            >
+              Contact Us
+            </Link>
+          </nav>
 
-        <Image
-          src={Search}
-          alt="search-logo"
-          className="w-4 md:w-8 aspect-square cursor-pointer"
-          onClick={() => { setIsSearchVisible(!isSearchVisible); setIsVisible(false) }}
-        />
+          <Image
+            src={Search}
+            alt="search-logo"
+            className="w-4 md:w-8 aspect-square cursor-pointer"
+            onClick={() => {
+              setIsSearchVisible(!isSearchVisible)
+              setIsVisible(false)
+            }}
+          />
 
-        <Image
-          src={Menu}
-          alt="menu-logo"
-          className="lg:hidden"
-          onClick={() => { setIsVisible(!isVisible); setIsSearchVisible(false) }}
-        />
+          <Image
+            src={Menu}
+            alt="menu-logo"
+            className="lg:hidden"
+            onClick={() => {
+              setIsVisible(!isVisible)
+              setIsSearchVisible(false)
+            }}
+          />
         </div>
 
         {isSearchVisible && (
-          <div ref={searchRef} className="absolute flex items-center right-0 md:top-0 top-[56px] w-full bg-white p-6 md:p-24 text-[20px] md:text-[80px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)]">
-            <input className="w-full rounded-none border-0 border-b border-[#00712D] placeholder:text-[#00712D] outline-0" placeholder="Search" />
+          <div
+            ref={searchRef}
+            className="absolute flex items-center right-0 md:top-0 top-[56px] w-full bg-white p-6 md:p-24 text-[20px] md:text-[80px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)]"
+          >
+            <input
+              className="w-full rounded-none border-0 border-b border-[#00712D] placeholder:text-[#00712D] outline-0"
+              placeholder="Search"
+            />
 
-            <Image
-          src={GreenSearch}
-          alt="search-logo"
-          className="w-3 md:w-12 aspect-square"
-        />
+            <Image src={GreenSearch} alt="search-logo" className="w-3 md:w-12 aspect-square" />
           </div>
         )}
 
         {isVisible && (
-          <div ref={dropdownRef} className="absolute right-0 top-[56px] block flex w-[calc(100vw-56px)] flex-col rounded-l-[10px] bg-white py-[30px] text-[18px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)] lg:hidden">
+          <div
+            ref={dropdownRef}
+            className="absolute right-0 top-[56px] block flex w-[calc(100vw-56px)] flex-col rounded-l-[10px] bg-white py-[30px] text-[18px] font-[900] text-[#00712D] shadow-[3px_3px_2px_0_rgba(0,113,45,0.30)] lg:hidden"
+          >
             <div className="flex h-[30px] items-center justify-between px-[30px] active:bg-[rgba(0,113,45,0.10)]">
               <Link href="/" className={`flex-1 ${pathname === '/' ? 'underline' : ''}`}>
                 Home
               </Link>
 
-              <Image
-                src={Close}
-                width={24}
-                height={24}
-                alt="arrow-down-icon"
-                onClick={() => setIsVisible(false)}
-              />
+              <Image src={Close} width={24} height={24} alt="arrow-down-icon" onClick={() => setIsVisible(false)} />
             </div>
 
             <Link
@@ -273,53 +289,45 @@ export default function Header() {
             {activeMobileDropdown === 'programs' && (
               <ul className="mt-2.5 space-y-2.5 px-[30px] text-[16px] font-[800]">
                 <li>
-                  <Link
-                    className={pathname === '/camps/nature' ? 'underline' : ''}
-                    href="/camps/nature"
-                  >
+                  <Link className={pathname === '/camps/nature' ? 'underline' : ''} href="/camps/nature">
                     Nature Camps
                   </Link>
                 </li>
 
                 <li>
-                  <Link
-                    className={pathname === '/camps/subject' ? 'underline' : ''}
-                    href="/camps/subject"
-                  >
+                  <Link className={pathname === '/camps/subject' ? 'underline' : ''} href="/camps/subject">
                     Subject Camps
                   </Link>
                 </li>
 
                 <li className="flex flex-col">
                   <div className="flex w-full items-center justify-between">
-                    <Link
-                      className={pathname === '/camps/leadership' ? 'underline' : ''}
-                      href="/camps/leadership"
-                    >
+                    <Link className={pathname === '/camps/leadership' ? 'underline' : ''} href="/camps/leadership">
                       Leadership Camps
                     </Link>
 
-                    <Image className={activeSubMenuDropdown === 'leadership' ? 'rotate-180' : ''} src={ArrowDown} width={12} alt="arrow-down-icon" onClick={() => toggleSubMenuDropdown("leadership")} />
+                    <Image
+                      className={activeSubMenuDropdown === 'leadership' ? 'rotate-180' : ''}
+                      src={ArrowDown}
+                      width={12}
+                      alt="arrow-down-icon"
+                      onClick={() => toggleSubMenuDropdown('leadership')}
+                    />
                   </div>
 
                   {activeSubMenuDropdown === 'leadership' && (
-                  <ul className="mt-1 space-y-1 text-[14px] font-[600]">
-                    <li>
-                      <Link
-                        className={pathname === '/taman-negara' ? 'underline' : ''}
-                        href="/taman-negara"
-                      >
-                        Taman Negara
-                      </Link>
-                    </li>
-                  </ul>)}
+                    <ul className="mt-1 space-y-1 text-[14px] font-[600]">
+                      <li>
+                        <Link className={pathname === '/taman-negara' ? 'underline' : ''} href="/taman-negara">
+                          Taman Negara
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
                 </li>
 
                 <li>
-                  <Link
-                    className={pathname === '/our-programs' ? 'underline' : ''}
-                    href="/our-programs"
-                  >
+                  <Link className={pathname === '/our-programs' ? 'underline' : ''} href="/our-programs">
                     Explore Our Programs
                   </Link>
                 </li>

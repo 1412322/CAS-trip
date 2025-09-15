@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     keyframes: {
       shine: {
-        '0%':   { backgroundPosition: '200% 0, 0 0' },
-        '20%':  { backgroundPosition: '-100% 0, 0 0' },
+        '0%': { backgroundPosition: '200% 0, 0 0' },
+        '20%': { backgroundPosition: '-100% 0, 0 0' },
         '100%': { backgroundPosition: '-100% 0, 0 0' },
       },
       'shine-hover': {
-        '0%':   { backgroundPosition: '200% 0, 0 0' },
+        '0%': { backgroundPosition: '200% 0, 0 0' },
         '100%': { backgroundPosition: '-100% 0, 0 0' },
       },
     },

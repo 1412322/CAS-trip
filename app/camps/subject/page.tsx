@@ -65,9 +65,7 @@ export default function NatureCamps() {
             </div>
 
             <div className="flex-1 text-left text-[#00712D]">
-              {item.title && (
-                <div className="text-[14px] font-[600] md:text-[18px]">{item.title}</div>
-              )}
+              {item.title && <div className="text-[14px] font-[600] md:text-[18px]">{item.title}</div>}
 
               <ul className={`${item.descriptions.length > 1 ? 'ml-4 list-disc' : ''}`}>
                 {item.descriptions.map((description, descriptionIndex) => (

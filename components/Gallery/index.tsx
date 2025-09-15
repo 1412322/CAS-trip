@@ -1,9 +1,10 @@
 'use client'
 
-import Image, { StaticImageData } from 'next/image'
-import { useState } from 'react'
 import ArrowLeft from '@/public/images/arrow_left.svg'
 import ArrowRight from '@/public/images/arrow_right.svg'
+import Image, { StaticImageData } from 'next/image'
+import { useState } from 'react'
+import { useSwipeable } from 'react-swipeable'
 
 interface GalleryProps {
   images: { src: StaticImageData; title: string; subTitle: string }[]
@@ -22,45 +23,61 @@ export default function Gallery({ images }: GalleryProps) {
 
   const getPositionClass = (index: number) => {
     const diff = index - current
-    if (diff === 0) return {
-      container: 'z-30 scale-100',
-      image: '',
-    }
+    if (diff === 0)
+      return {
+        container: 'z-30 scale-100',
+        image: '',
+      }
     if (diff === -1 || diff === images.length - 1)
       return {
         container: 'z-20 -translate-x-[70%] scale-75',
-        image: 'brightness-[0.5]'
+        image: 'brightness-[0.5]',
       }
     if (diff === -2 || diff === images.length - 2)
       return {
         container: 'z-10 -translate-x-[120%] scale-50',
-        image: 'brightness-[0.25]'
+        image: 'brightness-[0.25]',
       }
     if (diff === 1 || diff === -(images.length - 1))
-    return {
-      container: 'z-20 translate-x-[70%] scale-75',
-      image: 'brightness-[0.5]'
-    }
+      return {
+        container: 'z-20 translate-x-[70%] scale-75',
+        image: 'brightness-[0.5]',
+      }
     if (diff === 2 || diff === -(images.length - 2))
-    return {
-      container: 'z-10 translate-x-[120%] scale-50',
-      image: 'brightness-[0.25]'
-    }
+      return {
+        container: 'z-10 translate-x-[120%] scale-50',
+        image: 'brightness-[0.25]',
+      }
     return {
       container: 'hidden',
       image: '',
     }
   }
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setCurrent((prev) => (prev + 1) % images.length),
+    onSwipedRight: () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1)),
+    trackMouse: true, // also works with mouse
+  })
+
   return (
     <div className="relative overflow-hidden h-[145px] lg:h-[532px] w-full">
-      <div className="relative flex h-full items-center justify-center">
+      <div {...handlers} className="relative flex h-full items-center justify-center">
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute flex h-full w-[106px] lg:w-[390px] flex-col items-center justify-center overflow-hidden rounded-[5px] lg:rounded-[20px] text-white transition-all duration-500 ${getPositionClass(index).container}`}
+            className={`absolute flex h-full w-[106px] lg:w-[390px] flex-col items-center justify-center overflow-hidden rounded-[5px] lg:rounded-[20px] text-white transition-all duration-500 ${
+              getPositionClass(index).container
+            }`}
           >
-            <Image className={`${getPositionClass(index).image} cursor-pointer`} src={img.src} alt={img.title} layout="fill" objectFit="cover" onClick={() => setCurrent(index)}/>
+            <Image
+              className={`${getPositionClass(index).image} cursor-pointer`}
+              src={img.src}
+              alt={img.title}
+              layout="fill"
+              objectFit="cover"
+              onClick={() => setCurrent(index)}
+            />
 
             <div className="relative z-10 text-center font-[900] text-[10px] lg:text-[32px]">
               {img.title && <h3>{img.title}</h3>}

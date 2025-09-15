@@ -86,7 +86,7 @@ export default function Home() {
         <Destinations />
 
         <div className="mt-5 md:mt-10 flex justify-center">
-          <Button path='/our-programs'>View All 10+ Programs</Button>
+          <Button path="/our-programs">View All 10+ Programs</Button>
         </div>
       </Container>
 
@@ -121,9 +121,7 @@ export default function Home() {
                   layout="responsive"
                 />
 
-                <label className="mt-4 text-[14px] font-[700] text-[#00712D] md:text-[24px]">
-                  {item.title}
-                </label>
+                <label className="mt-4 text-[14px] font-[700] text-[#00712D] md:text-[24px]">{item.title}</label>
               </div>
             </Link>
           ))}
@@ -163,17 +161,11 @@ export default function Home() {
           ].map((item, index) => (
             <div key={index} className="flex flex-col items-center gap-2.5 md:flex-row md:gap-6">
               <div className="flex-1 w-full">
-              <Image
-                src={item.img}
-                alt={item.title}
-                className="aspect-square w-full rounded-[10px] object-cover"
-              />
+                <Image src={item.img} alt={item.title} className="aspect-square w-full rounded-[10px] object-cover" />
               </div>
 
               <div className="flex-1 text-left">
-                <h3 className="mb-1.5 text-[18px] font-[900] text-[#00712D] md:mb-6 md:text-[24px]">
-                  {item.title}
-                </h3>
+                <h3 className="mb-1.5 text-[18px] font-[900] text-[#00712D] md:mb-6 md:text-[24px]">{item.title}</h3>
 
                 <Paragraph className="!text-left">{item.description}</Paragraph>
               </div>
@@ -227,7 +219,6 @@ export default function Home() {
         </div>
       </Container>
 
-
       <Container className="bg-[#ECFAE5] !px-0 !pb-0">
         <Heading color="text-[#22C55E]">OUR PARTNERS</Heading>
 
@@ -238,7 +229,7 @@ export default function Home() {
       <Container className="bg-[url('../public/images/our_favorite_travelers_cover.png')]">
         <Heading color="text-white">OUR FAVORITE TRAVELERS</Heading>
 
-<Travelers />
+        <Travelers />
       </Container>
 
       <Container className="bg-[#ECFAE5]">
@@ -247,7 +238,7 @@ export default function Home() {
             <Heading color="text-[#00712D] !text-left">LATEST TRIP UPDATES</Heading>
 
             <Paragraph className="!text-left">
-            Subscribe here to receive comprehensive updates on all current and upcoming Our CAS Trips.
+              Subscribe here to receive comprehensive updates on all current and upcoming Our CAS Trips.
             </Paragraph>
           </div>
 

@@ -22,12 +22,7 @@ export default function Accordion({ title, description }: AccordionProps) {
         <div className="flex-1">{title}</div>
 
         <div className="relative aspect-square w-4 md:w-6">
-          <Image
-            className={isActive ? 'rotate-180' : ''}
-            src={ArrowDown}
-            layout="fill"
-            alt="arrow-down-icon"
-          />
+          <Image className={isActive ? 'rotate-180' : ''} src={ArrowDown} layout="fill" alt="arrow-down-icon" />
         </div>
       </div>
 

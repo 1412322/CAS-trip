@@ -25,13 +25,11 @@ export default function AboutUs() {
 
         <Paragraph className="md:max-w-4xl m-auto">
           This website serves as a premier platform specializing in{' '}
-          <b>Creativity, Activity and Service volunteer trips</b> for international school students
-          worldwide.
+          <b>Creativity, Activity and Service volunteer trips</b> for international school students worldwide.
           <br />
           <br />
-          Given on the spirit of established leaders in student travel, our platform is dedicated to
-          helping young individuals put their values into action and facilitate profound youth
-          changes.
+          Given on the spirit of established leaders in student travel, our platform is dedicated to helping young
+          individuals put their values into action and facilitate profound youth changes.
         </Paragraph>
       </Container>
 
@@ -125,7 +123,10 @@ Meet All Our member
             />
 
             <div className="flex-1">
-              <p className="text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]" dangerouslySetInnerHTML={{ __html: item.description }} />
+              <p
+                className="text-left text-[14px] font-[600] text-[#00712D] md:text-[18px]"
+                dangerouslySetInnerHTML={{ __html: item.description }}
+              />
             </div>
           </div>
         ))}
@@ -139,9 +140,8 @@ Meet All Our member
         <div className="absolute inset-0 z-[-1] bg-[#000] opacity-50" />
 
         <Paragraph className="text-white md:max-w-4xl m-auto">
-          To be the leading initiative in Southeast Asia for inspiring and empowering a new
-          generation of international students through unique and impactful educational travel
-          programs.
+          To be the leading initiative in Southeast Asia for inspiring and empowering a new generation of international
+          students through unique and impactful educational travel programs.
         </Paragraph>
       </Container>
 
@@ -182,9 +182,7 @@ Meet All Our member
               />
 
               <div className="flex-1 text-left text-[#00712D]">
-                <div className="mb-1 text-[14px] font-[900] md:text-[24px]">
-                  {item.title}
-                </div>
+                <div className="mb-1 text-[14px] font-[900] md:text-[24px]">{item.title}</div>
 
                 <div className="text-[12px] font-[600] md:text-[18px]">{item.description}</div>
               </div>
@@ -198,7 +196,7 @@ Meet All Our member
         <Heading color="text-[#22C55E]">WHAT WE DO</Heading>
 
         <Paragraph className="mb-4 md:mb-10">
-        We cultivate personal growth, leadership, and social impact, empowering students skills through:
+          We cultivate personal growth, leadership, and social impact, empowering students skills through:
         </Paragraph>
 
         <div className="flex flex-col items-center justify-center gap-8 lg:flex-row md:items-start md:gap-5 md:max-w-4xl m-auto">
@@ -261,22 +259,30 @@ Meet All Our member
                 'Strict adherence to international health guidelines, upholding recognized global safety standards.',
                 'Comprehensive insurance coverage ensures your complete peace of mind during all our programs.',
               ].map((item, index) => (
-                <li key={index} className="mb-5 flex items-center gap-2 last:mb-0 md:mb-6">
+                <li key={index} className="mb-5 flex items-start gap-2 last:mb-0 md:mb-6">
                   <Image src={Check} alt="check" width={16} height={16} /> {item}
                 </li>
               ))}
             </ul>
 
             <div className="mt-5 flex justify-center md:mt-20 md:justify-start">
-              <Button path="/our-programs">Explore our programs</Button>
+              <Button path="/our-programs">Explore Our Programs</Button>
             </div>
           </div>
 
           <div className="relative w-full flex-1 pb-10 md:pb-20 pl-20">
-          <Image className="w-auto h-[270px] md:h-[560px] rounded-[5px] md:rounded-[20px] object-cover" src={SafetyExpertise1} alt="" />
+            <Image
+              className="w-auto h-[270px] md:h-[560px] rounded-[5px] md:rounded-[20px] object-cover"
+              src={SafetyExpertise1}
+              alt=""
+            />
 
-          <Image className="w-2/3 h-[156px] md:h-[324px] rounded-[5px] md:rounded-[20px] absolute bottom-0 left-0 object-cover shadow-[0.964px_-0.964px_1.446px_0_#FFF]" src={SafetyExpertise2} alt="" />
-        </div>
+            <Image
+              className="w-2/3 h-[156px] md:h-[324px] rounded-[5px] md:rounded-[20px] absolute bottom-0 left-0 object-cover shadow-[0.964px_-0.964px_1.446px_0_#FFF]"
+              src={SafetyExpertise2}
+              alt=""
+            />
+          </div>
         </div>
       </Container>
     </main>

@@ -39,12 +39,8 @@ export default function TamanNegara() {
         <Heading color="text-[#22C55E]">LET'S TAKE A LOOK OUR JOURNEY</Heading>
 
         <div className="flex items-center justify-center bg-[#00000033] relative min-h-[180px] w-full flex-1 overflow-hidden rounded-[10px] border-2 border-[#00712D] md:max-w-4xl m-auto md:min-h-[460px] md:rounded-[20px]">
-                <Image
-                  src={Play}
-                  alt=""
-                  className="w-[50px] md:w-[100px] aspect-square object-contain"
-                />
-              </div>
+          <Image src={Play} alt="" className="w-[50px] md:w-[100px] aspect-square object-contain" />
+        </div>
 
         <div className="mt-5 md:mt-10 flex justify-center">
           <Button path="/our-programs">Watch More Our Trips</Button>
@@ -59,7 +55,10 @@ export default function TamanNegara() {
         <div className="absolute inset-0 z-[-1] bg-[#000] opacity-50" />
 
         <Paragraph className="text-white md:max-w-4xl m-auto">
-        Experience a unique 7-day journey blending urban exploration, thrilling nature, and cultural immersion across Singapore and Malaysia. Discover Singapore's iconic landmarks before delving into Malaysia's serene landscapes and ancient wonders. Engage in hands-on challenges and cultural exchanges for a perfect blend of learning, adventure, and personal growth.
+          Experience a unique 7-day journey blending urban exploration, thrilling nature, and cultural immersion across
+          Singapore and Malaysia. Discover Singapore's iconic landmarks before delving into Malaysia's serene landscapes
+          and ancient wonders. Engage in hands-on challenges and cultural exchanges for a perfect blend of learning,
+          adventure, and personal growth.
         </Paragraph>
 
         <div className="mt-5 md:mt-10 flex justify-center">
@@ -95,9 +94,7 @@ export default function TamanNegara() {
                 />
               </div>
 
-              <h3 className="mt-2.5 text-[20px] font-[900] text-[#00712D] md:mt-10 md:text-[24px]">
-                {item.title}
-              </h3>
+              <h3 className="mt-2.5 text-[20px] font-[900] text-[#00712D] md:mt-10 md:text-[24px]">{item.title}</h3>
             </li>
           ))}
         </ul>
@@ -139,24 +136,16 @@ export default function TamanNegara() {
               description: 'Deepen knowledge\nSharpen soft skills',
             },
           ].map((item, index) => (
-            <li
-              key={index}
-              className="flex flex-col items-center justify-start space-y-1 md:space-y-2.5"
-            >
+            <li key={index} className="flex flex-col items-center justify-start space-y-1 md:space-y-2.5">
               <div className="flex h-11 w-11 items-center justify-center rounded-full md:h-[88px] md:w-[88px]">
-                <Image
-                  src={item.img}
-                  className="h-full w-full object-cover"
-                  layout="responsive"
-                  alt=""
-                />
+                <Image src={item.img} className="h-full w-full object-cover" layout="responsive" alt="" />
               </div>
 
-              <div className="text-center text-[12px] font-[900] text-white md:text-[18px]">
-                {item.title}
-              </div>
+              <div className="text-center text-[12px] font-[900] text-white md:text-[18px]">{item.title}</div>
 
-              <p className="whitespace-break-spaces text-center text-[10px] md:text-[14px] font-[600] leading-3 md:leading-[18px] text-white">{item.description}</p>
+              <p className="whitespace-break-spaces text-center text-[10px] md:text-[14px] font-[600] leading-3 md:leading-[18px] text-white">
+                {item.description}
+              </p>
             </li>
           ))}
         </ul>
@@ -208,10 +197,7 @@ export default function TamanNegara() {
               ],
             },
           ].map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-1 flex-col items-center last:border-l last:border-[#00712D]"
-            >
+            <div key={index} className="flex flex-1 flex-col items-center last:border-l last:border-[#00712D]">
               <div className="flex h-10 w-full items-center justify-center bg-[#00712D] text-center text-[20px] font-[800] text-white md:h-[76px] md:text-[32px]">
                 {item.title}
               </div>
@@ -229,9 +215,7 @@ export default function TamanNegara() {
                       {/* <Image className={activeDropdown === "programs" ? 'rotate-180' : ''} src={ArrowDown} width={12} alt="arrow-down-icon" /> */}
                     </div>
 
-                    <Paragraph className="mb-1.5 ml-[26px] !text-left md:ml-[30px]">
-                      {content.description}
-                    </Paragraph>
+                    <Paragraph className="mb-1.5 ml-[26px] !text-left md:ml-[30px]">{content.description}</Paragraph>
                   </li>
                 ))}
               </ul>
