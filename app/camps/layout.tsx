@@ -20,7 +20,7 @@ export default function CampsLayout({ children }: { children: React.ReactNode })
     <>
       {children}
 
-      <Container className="bg-[#00712D]">
+      <Container className="bg-[#00712D] !px-0">
         <h2 className="flex flex-col lg:flex-row justify-center md:gap-2 text-center text-[20px] font-[800] md:text-[32px] text-white mb-3 md:mb-8">
           DISCOVER OUR<div className="text-[#FFA726]">ESTABLISHED DESTINATIONS</div>
         </h2>

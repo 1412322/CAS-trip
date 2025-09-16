@@ -61,12 +61,12 @@ export default function Gallery({ images }: GalleryProps) {
   })
 
   return (
-    <div className="relative overflow-hidden h-[145px] lg:h-[532px] w-full">
+    <div className="relative overflow-hidden h-[180px] lg:h-[532px] w-full">
       <div {...handlers} className="relative flex h-full items-center justify-center">
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute flex h-full w-[106px] lg:w-[390px] flex-col items-center justify-center overflow-hidden rounded-[5px] lg:rounded-[20px] text-white transition-all duration-500 ${
+            className={`absolute flex h-full w-[120px] lg:w-[390px] flex-col items-center justify-center overflow-hidden rounded-[5px] lg:rounded-[20px] text-white transition-all duration-500 ${
               getPositionClass(index).container
             }`}
           >
