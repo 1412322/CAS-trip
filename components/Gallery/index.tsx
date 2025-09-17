@@ -79,7 +79,7 @@ export default function Gallery({ images }: GalleryProps) {
               onClick={() => setCurrent(index)}
             />
 
-            <div className="relative z-10 text-center font-[900] text-[20px] lg:text-[32px]">
+            <div className="relative z-10 text-center font-[900] text-[24px] lg:text-[32px]">
               {img.title && <h3>{img.title}</h3>}
 
               {img.subTitle && <h3>{img.subTitle}</h3>}
