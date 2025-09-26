@@ -25,7 +25,6 @@ import Partners from './Partners'
 import Travelers from './Travelers'
 
 export default function Home() {
-  return <div>maintenance</div>
   return (
     <main>
       {/* Hero Section */}
