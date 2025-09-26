@@ -16,30 +16,31 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body className={`${montserrat.className}`}>
-        <Head>
-          <title>CAS Trips - Home</title>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
+  return null
+  // return (
+  //   <html lang="en">
+  //     <body className={`${montserrat.className}`}>
+  //       <Head>
+  //         <title>CAS Trips - Home</title>
+  //         <link
+  //           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+  //           rel="stylesheet"
+  //         />
+  //       </Head>
 
-        {/* Navbar */}
-        <Header />
+  //       {/* Navbar */}
+  //       <Header />
 
-        <div className="relative">
-          {children}
+  //       <div className="relative">
+  //         {children}
 
-          {/* BACK TO TOP BUTTON */}
-          <BackToTopButton />
-        </div>
+  //         {/* BACK TO TOP BUTTON */}
+  //         <BackToTopButton />
+  //       </div>
 
-        {/* FOOTER */}
-        <Footer />
-      </body>
-    </html>
-  )
+  //       {/* FOOTER */}
+  //       <Footer />
+  //     </body>
+  //   </html>
+  // )
 }
