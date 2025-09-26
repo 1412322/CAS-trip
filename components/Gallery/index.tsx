@@ -30,22 +30,22 @@ export default function Gallery({ images }: GalleryProps) {
       }
     if (diff === -1 || diff === images.length - 1)
       return {
-        container: 'z-20 -translate-x-[45%] lg:-translate-x-[70%] scale-75',
+        container: 'z-20 -translate-x-[30%] lg:-translate-x-[70%] scale-75',
         image: 'brightness-[0.5]',
       }
     if (diff === -2 || diff === images.length - 2)
       return {
-        container: 'z-10 -translate-x-[80%] lg:-translate-x-[120%] scale-[0.55]',
+        container: 'z-10 -translate-x-[50%] lg:-translate-x-[120%] scale-[0.55]',
         image: 'brightness-[0.25]',
       }
     if (diff === 1 || diff === -(images.length - 1))
       return {
-        container: 'z-20 translate-x-[45%] lg:translate-x-[70%] scale-75',
+        container: 'z-20 translate-x-[30%] lg:translate-x-[70%] scale-75',
         image: 'brightness-[0.5]',
       }
     if (diff === 2 || diff === -(images.length - 2))
       return {
-        container: 'z-10 translate-x-[80%] lg:translate-x-[120%] scale-[0.55]',
+        container: 'z-10 translate-x-[50%] lg:translate-x-[120%] scale-[0.55]',
         image: 'brightness-[0.25]',
       }
     return {
@@ -61,12 +61,12 @@ export default function Gallery({ images }: GalleryProps) {
   })
 
   return (
-    <div className="relative overflow-hidden h-[220px] lg:h-[532px] w-full">
+    <div className="relative overflow-hidden h-[300px] lg:h-[532px] w-full">
       <div {...handlers} className="relative flex h-full items-center justify-center">
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute flex h-full w-[160px] lg:w-[390px] flex-col items-center justify-center overflow-hidden rounded-[5px] lg:rounded-[20px] text-white transition-all duration-500 ${
+            className={`absolute flex h-full w-[219px] lg:w-[390px] flex-col items-center justify-center overflow-hidden rounded-[5px] lg:rounded-[20px] text-white transition-all duration-500 ${
               getPositionClass(index).container
             }`}
           >
@@ -79,7 +79,7 @@ export default function Gallery({ images }: GalleryProps) {
               onClick={() => setCurrent(index)}
             />
 
-            <div className="relative z-10 text-center font-[900] text-[20px] lg:text-[32px]">
+            <div className="relative z-10 text-center font-[900] text-[24px] lg:text-[32px]">
               {img.title && <h3>{img.title}</h3>}
 
               {img.subTitle && <h3>{img.subTitle}</h3>}
