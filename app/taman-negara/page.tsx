@@ -21,7 +21,7 @@ export default function TamanNegara() {
   return (
     <main>
       {/* Hero Section */}
-      <div className="relative h-[50vh] bg-[url('../public/images/mobile_cover.webp')] bg-cover bg-center bg-no-repeat md:h-screen md:max-h-[655px] md:bg-[url('../public/images/taman_negara_cover.webp')]">
+      <div className="relative h-[50vh] bg-[url('../public/images/mobile_taman_negara_cover.webp')] bg-cover bg-center bg-no-repeat md:h-screen md:max-h-[655px] md:bg-[url('../public/images/taman_negara_cover.webp')]">
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         <div className="z-1 absolute flex h-full w-full flex-col items-center justify-center px-5 md:px-[100px]">
